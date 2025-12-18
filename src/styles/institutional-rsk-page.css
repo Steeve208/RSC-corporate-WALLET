@@ -1,0 +1,493 @@
+/* Institutional RSK Page Styles */
+.institutional-rsk-page {
+  min-height: 100vh;
+  background: #050509;
+  color: #ffffff;
+}
+
+.institutional-rsk-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.institutional-rsk-hero {
+  padding: 140px 0 80px;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.institutional-rsk-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.institutional-rsk-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.institutional-rsk-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.institutional-rsk-hero-icon {
+  color: #14b8a6;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.institutional-rsk-hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.institutional-rsk-hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Section Styles */
+.institutional-rsk-what,
+.institutional-rsk-role,
+.institutional-rsk-supply,
+.institutional-rsk-cases {
+  padding: 80px 0;
+}
+
+.institutional-rsk-what {
+  background: #050509;
+}
+
+.institutional-rsk-role {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.institutional-rsk-supply {
+  background: #050509;
+}
+
+.institutional-rsk-cases {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.institutional-rsk-section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.institutional-rsk-section-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.institutional-rsk-section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.institutional-rsk-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+/* What Section */
+.institutional-rsk-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-rsk-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.institutional-rsk-feature-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-rsk-feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+}
+
+.institutional-rsk-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.institutional-rsk-feature-description {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Role Section */
+.institutional-rsk-role-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 900px;
+}
+
+.institutional-rsk-role-feature {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.institutional-rsk-role-feature:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.institutional-rsk-role-feature-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.institutional-rsk-role-feature-content {
+  flex: 1;
+}
+
+.institutional-rsk-role-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.institutional-rsk-role-feature-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Supply Section */
+.institutional-rsk-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-rsk-supply-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.institutional-rsk-supply-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-rsk-supply-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+}
+
+.institutional-rsk-supply-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.institutional-rsk-supply-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.institutional-rsk-supply-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.institutional-rsk-supply-metric-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.institutional-rsk-supply-metric-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #14b8a6;
+}
+
+.institutional-rsk-supply-utilities {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.institutional-rsk-supply-utility {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.institutional-rsk-check-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+/* Use Cases */
+.institutional-rsk-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-rsk-case-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.institutional-rsk-case-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-rsk-case-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+}
+
+.institutional-rsk-case-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.institutional-rsk-case-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.institutional-rsk-case-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.institutional-rsk-case-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Docs Section */
+.institutional-rsk-docs {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #050509 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.institutional-rsk-docs-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.institutional-rsk-docs-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.institutional-rsk-docs-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 250px;
+  justify-content: center;
+}
+
+.institutional-rsk-docs-button--primary {
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+}
+
+.institutional-rsk-docs-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+}
+
+.institutional-rsk-docs-button--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.institutional-rsk-docs-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.institutional-rsk-docs-button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.institutional-rsk-docs-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .institutional-rsk-hero {
+    padding: 120px 0 60px;
+  }
+
+  .institutional-rsk-what,
+  .institutional-rsk-role,
+  .institutional-rsk-supply,
+  .institutional-rsk-cases {
+    padding: 60px 0;
+  }
+
+  .institutional-rsk-docs {
+    padding: 80px 0;
+  }
+
+  .institutional-rsk-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .institutional-rsk-features {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-rsk-role-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .institutional-rsk-supply-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-rsk-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-rsk-docs-buttons {
+    flex-direction: column;
+  }
+
+  .institutional-rsk-docs-button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,1976 @@
+{
+  "navbar": {
+    "individuos": "Individuos",
+    "empresas": "Empresas",
+    "instituciones": "Instituciones",
+    "desarrolladores": "Desarrolladores",
+    "empresa": "Empresa",
+    "descargar": "Descargar"
+  },
+  "dropdowns": {
+    "individuos": {
+      "title": "Para Todos",
+      "subtitle": "Soluciones financieras descentralizadas para tu día a día.",
+      "learnMore": "Saber más",
+      "items": {
+        "wallet": {
+          "title": "RSC Wallet",
+          "description": "Billetera personal, pagos, staking, control de activos"
+        },
+        "qrPayments": {
+          "title": "Pagos con QR",
+          "description": "Envía y paga fácilmente desde tu móvil"
+        },
+        "staking": {
+          "title": "Staking & Rewards",
+          "description": "Gana con el ecosistema RSC"
+        },
+        "remittances": {
+          "title": "Remesas / Transferencias",
+          "description": "Envía dinero de forma rápida y segura"
+        },
+        "education": {
+          "title": "Educación / Learn",
+          "description": "Guías básicas, seguridad, primeros pasos"
+        }
+      }
+    },
+    "empresas": {
+      "title": "Para Empresas",
+      "subtitle": "Infraestructura de pagos y finanzas para negocios modernos.",
+      "learnMore": "Saber más",
+      "items": {
+        "businessWallet": {
+          "title": "RSC Business Wallet",
+          "description": "Billetera empresarial con control y reportes"
+        },
+        "payments": {
+          "title": "RSC Payments",
+          "description": "Cobros con QR, liquidación rápida"
+        },
+        "api": {
+          "title": "API de pagos",
+          "description": "Integración en apps, e-commerce, POS"
+        },
+        "billing": {
+          "title": "Facturación / Reports",
+          "description": "Facturación e informes financieros"
+        },
+        "useCases": {
+          "title": "Casos de uso comerciales",
+          "description": "Casos de uso comerciales y ejemplos"
+        }
+      }
+    },
+    "instituciones": {
+      "title": "Nuestros Clientes",
+      "subtitle": "Confiado por instituciones y gobiernos de todo el mundo.",
+      "learnMore": "Saber más",
+      "items": {
+        "p2p": {
+          "title": "P2P Market",
+          "description": "Plataforma de trading peer-to-peer"
+        },
+        "corporate": {
+          "title": "RSC Corporate",
+          "description": "Soluciones y servicios corporativos"
+        },
+        "chain": {
+          "title": "RSC Chain",
+          "description": "Infraestructura blockchain"
+        },
+        "token": {
+          "title": "REESK [RSK] (RSC TOKEN)",
+          "description": "Token nativo de RSC Chain"
+        }
+      }
+    },
+    "desarrolladores": {
+      "title": "Para Desarrolladores",
+      "subtitle": "Construye sobre RSC Chain con herramientas abiertas y escalables.",
+      "learnMore": "Saber más",
+      "items": {
+        "docs": {
+          "title": "Developer Docs",
+          "description": "Guías técnicas, RPC, nodos"
+        },
+        "chain": {
+          "title": "RSC Chain",
+          "description": "Infraestructura blockchain"
+        },
+        "apis": {
+          "title": "APIs & SDKs",
+          "description": "Wallet, pagos, smart contracts"
+        },
+        "testnet": {
+          "title": "Testnet / Faucet",
+          "description": "Red de pruebas y faucet de tokens"
+        },
+        "roadmap": {
+          "title": "Roadmap técnico",
+          "description": "Roadmap técnico y actualizaciones"
+        }
+      }
+    },
+    "empresa": {
+      "title": "Acerca de RSC",
+      "subtitle": "La organización detrás del ecosistema RSC.",
+      "learnMore": "Saber más",
+      "items": {
+        "about": {
+          "title": "Acerca de RSC",
+          "description": "Visión, misión y valores"
+        },
+        "security": {
+          "title": "Seguridad y Cumplimiento",
+          "description": "Prácticas de seguridad y cumplimiento"
+        },
+        "careers": {
+          "title": "Carreras",
+          "description": "Únete al equipo RSC"
+        },
+        "press": {
+          "title": "Prensa / Medios",
+          "description": "Comunicados de prensa y recursos para medios"
+        },
+        "contact": {
+          "title": "Contacto / Alianzas",
+          "description": "Ponte en contacto y oportunidades de alianzas"
+        }
+      }
+    }
+  },
+  "hero": {
+    "tag": "Billetera Digital",
+    "title": "RSC Wallet",
+    "subtitle": "Tu economía completa en RSC Chain",
+    "description": "RSC Wallet es tu puerta de entrada al ecosistema RSC Chain. Gestiona tus activos, ejecuta transacciones instantáneas, participa en staking y accede a DeFi, todo desde una sola billetera no custodial. Tu identidad, tu dinero y tus pagos viven directamente en RSC Chain.",
+    "cta": "Crear RSC Wallet"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  },
+  "wallet": {
+    "hero": {
+      "title": "RSC Wallet",
+      "subtitle": "Billetera non-custodial para operar en RSC Chain",
+      "ctaDownload": "Descargar",
+      "ctaCreate": "Crear Wallet"
+    },
+    "features": {
+      "title": "Qué Puedes Hacer",
+      "sendReceive": {
+        "title": "Enviar / Recibir Activos",
+        "description": "Transfiere RSK y activos compatibles al instante con total transparencia"
+      },
+      "balance": {
+        "title": "Ver Balance y Actividad",
+        "description": "Monitorea tus activos e historial de transacciones en tiempo real"
+      },
+      "staking": {
+        "title": "Staking y Recompensas",
+        "description": "Gana ingresos pasivos haciendo staking de tus tokens RSK"
+      },
+      "qrPayments": {
+        "title": "Pagos con QR",
+        "description": "Paga y recibe pagos fácilmente usando códigos QR"
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "step1": {
+        "title": "Crear Wallet",
+        "description": "Descarga la app y crea tu billetera en segundos"
+      },
+      "step2": {
+        "title": "Asegurar Acceso",
+        "description": "Respalda tu frase semilla y configura PIN o seguridad biométrica"
+      },
+      "step3": {
+        "title": "Usar y Controlar Fondos",
+        "description": "Comienza a enviar, recibir y gestionar tus activos"
+      }
+    },
+    "security": {
+      "title": "Seguridad",
+      "nonCustodial": {
+        "title": "Non-Custodial",
+        "description": "Tú controlas tus claves privadas. Nosotros nunca tenemos acceso a tus fondos"
+      },
+      "seedPhrase": {
+        "title": "Frase Semilla",
+        "description": "Frase de recuperación de 12 palabras para respaldar y restaurar tu billetera"
+      },
+      "biometry": {
+        "title": "PIN / Biometría",
+        "description": "Capa adicional de seguridad con código PIN o reconocimiento de huella/cara"
+      }
+    },
+    "screenshots": {
+      "title": "Capturas Reales",
+      "home": "Inicio",
+      "sendReceive": "Enviar / Recibir",
+      "staking": "Staking",
+      "settings": "Configuración"
+    },
+    "cta": {
+      "title": "¿Listo para Empezar?",
+      "description": "Descarga RSC Wallet y toma el control de tus activos digitales",
+      "button": "Descargar App"
+    }
+  },
+  "payments": {
+    "hero": {
+      "title": "RSC Payments",
+      "subtitle": "Envía y recibe pagos al instante con códigos QR en RSC Chain"
+    },
+    "what": {
+      "title": "¿Qué son los Pagos RSC?",
+      "description": "RSC Payments es un sistema de pagos rápido, seguro y descentralizado construido en RSC Chain. Envía y recibe tokens RSK al instante usando códigos QR, sin intermediarios ni altas comisiones.",
+      "benefit1": "Transacciones instantáneas en RSC Chain",
+      "benefit2": "Bajas comisiones de transacción",
+      "benefit3": "No se requieren intermediarios",
+      "benefit4": "Seguro y transparente",
+      "qrLabel": "Escanear para Pagar"
+    },
+    "qr": {
+      "title": "Pagos con Código QR",
+      "description": "Paga con un simple escaneo. Genera o escanea códigos QR para enviar y recibir pagos al instante.",
+      "step1": "Abre RSC Wallet",
+      "step2": "Escanea código QR o genera el tuyo",
+      "step3": "Confirma y envía al instante"
+    },
+    "instant": {
+      "title": "Transferencias Instantáneas Entre Usuarios",
+      "description": "Envía tokens RSK directamente a cualquier usuario en RSC Chain en segundos, sin esperar confirmaciones ni pagar altas comisiones.",
+      "benefit1": "Transferencias en tiempo real",
+      "benefit2": "Sin tiempo de espera",
+      "benefit3": "Directo peer-to-peer"
+    },
+    "cases": {
+      "title": "Casos de Uso",
+      "friends": {
+        "title": "Pagar a Amigos",
+        "description": "Divide cuentas, paga préstamos o envía dinero a amigos al instante.",
+        "example": "Dividir cuenta de cena con amigos"
+      },
+      "merchants": {
+        "title": "Pagar a Comercios",
+        "description": "Paga en tiendas, restaurantes y tiendas online usando códigos QR.",
+        "example": "Pagar en cafetería con QR"
+      }
+    },
+    "security": {
+      "title": "Seguridad y Confirmación",
+      "description": "Cada transacción está asegurada por la tecnología blockchain de RSC Chain, con confirmación instantánea y total transparencia.",
+      "feature1": "Transacciones aseguradas por blockchain",
+      "feature2": "Confirmación instantánea",
+      "feature3": "Historial completo de transacciones",
+      "feature4": "Control de clave privada"
+    },
+    "cta": {
+      "title": "Comienza a Usar Pagos",
+      "description": "Usa RSC Payments en tu app RSC Wallet. Descarga ahora y comienza a enviar pagos al instante.",
+      "button": "Usar en RSC Wallet"
+    }
+  },
+  "staking": {
+    "hero": {
+      "title": "Staking y Recompensas",
+      "subtitle": "Gana ingresos pasivos haciendo staking de tus tokens RSK en RSC Chain"
+    },
+    "what": {
+      "title": "¿Qué es Staking en RSC?",
+      "description": "El staking te permite bloquear tus tokens RSK para apoyar la red RSC Chain y ganar recompensas a cambio. Es una forma de participar en la seguridad de la red mientras generas ingresos pasivos.",
+      "benefit1": {
+        "title": "Gana Recompensas",
+        "description": "Genera ingresos pasivos haciendo staking de tus tokens"
+      },
+      "benefit2": {
+        "title": "Apoya la Red",
+        "description": "Ayuda a asegurar y validar la red RSC Chain"
+      },
+      "benefit3": {
+        "title": "Bajo Riesgo",
+        "description": "Staking seguro con reglas y controles transparentes"
+      },
+      "visual": {
+        "label": "Cantidad en Staking"
+      }
+    },
+    "rewards": {
+      "title": "Cómo Generar Recompensas",
+      "step1": {
+        "title": "Haz Staking de Tus Tokens",
+        "description": "Bloquea tus tokens RSK en el pool de staking"
+      },
+      "step2": {
+        "title": "Gana Recompensas",
+        "description": "Recibe recompensas automáticamente según tu cantidad en staking"
+      },
+      "step3": {
+        "title": "Compone o Retira",
+        "description": "Reinvierte las recompensas o retíralas a tu billetera"
+      },
+      "visual": {
+        "title": "Recompensas Ganadas",
+        "period": "Últimos 30 días"
+      }
+    },
+    "rules": {
+      "title": "Reglas Básicas",
+      "lock": {
+        "title": "Período de Bloqueo",
+        "description": "Tus tokens están bloqueados por un período específico para asegurar la seguridad de la red.",
+        "detail": "Bloqueo mínimo: 30 días"
+      },
+      "rewards": {
+        "title": "Recompensas",
+        "description": "Gana recompensas según tu cantidad en staking y la tasa APY actual.",
+        "detail": "APY: Hasta 5% anual"
+      },
+      "unstake": {
+        "title": "Desbloquear",
+        "description": "Puedes desbloquear tus tokens después de que termine el período de bloqueo.",
+        "detail": "Período de desbloqueo: 7 días"
+      }
+    },
+    "transparency": {
+      "title": "Transparencia y Control",
+      "description": "Transparencia total en las operaciones de staking. Monitorea tu cantidad en staking, recompensas y todas las transacciones en tiempo real.",
+      "feature1": "Dashboard de staking en tiempo real",
+      "feature2": "Historial completo de transacciones",
+      "feature3": "Cálculos transparentes de recompensas",
+      "feature4": "Control total sobre tus tokens en staking"
+    },
+    "cta": {
+      "title": "Comienza a Hacer Staking Ahora",
+      "description": "Comienza a ganar recompensas haciendo staking de tus tokens RSK directamente desde tu RSC Wallet.",
+      "button": "Empezar Staking desde la Wallet"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Aprende y Educación",
+      "subtitle": "Todo lo que necesitas saber para comenzar con RSC Wallet"
+    },
+    "wallet": {
+      "title": "¿Qué es una Billetera?",
+      "description": "Una billetera de criptomonedas es una herramienta digital que te permite almacenar, enviar y recibir criptomonedas. Piénsalo como una cuenta bancaria digital, pero tienes control total sobre tus fondos.",
+      "feature1": "Almacena tus tokens RSK y otras criptomonedas",
+      "feature2": "Envía y recibe pagos al instante",
+      "feature3": "Accede a servicios DeFi y dApps",
+      "feature4": "Control total sobre tus activos digitales"
+    },
+    "noncustodial": {
+      "title": "¿Qué es Non-Custodial?",
+      "description": "Una billetera non-custodial significa que tú controlas tus claves privadas. Ningún tercero tiene acceso a tus fondos. Esto es diferente de las billeteras custodiales donde una empresa guarda tus claves.",
+      "custodial": {
+        "title": "Billeteras Custodiales",
+        "point1": "La empresa controla tus claves privadas",
+        "point2": "Dependes de la seguridad de la empresa",
+        "point3": "Riesgo de perder acceso si la empresa falla"
+      },
+      "noncustodial": {
+        "title": "Billeteras Non-Custodiales (RSC Wallet)",
+        "point1": "Tú controlas tus claves privadas",
+        "point2": "Ningún tercero puede acceder a tus fondos",
+        "point3": "Independencia y seguridad total"
+      }
+    },
+    "seed": {
+      "title": "Cómo Proteger tu Frase Semilla",
+      "warning": "Tu frase semilla es la llave maestra de tu billetera. Nunca la compartas con nadie y guárdala de forma segura.",
+      "step1": {
+        "title": "Escríbela en Papel",
+        "description": "Escribe tu frase semilla de 12 palabras en papel. Nunca la almacenes digitalmente ni tomes capturas de pantalla."
+      },
+      "step2": {
+        "title": "Guárdala de Forma Segura",
+        "description": "Mantenla en un lugar seguro, como una caja fuerte a prueba de fuego o una caja de seguridad. Considera hacer una copia de respaldo."
+      },
+      "step3": {
+        "title": "Nunca la Compartas",
+        "description": "Nunca compartas tu frase semilla con nadie. Los servicios legítimos nunca la pedirán."
+      },
+      "step4": {
+        "title": "Verifica el Respaldo",
+        "description": "Prueba tu respaldo restaurando tu billetera en un dispositivo de prueba para asegurarte de que funciona correctamente."
+      }
+    },
+    "firstSteps": {
+      "title": "Primeros Pasos en RSC",
+      "step1": {
+        "title": "Descarga RSC Wallet",
+        "description": "Descarga la app RSC Wallet desde el sitio web oficial o la tienda de aplicaciones."
+      },
+      "step2": {
+        "title": "Crea tu Billetera",
+        "description": "Sigue el proceso de configuración para crear una nueva billetera. Guarda tu frase semilla de forma segura."
+      },
+      "step3": {
+        "title": "Asegura tu Billetera",
+        "description": "Configura PIN o autenticación biométrica para seguridad adicional."
+      },
+      "step4": {
+        "title": "Comienza a Usar",
+        "description": "¡Estás listo! Comienza a recibir tokens RSK, hacer pagos y explorar funciones DeFi."
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿RSC Wallet es gratis?",
+        "answer": "Sí, RSC Wallet es completamente gratis de descargar y usar. Solo pagas las comisiones de red por las transacciones en RSC Chain."
+      },
+      "q2": {
+        "question": "¿Qué pasa si pierdo mi frase semilla?",
+        "answer": "Si pierdes tu frase semilla, perderás permanentemente el acceso a tu billetera y fondos. Por eso es crucial guardarla de forma segura y nunca compartirla."
+      },
+      "q3": {
+        "question": "¿Puedo recuperar mi billetera con mi frase semilla?",
+        "answer": "Sí, puedes recuperar tu billetera en cualquier dispositivo usando tu frase semilla de 12 palabras. Por eso es tan importante mantenerla segura."
+      },
+      "q4": {
+        "question": "¿Es segura RSC Wallet?",
+        "answer": "Sí, RSC Wallet es una billetera non-custodial con seguridad de estándar industrial. Tus claves privadas nunca salen de tu dispositivo, y nosotros nunca tenemos acceso a tus fondos."
+      },
+      "q5": {
+        "question": "¿Puedo usar RSC Wallet en múltiples dispositivos?",
+        "answer": "Sí, puedes importar tu billetera en múltiples dispositivos usando tu frase semilla. Sin embargo, asegúrate de que cada dispositivo esté seguro."
+      },
+      "q6": {
+        "question": "¿Qué criptomonedas soporta RSC Wallet?",
+        "answer": "RSC Wallet principalmente soporta tokens RSK y otros tokens en RSC Chain. Consulta la app para la lista completa de activos soportados."
+      }
+    }
+  },
+  "remittances": {
+    "hero": {
+      "title": "Remesas sin Fronteras",
+      "subtitle": "Envía valor globalmente con velocidad y control, sin intermediarios innecesarios.",
+      "cta": "Enviar con RSC Wallet"
+    },
+    "allows": {
+      "title": "Qué Permite",
+      "feature1": {
+        "title": "Envíos P2P Internacionales",
+        "description": "Envía dinero a cualquier persona, en cualquier parte del mundo, directamente desde tu billetera sin intermediarios."
+      },
+      "feature2": {
+        "title": "Transferencias Instantáneas entre Usuarios RSC",
+        "description": "Transfiere tokens RSK al instante a cualquier usuario de RSC Wallet, con confirmación inmediata en la blockchain."
+      },
+      "feature3": {
+        "title": "Costos Visibles Antes de Confirmar",
+        "description": "Ve todas las tarifas y costos de antemano antes de confirmar tu transacción. Sin cargos ocultos ni sorpresas."
+      }
+    },
+    "how": {
+      "title": "Cómo Funciona",
+      "step1": {
+        "title": "Usuario A Envía desde su Wallet",
+        "description": "Abre RSC Wallet, ingresa la dirección del destinatario o escanea su código QR, y confirma el monto."
+      },
+      "step2": {
+        "title": "Usuario B Recibe al Instante",
+        "description": "El destinatario recibe los fondos inmediatamente en su RSC Wallet, con confirmación instantánea."
+      },
+      "step3": {
+        "title": "Confirmación On-Chain",
+        "description": "Cada transacción se registra en la blockchain de RSC Chain, proporcionando transparencia y seguridad."
+      }
+    },
+    "cases": {
+      "title": "Casos Reales",
+      "case1": {
+        "title": "Envíos Familiares",
+        "description": "Envía dinero a familiares en el extranjero de forma rápida y segura, sin altas tarifas ni largos tiempos de espera."
+      },
+      "case2": {
+        "title": "Freelancers",
+        "description": "Recibe pagos de clientes de todo el mundo al instante, sin las demoras de la banca tradicional."
+      },
+      "case3": {
+        "title": "Pagos Recurrentes",
+        "description": "Configura transferencias automáticas para pagos regulares como suscripciones, alquiler o apoyo mensual."
+      }
+    },
+    "security": {
+      "title": "Seguridad",
+      "feature1": {
+        "title": "Dirección Verificada",
+        "description": "Verifica direcciones de destinatarios antes de enviar para asegurar que los fondos lleguen al destino correcto."
+      },
+      "feature2": {
+        "title": "Confirmaciones Claras",
+        "description": "Recibe confirmaciones claras de transacciones con todos los detalles visibles antes de finalizar."
+      },
+      "feature3": {
+        "title": "Historial Completo",
+        "description": "Accede a un historial completo de todas tus transacciones con total transparencia y trazabilidad."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Enviar Globalmente?",
+      "description": "Crea tu RSC Wallet y comienza a enviar remesas sin fronteras, con velocidad y seguridad.",
+      "button": "Crear RSC Wallet"
+    }
+  },
+  "businessWallet": {
+    "hero": {
+      "title": "RSC Business Wallet",
+      "subtitle": "Billetera empresarial diseñada para negocios, con gestión multi-usuario y controles avanzados"
+    },
+    "designed": {
+      "title": "Billetera Diseñada para Negocios",
+      "description": "RSC Business Wallet está construida específicamente para empresas que necesitan gestión financiera avanzada, colaboración en equipo y herramientas de reportes completas.",
+      "feature1": "Acceso multi-usuario con permisos basados en roles",
+      "feature2": "Controles avanzados de pagos y límites",
+      "feature3": "Historial completo de transacciones y reportes",
+      "feature4": "Seguridad y cumplimiento de nivel empresarial",
+      "visual": {
+        "label": "Soluciones Empresariales"
+      }
+    },
+    "multiuser": {
+      "title": "Multi-Usuario (Roles)",
+      "description": "Gestiona tu equipo con diferentes niveles de acceso. Asigna roles y permisos para controlar quién puede realizar qué acciones en tu billetera empresarial.",
+      "roles": {
+        "admin": {
+          "title": "Administrador",
+          "description": "Acceso completo a todas las funciones y configuraciones",
+          "permission1": "Gestionar todos los usuarios y roles",
+          "permission2": "Configurar límites y reglas de pago",
+          "permission3": "Acceder a todos los reportes y análisis"
+        },
+        "manager": {
+          "title": "Gerente",
+          "description": "Supervisar operaciones y aprobar transacciones",
+          "permission1": "Aprobar pagos y transacciones",
+          "permission2": "Ver reportes y análisis",
+          "permission3": "Gestionar miembros del equipo"
+        },
+        "operator": {
+          "title": "Operador",
+          "description": "Ejecutar operaciones diarias y pagos",
+          "permission1": "Procesar pagos y transacciones",
+          "permission2": "Ver historial de transacciones",
+          "permission3": "Generar reportes básicos"
+        }
+      }
+    },
+    "payments": {
+      "title": "Control de Pagos",
+      "description": "Controles avanzados para gestionar y monitorear todos los pagos empresariales con seguridad y transparencia.",
+      "feature1": {
+        "title": "Límites de Pago",
+        "description": "Establece límites diarios, semanales o mensuales para diferentes usuarios y roles"
+      },
+      "feature2": {
+        "title": "Flujos de Aprobación",
+        "description": "Requiere múltiples aprobaciones para transacciones grandes o operaciones sensibles"
+      },
+      "feature3": {
+        "title": "Monitoreo en Tiempo Real",
+        "description": "Monitorea todos los pagos en tiempo real con notificaciones y alertas instantáneas"
+      }
+    },
+    "reports": {
+      "title": "Historial y Reportes",
+      "description": "Herramientas de reportes completas para rastrear, analizar y exportar todos tus datos financieros empresariales.",
+      "report1": {
+        "title": "Análisis Financiero",
+        "description": "Análisis detallados e insights sobre tus finanzas empresariales"
+      },
+      "report2": {
+        "title": "Historial de Transacciones",
+        "description": "Historial completo de todas las transacciones con filtros y búsqueda"
+      },
+      "report3": {
+        "title": "Reportes de Pagos",
+        "description": "Exporta reportes de pagos para contabilidad y propósitos fiscales"
+      }
+    },
+    "cases": {
+      "title": "Casos de Uso",
+      "merchants": {
+        "title": "Comercios",
+        "description": "Perfecto para tiendas minoristas, restaurantes y negocios de servicios que necesitan gestionar pagos y transacciones diarias.",
+        "benefit1": "Aceptar pagos QR de clientes",
+        "benefit2": "Rastrear ventas y ingresos diarios",
+        "benefit3": "Gestionar múltiples métodos de pago"
+      },
+      "startups": {
+        "title": "Startups",
+        "description": "Ideal para empresas en crecimiento que necesitan control financiero y funciones de colaboración en equipo.",
+        "benefit1": "Acceso multi-usuario para miembros del equipo",
+        "benefit2": "Control de presupuesto y límites de gasto",
+        "benefit3": "Reportes financieros para inversionistas"
+      }
+    },
+    "cta": {
+      "title": "Comienza con Business Wallet",
+      "description": "Contáctanos para conocer más sobre RSC Business Wallet y solicitar acceso para tu empresa.",
+      "buttonContact": "Contáctanos",
+      "buttonRequest": "Solicitar Acceso"
+    }
+  },
+  "businessBilling": {
+    "hero": {
+      "title": "Control Financiero para Negocios",
+      "subtitle": "Visualiza, organiza y reporta la actividad de tu empresa en RSC.",
+      "cta": "Solicitar Acceso"
+    },
+    "features": {
+      "title": "Funcionalidades",
+      "feature1": {
+        "title": "Historial Completo de Pagos",
+        "description": "Accede a un registro completo de todas las transacciones, pagos y movimientos financieros en tu billetera empresarial."
+      },
+      "feature2": {
+        "title": "Exportación de Datos (CSV / PDF)",
+        "description": "Exporta tus datos financieros en formato CSV o PDF para análisis externos y sistemas contables."
+      },
+      "feature3": {
+        "title": "Separación por Periodos",
+        "description": "Organiza y filtra transacciones por periodos (diario, semanal, mensual, trimestral o rangos personalizados)."
+      },
+      "feature4": {
+        "title": "Identificación de Ingresos y Egresos",
+        "description": "Categoriza e identifica automáticamente ingresos y egresos para una mejor gestión financiera."
+      }
+    },
+    "cases": {
+      "title": "Casos de Uso",
+      "case1": {
+        "title": "Contabilidad Interna",
+        "description": "Mantén un registro de todos los movimientos financieros para contabilidad interna y planificación financiera."
+      },
+      "case2": {
+        "title": "Reportes Fiscales (según jurisdicción)",
+        "description": "Genera reportes formateados según los requisitos fiscales de tu jurisdicción."
+      },
+      "case3": {
+        "title": "Auditorías",
+        "description": "Proporciona registros financieros completos y detallados para auditorías internas o externas."
+      }
+    },
+    "integration": {
+      "title": "Integración",
+      "wallet": {
+        "title": "Con Business Wallet",
+        "description": "Integrado perfectamente con RSC Business Wallet para control financiero completo.",
+        "feature1": "Sincronización automática de transacciones",
+        "feature2": "Actualizaciones de balance en tiempo real",
+        "feature3": "Acceso multi-usuario y permisos"
+      },
+      "api": {
+        "title": "Con APIs de Pago",
+        "description": "Conecta con las APIs de Pago de RSC para integrar facturación y reportes en tus sistemas.",
+        "feature1": "Acceso API a datos de transacciones",
+        "feature2": "Generación automatizada de reportes",
+        "feature3": "Integración personalizada con tus herramientas"
+      }
+    },
+    "future": {
+      "title": "Visión Futura",
+      "description": "Estamos mejorando continuamente nuestras herramientas de facturación y reportes. Próximamente:",
+      "feature1": "Análisis avanzados y pronósticos",
+      "feature2": "Soporte multi-moneda y conversión",
+      "feature3": "Integración con software contable principal",
+      "cta": "Mantente Actualizado"
+    }
+  },
+  "businessPayments": {
+    "hero": {
+      "title": "RSC Payments",
+      "subtitle": "Solución de pagos para empresas con liquidaciones rápidas y bajas comisiones"
+    },
+    "qr": {
+      "title": "Cobros con QR",
+      "description": "Acepta pagos de clientes al instante usando códigos QR. Genera códigos QR para tus productos o servicios y recibe pagos directamente en tu billetera empresarial.",
+      "feature1": "Confirmación de pago instantánea",
+      "feature2": "No se requiere hardware adicional",
+      "feature3": "Liquidación directa a tu billetera",
+      "visual": {
+        "label": "Escanear para Pagar"
+      }
+    },
+    "fast": {
+      "title": "Pagos Rápidos",
+      "description": "Recibe pagos más rápido que los sistemas bancarios tradicionales. Las liquidaciones ocurren en segundos, no en días.",
+      "benefit1": {
+        "title": "Liquidación Instantánea",
+        "description": "Los pagos se liquidan inmediatamente en RSC Chain"
+      },
+      "benefit2": {
+        "title": "Bajas Comisiones",
+        "description": "Paga comisiones mínimas comparado con procesadores de pago tradicionales"
+      },
+      "benefit3": {
+        "title": "Disponibilidad 24/7",
+        "description": "Acepta pagos en cualquier momento, en cualquier lugar, sin restricciones de horarios bancarios"
+      }
+    },
+    "friction": {
+      "title": "Menos Fricción que Bancos",
+      "description": "RSC Payments elimina la complejidad y demoras de los sistemas bancarios tradicionales.",
+      "banks": {
+        "title": "Bancos Tradicionales",
+        "point1": "Días para liquidación",
+        "point2": "Altas comisiones de transacción",
+        "point3": "Proceso de configuración complejo",
+        "point4": "Restricciones de horarios bancarios"
+      },
+      "rsc": {
+        "title": "RSC Payments",
+        "point1": "Liquidación instantánea",
+        "point2": "Bajas comisiones de transacción",
+        "point3": "Integración simple",
+        "point4": "Disponibilidad 24/7"
+      }
+    },
+    "integration": {
+      "title": "Integración con RSC Wallet",
+      "description": "Integra RSC Payments sin problemas con tu RSC Business Wallet para una gestión financiera completa.",
+      "feature1": {
+        "title": "Plataforma Unificada",
+        "description": "Gestiona pagos y billetera en un solo lugar"
+      },
+      "feature2": {
+        "title": "Conciliación Automática",
+        "description": "Todos los pagos aparecen automáticamente en tu billetera"
+      },
+      "feature3": {
+        "title": "Generación de Códigos QR",
+        "description": "Genera códigos QR directamente desde tu billetera"
+      }
+    },
+    "cases": {
+      "title": "Casos Reales",
+      "case1": {
+        "title": "Tienda Minorista",
+        "description": "Una tienda minorista implementó RSC Payments y redujo el tiempo de procesamiento de pagos en un 90%.",
+        "result": "90% más rápido"
+      },
+      "case2": {
+        "title": "Negocio Online",
+        "description": "Una plataforma de e-commerce integró RSC Payments y redujo las comisiones de transacción en un 70%.",
+        "result": "70% menos comisiones"
+      },
+      "case3": {
+        "title": "Proveedor de Servicios",
+        "description": "Una empresa de servicios usa RSC Payments para liquidaciones instantáneas y mejor flujo de caja.",
+        "result": "Flujo de caja instantáneo"
+      }
+    },
+    "cta": {
+      "title": "Comienza a Aceptar Pagos",
+      "description": "Comienza con RSC Payments hoy o contacta a nuestro equipo de ventas para soluciones empresariales.",
+      "buttonStart": "Empezar",
+      "buttonContact": "Contactar Ventas"
+    }
+  },
+  "businessAPI": {
+    "hero": {
+      "title": "APIs de Pago",
+      "subtitle": "Integra RSC Payments en tus aplicaciones, e-commerce y sistemas POS"
+    },
+    "what": {
+      "title": "Qué Permiten las APIs",
+      "description": "Las APIs de RSC Payments te permiten integrar el procesamiento de pagos directamente en tus aplicaciones, sitios web y sistemas. Construye soluciones de pago personalizadas adaptadas a las necesidades de tu negocio.",
+      "capability1": {
+        "title": "Procesar Pagos",
+        "description": "Acepta y procesa pagos programáticamente mediante llamadas API"
+      },
+      "capability2": {
+        "title": "Gestionar Transacciones",
+        "description": "Crea, rastrea y gestiona transacciones de pago en tiempo real"
+      },
+      "capability3": {
+        "title": "Generar Reportes",
+        "description": "Accede al historial de transacciones y genera reportes personalizados vía API"
+      },
+      "capability4": {
+        "title": "Integración Webhook",
+        "description": "Recibe notificaciones en tiempo real sobre eventos de pago y cambios de estado"
+      }
+    },
+    "cases": {
+      "title": "Casos de Uso",
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Integra pagos en tu tienda online para experiencias de checkout sin fricción.",
+        "feature1": "Checkout de un clic",
+        "feature2": "Pagos recurrentes",
+        "feature3": "Soporte multi-moneda"
+      },
+      "apps": {
+        "title": "Apps Móviles",
+        "description": "Agrega funcionalidad de pagos a tus aplicaciones móviles con SDKs nativos.",
+        "feature1": "SDKs para iOS y Android",
+        "feature2": "Compras in-app",
+        "feature3": "Notificaciones push"
+      },
+      "pos": {
+        "title": "Sistemas POS",
+        "description": "Conecta tus sistemas de punto de venta para aceptar pagos RSC en ubicaciones físicas.",
+        "feature1": "Integración de hardware",
+        "feature2": "Soporte modo offline",
+        "feature3": "Generación de recibos"
+      }
+    },
+    "flow": {
+      "title": "Flujo de Integración",
+      "description": "Proceso de integración simple que se puede completar en solo unos pasos.",
+      "step1": {
+        "title": "Obtener API Keys",
+        "description": "Regístrate y obtén tus API keys desde el panel de desarrollador"
+      },
+      "step2": {
+        "title": "Instalar SDK",
+        "description": "Instala el SDK o librería para tu lenguaje de programación preferido"
+      },
+      "step3": {
+        "title": "Integrar",
+        "description": "Agrega endpoints de pago a tu aplicación usando nuestra documentación API"
+      },
+      "step4": {
+        "title": "Probar y Desplegar",
+        "description": "Prueba en entorno sandbox, luego despliega a producción"
+      }
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Medidas de seguridad de nivel empresarial para proteger tus integraciones API y datos de clientes.",
+      "feature1": {
+        "title": "Autenticación con API Key",
+        "description": "Autenticación segura usando API keys y tokens secretos"
+      },
+      "feature2": {
+        "title": "Cifrado HTTPS",
+        "description": "Todas las comunicaciones API están cifradas usando protocolos TLS/SSL"
+      },
+      "feature3": {
+        "title": "Rate Limiting",
+        "description": "Rate limiting incorporado para prevenir abuso y asegurar estabilidad del sistema"
+      }
+    },
+    "docs": {
+      "title": "Documentación Técnica",
+      "description": "Documentación completa de API con ejemplos de código, SDKs y guías de integración.",
+      "link": "Ver Documentación Técnica"
+    }
+  },
+  "businessUseCases": {
+    "hero": {
+      "title": "Casos de Uso Comerciales",
+      "subtitle": "Ejemplos reales de cómo las empresas usan las soluciones RSC"
+    },
+    "retail": {
+      "title": "Retail",
+      "description": "Tiendas minoristas y negocios físicos usan RSC Payments para aceptar pagos de clientes de forma rápida y segura, reduciendo costos de transacción y mejorando el flujo de caja.",
+      "benefit1": "Aceptar pagos QR de clientes",
+      "benefit2": "Comisiones más bajas que procesadores tradicionales",
+      "benefit3": "Liquidación instantánea a billetera empresarial",
+      "example": {
+        "title": "Ejemplo",
+        "text": "Una tienda de ropa redujo los costos de procesamiento de pagos en un 60% y mejoró la velocidad de checkout en 3x usando RSC Payments."
+      }
+    },
+    "digital": {
+      "title": "Servicios Digitales",
+      "description": "Proveedores de servicios, consultores y negocios digitales usan RSC para recibir pagos por sus servicios, gestionar suscripciones y automatizar facturación.",
+      "benefit1": "Pagos recurrentes automatizados",
+      "benefit2": "Notificaciones de pago instantáneas",
+      "benefit3": "Soporte multi-moneda",
+      "example": {
+        "title": "Ejemplo",
+        "text": "Una firma de consultoría automatizó su facturación y cobro de pagos, reduciendo el tiempo administrativo en un 70%."
+      }
+    },
+    "platforms": {
+      "title": "Plataformas Online",
+      "description": "Plataformas de e-commerce, marketplaces y servicios online integran RSC Payments para ofrecer experiencias de pago sin fricción a sus usuarios.",
+      "benefit1": "Integración de checkout de un clic",
+      "benefit2": "División de pagos en marketplace",
+      "benefit3": "Seguimiento de transacciones en tiempo real",
+      "example": {
+        "title": "Ejemplo",
+        "text": "Un marketplace online integró RSC Payments y aumentó las tasas de conversión en un 25% con checkout más rápido."
+      }
+    },
+    "remittances": {
+      "title": "Remesas",
+      "description": "Servicios financieros y empresas de remesas usan RSC Chain para transferencias transfronterizas rápidas y de bajo costo y servicios de remesas.",
+      "benefit1": "Transferencias transfronterizas rápidas",
+      "benefit2": "Comisiones más bajas que remesas tradicionales",
+      "benefit3": "Disponibilidad 24/7",
+      "example": {
+        "title": "Ejemplo",
+        "text": "Un servicio de remesas redujo las comisiones de transferencia en un 80% y el tiempo de procesamiento de días a segundos."
+      }
+    },
+    "examples": {
+      "title": "Ejemplos Prácticos",
+      "example1": {
+        "title": "Cadena de Supermercados",
+        "description": "Una cadena de supermercados implementó RSC Payments en 50 tiendas, procesando más de 10,000 transacciones diarias.",
+        "metric1": "10,000+ transacciones diarias",
+        "metric2": "60% reducción de costos"
+      },
+      "example2": {
+        "title": "Plataforma SaaS",
+        "description": "Una empresa SaaS integró RSC Payments para facturación de suscripciones, gestionando miles de pagos recurrentes.",
+        "metric1": "5,000+ suscripciones activas",
+        "metric2": "99.9% tiempo de actividad"
+      },
+      "example3": {
+        "title": "Marketplace",
+        "description": "Un marketplace online usa RSC Payments para transacciones comprador-vendedor con depósito en garantía y liquidación automática.",
+        "metric1": "50% transacciones más rápidas",
+        "metric2": "Cero incidentes de fraude"
+      }
+    }
+  },
+  "institutionalP2P": {
+    "hero": {
+      "title": "Mercado P2P Institucional",
+      "subtitle": "Infraestructura de trading peer-to-peer de nivel empresarial para instituciones financieras"
+    },
+    "what": {
+      "title": "Qué es el Mercado P2P Institucional",
+      "description": "El Mercado P2P Institucional es una infraestructura de trading sofisticada diseñada para instituciones financieras, fondos y brokers. Permite transacciones peer-to-peer seguras, cumplidas y eficientes a escala, con servicios de depósito en garantía integrados y características de cumplimiento regulatorio.",
+      "feature1": {
+        "title": "Trading Institucional",
+        "description": "Capacidades de trading de alto volumen diseñadas para participantes institucionales con sistemas avanzados de emparejamiento de órdenes y liquidación"
+      },
+      "feature2": {
+        "title": "Infraestructura de Mercado",
+        "description": "Infraestructura de mercado robusta con precios en tiempo real, gestión de libro de órdenes y ejecución de trades"
+      },
+      "feature3": {
+        "title": "Seguridad y Confianza",
+        "description": "Seguridad de nivel empresarial con billeteras multi-firma, integración de almacenamiento en frío y trazabilidad de auditoría completa"
+      }
+    },
+    "escrow": {
+      "title": "Servicios de Depósito en Garantía",
+      "description": "Los servicios automatizados de depósito en garantía aseguran transacciones seguras al mantener activos en custodia hasta que se cumplan todas las condiciones, protegiendo a ambas partes en transacciones institucionales.",
+      "feature1": {
+        "title": "Custodia Automatizada",
+        "description": "Depósito en garantía basado en contratos inteligentes que automáticamente mantiene activos hasta que se verifiquen y completen las condiciones de trade"
+      },
+      "feature2": {
+        "title": "Verificación Multi-Parte",
+        "description": "Requiere verificación de múltiples partes antes de liberar fondos, asegurando cumplimiento y reduciendo riesgo de fraude"
+      },
+      "feature3": {
+        "title": "Resolución de Disputas",
+        "description": "Mecanismos de resolución de disputas incorporados con soporte de arbitraje para transacciones institucionales complejas"
+      }
+    },
+    "compliance": {
+      "title": "Cumplimiento y Regulatorio",
+      "description": "Marco de cumplimiento integral diseñado para cumplir con los requisitos regulatorios para servicios financieros institucionales.",
+      "item1": "Verificación KYC/AML para todos los participantes",
+      "item2": "Monitoreo y reporte de transacciones",
+      "item3": "Reporte regulatorio y trazabilidad de auditoría",
+      "item4": "Servicios de custodia licenciados",
+      "item5": "Soporte de cumplimiento multi-jurisdiccional",
+      "item6": "Evaluación de riesgo y alertas en tiempo real"
+    },
+    "cases": {
+      "title": "Casos de Uso",
+      "funds": {
+        "title": "Fondos de Inversión",
+        "description": "Los fondos de inversión usan el mercado P2P para trading seguro de activos, rebalanceo de portafolio y liquidación eficiente.",
+        "benefit1": "Capacidades de trading de gran volumen",
+        "benefit2": "Custodia segura de activos",
+        "benefit3": "Liquidación y reporte automatizados"
+      },
+      "brokers": {
+        "title": "Brokers y Firmas de Trading",
+        "description": "Los brokers y firmas de trading aprovechan la plataforma para trading de clientes, market making y provisión de liquidez.",
+        "benefit1": "Emparejamiento avanzado de órdenes",
+        "benefit2": "Datos de mercado en tiempo real",
+        "benefit3": "Herramientas de cumplimiento regulatorio"
+      }
+    },
+    "cta": {
+      "title": "Contacto Institucional",
+      "description": "Contacta a nuestro equipo institucional para conocer más sobre la infraestructura del Mercado P2P y discutir tus requisitos específicos.",
+      "button": "Contactar Equipo Institucional"
+    }
+  },
+  "institutionalChain": {
+    "hero": {
+      "title": "RSC Chain",
+      "subtitle": "Infraestructura blockchain empresarial para aplicaciones institucionales"
+    },
+    "what": {
+      "title": "Qué es RSC Chain",
+      "description": "RSC Chain es una infraestructura blockchain de alto rendimiento diseñada para uso institucional. Construida con seguridad de nivel empresarial, escalabilidad y características de cumplimiento, permite a las instituciones financieras construir y desplegar aplicaciones descentralizadas a escala.",
+      "feature1": {
+        "title": "Alto Rendimiento",
+        "description": "Optimizado para alto throughput y baja latencia, soportando miles de transacciones por segundo"
+      },
+      "feature2": {
+        "title": "Seguridad Empresarial",
+        "description": "Arquitectura de seguridad multicapa con criptografía avanzada y gestión de claves de nivel institucional"
+      },
+      "feature3": {
+        "title": "Cumplimiento Regulatorio",
+        "description": "Características de cumplimiento incorporadas incluyendo integración KYC/AML y capacidades de reporte regulatorio"
+      }
+    },
+    "architecture": {
+      "title": "Arquitectura",
+      "description": "RSC Chain presenta una arquitectura modular y en capas diseñada para flexibilidad, escalabilidad y requisitos institucionales.",
+      "layer1": {
+        "title": "Capa de Consenso",
+        "description": "Mecanismo de consenso robusto que asegura la seguridad de la red y la finalidad de las transacciones"
+      },
+      "layer2": {
+        "title": "Capa de Ejecución",
+        "description": "Entorno de ejecución de alto rendimiento que soporta contratos inteligentes y transacciones complejas"
+      },
+      "layer3": {
+        "title": "Capa de Aplicación",
+        "description": "APIs y herramientas amigables para desarrolladores para construir aplicaciones y servicios institucionales"
+      }
+    },
+    "consensus": {
+      "title": "Mecanismo de Consenso",
+      "description": "RSC Chain usa un mecanismo de consenso avanzado diseñado para seguridad, rendimiento y descentralización de nivel institucional.",
+      "feature1": {
+        "title": "Finalidad Rápida",
+        "description": "Confirmación rápida de transacciones con finalidad determinística, asegurando liquidación inmediata"
+      },
+      "feature2": {
+        "title": "Alto Throughput",
+        "description": "Algoritmo de consenso optimizado que soporta altos volúmenes de transacciones sin comprometer la seguridad"
+      },
+      "feature3": {
+        "title": "Tolerancia a Fallos Bizantinos",
+        "description": "Resiliente a fallos de red y actores maliciosos, manteniendo la integridad de la red bajo todas las condiciones"
+      }
+    },
+    "scalability": {
+      "title": "Escalabilidad",
+      "description": "RSC Chain está diseñado para escalar con la demanda institucional, soportando volúmenes de transacciones y participantes de red en crecimiento.",
+      "metric1": {
+        "value": "10,000+",
+        "label": "Transacciones por segundo"
+      },
+      "metric2": {
+        "value": "< 2s",
+        "label": "Tiempo de confirmación de bloque"
+      },
+      "metric3": {
+        "value": "99.9%",
+        "label": "Tiempo de actividad de red"
+      }
+    },
+    "cases": {
+      "title": "Casos de Uso Institucionales",
+      "case1": {
+        "title": "Monedas Digitales de Banco Central",
+        "description": "Los bancos centrales aprovechan la infraestructura de RSC Chain para implementación de CBDC y sistemas de moneda digital.",
+        "benefit1": "Cumplimiento regulatorio incorporado",
+        "benefit2": "Alto throughput de transacciones",
+        "benefit3": "Seguro y auditable"
+      },
+      "case2": {
+        "title": "Pagos Transfronterizos",
+        "description": "Las instituciones financieras usan RSC Chain para redes de pagos transfronterizos rápidas y de bajo costo y servicios de remesas.",
+        "benefit1": "Liquidación instantánea",
+        "benefit2": "Costos de transacción reducidos",
+        "benefit3": "Disponibilidad 24/7"
+      },
+      "case3": {
+        "title": "Infraestructura de Activos Digitales",
+        "description": "Las instituciones construyen plataformas de activos digitales, sistemas de tokenización y protocolos DeFi en RSC Chain.",
+        "benefit1": "Soporte de contratos inteligentes",
+        "benefit2": "Características de interoperabilidad",
+        "benefit3": "Herramientas amigables para desarrolladores"
+      }
+    },
+    "cta": {
+      "docs": "Ver Documentación Técnica",
+      "partnership": "Asociación Institucional"
+    }
+  },
+  "institutionalCorporate": {
+    "hero": {
+      "title": "RSC Corporate",
+      "subtitle": "Servicios y soluciones blockchain empresariales para grandes instituciones"
+    },
+    "consulting": {
+      "title": "Consultoría Blockchain",
+      "description": "Servicios de consultoría blockchain expertos para ayudar a tu organización a entender, planificar e implementar soluciones blockchain adaptadas a tus necesidades específicas.",
+      "service1": {
+        "title": "Planificación Estratégica",
+        "description": "Desarrollo de estrategia blockchain integral y planificación de hoja de ruta para tu organización"
+      },
+      "service2": {
+        "title": "Evaluación de Seguridad",
+        "description": "Auditorías de seguridad en profundidad y evaluaciones de riesgo para implementaciones blockchain"
+      },
+      "service3": {
+        "title": "Guía de Implementación",
+        "description": "Guía experta durante todo el ciclo de vida de implementación blockchain"
+      }
+    },
+    "infrastructure": {
+      "title": "Infraestructura Dedicada",
+      "description": "Infraestructura blockchain privada y dedicada diseñada específicamente para los requisitos de tu empresa con control y personalización completos.",
+      "feature1": {
+        "title": "Redes Privadas",
+        "description": "Redes blockchain dedicadas aisladas de cadenas públicas, asegurando privacidad y control completos"
+      },
+      "feature2": {
+        "title": "Configuración Personalizada",
+        "description": "Infraestructura configurada según tus especificaciones exactas, requisitos de rendimiento y necesidades de cumplimiento"
+      },
+      "feature3": {
+        "title": "Servicios Gestionados",
+        "description": "Infraestructura completamente gestionada con monitoreo, mantenimiento y soporte 24/7"
+      }
+    },
+    "integrations": {
+      "title": "Integraciones Privadas",
+      "description": "Integración fluida de tecnología blockchain en tus sistemas y flujos de trabajo empresariales existentes.",
+      "integration1": {
+        "title": "Integración de Sistemas",
+        "description": "Integración con tus sistemas ERP, CRM y empresariales existentes",
+        "benefit1": "Integración basada en API",
+        "benefit2": "Sincronización de datos en tiempo real"
+      },
+      "integration2": {
+        "title": "Desarrollo Personalizado",
+        "description": "Aplicaciones blockchain y contratos inteligentes personalizados desarrollados para tus casos de uso específicos",
+        "benefit1": "Soluciones adaptadas",
+        "benefit2": "Propiedad completa del código fuente"
+      }
+    },
+    "support": {
+      "title": "Soporte Empresarial",
+      "description": "Servicios de soporte empresarial integrales para asegurar que tu infraestructura blockchain funcione de manera fluida y eficiente.",
+      "feature1": {
+        "title": "Soporte Técnico 24/7",
+        "description": "Soporte técnico las 24 horas del día de nuestro equipo experto para problemas críticos y emergencias"
+      },
+      "feature2": {
+        "title": "Gerente de Cuenta Dedicado",
+        "description": "Un gerente de cuenta dedicado asignado a tu organización para servicio personalizado y coordinación"
+      },
+      "feature3": {
+        "title": "Tiempos de Respuesta Prioritarios",
+        "description": "Tiempos de respuesta prioritarios garantizados para solicitudes de soporte y resolución de problemas"
+      },
+      "feature4": {
+        "title": "Capacitación y Documentación",
+        "description": "Programas de capacitación y documentación integrales para ayudar a tu equipo a maximizar el valor de la tecnología blockchain"
+      }
+    },
+    "cta": {
+      "title": "Contacto Directo",
+      "description": "Contacta directamente a nuestro equipo empresarial para discutir tus requisitos específicos y conocer cómo RSC Corporate puede ayudar a tu organización.",
+      "button": "Contactar Equipo Empresarial"
+    }
+  },
+  "institutionalRSK": {
+    "hero": {
+      "title": "REESK (RSK)",
+      "subtitle": "El activo digital nativo del ecosistema RSC Chain"
+    },
+    "what": {
+      "title": "Qué es RSK",
+      "description": "RSK (REESK) es el activo digital nativo del ecosistema RSC Chain. Sirve como el token de utilidad principal, permitiendo transacciones, gobernanza, staking y varias funciones del ecosistema dentro de la red RSC.",
+      "feature1": {
+        "title": "Activo Nativo",
+        "description": "El activo digital fundamental que impulsa todas las operaciones y transacciones en RSC Chain"
+      },
+      "feature2": {
+        "title": "Utilidad de Red",
+        "description": "Esencial para tarifas de transacción, ejecución de contratos inteligentes y participación en la red"
+      },
+      "feature3": {
+        "title": "Integración del Ecosistema",
+        "description": "Profundamente integrado en todos los servicios, aplicaciones e infraestructura de RSC Chain"
+      }
+    },
+    "role": {
+      "title": "Rol dentro del Ecosistema",
+      "description": "RSK juega un papel central en el ecosistema RSC Chain, sirviendo múltiples funciones críticas que permiten la operación y el crecimiento de la red.",
+      "feature1": {
+        "title": "Medio de Transacción",
+        "description": "Moneda principal para todas las transacciones, pagos y transferencias de valor en RSC Chain"
+      },
+      "feature2": {
+        "title": "Participación en Gobernanza",
+        "description": "Permite a los tenedores participar en la gobernanza de la red y procesos de toma de decisiones"
+      },
+      "feature3": {
+        "title": "Staking y Recompensas",
+        "description": "Usado para staking para asegurar la red y ganar recompensas por participación en la red"
+      }
+    },
+    "supply": {
+      "title": "Supply y Utilidad",
+      "description": "RSK tiene un mecanismo de oferta cuidadosamente diseñado y múltiples funciones de utilidad dentro del ecosistema RSC Chain.",
+      "supply": {
+        "title": "Oferta de Tokens",
+        "metric1": {
+          "label": "Oferta Total",
+          "value": "Oferta Fija"
+        },
+        "metric2": {
+          "label": "Distribución",
+          "value": "Asignación Institucional"
+        }
+      },
+      "utility": {
+        "title": "Funciones de Utilidad",
+        "utility1": "Tarifas de transacción y pagos de gas",
+        "utility2": "Staking y seguridad de red",
+        "utility3": "Derechos de voto en gobernanza",
+        "utility4": "Acceso a características premium"
+      }
+    },
+    "cases": {
+      "title": "Casos de Uso Institucionales",
+      "case1": {
+        "title": "Gestión de Tesorería",
+        "description": "Las instituciones usan RSK para gestión de tesorería, mantener reservas y gestionar portafolios de activos digitales.",
+        "benefit1": "Reserva de valor",
+        "benefit2": "Gestión de liquidez"
+      },
+      "case2": {
+        "title": "Infraestructura de Pagos",
+        "description": "RSK sirve como la base para sistemas de pago institucionales y transacciones transfronterizas.",
+        "benefit1": "Liquidación rápida",
+        "benefit2": "Bajos costos de transacción"
+      },
+      "case3": {
+        "title": "Staking y Rendimiento",
+        "description": "Las instituciones hacen staking de RSK para ganar recompensas mientras contribuyen a la seguridad y estabilidad de la red.",
+        "benefit1": "Generación de ingresos pasivos",
+        "benefit2": "Recompensas por participación en red"
+      }
+    },
+    "docs": {
+      "roadmap": "Ver Roadmap",
+      "documentation": "Documentación Técnica"
+    }
+  },
+  "developersDocs": {
+    "hero": {
+      "title": "Documentación para Desarrolladores",
+      "subtitle": "Guías completas, APIs y herramientas para construir en RSC Chain"
+    },
+    "gettingStarted": {
+      "title": "Guía de Inicio",
+      "description": "Comienza a construir en RSC Chain con nuestra guía de inicio completa. Sigue estos pasos para configurar tu entorno de desarrollo y crear tu primera aplicación.",
+      "step1": {
+        "title": "Configurar Entorno",
+        "description": "Instala las herramientas requeridas, SDKs y configura tu entorno de desarrollo"
+      },
+      "step2": {
+        "title": "Crear API Keys",
+        "description": "Regístrate para una cuenta de desarrollador y obtén tus API keys desde el panel"
+      },
+      "step3": {
+        "title": "Conectar a la Red",
+        "description": "Conéctate a RSC Chain testnet o mainnet usando endpoints RPC"
+      },
+      "step4": {
+        "title": "Construir tu Primera App",
+        "description": "Sigue nuestros tutoriales para crear tu primera aplicación descentralizada"
+      }
+    },
+    "walletAPI": {
+      "title": "Wallet API",
+      "description": "Integra funcionalidad de billetera en tus aplicaciones usando nuestra API de Wallet completa. Crea billeteras, gestiona cuentas y procesa transacciones programáticamente.",
+      "feature1": {
+        "title": "Gestión de Cuentas",
+        "description": "Crea, importa y gestiona cuentas de billetera con control programático completo"
+      },
+      "feature2": {
+        "title": "Procesamiento de Transacciones",
+        "description": "Envía, recibe y rastrea transacciones con historial detallado de transacciones"
+      },
+      "feature3": {
+        "title": "Soporte Multi-Firma",
+        "description": "Implementa billeteras multi-firma para mayor seguridad y gobernanza"
+      }
+    },
+    "rpc": {
+      "title": "Blockchain RPC",
+      "description": "Interactúa con la blockchain de RSC Chain usando la API JSON-RPC. Consulta datos de blockchain, envía transacciones e interactúa con contratos inteligentes.",
+      "feature1": {
+        "title": "Endpoints RPC",
+        "description": "Accede a endpoints RPC públicos y privados para testnet y mainnet"
+      },
+      "feature2": {
+        "title": "Interacción con Contratos Inteligentes",
+        "description": "Despliega, llama e interactúa con contratos inteligentes usando métodos RPC"
+      },
+      "feature3": {
+        "title": "Consultas Blockchain",
+        "description": "Consulta bloques, transacciones, cuentas y estados de contratos en tiempo real"
+      }
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Mejores prácticas y guías para desarrollo seguro en RSC Chain.",
+      "feature1": {
+        "title": "Gestión de Claves",
+        "description": "Almacenamiento y gestión segura de claves privadas y credenciales"
+      },
+      "feature2": {
+        "title": "Validación de Entrada",
+        "description": "Valida y sanitiza todas las entradas de usuario para prevenir ataques de inyección"
+      },
+      "feature3": {
+        "title": "Seguridad de Transacciones",
+        "description": "Implementa mecanismos adecuados de firma y verificación de transacciones"
+      },
+      "feature4": {
+        "title": "Auditoría de Contratos Inteligentes",
+        "description": "Sigue las mejores prácticas de seguridad y realiza auditorías exhaustivas antes del despliegue"
+      }
+    },
+    "examples": {
+      "title": "Ejemplos de Código",
+      "example1": {
+        "title": "Integración de Billetera",
+        "description": "Ejemplo completo de integración de funcionalidad de billetera en una aplicación web",
+        "link": "Ver Ejemplo"
+      },
+      "example2": {
+        "title": "Despliegue de Contrato Inteligente",
+        "description": "Guía paso a paso para desplegar e interactuar con contratos inteligentes",
+        "link": "Ver Ejemplo"
+      },
+      "example3": {
+        "title": "Procesamiento de Transacciones",
+        "description": "Código de ejemplo para enviar y recibir transacciones en RSC Chain",
+        "link": "Ver Ejemplo"
+      }
+    }
+  },
+  "developersChain": {
+    "hero": {
+      "title": "RSC Chain",
+      "subtitle": "Documentación técnica para ejecutar nodos e interactuar con RSC Chain"
+    },
+    "node": {
+      "title": "Cómo Correr un Nodo",
+      "description": "Aprende cómo configurar y ejecutar tu propio nodo de RSC Chain para participar en la red y acceder a datos de blockchain directamente.",
+      "step1": {
+        "title": "Instalar Dependencias",
+        "description": "Instala las dependencias del sistema y herramientas requeridas",
+        "code": "sudo apt-get update && sudo apt-get install -y build-essential"
+      },
+      "step2": {
+        "title": "Clonar Repositorio",
+        "description": "Clona el repositorio del nodo de RSC Chain desde GitHub",
+        "code": "git clone https://github.com/rsc-chain/node.git"
+      },
+      "step3": {
+        "title": "Compilar y Ejecutar",
+        "description": "Compila el binario del nodo e inicia el nodo",
+        "code": "cd node && make build && ./rsc-node --network mainnet"
+      }
+    },
+    "endpoints": {
+      "title": "Endpoints RPC",
+      "description": "Conéctate a RSC Chain usando endpoints RPC públicos o privados para testnet y mainnet.",
+      "endpoint1": {
+        "title": "RPC Mainnet",
+        "url": "https://rpc.rscchain.io",
+        "description": "Endpoint RPC público para RSC Chain mainnet"
+      },
+      "endpoint2": {
+        "title": "RPC Testnet",
+        "url": "https://testnet.rpc.rscchain.io",
+        "description": "Endpoint RPC público para RSC Chain testnet"
+      },
+      "endpoint3": {
+        "title": "RPC WebSocket",
+        "url": "wss://rpc.rscchain.io/ws",
+        "description": "Endpoint WebSocket para datos de blockchain en tiempo real"
+      }
+    },
+    "architecture": {
+      "title": "Arquitectura Técnica",
+      "description": "Entender la arquitectura técnica de RSC Chain ayuda a los desarrolladores a construir mejores aplicaciones e integraciones.",
+      "layer1": {
+        "title": "Capa de Consenso",
+        "description": "El mecanismo de consenso asegura la seguridad de la red y la finalidad de las transacciones a través de un proceso de validación robusto"
+      },
+      "layer2": {
+        "title": "Capa de Red",
+        "description": "La capa de red P2P maneja la comunicación entre nodos, propagación de bloques y descubrimiento de pares"
+      },
+      "layer3": {
+        "title": "Capa de Aplicación",
+        "description": "Entorno de ejecución de contratos inteligentes e interfaces de aplicación para construir aplicaciones descentralizadas"
+      }
+    },
+    "github": {
+      "title": "Repositorios de GitHub",
+      "description": "Accede al código fuente, contribuye al desarrollo y explora los repositorios de RSC Chain en GitHub.",
+      "link1": {
+        "title": "Nodo RSC Chain",
+        "url": "github.com/rsc-chain/node"
+      },
+      "link2": {
+        "title": "SDK RSC Chain",
+        "url": "github.com/rsc-chain/sdk"
+      },
+      "link3": {
+        "title": "Documentación RSC Chain",
+        "url": "github.com/rsc-chain/docs"
+      }
+    }
+  },
+  "developersAPIs": {
+    "hero": {
+      "title": "APIs y SDKs",
+      "subtitle": "SDKs y APIs completas para construir en RSC Chain"
+    },
+    "walletSDK": {
+      "title": "SDK Wallet",
+      "description": "Integra funcionalidad de billetera en tus aplicaciones con nuestro SDK de Wallet completo. Disponible para múltiples lenguajes de programación y plataformas.",
+      "feature1": "Crear y gestionar cuentas de billetera",
+      "feature2": "Enviar y recibir transacciones",
+      "feature3": "Soporte de billetera multi-firma",
+      "feature4": "Historial de transacciones y consultas de balance",
+      "install": {
+        "title": "Instalación",
+        "code": "npm install @rsc-chain/wallet-sdk"
+      }
+    },
+    "paymentsSDK": {
+      "title": "SDK Payments",
+      "description": "Procesa pagos sin problemas con nuestro SDK de Payments. Maneja pagos QR, transferencias instantáneas y procesamiento de pagos con facilidad.",
+      "feature1": "Generación de pagos con código QR",
+      "feature2": "Procesamiento de pagos instantáneo",
+      "feature3": "Seguimiento de estado de pagos",
+      "feature4": "Soporte de integración webhook",
+      "install": {
+        "title": "Instalación",
+        "code": "npm install @rsc-chain/payments-sdk"
+      }
+    },
+    "examples": {
+      "title": "Ejemplos de Código",
+      "example1": {
+        "title": "Crear Billetera",
+        "description": "Código de ejemplo para crear una nueva cuenta de billetera",
+        "code": "const wallet = await WalletSDK.create();",
+        "link": "Ver Ejemplo Completo"
+      },
+      "example2": {
+        "title": "Procesar Pago",
+        "description": "Código de ejemplo para procesar una transacción de pago",
+        "code": "const payment = await PaymentsSDK.create({ amount, recipient });",
+        "link": "Ver Ejemplo Completo"
+      },
+      "example3": {
+        "title": "Verificar Balance",
+        "description": "Código de ejemplo para verificar el balance de la billetera",
+        "code": "const balance = await wallet.getBalance();",
+        "link": "Ver Ejemplo Completo"
+      }
+    },
+    "versioning": {
+      "title": "Versionado",
+      "description": "Nuestros SDKs siguen versionado semántico. Consulta las últimas versiones y changelogs para cada paquete.",
+      "version1": {
+        "name": "Wallet SDK",
+        "tag": "v2.1.0",
+        "description": "Última versión estable con características de seguridad mejoradas y mejoras de rendimiento",
+        "link": "Ver Changelog"
+      },
+      "version2": {
+        "name": "Payments SDK",
+        "tag": "v1.5.2",
+        "description": "Última versión estable con nuevos métodos de pago y correcciones de errores",
+        "link": "Ver Changelog"
+      }
+    }
+  },
+  "developersTestnet": {
+    "hero": {
+      "title": "Testnet",
+      "subtitle": "Prueba y desarrolla en RSC Chain testnet sin usar fondos reales"
+    },
+    "what": {
+      "title": "Qué es la Testnet",
+      "description": "RSC Chain testnet es una red blockchain separada diseñada para pruebas y desarrollo. Usa tokens de prueba que no tienen valor real, permitiendo a los desarrolladores experimentar libremente sin riesgo financiero.",
+      "benefit1": {
+        "title": "Pruebas Sin Riesgo",
+        "description": "Prueba tus aplicaciones y contratos inteligentes sin usar fondos o activos reales"
+      },
+      "benefit2": {
+        "title": "Funcionalidad Completa",
+        "description": "La testnet proporciona la misma funcionalidad que mainnet, permitiendo pruebas completas"
+      },
+      "benefit3": {
+        "title": "Tokens de Prueba Gratis",
+        "description": "Obtén tokens de prueba del faucet para comenzar a probar inmediatamente"
+      }
+    },
+    "faucet": {
+      "title": "Faucet",
+      "description": "El faucet de testnet proporciona tokens de prueba gratuitos para desarrollo y pruebas.",
+      "card": {
+        "title": "Obtener Tokens de Prueba",
+        "description": "Solicita tokens de prueba directamente del faucet para financiar tu billetera de testnet para desarrollo y pruebas.",
+        "info1": "Tokens de prueba gratuitos para desarrollo",
+        "info2": "Sin valor real, seguro para experimentar",
+        "button": "Acceder al Faucet"
+      }
+    },
+    "explorer": {
+      "title": "Explorador Blockchain",
+      "description": "Explora la blockchain de testnet, visualiza transacciones, bloques y contratos inteligentes usando el explorador de testnet.",
+      "card": {
+        "title": "Explorador Testnet",
+        "description": "Navega transacciones, bloques, cuentas y contratos inteligentes en RSC Chain testnet.",
+        "feature1": "Ver historial de transacciones",
+        "feature2": "Explorar bloques y cuentas",
+        "feature3": "Inspeccionar contratos inteligentes",
+        "button": "Abrir Explorador"
+      }
+    },
+    "limitations": {
+      "title": "Limitaciones",
+      "description": "Limitaciones importantes y consideraciones al usar la testnet para desarrollo.",
+      "limitation1": {
+        "title": "Sin Valor Real",
+        "description": "Los tokens de prueba no tienen valor monetario real y no pueden intercambiarse por activos reales"
+      },
+      "limitation2": {
+        "title": "Reseteos de Red",
+        "description": "La testnet puede ser reseteada periódicamente, causando pérdida de datos y transacciones de prueba"
+      },
+      "limitation3": {
+        "title": "Diferencias de Rendimiento",
+        "description": "El rendimiento de la testnet puede diferir del mainnet debido a menor actividad de red"
+      },
+      "limitation4": {
+        "title": "No para Producción",
+        "description": "La testnet es solo para desarrollo y no debe usarse para aplicaciones de producción"
+      }
+    }
+  },
+  "developersRoadmap": {
+    "hero": {
+      "title": "Roadmap Técnico de RSC",
+      "subtitle": "Transparencia sobre lo que se construye, lo que está en progreso y lo que viene.",
+      "cta": "Ver Repositorios",
+      "githubLink": "https://github.com/rscchain"
+    },
+    "now": {
+      "label": "Ahora",
+      "title": "En Desarrollo",
+      "description": "Trabajo actual en Wallet, APIs e infraestructura core.",
+      "items": {
+        "item1": {
+          "title": "Funcionalidades Core de Wallet",
+          "version": "v2.1.0",
+          "date": "Q1 2024",
+          "description": "Funcionalidad mejorada de wallet con seguridad mejorada, soporte multi-firma y gestión avanzada de transacciones.",
+          "githubLink": "https://github.com/rscchain/wallet/issues"
+        },
+        "item2": {
+          "title": "APIs de Pago",
+          "version": "v1.5.0",
+          "date": "Q1 2024",
+          "description": "Expansión de capacidades de API de pago con nuevos endpoints, mejoras en webhooks y documentación mejorada.",
+          "githubLink": "https://github.com/rscchain/payments-api/issues"
+        },
+        "item3": {
+          "title": "Infraestructura Core",
+          "version": "v3.0.0",
+          "date": "Q2 2024",
+          "description": "Mejora de infraestructura blockchain con mejor escalabilidad, optimizaciones de rendimiento y mejoras de estabilidad de red.",
+          "githubLink": "https://github.com/rscchain/core/issues"
+        }
+      }
+    },
+    "next": {
+      "label": "Próximo",
+      "title": "Próximamente",
+      "description": "Desarrollo de Bridge, mejoras de consenso y herramientas para desarrolladores.",
+      "items": {
+        "item1": {
+          "title": "Bridge Cross-Chain",
+          "version": "v1.0.0",
+          "date": "Q2-Q3 2024",
+          "description": "Desarrollo de un bridge cross-chain seguro para habilitar transferencias de activos entre RSC Chain y otras blockchains principales.",
+          "githubLink": "https://github.com/rscchain/bridge/issues"
+        },
+        "item2": {
+          "title": "Mejoras de Consenso",
+          "version": "v3.1.0",
+          "date": "Q3 2024",
+          "description": "Mejora del mecanismo de consenso para mejor rendimiento, menor latencia y eficiencia de red mejorada.",
+          "githubLink": "https://github.com/rscchain/consensus/issues"
+        },
+        "item3": {
+          "title": "Herramientas para Desarrolladores",
+          "version": "v2.0.0",
+          "date": "Q3 2024",
+          "description": "Nuevas herramientas de desarrollo, SDKs mejorados y capacidades de depuración mejoradas para desarrolladores construyendo en RSC Chain.",
+          "githubLink": "https://github.com/rscchain/tooling/issues"
+        }
+      }
+    },
+    "later": {
+      "label": "Más Tarde",
+      "title": "Exploración",
+      "description": "Optimización, features avanzadas e integraciones bajo consideración.",
+      "items": {
+        "item1": {
+          "title": "Soluciones Layer 2",
+          "version": "TBD",
+          "date": "2025",
+          "description": "Explorando soluciones de escalado Layer 2 para mejorar aún más el rendimiento de transacciones y reducir costos.",
+          "githubLink": "https://github.com/rscchain/layer2/issues"
+        },
+        "item2": {
+          "title": "Features DeFi Avanzadas",
+          "version": "TBD",
+          "date": "2025",
+          "description": "Investigación y desarrollo de features DeFi avanzadas incluyendo préstamos, borrowing y protocolos de yield farming.",
+          "githubLink": "https://github.com/rscchain/defi/issues"
+        },
+        "item3": {
+          "title": "Integraciones Empresariales",
+          "version": "TBD",
+          "date": "2025",
+          "description": "Construyendo integraciones con sistemas empresariales principales e infraestructura financiera tradicional.",
+          "githubLink": "https://github.com/rscchain/integrations/issues"
+        }
+      }
+    },
+    "viewOnGitHub": "Ver en GitHub",
+    "cta": {
+      "title": "Contribuir y Construir en RSC",
+      "description": "Únete a nuestra comunidad de desarrolladores construyendo el futuro de las finanzas descentralizadas. Contribuye código, reporta issues o construye tus propios proyectos en RSC Chain.",
+      "contribute": "Contribuir",
+      "contributeLink": "https://github.com/rscchain",
+      "build": "Construir en RSC",
+      "buildLink": "/developers/docs"
+    }
+  },
+  "companyAbout": {
+    "hero": {
+      "title": "Acerca de RSC",
+      "subtitle": "La organización detrás del ecosistema RSC"
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Nuestra visión es crear un ecosistema financiero descentralizado que empodere a individuos e instituciones en todo el mundo, haciendo los servicios financieros accesibles, transparentes y seguros para todos."
+    },
+    "mission": {
+      "title": "Misión",
+      "description": "Nuestra misión es construir y mantener la infraestructura de RSC Chain, proporcionando soluciones blockchain innovadoras que permitan transacciones financieras seguras, rápidas y rentables mientras fomentamos la inclusión financiera y la innovación."
+    },
+    "philosophy": {
+      "title": "Filosofía",
+      "description": "Nuestra filosofía central guía todo lo que hacemos y da forma a nuestro enfoque para construir el ecosistema RSC.",
+      "principle1": {
+        "title": "Descentralización",
+        "description": "Creemos en el poder de los sistemas descentralizados para crear infraestructura financiera más transparente, justa y resiliente."
+      },
+      "principle2": {
+        "title": "Seguridad Primero",
+        "description": "La seguridad está en el centro de todo lo que construimos, asegurando la protección de los fondos y datos de los usuarios por encima de todo."
+      },
+      "principle3": {
+        "title": "Innovación Abierta",
+        "description": "Fomentamos un ecosistema abierto donde desarrolladores, empresas e instituciones pueden innovar y construir juntos."
+      }
+    }
+  },
+  "companySecurity": {
+    "hero": {
+      "title": "Seguridad y Cumplimiento",
+      "subtitle": "Nuestro compromiso con la seguridad y la protección de activos de usuarios"
+    },
+    "model": {
+      "title": "Modelo de Seguridad",
+      "description": "RSC emplea un modelo de seguridad integral y multicapa diseñado para proteger activos de usuarios, datos y la integridad de la red.",
+      "feature1": {
+        "title": "Protección Multicapa",
+        "description": "Múltiples capas de seguridad incluyendo cifrado, controles de acceso y sistemas de monitoreo"
+      },
+      "feature2": {
+        "title": "Gestión de Claves",
+        "description": "Sistemas avanzados de gestión de claves con módulos de seguridad de hardware y almacenamiento seguro de claves"
+      },
+      "feature3": {
+        "title": "Monitoreo Continuo",
+        "description": "Sistemas de monitoreo 24/7 y detección de amenazas para identificar y responder a incidentes de seguridad"
+      }
+    },
+    "responsibilities": {
+      "title": "Responsabilidades",
+      "description": "Tomamos nuestras responsabilidades de seguridad en serio y estamos comprometidos a mantener los más altos estándares.",
+      "responsibility1": {
+        "title": "Protección de Activos",
+        "description": "Proteger activos de usuarios a través de infraestructura segura y mejores prácticas de seguridad"
+      },
+      "responsibility2": {
+        "title": "Privacidad de Datos",
+        "description": "Asegurar la privacidad de datos de usuarios y cumplimiento con regulaciones de protección de datos"
+      },
+      "responsibility3": {
+        "title": "Transparencia",
+        "description": "Mantener transparencia sobre nuestras prácticas de seguridad y cualquier incidente que pueda ocurrir"
+      }
+    },
+    "practices": {
+      "title": "Mejores Prácticas",
+      "description": "Mejores prácticas de seguridad que seguimos para asegurar la seguridad de nuestra plataforma y usuarios.",
+      "practice1": "Auditorías de seguridad regulares y pruebas de penetración",
+      "practice2": "Capacitación en seguridad y programas de concienciación para empleados",
+      "practice3": "Planes de respuesta a incidentes y recuperación ante desastres",
+      "practice4": "Cumplimiento con estándares de seguridad de la industria",
+      "practice5": "Actualizaciones y parches de seguridad regulares"
+    }
+  },
+  "companyCareers": {
+    "hero": {
+      "title": "Carreras",
+      "subtitle": "Únete a nosotros para construir el futuro de las finanzas descentralizadas"
+    },
+    "positions": {
+      "title": "Vacantes Abiertas",
+      "position1": {
+        "title": "Desarrollador Blockchain Senior",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "description": "Lidera el desarrollo de infraestructura blockchain y contratos inteligentes para RSC Chain.",
+        "link": "Aplicar Ahora"
+      },
+      "position2": {
+        "title": "Ingeniero de Seguridad",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "description": "Diseña e implementa medidas de seguridad para proteger la infraestructura de RSC Chain y activos de usuarios.",
+        "link": "Aplicar Ahora"
+      },
+      "position3": {
+        "title": "Gerente de Producto",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "description": "Impulsa la estrategia y desarrollo de productos para productos y servicios del ecosistema RSC.",
+        "link": "Aplicar Ahora"
+      }
+    },
+    "culture": {
+      "title": "Cultura de la Empresa",
+      "description": "Fomentamos una cultura de innovación, colaboración y aprendizaje continuo.",
+      "value1": {
+        "title": "Innovación",
+        "description": "Fomentamos el pensamiento creativo y soluciones innovadoras a problemas complejos"
+      },
+      "value2": {
+        "title": "Colaboración",
+        "description": "Creemos en trabajar juntos como equipo para lograr nuestros objetivos comunes"
+      },
+      "value3": {
+        "title": "Crecimiento",
+        "description": "Apoyamos el desarrollo profesional y el aprendizaje continuo para todos los miembros del equipo"
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "¿Interesado en unirte a nuestro equipo? Contáctanos.",
+      "email": "careers@rscchain.io"
+    }
+  },
+  "companyContact": {
+    "hero": {
+      "title": "Contacto y Asociaciones",
+      "subtitle": "Ponte en contacto con nuestro equipo para consultas comerciales y asociaciones"
+    },
+    "form": {
+      "title": "Formulario de Contacto",
+      "description": "Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "company": "Empresa",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Selecciona un asunto",
+      "subjectOption1": "Asociación",
+      "subjectOption2": "Consulta Comercial",
+      "subjectOption3": "Soporte Técnico",
+      "subjectOption4": "Otro",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje"
+    },
+    "email": {
+      "title": "Correo Institucional",
+      "description": "Para consultas directas, puedes contactarnos en nuestras direcciones de correo institucionales.",
+      "address1": {
+        "label": "Consultas Generales",
+        "email": "info@rscchain.io"
+      },
+      "address2": {
+        "label": "Asociaciones",
+        "email": "partnerships@rscchain.io"
+      }
+    }
+  },
+  "companyPress": {
+    "hero": {
+      "title": "Prensa y Medios",
+      "subtitle": "Noticias, anuncios oficiales y recursos para medios.",
+      "cta": "Media Kit"
+    },
+    "statements": {
+      "title": "Comunicados Oficiales",
+      "statement1": {
+        "date": "15 de Marzo, 2024",
+        "title": "Lanzamiento de RSC Chain Mainnet",
+        "description": "Anuncio oficial del lanzamiento de RSC Chain mainnet y hitos de estabilidad de red."
+      },
+      "statement2": {
+        "date": "10 de Febrero, 2024",
+        "title": "Asociación con Institución Financiera Mayor",
+        "description": "RSC anuncia asociación estratégica para expandir la adopción blockchain en finanzas tradicionales."
+      },
+      "statement3": {
+        "date": "5 de Enero, 2024",
+        "title": "Finalización de Auditoría de Seguridad",
+        "description": "RSC Chain completa auditoría de seguridad integral con firma líder en seguridad."
+      }
+    },
+    "news": {
+      "title": "Noticias y Lanzamientos",
+      "news1": {
+        "date": "1 de Abril, 2024",
+        "title": "Lanzamiento de RSC Wallet v2.0",
+        "description": "Actualización mayor de RSC Wallet con nuevas funcionalidades, seguridad mejorada y experiencia de usuario mejorada."
+      },
+      "news2": {
+        "date": "20 de Marzo, 2024",
+        "title": "APIs de Pago Ahora Disponibles",
+        "description": "RSC lanza APIs de Pago públicas para empresas y desarrolladores para integrar pagos RSC."
+      },
+      "news3": {
+        "date": "1 de Marzo, 2024",
+        "title": "Lanzamiento de Programa de Recompensas Staking",
+        "description": "Nuevo programa de staking permite a usuarios ganar recompensas apoyando la red RSC Chain."
+      },
+      "news4": {
+        "date": "15 de Febrero, 2024",
+        "title": "Portal de Documentación para Desarrolladores",
+        "description": "Portal de documentación para desarrolladores lanzado con guías, APIs y SDKs."
+      }
+    },
+    "coverage": {
+      "title": "Cobertura en Medios",
+      "coverage1": {
+        "source": "TechCrunch",
+        "title": "RSC Chain: La Blockchain de Próxima Generación para Finanzas",
+        "date": "25 de Marzo, 2024"
+      },
+      "coverage2": {
+        "source": "CoinDesk",
+        "title": "Cómo RSC Chain está Revolucionando los Pagos Transfronterizos",
+        "date": "10 de Marzo, 2024"
+      },
+      "coverage3": {
+        "source": "Forbes",
+        "title": "Innovación Blockchain: El Enfoque de RSC a las Finanzas Descentralizadas",
+        "date": "28 de Febrero, 2024"
+      },
+      "coverage4": {
+        "source": "The Block",
+        "title": "RSC Chain Mainnet: Análisis Técnico Profundo",
+        "date": "15 de Febrero, 2024"
+      }
+    },
+    "announcements": {
+      "title": "Anuncios Importantes",
+      "announcement1": {
+        "type": "TGE",
+        "title": "Token Generation Event (TGE)",
+        "description": "RSC anuncia próximo Token Generation Event con detalles sobre distribución y utilidad de tokens.",
+        "date": "Q2 2024"
+      },
+      "announcement2": {
+        "type": "Evento",
+        "title": "RSC Chain Summit 2024",
+        "description": "Únete a nosotros para el primer RSC Chain Summit con keynotes, talleres y oportunidades de networking.",
+        "date": "Junio 2024"
+      },
+      "announcement3": {
+        "type": "Asociación",
+        "title": "Anuncio de Asociación Estratégica",
+        "description": "RSC anuncia asociación mayor para expandir el ecosistema y llevar blockchain a adopción mainstream.",
+        "date": "Q3 2024"
+      }
+    },
+    "mediaKit": {
+      "title": "Media Kit",
+      "description": "Descarga recursos oficiales para cobertura de medios y publicaciones.",
+      "logos": {
+        "title": "Logos Oficiales",
+        "description": "Logos de RSC Chain en alta resolución en varios formatos y esquemas de color."
+      },
+      "guidelines": {
+        "title": "Guías de Marca",
+        "description": "Guías de marca completas incluyendo colores, tipografía y guías de uso."
+      },
+      "screenshots": {
+        "title": "Screenshots de Productos",
+        "description": "Screenshots oficiales de RSC Wallet y otros productos para uso en medios."
+      }
+    },
+    "contact": {
+      "title": "Contacto de Prensa",
+      "description": "Para consultas de medios, solicitudes de entrevistas o comunicados de prensa, por favor contacta a nuestro equipo de prensa.",
+      "email": "press@rscchain.io"
+    },
+    "form": {
+      "title": "Formulario de Consulta de Medios",
+      "description": "Completa el formulario a continuación para consultas de medios, solicitudes de entrevistas o acceso a media kit.",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "media": "Medio de Comunicación",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Selecciona un asunto",
+      "subjectOption1": "Solicitud de Entrevista",
+      "subjectOption2": "Comunicado de Prensa",
+      "subjectOption3": "Solicitud de Media Kit",
+      "subjectOption4": "Otro",
+      "message": "Mensaje",
+      "submit": "Enviar Consulta"
+    },
+    "readMore": "Leer Más",
+    "readArticle": "Leer Artículo",
+    "download": "Descargar"
+  }
+}
+

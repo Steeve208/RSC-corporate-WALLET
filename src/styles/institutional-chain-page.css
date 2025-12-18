@@ -1,0 +1,539 @@
+/* Institutional Chain Page Styles */
+.institutional-chain-page {
+  min-height: 100vh;
+  background: #050509;
+  color: #ffffff;
+}
+
+.institutional-chain-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.institutional-chain-hero {
+  padding: 140px 0 80px;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.institutional-chain-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.institutional-chain-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.institutional-chain-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.institutional-chain-hero-icon {
+  color: #14b8a6;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.institutional-chain-hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.institutional-chain-hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Section Styles */
+.institutional-chain-what,
+.institutional-chain-architecture,
+.institutional-chain-consensus,
+.institutional-chain-scalability,
+.institutional-chain-cases {
+  padding: 80px 0;
+}
+
+.institutional-chain-what {
+  background: #050509;
+}
+
+.institutional-chain-architecture {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.institutional-chain-consensus {
+  background: #050509;
+}
+
+.institutional-chain-scalability {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.institutional-chain-cases {
+  background: #050509;
+}
+
+.institutional-chain-section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.institutional-chain-section-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.institutional-chain-section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.institutional-chain-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+/* What Section */
+.institutional-chain-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-chain-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.institutional-chain-feature-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-chain-feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+}
+
+.institutional-chain-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.institutional-chain-feature-description {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Architecture Section */
+.institutional-chain-architecture-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 900px;
+}
+
+.institutional-chain-layer {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.institutional-chain-layer::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 100%;
+  width: 2px;
+  height: 24px;
+  background: rgba(20, 184, 166, 0.3);
+}
+
+.institutional-chain-layer:last-child::before {
+  display: none;
+}
+
+.institutional-chain-layer:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.institutional-chain-layer-number {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.institutional-chain-layer-content {
+  flex: 1;
+}
+
+.institutional-chain-layer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.institutional-chain-layer-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Consensus Section */
+.institutional-chain-consensus-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 900px;
+}
+
+.institutional-chain-consensus-feature {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.institutional-chain-consensus-feature:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.institutional-chain-consensus-feature-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.institutional-chain-consensus-feature-content {
+  flex: 1;
+}
+
+.institutional-chain-consensus-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.institutional-chain-consensus-feature-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Scalability Section */
+.institutional-chain-scalability-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-chain-metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.institutional-chain-metric-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-chain-metric-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.institutional-chain-metric-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Use Cases */
+.institutional-chain-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.institutional-chain-case-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.institutional-chain-case-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.institutional-chain-case-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14b8a6;
+}
+
+.institutional-chain-case-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.institutional-chain-case-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.institutional-chain-case-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.institutional-chain-case-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.institutional-chain-check-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.institutional-chain-cta {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #050509 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.institutional-chain-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.institutional-chain-cta-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.institutional-chain-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 250px;
+  justify-content: center;
+}
+
+.institutional-chain-cta-button--primary {
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+}
+
+.institutional-chain-cta-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+}
+
+.institutional-chain-cta-button--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.institutional-chain-cta-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.institutional-chain-cta-button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.institutional-chain-cta-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .institutional-chain-hero {
+    padding: 120px 0 60px;
+  }
+
+  .institutional-chain-what,
+  .institutional-chain-architecture,
+  .institutional-chain-consensus,
+  .institutional-chain-scalability,
+  .institutional-chain-cases {
+    padding: 60px 0;
+  }
+
+  .institutional-chain-cta {
+    padding: 80px 0;
+  }
+
+  .institutional-chain-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .institutional-chain-features {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-chain-architecture-layers {
+    gap: 16px;
+  }
+
+  .institutional-chain-layer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .institutional-chain-layer::before {
+    display: none;
+  }
+
+  .institutional-chain-consensus-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .institutional-chain-scalability-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-chain-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-chain-cta-buttons {
+    flex-direction: column;
+  }
+
+  .institutional-chain-cta-button {
+    width: 100%;
+  }
+}
+

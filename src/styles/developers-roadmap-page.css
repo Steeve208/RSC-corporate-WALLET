@@ -1,0 +1,361 @@
+/* Developers Roadmap Page Styles */
+.developers-roadmap-page {
+  min-height: 100vh;
+  background: #050509;
+  color: #ffffff;
+}
+
+.developers-roadmap-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.developers-roadmap-hero {
+  padding: 140px 0 100px;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.developers-roadmap-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.developers-roadmap-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.developers-roadmap-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.developers-roadmap-hero-icon {
+  color: #14b8a6;
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.developers-roadmap-hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.developers-roadmap-hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.developers-roadmap-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.developers-roadmap-hero-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.developers-roadmap-hero-cta-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Roadmap Sections */
+.developers-roadmap-sections {
+  padding: 80px 0;
+  background: #050509;
+}
+
+.developers-roadmap-section {
+  margin-bottom: 80px;
+}
+
+.developers-roadmap-section:last-child {
+  margin-bottom: 0;
+}
+
+.developers-roadmap-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.developers-roadmap-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.developers-roadmap-badge-now {
+  background: rgba(20, 184, 166, 0.2);
+  color: #14b8a6;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.developers-roadmap-badge-next {
+  background: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.developers-roadmap-badge-later {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.developers-roadmap-section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.developers-roadmap-section-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Roadmap Items */
+.developers-roadmap-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.developers-roadmap-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.developers-roadmap-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.developers-roadmap-item-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.developers-roadmap-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.developers-roadmap-item-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.developers-roadmap-item-version {
+  font-size: 0.875rem;
+  color: #14b8a6;
+  background: rgba(20, 184, 166, 0.1);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.developers-roadmap-item-date {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.developers-roadmap-item-date::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.developers-roadmap-item-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.developers-roadmap-item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #14b8a6;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.developers-roadmap-item-link:hover {
+  color: #06b6d4;
+  gap: 10px;
+}
+
+/* CTA Section */
+.developers-roadmap-cta {
+  padding: 80px 0;
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.developers-roadmap-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.developers-roadmap-cta-icon {
+  color: #14b8a6;
+  margin: 0 auto 32px;
+}
+
+.developers-roadmap-cta-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.developers-roadmap-cta-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.developers-roadmap-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.developers-roadmap-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.developers-roadmap-cta-button-primary {
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+}
+
+.developers-roadmap-cta-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+}
+
+.developers-roadmap-cta-button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.developers-roadmap-cta-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+.developers-roadmap-cta-button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .developers-roadmap-hero {
+    padding: 120px 0 80px;
+  }
+
+  .developers-roadmap-sections,
+  .developers-roadmap-cta {
+    padding: 60px 0;
+  }
+
+  .developers-roadmap-section {
+    margin-bottom: 60px;
+  }
+
+  .developers-roadmap-items {
+    grid-template-columns: 1fr;
+  }
+
+  .developers-roadmap-cta-buttons {
+    flex-direction: column;
+  }
+
+  .developers-roadmap-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

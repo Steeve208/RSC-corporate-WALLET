@@ -1,0 +1,302 @@
+/* Company Careers Page Styles */
+.company-careers-page {
+  min-height: 100vh;
+  background: #050509;
+  color: #ffffff;
+}
+
+.company-careers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.company-careers-hero {
+  padding: 140px 0 80px;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-careers-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.company-careers-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.company-careers-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.company-careers-hero-icon {
+  color: #14b8a6;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.company-careers-hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.company-careers-hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Section Styles */
+.company-careers-positions,
+.company-careers-culture,
+.company-careers-contact {
+  padding: 80px 0;
+}
+
+.company-careers-positions {
+  background: #050509;
+}
+
+.company-careers-culture {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.company-careers-contact {
+  background: #050509;
+}
+
+.company-careers-section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.company-careers-section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.company-careers-section-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.company-careers-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+/* Positions */
+.company-careers-positions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.company-careers-position-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.company-careers-position-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.company-careers-position-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.company-careers-position-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.company-careers-position-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.company-careers-meta-icon {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+.company-careers-position-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.company-careers-position-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #14b8a6;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.company-careers-position-link:hover {
+  color: #06b6d4;
+  gap: 12px;
+}
+
+.company-careers-position-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+/* Culture */
+.company-careers-culture-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.company-careers-value-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.company-careers-value-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(20, 184, 166, 0.3);
+  transform: translateY(-4px);
+}
+
+.company-careers-value-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.company-careers-value-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Contact */
+.company-careers-contact-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.company-careers-contact-icon {
+  color: #14b8a6;
+  margin: 0 auto 24px;
+}
+
+.company-careers-contact-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.company-careers-contact-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.company-careers-contact-email {
+  display: inline-block;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+}
+
+.company-careers-contact-email:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .company-careers-hero {
+    padding: 120px 0 60px;
+  }
+
+  .company-careers-positions,
+  .company-careers-culture,
+  .company-careers-contact {
+    padding: 60px 0;
+  }
+
+  .company-careers-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .company-careers-positions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-careers-culture-values {
+    grid-template-columns: 1fr;
+  }
+}
+
