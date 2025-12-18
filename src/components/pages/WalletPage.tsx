@@ -2,7 +2,6 @@ import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
 import { 
   Send, 
-  ArrowDownLeft, 
   Wallet, 
   TrendingUp, 
   QrCode, 
@@ -10,7 +9,6 @@ import {
   Key, 
   Fingerprint, 
   Eye,
-  Check,
   Download,
   ArrowRight,
   Lock,

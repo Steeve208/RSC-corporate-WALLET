@@ -4,8 +4,6 @@ import {
   FileText, 
   Download, 
   Calendar,
-  TrendingUp,
-  TrendingDown,
   CheckCircle,
   FileSpreadsheet,
   Receipt,

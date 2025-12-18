@@ -6,8 +6,7 @@ import {
   Mail,
   ArrowRight,
   MapPin,
-  Clock,
-  CheckCircle
+  Clock
 } from 'lucide-react';
 import '../../styles/company-careers-page.css';
 

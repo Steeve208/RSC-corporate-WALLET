@@ -4,8 +4,7 @@ import {
   Info, 
   Eye, 
   Target,
-  Heart,
-  ArrowRight
+  Heart
 } from 'lucide-react';
 import '../../styles/company-about-page.css';
 

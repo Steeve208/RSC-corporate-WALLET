@@ -3,15 +3,12 @@ import { Navbar } from '../landing/Navbar';
 import { 
   Map, 
   Code, 
-  GitBranch,
-  Calendar,
   ExternalLink,
   ArrowRight,
   CheckCircle,
   Clock,
   Lightbulb,
-  Github,
-  Wrench
+  Github
 } from 'lucide-react';
 import '../../styles/developers-roadmap-page.css';
 

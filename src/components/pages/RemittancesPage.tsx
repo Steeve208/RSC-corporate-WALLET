@@ -1,7 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
 import { 
-  Send, 
   Globe, 
   Zap,
   DollarSign,

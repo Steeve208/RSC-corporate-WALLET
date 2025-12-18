@@ -3,7 +3,7 @@ import '../../styles/landing.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
 import { useTranslation } from '../../contexts/I18nContext';
-import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, CreditCard, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen } from 'lucide-react';
+import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen } from 'lucide-react';
 
 type LandingPageProps = {
   onEnter?: () => void;

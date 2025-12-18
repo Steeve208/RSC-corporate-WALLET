@@ -2,14 +2,12 @@ import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
 import { 
   QrCode, 
-  Send, 
   Users, 
   Store, 
   Shield, 
   CheckCircle, 
   Zap,
   ArrowRight,
-  Smartphone,
   Wallet
 } from 'lucide-react';
 import '../../styles/payments-page.css';

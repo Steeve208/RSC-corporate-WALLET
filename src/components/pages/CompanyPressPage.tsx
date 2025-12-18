@@ -11,8 +11,6 @@ import {
   Calendar,
   Megaphone,
   Globe,
-  Users,
-  CheckCircle,
   Send
 } from 'lucide-react';
 import '../../styles/company-press-page.css';

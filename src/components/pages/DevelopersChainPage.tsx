@@ -5,11 +5,8 @@ import {
   Server, 
   Layers,
   Github,
-  ArrowRight,
-  Terminal,
   Code,
   Settings,
-  CheckCircle,
   ExternalLink
 } from 'lucide-react';
 import '../../styles/developers-chain-page.css';

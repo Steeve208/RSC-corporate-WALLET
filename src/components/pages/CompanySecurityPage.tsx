@@ -4,7 +4,6 @@ import {
   Shield, 
   Lock, 
   CheckCircle,
-  AlertTriangle,
   Key,
   Eye,
   FileCheck
