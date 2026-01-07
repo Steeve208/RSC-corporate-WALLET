@@ -62,11 +62,11 @@ export function BuyForm() {
 
   return (
     <div className="buy-form-container">
-      <h3>Buy wRSK</h3>
+      <h3>Buy wRSK Tokens</h3>
       
       <form onSubmit={handleBuy} className="buy-form">
         <div className="form-group">
-          <label>USDT to pay</label>
+          <label>USDT Amount</label>
           <div className="input-group">
             <input
               type="number"
@@ -80,12 +80,12 @@ export function BuyForm() {
             <span className="input-suffix">USDT</span>
           </div>
           <div className="balance-info">
-            Balance: {formatNumber(usdtBalance, 2)} USDT
+            Your USDT Balance: {formatNumber(usdtBalance, 2)} USDT
           </div>
         </div>
 
         <div className="form-group">
-          <label>You will receive</label>
+          <label>wRSK Amount</label>
           <div className="output-display">
             {formatNumber(wRSKAmount, 2)} wRSK
           </div>
@@ -103,7 +103,7 @@ export function BuyForm() {
           className="btn-buy"
           disabled={isBuying || !usdtAmount || parseFloat(usdtAmount) <= 0}
         >
-          {isBuying ? 'Processing...' : 'Buy wRSK'}
+          {isBuying ? 'Processing...' : 'Buy Tokens'}
         </button>
       </form>
     </div>

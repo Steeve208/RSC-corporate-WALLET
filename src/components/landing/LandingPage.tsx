@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../../styles/landing.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
+import { useTranslation } from '../../contexts/I18nContext';
 import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen, Rocket } from 'lucide-react';
 
 type LandingPageProps = {
@@ -15,6 +16,7 @@ const handleEnter = () => {
 
 
 export function LandingPage({ onEnter }: LandingPageProps) {
+  const { t } = useTranslation();
   const [activeScreen, setActiveScreen] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -142,15 +144,15 @@ export function LandingPage({ onEnter }: LandingPageProps) {
           <div className="rsc-why-header">
             <div className="rsc-why-badge">
               <span className="rsc-why-badge-dot"></span>
-              <span>Ecosistema RSC</span>
+              <span>{t('landing.why.badge')}</span>
             </div>
             <h2 className="rsc-why-title">
-              <span className="rsc-why-title-gradient">La wallet que conecta</span>
+              <span className="rsc-why-title-gradient">{t('landing.why.title')}</span>
               <br />
-              <span>tu economía a RSC Chain</span>
+              <span>{t('landing.why.title2')}</span>
             </h2>
             <p className="rsc-why-subtitle">
-              Gestiona activos, pagos y recompensas desde una sola identidad digital. RSC Wallet está diseñada para operar en el ecosistema RSC con velocidad, control y seguridad.
+              {t('landing.why.subtitle')}
             </p>
             </div>
 
@@ -163,9 +165,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <Key size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
                 </div>
-              <h3 className="rsc-why-card-title">Non-custodial</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.nonCustodial.title')}</h3>
               <p className="rsc-why-card-description">
-                Tus llaves, tu control. Nadie puede congelar tu saldo ni tomar custodia de tus fondos.
+                {t('landing.why.nonCustodial.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
                 </div>
@@ -178,9 +180,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <Zap size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
                 </div>
-              <h3 className="rsc-why-card-title">Transacciones instantáneas</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.instant.title')}</h3>
               <p className="rsc-why-card-description">
-                Enviar y recibir toma segundos, con estados claros y confirmación verificable.
+                {t('landing.why.instant.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
               </div>
@@ -193,9 +195,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <Coins size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
                 </div>
-              <h3 className="rsc-why-card-title">Staking & rewards</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.staking.title')}</h3>
               <p className="rsc-why-card-description">
-                Participa en el ecosistema: staking, recompensas y utilidades integradas.
+                {t('landing.why.staking.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
                 </div>
@@ -208,9 +210,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <QrCode size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
                 </div>
-              <h3 className="rsc-why-card-title">Pagos con QR</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.qrPayments.title')}</h3>
               <p className="rsc-why-card-description">
-                Paga de forma simple. Escanea, confirma y listo (ideal para comercios y vida diaria).
+                {t('landing.why.qrPayments.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
               </div>
@@ -223,9 +225,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <FileText size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
             </div>
-              <h3 className="rsc-why-card-title">Historial y transparencia</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.history.title')}</h3>
               <p className="rsc-why-card-description">
-                Actividad organizada, exportable y fácil de auditar para el usuario.
+                {t('landing.why.history.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
           </div>
@@ -238,9 +240,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 <Network size={32} className="rsc-why-icon" />
                 <div className="rsc-why-icon-pulse"></div>
               </div>
-              <h3 className="rsc-why-card-title">Diseñada para el ecosistema RSC</h3>
+              <h3 className="rsc-why-card-title">{t('landing.why.ecosystem.title')}</h3>
               <p className="rsc-why-card-description">
-                Integración nativa con RSC Chain: identidad, apps, servicios y futuro bridge.
+                {t('landing.why.ecosystem.description')}
               </p>
               <div className="rsc-why-card-shine"></div>
               </div>
@@ -266,7 +268,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-features-container">
           <div className="rsc-features-header">
             <h2 className="rsc-features-title">
-              Todo lo esencial. <span className="rsc-features-title-gradient">Y lo avanzado, también.</span>
+              {t('landing.features.title')} <span className="rsc-features-title-gradient">{t('landing.features.titleGradient')}</span>
             </h2>
                   </div>
 
@@ -279,23 +281,23 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-feature-icon-bg"></div>
                     <ArrowUpRight size={28} className="rsc-feature-icon" />
                       </div>
-                  <h3 className="rsc-feature-block-title">Enviar y recibir sin fricción</h3>
+                  <h3 className="rsc-feature-block-title">{t('landing.features.sendReceive.title')}</h3>
                     </div>
                 <p className="rsc-feature-block-text">
-                  Envía RSK y activos compatibles con total claridad: dirección, monto, comisión, estado y confirmación. Recibe con un toque y comparte tu dirección o QR.
+                  {t('landing.features.sendReceive.description')}
                 </p>
                 <ul className="rsc-feature-bullets">
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Confirmaciones y estados: Pending / Confirmed</span>
+                    <span>{t('landing.features.sendReceive.bullet1')}</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Copiar, compartir, escanear QR</span>
+                    <span>{t('landing.features.sendReceive.bullet2')}</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Dirección pública con formato claro</span>
+                    <span>{t('landing.features.sendReceive.bullet3')}</span>
                   </li>
                 </ul>
                       </div>
@@ -310,7 +312,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-mockup-transaction">
                       <div className="rsc-mockup-tx-icon">→</div>
                       <div className="rsc-mockup-tx-info">
-                        <div className="rsc-mockup-tx-label">Enviando</div>
+                        <div className="rsc-mockup-tx-label">{t('landing.features.sendReceive.mockupSending')}</div>
                         <div className="rsc-mockup-tx-amount">1,250 RSK</div>
                       </div>
                       <div className="rsc-mockup-tx-status">Pending</div>
@@ -331,23 +333,23 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-feature-icon-bg"></div>
                     <FileText size={28} className="rsc-feature-icon" />
                     </div>
-                  <h3 className="rsc-feature-block-title">Tu portfolio, simple y visible</h3>
+                  <h3 className="rsc-feature-block-title">Your portfolio, simple and visible</h3>
                   </div>
                 <p className="rsc-feature-block-text">
-                  Balance total, movimientos recientes y métricas básicas. Diseñado para entender tu dinero en segundos.
+                  Total balance, recent movements, and basic metrics. Designed to understand your money in seconds.
                 </p>
                 <ul className="rsc-feature-bullets">
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Total balance + variación diaria (si aplica)</span>
+                    <span>Total balance + daily variation (if applicable)</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Últimas transacciones</span>
+                    <span>Latest transactions</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Separación por activos</span>
+                    <span>Separation by assets</span>
                   </li>
                 </ul>
                   </div>
@@ -381,23 +383,23 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-feature-icon-bg"></div>
                     <Coins size={28} className="rsc-feature-icon" />
                   </div>
-                  <h3 className="rsc-feature-block-title">Staking integrado al flujo</h3>
+                  <h3 className="rsc-feature-block-title">Staking integrated into the flow</h3>
                 </div>
                 <p className="rsc-feature-block-text">
-                  Haz staking sin salir del producto. Recompensas y tiempos transparentes.
+                  Stake without leaving the product. Transparent rewards and timing.
                 </p>
                 <ul className="rsc-feature-bullets">
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Monto en staking / disponible</span>
+                    <span>Staked amount / available</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Recompensas estimadas y acumuladas</span>
+                    <span>Estimated and accumulated rewards</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Acciones claras: Stake / Unstake</span>
+                    <span>Clear actions: Stake / Unstake</span>
                   </li>
                 </ul>
               </div>
@@ -410,9 +412,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   </div>
                   <div className="rsc-mockup-content">
                     <div className="rsc-mockup-staking">
-                      <div className="rsc-mockup-staking-label">En Staking</div>
+                      <div className="rsc-mockup-staking-label">Staked</div>
                       <div className="rsc-mockup-staking-amount">5,000 RSK</div>
-                      <div className="rsc-mockup-staking-rewards">Recompensas: +125 RSK</div>
+                      <div className="rsc-mockup-staking-rewards">Rewards: +125 RSK</div>
                       <div className="rsc-mockup-staking-actions">
                         <div className="rsc-mockup-btn">Stake</div>
                         <div className="rsc-mockup-btn">Unstake</div>
@@ -431,23 +433,23 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-feature-icon-bg"></div>
                     <Key size={28} className="rsc-feature-icon" />
                 </div>
-                  <h3 className="rsc-feature-block-title">Seguridad práctica, no promesas vacías</h3>
+                  <h3 className="rsc-feature-block-title">Practical security, not empty promises</h3>
               </div>
                 <p className="rsc-feature-block-text">
-                  Protecciones reales orientadas al usuario: bloqueo, backup y control.
+                  Real user-oriented protections: lock, backup, and control.
                 </p>
                 <ul className="rsc-feature-bullets">
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>PIN / Biométrica</span>
+                    <span>PIN / Biometric</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Auto-lock y protección en segundo plano</span>
+                    <span>Auto-lock and background protection</span>
                   </li>
                   <li>
                     <span className="rsc-bullet-icon">✓</span>
-                    <span>Backup con frase semilla (seed)</span>
+                    <span>Backup with seed phrase</span>
                   </li>
                 </ul>
               </div>
@@ -462,11 +464,11 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <div className="rsc-mockup-security">
                       <div className="rsc-mockup-security-item">
                         <div className="rsc-mockup-security-icon">🔒</div>
-                        <div className="rsc-mockup-security-label">PIN Activo</div>
+                        <div className="rsc-mockup-security-label">PIN Active</div>
                       </div>
                       <div className="rsc-mockup-security-item">
                         <div className="rsc-mockup-security-icon">👆</div>
-                        <div className="rsc-mockup-security-label">Biometría</div>
+                        <div className="rsc-mockup-security-label">Biometric</div>
                       </div>
                       <div className="rsc-mockup-security-item">
                         <div className="rsc-mockup-security-icon">🔑</div>
@@ -499,7 +501,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-how-container">
           <div className="rsc-how-header">
             <h2 className="rsc-how-title">
-              <span className="rsc-how-title-gradient">Empieza</span> en minutos
+              <span className="rsc-how-title-gradient">{t('landing.how.title')}</span> {t('landing.how.titleGradient')}
         </h2>
           </div>
 
@@ -516,9 +518,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-step-icon-bg"></div>
                   <Wallet size={32} className="rsc-step-icon" />
                 </div>
-                <h3 className="rsc-step-title">Crea tu wallet</h3>
+                <h3 className="rsc-step-title">{t('landing.how.step1.title')}</h3>
                 <p className="rsc-step-description">
-                  Genera tu wallet y guarda tu frase de recuperación (seed) de forma segura.
+                  {t('landing.how.step1.description')}
                 </p>
               </div>
               <div className="rsc-step-connector">
@@ -538,9 +540,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-step-icon-bg"></div>
                   <Shield size={32} className="rsc-step-icon" />
                 </div>
-                <h3 className="rsc-step-title">Asegura tu acceso</h3>
+                <h3 className="rsc-step-title">{t('landing.how.step2.title')}</h3>
                 <p className="rsc-step-description">
-                  Activa PIN o biometría y configura el bloqueo automático.
+                  {t('landing.how.step2.description')}
                 </p>
               </div>
               <div className="rsc-step-connector">
@@ -560,9 +562,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-step-icon-bg"></div>
                   <QrCode size={32} className="rsc-step-icon" />
             </div>
-                <h3 className="rsc-step-title">Recibe fondos o conecta servicios</h3>
+                <h3 className="rsc-step-title">{t('landing.how.step3.title')}</h3>
                 <p className="rsc-step-description">
-                  Deposita, recibe por QR o integra con el ecosistema RSC.
+                  {t('landing.how.step3.description')}
                 </p>
               </div>
               <div className="rsc-step-connector">
@@ -582,9 +584,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-step-icon-bg"></div>
                   <Play size={32} className="rsc-step-icon" />
                 </div>
-                <h3 className="rsc-step-title">Usa: paga, envía, stakea</h3>
+                <h3 className="rsc-step-title">{t('landing.how.step4.title')}</h3>
                 <p className="rsc-step-description">
-                  Opera tu día a día con historial, estados y control total.
+                  {t('landing.how.step4.description')}
                 </p>
               </div>
             </div>
@@ -592,7 +594,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
 
           <div className="rsc-how-microcopy">
             <p className="rsc-how-microcopy-text">
-              RSC Wallet está diseñada para ser clara incluso si es tu primera wallet.
+              {t('landing.how.microcopy')}
             </p>
               </div>
         </div>
@@ -621,17 +623,17 @@ export function LandingPage({ onEnter }: LandingPageProps) {
               <div className="rsc-security-icon-main-pulse"></div>
         </div>
             <h2 className="rsc-security-title">
-              Tu seguridad es <span className="rsc-security-title-gradient">parte del producto</span>
+              {t('landing.security.title')} <span className="rsc-security-title-gradient">{t('landing.security.titleGradient')}</span>
             </h2>
           </div>
 
           <div className="rsc-security-content">
             <div className="rsc-security-text">
               <p className="rsc-security-paragraph">
-                RSC Wallet es non-custodial, lo que significa que el control del acceso lo mantiene el usuario. La app está diseñada para proteger la clave privada y ayudarte a recuperar tu cuenta de forma responsable.
+                {t('landing.security.paragraph1')}
               </p>
               <p className="rsc-security-paragraph">
-                La seguridad no es un banner: es una serie de capas pensadas para uso real.
+                {t('landing.security.paragraph2')}
               </p>
               </div>
 
@@ -653,8 +655,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <Key size={24} className="rsc-security-feature-icon" />
               </div>
                 <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Backup con frase semilla</h4>
-                  <p className="rsc-security-feature-description">Recuperación cuando lo necesites</p>
+                  <h4 className="rsc-security-feature-title">{t('landing.security.seedPhrase.title')}</h4>
+                  <p className="rsc-security-feature-description">{t('landing.security.seedPhrase.description')}</p>
             </div>
           </div>
 
@@ -664,8 +666,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <Fingerprint size={24} className="rsc-security-feature-icon" />
                 </div>
                 <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Protecciones de acceso</h4>
-                  <p className="rsc-security-feature-description">PIN y biometría</p>
+                  <h4 className="rsc-security-feature-title">{t('landing.security.access.title')}</h4>
+                  <p className="rsc-security-feature-description">{t('landing.security.access.description')}</p>
           </div>
         </div>
 
@@ -675,8 +677,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <Lock size={24} className="rsc-security-feature-icon" />
             </div>
                 <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Datos sensibles protegidos</h4>
-                  <p className="rsc-security-feature-description">Cifrado local (si lo implementas)</p>
+                  <h4 className="rsc-security-feature-title">Protected sensitive data</h4>
+                  <p className="rsc-security-feature-description">Local encryption (if implemented)</p>
             </div>
           </div>
 
@@ -686,8 +688,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <Eye size={24} className="rsc-security-feature-icon" />
                 </div>
                 <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Buenas prácticas</h4>
-                  <p className="rsc-security-feature-description">Recordatorios anti-phishing y verificación de direcciones</p>
+                  <h4 className="rsc-security-feature-title">Best practices</h4>
+                  <p className="rsc-security-feature-description">Anti-phishing reminders and address verification</p>
                 </div>
               </div>
             </div>
@@ -698,7 +700,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
               <AlertCircle size={20} />
             </div>
             <p className="rsc-security-disclaimer-text">
-              La seguridad final también depende del cuidado del usuario con su frase semilla y su dispositivo.
+              {t('landing.security.disclaimer')}
             </p>
           </div>
         </div>
@@ -722,7 +724,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-usecases-container">
           <div className="rsc-usecases-header">
             <h2 className="rsc-usecases-title">
-              <span className="rsc-usecases-title-gradient">Hecha para personas.</span> Lista para negocios. <span className="rsc-usecases-title-gradient">Abierta a integración.</span>
+              <span className="rsc-usecases-title-gradient">{t('landing.usecases.title')}</span> {t('landing.usecases.title2')} <span className="rsc-usecases-title-gradient">{t('landing.usecases.titleGradient')}</span>
             </h2>
               </div>
 
@@ -734,32 +736,32 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-usecase-icon-column-bg"></div>
                   <User size={32} className="rsc-usecase-icon-column-icon" />
             </div>
-                <h3 className="rsc-usecase-column-title">Individuos</h3>
+                <h3 className="rsc-usecase-column-title">{t('landing.usecases.individuals.title')}</h3>
               </div>
               <ul className="rsc-usecase-list">
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Send size={20} />
                   </div>
-                  <span>Enviar/recibir RSK al instante</span>
+                  <span>{t('landing.usecases.individuals.item1')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <TrendingUp size={20} />
                   </div>
-                  <span>Control de balance y actividad</span>
+                  <span>{t('landing.usecases.individuals.item2')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Coins size={20} />
                   </div>
-                  <span>Staking y recompensas del ecosistema</span>
+                  <span>{t('landing.usecases.individuals.item3')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <QrCode size={20} />
                   </div>
-                  <span>Pagos con QR en vida diaria</span>
+                  <span>{t('landing.usecases.individuals.item4')}</span>
                 </li>
               </ul>
             </div>
@@ -771,32 +773,32 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-usecase-icon-column-bg"></div>
                   <Building2 size={32} className="rsc-usecase-icon-column-icon" />
                 </div>
-                <h3 className="rsc-usecase-column-title">Empresas / Comercios</h3>
+                <h3 className="rsc-usecase-column-title">{t('landing.usecases.businesses.title')}</h3>
               </div>
               <ul className="rsc-usecase-list">
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <QrCode size={20} />
                   </div>
-                  <span>Cobros rápidos con QR</span>
+                  <span>{t('landing.usecases.businesses.item1')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Check size={20} />
                   </div>
-                  <span>Confirmación clara de pago</span>
+                  <span>{t('landing.usecases.businesses.item2')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <FileText size={20} />
                   </div>
-                  <span>Historial de transacciones para control interno</span>
+                  <span>{t('landing.usecases.businesses.item3')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Network size={20} />
                   </div>
-                  <span>Preparada para integraciones futuras con RSC Payments</span>
+                  <span>{t('landing.usecases.businesses.item4')}</span>
                 </li>
               </ul>
             </div>
@@ -808,26 +810,26 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-usecase-icon-column-bg"></div>
                   <Code size={32} className="rsc-usecase-icon-column-icon" />
                 </div>
-                <h3 className="rsc-usecase-column-title">Desarrolladores</h3>
+                <h3 className="rsc-usecase-column-title">Developers</h3>
               </div>
               <ul className="rsc-usecase-list">
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Network size={20} />
                   </div>
-                  <span>Integración con APIs del ecosistema (REST/WS)</span>
+                  <span>Integration with ecosystem APIs (REST/WS)</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Wallet size={20} />
                   </div>
-                  <span>Enfoque modular: wallet como puerta al stack RSC</span>
+                  <span>Modular approach: wallet as gateway to RSC stack</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <FileText size={20} />
                   </div>
-                  <span>Documentación / endpoints <span className="rsc-usecase-coming-soon">(Coming soon)</span></span>
+                  <span>Documentation / endpoints <span className="rsc-usecase-coming-soon">(Coming soon)</span></span>
                 </li>
               </ul>
             </div>
@@ -853,10 +855,10 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-preview-container">
           <div className="rsc-preview-header">
             <h2 className="rsc-preview-title">
-              Diseñada para ser <span className="rsc-preview-title-gradient">clara, rápida y elegante</span>
+              Designed to be <span className="rsc-preview-title-gradient">clear, fast, and elegant</span>
             </h2>
             <p className="rsc-preview-subtitle">
-              Una experiencia enfocada en lo importante: control, visibilidad y acciones rápidas.
+              An experience focused on what matters: control, visibility, and quick actions.
             </p>
               </div>
 
@@ -1087,7 +1089,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                         <div className="rsc-preview-backup-warning">
                           <AlertCircle size={24} />
                           <div className="rsc-preview-backup-warning-text">
-                            Guarda tu frase de recuperación en un lugar seguro
+                            Save your recovery phrase in a safe place
                           </div>
                         </div>
                         <div className="rsc-preview-seed-words">
@@ -1212,10 +1214,10 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-ecosystem-container">
           <div className="rsc-ecosystem-header">
             <h2 className="rsc-ecosystem-title">
-              La puerta de entrada al <span className="rsc-ecosystem-title-gradient">ecosistema RSC</span>
+              The gateway to the <span className="rsc-ecosystem-title-gradient">RSC ecosystem</span>
             </h2>
             <p className="rsc-ecosystem-subtitle">
-              RSC Wallet no es una app aislada. Es el punto de acceso a la infraestructura de RSC Chain: identidad, pagos, utilidades y futuras integraciones.
+              RSC Wallet is not an isolated app. It's the access point to RSC Chain infrastructure: identity, payments, utilities, and future integrations.
             </p>
           </div>
 
@@ -1247,7 +1249,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   </div>
                   <h3 className="rsc-ecosystem-block-title">Wallet ↔ RSC Chain</h3>
                   <p className="rsc-ecosystem-block-description">
-                    Operaciones y confirmaciones conectadas a la red.
+                    Operations and confirmations connected to the network.
                   </p>
                 </div>
               </div>
@@ -1267,7 +1269,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   </div>
                   <h3 className="rsc-ecosystem-block-title">Wallet ↔ Rewards / Mining / Events</h3>
                   <p className="rsc-ecosystem-block-description">
-                    Recompensas y utilidades dentro del ecosistema.
+                    Rewards and utilities within the ecosystem.
                   </p>
               </div>
               </div>
@@ -1287,7 +1289,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   </div>
                   <h3 className="rsc-ecosystem-block-title">Wallet ↔ Bridge <span className="rsc-ecosystem-roadmap-badge">(Roadmap)</span></h3>
                   <p className="rsc-ecosystem-block-description">
-                    Conexión a otras redes mediante puente oficial cuando esté habilitado.
+                    Connection to other networks via official bridge when enabled.
                   </p>
                 </div>
               </div>
@@ -1305,9 +1307,9 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                     <Link2 size={16} />
                     <Banknote size={20} />
                   </div>
-                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ RSC Bank / Payments <span className="rsc-ecosystem-vision-badge">(Visión)</span></h3>
+                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ RSC Bank / Payments <span className="rsc-ecosystem-vision-badge">(Vision)</span></h3>
                   <p className="rsc-ecosystem-block-description">
-                    Pagos diarios, conversión y experiencia bancaria cripto-first.
+                    Daily payments, conversion, and crypto-first banking experience.
                   </p>
                 </div>
               </div>
@@ -1334,10 +1336,10 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         <div className="rsc-faq-container">
           <div className="rsc-faq-header">
             <h2 className="rsc-faq-title">
-              Preguntas <span className="rsc-faq-title-gradient">frecuentes</span>
+              {t('landing.faq.title')} <span className="rsc-faq-title-gradient">{t('landing.faq.titleGradient')}</span>
             </h2>
             <p className="rsc-faq-subtitle">
-              Todo lo que necesitas saber sobre RSC Wallet
+              {t('landing.faq.subtitle')}
           </p>
         </div>
 
@@ -1349,7 +1351,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}
                 aria-expanded={openFaq === 0}
               >
-                <span className="rsc-faq-question-text">¿RSC Wallet es custodial?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q1')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1362,7 +1364,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 0 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>No. Está diseñada como non-custodial: el acceso y control lo mantiene el usuario.</p>
+                <p>{t('landing.faq.a1')}</p>
               </div>
             </div>
 
@@ -1373,7 +1375,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
                 aria-expanded={openFaq === 1}
               >
-                <span className="rsc-faq-question-text">¿Qué pasa si pierdo mi teléfono?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q2')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1386,7 +1388,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 1 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Puedes recuperar tu wallet usando tu frase semilla (seed). Por eso es clave guardarla bien.</p>
+                <p>{t('landing.faq.a2')}</p>
         </div>
             </div>
 
@@ -1397,7 +1399,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
                 aria-expanded={openFaq === 2}
               >
-                <span className="rsc-faq-question-text">¿Hay comisiones?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q3')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1410,7 +1412,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
             </button>
               <div className={`rsc-faq-answer ${openFaq === 2 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Puede haber comisiones de red según la operación. La app mostrará el costo antes de confirmar.</p>
+                <p>{t('landing.faq.a3')}</p>
           </div>
             </div>
 
@@ -1421,7 +1423,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
                 aria-expanded={openFaq === 3}
               >
-                <span className="rsc-faq-question-text">¿Puedo ver mis transacciones?</span>
+                <span className="rsc-faq-question-text">Can I view my transactions?</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1434,7 +1436,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 3 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Sí. Tendrás historial con estados y detalles básicos.</p>
+                <p>Yes. You'll have history with states and basic details.</p>
             </div>
             </div>
 
@@ -1445,7 +1447,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}
                 aria-expanded={openFaq === 4}
               >
-                <span className="rsc-faq-question-text">¿Está disponible en iOS/Android?</span>
+                <span className="rsc-faq-question-text">Is it available on iOS/Android?</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1458,7 +1460,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 4 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Sí / Coming soon (usa el estado real que tengas).</p>
+                <p>Yes / Coming soon (use the actual status you have).</p>
             </div>
             </div>
 
@@ -1469,7 +1471,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}
                 aria-expanded={openFaq === 5}
               >
-                <span className="rsc-faq-question-text">¿RSC Wallet es parte de RSC Chain?</span>
+                <span className="rsc-faq-question-text">Is RSC Wallet part of RSC Chain?</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1482,7 +1484,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 5 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Sí. Es el producto oficial para interactuar con el ecosistema y sus utilidades.</p>
+                <p>Yes. It's the official product to interact with the ecosystem and its utilities.</p>
               </div>
             </div>
           </div>
@@ -1508,15 +1510,15 @@ export function LandingPage({ onEnter }: LandingPageProps) {
           <div className="rsc-cta-final-content">
             <div className="rsc-cta-final-badge">
               <span className="rsc-cta-final-badge-dot"></span>
-              <span>Listo para empezar</span>
+              <span>Ready to get started</span>
             </div>
             
             <h2 className="rsc-cta-final-title">
-              Crea tu <span className="rsc-cta-final-title-gradient">RSC Wallet</span> hoy
+              Create your <span className="rsc-cta-final-title-gradient">RSC Wallet</span> today
             </h2>
             
             <p className="rsc-cta-final-subtitle">
-              Accede al ecosistema RSC con control real, transacciones rápidas y seguridad práctica.
+              Access the RSC ecosystem with real control, fast transactions, and practical security.
             </p>
 
             <div className="rsc-cta-final-actions">
@@ -1525,7 +1527,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={onEnter || handleEnter}
               >
                 <Download size={20} />
-                <span>Descargar RSC Wallet</span>
+                <span>Download RSC Wallet</span>
                 <ArrowRight size={20} />
               </button>
               
@@ -1534,12 +1536,12 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
               >
                 <BookOpen size={20} />
-                <span>Ver documentación / Seguridad</span>
+                <span>View documentation / Security</span>
               </button>
             </div>
 
             <p className="rsc-cta-final-microcopy">
-              Disponible para usuarios que buscan operar con libertad y claridad.
+              Available for users seeking to operate with freedom and clarity.
             </p>
           </div>
 

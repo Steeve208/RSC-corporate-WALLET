@@ -11,9 +11,9 @@ export function SaleCard() {
   const { account, provider, signer, isConnecting } = useWeb3();
   const { saleInfo, userPurchase, claimableAmount, isLoading, error } = useSaleContract(provider, signer);
   
-  // Si no hay wallet conectado, mostrar mensaje amigable (antes de intentar cargar datos)
+  // If no wallet connected, show friendly message
   if (!account && !isConnecting && !saleInfo) {
-    // Si está cargando, mostrar spinner
+    // If loading, show spinner
     if (isLoading) {
       return (
         <div className="sale-card loading">
@@ -23,7 +23,7 @@ export function SaleCard() {
       );
     }
     
-    // Si no está cargando, mostrar mensaje para conectar wallet
+    // If not loading, show message to connect wallet
     return (
       <div className="sale-card">
         <div className="connect-wallet-prompt">
@@ -41,14 +41,14 @@ export function SaleCard() {
             <li>✅ Claim your tokens when available</li>
           </ul>
           <p className="prompt-note">
-            <strong>Note:</strong> Make sure you have MetaMask installed and are on BSC Mainnet.
+            <strong>Note: Make sure you have MetaMask installed and are on BSC Mainnet.</strong>
           </p>
         </div>
       </div>
     );
   }
 
-  // Si está cargando y hay wallet o saleInfo, mostrar spinner
+  // If loading and has wallet or saleInfo, show spinner
   if (isLoading && !saleInfo) {
     return (
       <div className="sale-card loading">
@@ -179,7 +179,7 @@ export function SaleCard() {
                 <li>✅ Claim your tokens when available</li>
               </ul>
               <p className="prompt-note">
-                <strong>Note:</strong> Make sure you have USDT on BSC Mainnet and enough BNB for gas fees.
+                <strong>Note: Make sure you have USDT on BSC Mainnet and enough BNB for gas fees.</strong>
               </p>
             </div>
           )}

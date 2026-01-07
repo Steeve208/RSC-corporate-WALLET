@@ -49,23 +49,23 @@ export function ClaimSection() {
           <span className="info-value">{formatNumber(userPurchase.total, 2)} wRSK</span>
         </div>
         <div className="info-row">
-          <span className="info-label">Received immediately (25%):</span>
+          <span className="info-label">Immediate (25%):</span>
           <span className="info-value">{formatNumber(parseFloat(userPurchase.total) * 0.25, 2)} wRSK</span>
         </div>
         <div className="info-row">
-          <span className="info-label">In vesting (75%):</span>
+          <span className="info-label">Vested (75%):</span>
           <span className="info-value">{formatNumber(totalVested, 2)} wRSK</span>
         </div>
         <div className="info-row">
-          <span className="info-label">Already claimed:</span>
+          <span className="info-label">Claimed:</span>
           <span className="info-value">{formatNumber(claimed, 2)} wRSK</span>
         </div>
         <div className="info-row highlight">
-          <span className="info-label">Available to claim:</span>
+          <span className="info-label">Claimable:</span>
           <span className="info-value">{formatNumber(claimable, 2)} wRSK</span>
         </div>
         <div className="info-row">
-          <span className="info-label">Pending:</span>
+          <span className="info-label">Remaining:</span>
           <span className="info-value">{formatNumber(remaining - claimable, 2)} wRSK</span>
         </div>
       </div>
@@ -77,7 +77,7 @@ export function ClaimSection() {
             className="btn-claim"
             disabled={isClaiming || claimable <= 0}
           >
-            {isClaiming ? 'Processing...' : `Claim ${formatNumber(claimable, 2)} wRSK`}
+            {isClaiming ? 'Claiming...' : `Claim ${formatNumber(claimable, 2)} wRSK`}
           </button>
         </div>
       )}

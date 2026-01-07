@@ -1971,6 +1971,304 @@
     "readMore": "Read More",
     "readArticle": "Read Article",
     "download": "Download"
+  },
+  "sale": {
+    "header": {
+      "title": "wRSK Sale",
+      "subtitle": "RSC Finance",
+      "connectWallet": "Connect Wallet",
+      "connecting": "Connecting...",
+      "connected": "Connected:",
+      "disconnect": "Disconnect"
+    },
+    "saleCard": {
+      "title": "wRSK Public Sale",
+      "status": {
+        "upcoming": "Upcoming",
+        "active": "Active",
+        "ended": "Ended",
+        "paused": "Paused"
+      },
+      "stats": {
+        "price": "Price",
+        "sold": "Sold",
+        "available": "Available",
+        "maxPerUser": "Max per user"
+      },
+      "countdown": {
+        "startsIn": "Starts in:",
+        "endsIn": "Ends in:",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Min"
+      },
+      "dates": {
+        "start": "Start:",
+        "end": "End:"
+      },
+      "connectPrompt": {
+        "title": "Connect Your Wallet to View Sale Information",
+        "description": "To view the wRSK token sale details and participate, you need to connect your MetaMask wallet. Once connected, you'll be able to see all sale information and purchase tokens with USDT.",
+        "feature1": "View real-time sale information",
+        "feature2": "Buy wRSK tokens with USDT",
+        "feature3": "Receive 25% immediately",
+        "feature4": "75% vested over 6 months",
+        "feature5": "Claim your tokens when available",
+        "note": "Note: Make sure you have MetaMask installed and are on BSC Mainnet."
+      },
+      "purchasePrompt": {
+        "title": "Connect Your Wallet to Purchase",
+        "description": "To participate in the wRSK sale, you need to connect your MetaMask wallet. Once connected, you'll be able to purchase tokens with USDT.",
+        "feature1": "Buy wRSK tokens with USDT",
+        "feature2": "Receive 25% immediately",
+        "feature3": "75% vested over 6 months",
+        "feature4": "Claim your tokens when available",
+        "note": "Note: Make sure you have USDT on BSC Mainnet and enough BNB for gas fees."
+      },
+      "loading": "Loading sale information...",
+      "error": "Could not load sale information."
+    },
+    "buyForm": {
+      "title": "Buy wRSK Tokens",
+      "usdtAmount": "USDT Amount",
+      "wRSKAmount": "wRSK Amount",
+      "balance": "Your USDT Balance:",
+      "buy": "Buy Tokens",
+      "buying": "Processing...",
+      "error": {
+        "invalidAmount": "Enter a valid USDT amount",
+        "insufficientBalance": "Insufficient USDT balance in your wallet",
+        "maxExceeded": "Maximum per user is {max} wRSK"
+      },
+      "success": "Purchase successful! Transaction: {tx}"
+    },
+    "claimSection": {
+      "title": "My Tokens",
+      "totalPurchased": "Total purchased:",
+      "immediate": "Immediate (25%):",
+      "vested": "Vested (75%):",
+      "claimed": "Claimed:",
+      "claimable": "Claimable:",
+      "remaining": "Remaining:",
+      "claim": "Claim Tokens",
+      "claiming": "Claiming...",
+      "error": {
+        "noTokens": "No tokens available to claim"
+      },
+      "success": "Tokens claimed successfully! TX: {tx}"
+    },
+    "infoPanel": {
+      "title": "Sale Information",
+      "progress": "Sale progress",
+      "price": "Price",
+      "priceDesc": "{price} USDT per wRSK",
+      "vesting": "Vesting",
+      "vestingDesc": "25% immediate, 75% over 6 months",
+      "limitPerUser": "Limit per user",
+      "paymentMethod": "Payment method",
+      "paymentDesc": "USDT (BSC)",
+      "disclaimer": "Important: Make sure you have enough USDT in your wallet and have approved the contract spending. Tokens are distributed automatically: 25% immediately and 75% vested over 6 months."
+    },
+    "footer": {
+      "copyright": "© 2026 RSC Finance. All rights reserved.",
+      "viewContract": "View contract on BSCScan"
+    }
+  },
+  "landing": {
+    "why": {
+      "badge": "RSC Ecosystem",
+      "title": "The wallet that connects",
+      "title2": "your economy to RSC Chain",
+      "subtitle": "Manage assets, payments, and rewards from a single digital identity. RSC Wallet is designed to operate in the RSC ecosystem with speed, control, and security.",
+      "nonCustodial": {
+        "title": "Non-custodial",
+        "description": "Your keys, your control. No one can freeze your balance or take custody of your funds."
+      },
+      "instant": {
+        "title": "Instant transactions",
+        "description": "Sending and receiving takes seconds, with clear states and verifiable confirmation."
+      },
+      "staking": {
+        "title": "Staking & rewards",
+        "description": "Participate in the ecosystem: staking, rewards, and integrated utilities."
+      },
+      "qrPayments": {
+        "title": "QR payments",
+        "description": "Pay simply. Scan, confirm, and done (ideal for merchants and daily life)."
+      },
+      "history": {
+        "title": "History and transparency",
+        "description": "Organized, exportable activity that's easy for users to audit."
+      },
+      "ecosystem": {
+        "title": "Designed for the RSC ecosystem",
+        "description": "Native integration with RSC Chain: identity, apps, services, and future bridge."
+      }
+    },
+    "features": {
+      "title": "Everything essential.",
+      "titleGradient": "And the advanced, too.",
+      "sendReceive": {
+        "title": "Send and receive without friction",
+        "description": "Send RSK and compatible assets with complete clarity: address, amount, fee, status, and confirmation. Receive with a tap and share your address or QR.",
+        "bullet1": "Confirmations and states: Pending / Confirmed",
+        "bullet2": "Copy, share, scan QR",
+        "bullet3": "Public address with clear format",
+        "mockupSending": "Sending"
+      },
+      "portfolio": {
+        "title": "Your portfolio, simple and visible",
+        "description": "Total balance, recent movements, and basic metrics. Designed to understand your money in seconds.",
+        "bullet1": "Total balance + daily variation (if applicable)",
+        "bullet2": "Latest transactions",
+        "bullet3": "Separation by assets"
+      },
+      "staking": {
+        "title": "Staking integrated into the flow",
+        "description": "Stake without leaving the product. Transparent rewards and timing.",
+        "bullet1": "Staked amount / available",
+        "bullet2": "Estimated and accumulated rewards",
+        "bullet3": "Clear actions: Stake / Unstake",
+        "mockupStaked": "Staked",
+        "mockupRewards": "Rewards: +125 RSK"
+      },
+      "security": {
+        "title": "Practical security, not empty promises",
+        "description": "Real user-oriented protections: lock, backup, and control.",
+        "bullet1": "PIN / Biometric",
+        "bullet2": "Auto-lock and background protection",
+        "bullet3": "Backup with seed phrase",
+        "mockupPin": "PIN Active",
+        "mockupBiometric": "Biometric"
+      }
+    },
+    "how": {
+      "title": "Get started",
+      "titleGradient": "in minutes",
+      "step1": {
+        "title": "Create your wallet",
+        "description": "Generate your wallet and securely save your recovery phrase (seed)."
+      },
+      "step2": {
+        "title": "Secure your access",
+        "description": "Enable PIN or biometric and configure auto-lock."
+      },
+      "step3": {
+        "title": "Receive funds or connect services",
+        "description": "Deposit, receive via QR, or integrate with the RSC ecosystem."
+      },
+      "step4": {
+        "title": "Use: pay, send, stake",
+        "description": "Operate your daily life with history, states, and full control."
+      },
+      "microcopy": "RSC Wallet is designed to be clear even if it's your first wallet."
+    },
+    "security": {
+      "title": "Your security is",
+      "titleGradient": "part of the product",
+      "paragraph1": "RSC Wallet is non-custodial, meaning the user maintains control of access. The app is designed to protect the private key and help you recover your account responsibly.",
+      "paragraph2": "Security is not a banner: it's a series of layers designed for real use.",
+      "nonCustodial": {
+        "title": "Non-custodial",
+        "description": "User control over their access"
+      },
+      "seedPhrase": {
+        "title": "Backup with seed phrase",
+        "description": "Recovery when you need it"
+      },
+      "access": {
+        "title": "Access protections",
+        "description": "PIN and biometric"
+      },
+      "data": {
+        "title": "Protected sensitive data",
+        "description": "Local encryption (if implemented)"
+      },
+      "practices": {
+        "title": "Best practices",
+        "description": "Anti-phishing reminders and address verification"
+      },
+      "disclaimer": "Final security also depends on the user's care with their seed phrase and device."
+    },
+    "usecases": {
+      "title": "Made for people.",
+      "title2": "Ready for business.",
+      "titleGradient": "Open to integration.",
+      "individuals": {
+        "title": "Individuals",
+        "item1": "Send/receive RSK instantly",
+        "item2": "Balance and activity control",
+        "item3": "Staking and ecosystem rewards",
+        "item4": "QR payments in daily life"
+      },
+      "businesses": {
+        "title": "Businesses / Merchants",
+        "item1": "Fast QR collections",
+        "item2": "Clear payment confirmation",
+        "item3": "Transaction history for internal control",
+        "item4": "Ready for future integrations with RSC Payments"
+      },
+      "developers": {
+        "title": "Developers",
+        "item1": "Integration with ecosystem APIs (REST/WS)",
+        "item2": "Modular approach: wallet as gateway to RSC stack",
+        "item3": "Documentation / endpoints (Coming soon)"
+      }
+    },
+    "preview": {
+      "title": "Designed to be",
+      "titleGradient": "clear, fast, and elegant",
+      "subtitle": "An experience focused on what matters: control, visibility, and quick actions.",
+      "backupWarning": "Save your recovery phrase in a safe place"
+    },
+    "ecosystem": {
+      "title": "The gateway to the",
+      "titleGradient": "RSC ecosystem",
+      "subtitle": "RSC Wallet is not an isolated app. It's the access point to RSC Chain infrastructure: identity, payments, utilities, and future integrations.",
+      "chain": {
+        "title": "Wallet ↔ RSC Chain",
+        "description": "Operations and confirmations connected to the network."
+      },
+      "rewards": {
+        "title": "Wallet ↔ Rewards / Mining / Events",
+        "description": "Rewards and utilities within the ecosystem."
+      },
+      "bridge": {
+        "title": "Wallet ↔ Bridge (Roadmap)",
+        "description": "Connection to other networks via official bridge when enabled."
+      },
+      "bank": {
+        "title": "Wallet ↔ RSC Bank / Payments (Vision)",
+        "description": "Daily payments, conversion, and crypto-first banking experience."
+      }
+    },
+    "faq": {
+      "title": "Frequently",
+      "titleGradient": "asked questions",
+      "subtitle": "Everything you need to know about RSC Wallet",
+      "q1": "Is RSC Wallet custodial?",
+      "a1": "No. It's designed as non-custodial: the user maintains access and control.",
+      "q2": "What happens if I lose my phone?",
+      "a2": "You can recover your wallet using your seed phrase. That's why it's crucial to keep it safe.",
+      "q3": "Are there fees?",
+      "a3": "There may be network fees depending on the operation. The app will show the cost before confirming.",
+      "q4": "Can I view my transactions?",
+      "a4": "Yes. You'll have history with states and basic details.",
+      "q5": "Is it available on iOS/Android?",
+      "a5": "Yes / Coming soon (use the actual status you have).",
+      "q6": "Is RSC Wallet part of RSC Chain?",
+      "a6": "Yes. It's the official product to interact with the ecosystem and its utilities."
+    },
+    "cta": {
+      "badge": "Ready to get started",
+      "title": "Create your",
+      "titleGradient": "RSC Wallet",
+      "title2": "today",
+      "subtitle": "Access the RSC ecosystem with real control, fast transactions, and practical security.",
+      "download": "Download RSC Wallet",
+      "docs": "View documentation / Security",
+      "microcopy": "Available for users seeking to operate with freedom and clarity."
+    }
   }
 }
 

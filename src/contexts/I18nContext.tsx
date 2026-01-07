@@ -40,9 +40,18 @@ const translationsMap: Record<Language, any> = {
 
 export const I18nProvider = ({ children }: I18nProviderProps) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Get saved language from localStorage or default to English
-    const saved = localStorage.getItem('rsc-language') as Language;
-    return (saved && translationsMap[saved]) ? saved : 'en';
+    // Default to English - only use saved language if explicitly set by user
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('rsc-language') as Language;
+      // Validate saved language exists in translations map
+      if (saved && translationsMap[saved]) {
+        return saved;
+      }
+      // Default to English and save it
+      localStorage.setItem('rsc-language', 'en');
+      return 'en';
+    }
+    return 'en';
   });
 
   const setLanguage = (lang: Language) => {
