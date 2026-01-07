@@ -1,4 +1,3 @@
-import React from 'react';
 // Import components from integrated sale-frontend
 // @ts-ignore - JSX files
 import { Header } from '../sale-frontend/Header.jsx';
