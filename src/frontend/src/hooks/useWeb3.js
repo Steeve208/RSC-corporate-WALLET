@@ -1,5 +1,25 @@
 import { useState, useEffect } from 'react';
-import { connectWallet, switchToBSC } from '../utils/web3.js';
+import { connectWallet, switchToBSC, isMobile } from '../utils/web3.js';
+
+// Función para esperar a que window.ethereum esté disponible
+async function waitForEthereum(maxWait = 5000) {
+  if (window.ethereum) {
+    return window.ethereum;
+  }
+  
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const checkInterval = setInterval(() => {
+      if (window.ethereum) {
+        clearInterval(checkInterval);
+        resolve(window.ethereum);
+      } else if (Date.now() - startTime > maxWait) {
+        clearInterval(checkInterval);
+        resolve(null);
+      }
+    }, 100);
+  });
+}
 
 export function useWeb3() {
   const [account, setAccount] = useState(null);
@@ -7,15 +27,28 @@ export function useWeb3() {
   const [signer, setSigner] = useState(null);
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState(null);
+  const [ethereumReady, setEthereumReady] = useState(false);
 
   useEffect(() => {
-    // Check if there's already an active connection
-    if (window.ethereum) {
-      window.ethereum.on('accountsChanged', handleAccountsChanged);
-      window.ethereum.on('chainChanged', handleChainChanged);
-      
-      checkConnection();
-    }
+    // En móvil, esperar a que ethereum esté disponible
+    const initEthereum = async () => {
+      if (isMobile()) {
+        const ethereum = await waitForEthereum(5000);
+        if (ethereum) {
+          setEthereumReady(true);
+          setupListeners(ethereum);
+          checkConnection(ethereum);
+        }
+      } else {
+        if (window.ethereum) {
+          setEthereumReady(true);
+          setupListeners(window.ethereum);
+          checkConnection(window.ethereum);
+        }
+      }
+    };
+
+    initEthereum();
 
     return () => {
       if (window.ethereum) {
@@ -25,10 +58,15 @@ export function useWeb3() {
     };
   }, []);
 
-  const checkConnection = async () => {
+  const setupListeners = (ethereum) => {
+    ethereum.on('accountsChanged', handleAccountsChanged);
+    ethereum.on('chainChanged', handleChainChanged);
+  };
+
+  const checkConnection = async (ethereum) => {
     try {
-      if (window.ethereum) {
-        const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+      if (ethereum) {
+        const accounts = await ethereum.request({ method: 'eth_accounts' });
         if (accounts.length > 0) {
           await connect();
         }

@@ -2,19 +2,66 @@ import { ethers } from 'ethers';
 import { BSC_NETWORK } from '../../config/sale-frontend/contracts.js';
 
 /**
+ * Detecta si es un dispositivo móvil
+ */
+export function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+         (window.innerWidth <= 768 && window.matchMedia('(pointer: coarse)').matches);
+}
+
+/**
+ * Espera a que window.ethereum esté disponible (útil en móvil)
+ */
+async function waitForEthereum(maxWait = 3000) {
+  if (window.ethereum) {
+    return window.ethereum;
+  }
+  
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const checkInterval = setInterval(() => {
+      if (window.ethereum) {
+        clearInterval(checkInterval);
+        resolve(window.ethereum);
+      } else if (Date.now() - startTime > maxWait) {
+        clearInterval(checkInterval);
+        reject(new Error('MetaMask not detected'));
+      }
+    }, 100);
+  });
+}
+
+/**
  * Conecta a MetaMask y retorna el provider y signer
  */
 export async function connectWallet() {
-  if (typeof window.ethereum === 'undefined') {
-    throw new Error('MetaMask is not installed. Please install MetaMask to continue.');
+  const isMobileDevice = isMobile();
+  
+  // En móvil, esperar un poco más por si MetaMask está cargando
+  let ethereum;
+  try {
+    if (isMobileDevice) {
+      ethereum = await waitForEthereum(5000);
+    } else {
+      if (typeof window.ethereum === 'undefined') {
+        throw new Error('MetaMask is not installed. Please install the MetaMask extension from https://metamask.io');
+      }
+      ethereum = window.ethereum;
+    }
+  } catch (error) {
+    if (isMobileDevice) {
+      throw new Error('MetaMask not detected. Please make sure you are using the MetaMask app browser or have MetaMask installed. If using a regular browser, open this page in the MetaMask app browser.');
+    } else {
+      throw new Error('MetaMask is not installed. Please install the MetaMask extension from https://metamask.io');
+    }
   }
 
   try {
     // Request connection
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
+    await ethereum.request({ method: 'eth_requestAccounts' });
     
     // Create provider
-    const provider = new ethers.BrowserProvider(window.ethereum);
+    const provider = new ethers.BrowserProvider(ethereum);
     
     // Get signer
     const signer = await provider.getSigner();
@@ -31,7 +78,10 @@ export async function connectWallet() {
     if (error.code === 4001) {
       throw new Error('Connection rejected by user.');
     }
-    throw error;
+    if (error.message && error.message.includes('not detected')) {
+      throw error;
+    }
+    throw new Error(error.message || 'Failed to connect wallet. Please try again.');
   }
 }
 
@@ -39,8 +89,13 @@ export async function connectWallet() {
  * Cambia a la red BSC Mainnet
  */
 export async function switchToBSC() {
+  const ethereum = window.ethereum;
+  if (!ethereum) {
+    throw new Error('MetaMask not available');
+  }
+  
   try {
-    await window.ethereum.request({
+    await ethereum.request({
       method: 'wallet_switchEthereumChain',
       params: [{ chainId: BSC_NETWORK.chainId }],
     });
@@ -48,7 +103,7 @@ export async function switchToBSC() {
     // Si la red no existe, agregarla
     if (switchError.code === 4902) {
       try {
-        await window.ethereum.request({
+        await ethereum.request({
           method: 'wallet_addEthereumChain',
           params: [BSC_NETWORK],
         });

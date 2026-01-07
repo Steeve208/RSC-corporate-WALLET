@@ -810,26 +810,26 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-usecase-icon-column-bg"></div>
                   <Code size={32} className="rsc-usecase-icon-column-icon" />
                 </div>
-                <h3 className="rsc-usecase-column-title">Developers</h3>
+                <h3 className="rsc-usecase-column-title">{t('landing.usecases.developers.title')}</h3>
               </div>
               <ul className="rsc-usecase-list">
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Network size={20} />
                   </div>
-                  <span>Integration with ecosystem APIs (REST/WS)</span>
+                  <span>{t('landing.usecases.developers.item1')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <Wallet size={20} />
                   </div>
-                  <span>Modular approach: wallet as gateway to RSC stack</span>
+                  <span>{t('landing.usecases.developers.item2')}</span>
                 </li>
                 <li className="rsc-usecase-item">
                   <div className="rsc-usecase-item-icon">
                     <FileText size={20} />
                   </div>
-                  <span>Documentation / endpoints <span className="rsc-usecase-coming-soon">(Coming soon)</span></span>
+                  <span>{t('landing.usecases.developers.item3')}</span>
                 </li>
               </ul>
             </div>
@@ -1423,7 +1423,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
                 aria-expanded={openFaq === 3}
               >
-                <span className="rsc-faq-question-text">Can I view my transactions?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q4')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1436,7 +1436,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 3 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Yes. You'll have history with states and basic details.</p>
+                <p>{t('landing.faq.a4')}</p>
             </div>
             </div>
 
@@ -1447,7 +1447,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}
                 aria-expanded={openFaq === 4}
               >
-                <span className="rsc-faq-question-text">Is it available on iOS/Android?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q5')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1460,7 +1460,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 4 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Yes / Coming soon (use the actual status you have).</p>
+                <p>{t('landing.faq.a5')}</p>
             </div>
             </div>
 
@@ -1471,7 +1471,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}
                 aria-expanded={openFaq === 5}
               >
-                <span className="rsc-faq-question-text">Is RSC Wallet part of RSC Chain?</span>
+                <span className="rsc-faq-question-text">{t('landing.faq.q6')}</span>
                 <span className="rsc-faq-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -1484,7 +1484,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 </span>
               </button>
               <div className={`rsc-faq-answer ${openFaq === 5 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>Yes. It's the official product to interact with the ecosystem and its utilities.</p>
+                <p>{t('landing.faq.a6')}</p>
               </div>
             </div>
           </div>
@@ -1510,15 +1510,15 @@ export function LandingPage({ onEnter }: LandingPageProps) {
           <div className="rsc-cta-final-content">
             <div className="rsc-cta-final-badge">
               <span className="rsc-cta-final-badge-dot"></span>
-              <span>Ready to get started</span>
+              <span>{t('landing.cta.badge')}</span>
             </div>
             
             <h2 className="rsc-cta-final-title">
-              Create your <span className="rsc-cta-final-title-gradient">RSC Wallet</span> today
+              {t('landing.cta.title')} <span className="rsc-cta-final-title-gradient">{t('landing.cta.titleGradient')}</span> {t('landing.cta.title2')}
             </h2>
             
             <p className="rsc-cta-final-subtitle">
-              Access the RSC ecosystem with real control, fast transactions, and practical security.
+              {t('landing.cta.subtitle')}
             </p>
 
             <div className="rsc-cta-final-actions">
@@ -1527,7 +1527,7 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={onEnter || handleEnter}
               >
                 <Download size={20} />
-                <span>Download RSC Wallet</span>
+                <span>{t('landing.cta.download')}</span>
                 <ArrowRight size={20} />
               </button>
               
@@ -1536,12 +1536,12 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                 onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
               >
                 <BookOpen size={20} />
-                <span>View documentation / Security</span>
+                <span>{t('landing.cta.docs')}</span>
               </button>
             </div>
 
             <p className="rsc-cta-final-microcopy">
-              Available for users seeking to operate with freedom and clarity.
+              {t('landing.cta.microcopy')}
             </p>
           </div>
 

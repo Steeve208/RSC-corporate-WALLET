@@ -10,7 +10,7 @@ import './SaleCard.css';
 export function SaleCard() {
   const { account, provider, signer, isConnecting } = useWeb3();
   const { saleInfo, userPurchase, claimableAmount, isLoading, error } = useSaleContract(provider, signer);
-  
+
   // If no wallet connected, show friendly message
   if (!account && !isConnecting && !saleInfo) {
     // If loading, show spinner

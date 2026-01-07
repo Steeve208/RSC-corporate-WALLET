@@ -1,7 +1,27 @@
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { CONTRACTS } from '../config/contracts.js';
-import { formatEther } from '../utils/web3.js';
+import { formatEther, isMobile } from '../utils/web3.js';
+
+// Función para esperar a que window.ethereum esté disponible
+async function waitForEthereum(maxWait = 5000) {
+  if (window.ethereum) {
+    return window.ethereum;
+  }
+  
+  return new Promise((resolve) => {
+    const startTime = Date.now();
+    const checkInterval = setInterval(() => {
+      if (window.ethereum) {
+        clearInterval(checkInterval);
+        resolve(window.ethereum);
+      } else if (Date.now() - startTime > maxWait) {
+        clearInterval(checkInterval);
+        resolve(null);
+      }
+    }, 100);
+  });
+}
 
 export function useSaleContract(provider, signer) {
   const [saleContract, setSaleContract] = useState(null);
@@ -19,25 +39,44 @@ export function useSaleContract(provider, signer) {
   useEffect(() => {
     const initReadOnly = async () => {
       try {
-        if (typeof window === 'undefined' || !window.ethereum) {
-          setError('MetaMask is not installed');
+        if (typeof window === 'undefined') {
           setIsLoading(false);
           return;
         }
 
-        const prov = new ethers.BrowserProvider(window.ethereum);
-        const sale = new ethers.Contract(
-          CONTRACTS.RSKSale.address,
-          CONTRACTS.RSKSale.abi,
-          prov
-        );
-        setSaleContractReadOnly(sale);
-        // Cargar información pública inmediatamente
-        await loadPublicData(sale);
+        // En móvil, esperar a que ethereum esté disponible
+        let ethereum = window.ethereum;
+        if (isMobile() && !ethereum) {
+          ethereum = await waitForEthereum(5000);
+        }
+
+        if (!ethereum) {
+          // No mostrar error si no hay MetaMask, solo no cargar datos
+          setIsLoading(false);
+          return;
+        }
+
+        try {
+          const prov = new ethers.BrowserProvider(ethereum);
+          const sale = new ethers.Contract(
+            CONTRACTS.RSKSale.address,
+            CONTRACTS.RSKSale.abi,
+            prov
+          );
+          setSaleContractReadOnly(sale);
+          // Cargar información pública inmediatamente
+          await loadPublicData(sale);
+        } catch (contractErr) {
+          // Si hay error al cargar el contrato, no mostrar error técnico
+          // El usuario verá el mensaje de conectar wallet
+          console.error('Error loading contract (user may need to connect wallet):', contractErr);
+          setIsLoading(false);
+          // No establecer error aquí, dejar que el componente maneje el estado sin wallet
+        }
       } catch (err) {
         console.error('Error inicializando contrato read-only:', err);
-        setError('Error connecting to blockchain: ' + err.message);
         setIsLoading(false);
+        // No establecer error aquí
       }
     };
     
@@ -103,8 +142,11 @@ export function useSaleContract(provider, signer) {
       });
       setError(null);
     } catch (err) {
-      setError('Error loading sale information: ' + err.message);
-      console.error(err);
+      // Solo mostrar error si es un error real, no si es porque no hay wallet conectado
+      if (err.message && !err.message.includes('user rejected') && !err.message.includes('not connected')) {
+        console.error('Error loading sale info:', err);
+        // No establecer error aquí para no bloquear la UI, el componente manejará el estado
+      }
     } finally {
       setIsLoading(false);
     }

@@ -10,7 +10,7 @@ import './SaleCard.css';
 export function SaleCard() {
   const { account, provider, signer } = useWeb3();
   const { saleInfo, userPurchase, claimableAmount, isLoading, error } = useSaleContract(provider, signer);
-  
+
   // Si no hay wallet pero hay error, mostrar mensaje más amigable
   if (error && !saleInfo && !isLoading) {
     return (

@@ -127,3 +127,39 @@
   cursor: not-allowed;
 }
 
+@media (max-width: 768px) {
+  .buy-form-container {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .buy-form-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .input-group input {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
+
+  .input-suffix {
+    padding: 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .output-display {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+  }
+
+  .btn-buy {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .vesting-info {
+    font-size: 0.8rem;
+  }
+}
+
