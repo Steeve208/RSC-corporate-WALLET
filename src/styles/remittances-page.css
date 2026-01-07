@@ -403,33 +403,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .remittances-hero {
-    padding: 100px 0 60px;
-  }
-
-  .remittances-hero-container {
-    padding: 0 16px;
-  }
-
-  .remittances-hero-title {
-    font-size: clamp(2rem, 10vw, 3rem);
-    margin-bottom: 16px;
-  }
-
-  .remittances-hero-subtitle {
-    font-size: clamp(1rem, 4vw, 1.125rem);
-    margin-bottom: 32px;
-  }
-
-  .remittances-hero-cta {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px 24px;
-    font-size: 1rem;
-    justify-content: center;
-  }
-
-  .remittances-container {
-    padding: 0 16px;
+    padding: 120px 0 80px;
   }
 
   .remittances-allows,
@@ -437,123 +411,27 @@
   .remittances-cases,
   .remittances-security,
   .remittances-cta {
-    padding: 50px 0;
-  }
-
-  .remittances-section-title {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-    margin-bottom: 40px;
+    padding: 60px 0;
   }
 
   .remittances-allows-grid,
   .remittances-cases-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .remittances-allows-card,
-  .remittances-case-card {
-    padding: 28px 20px;
-  }
-
-  .remittances-allows-icon,
-  .remittances-case-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 20px;
-  }
-
-  .remittances-allows-card-title,
-  .remittances-case-title {
-    font-size: 1.25rem;
   }
 
   .remittances-how-step {
     flex-direction: column;
     text-align: center;
-    padding: 24px 20px;
-    gap: 16px;
-  }
-
-  .remittances-how-step-number {
-    width: 56px;
-    height: 56px;
-    font-size: 1.25rem;
-    margin: 0 auto;
-  }
-
-  .remittances-how-step-title {
-    font-size: 1.25rem;
   }
 
   .remittances-security-header {
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 40px;
   }
 
   .remittances-security-feature {
     flex-direction: column;
     text-align: center;
-    padding: 24px 20px;
-    gap: 16px;
-  }
-
-  .remittances-security-check {
-    margin: 0 auto;
-  }
-
-  .remittances-cta-content {
-    padding: 0 16px;
-  }
-
-  .remittances-cta-button {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px 24px;
-    font-size: 1rem;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .remittances-hero {
-    padding: 80px 0 50px;
-  }
-
-  .remittances-hero-icon {
-    margin-bottom: 24px;
-  }
-
-  .remittances-hero-icon svg {
-    width: 48px;
-    height: 48px;
-  }
-
-  .remittances-allows,
-  .remittances-how,
-  .remittances-cases,
-  .remittances-security,
-  .remittances-cta {
-    padding: 40px 0;
-  }
-
-  .remittances-allows-card,
-  .remittances-case-card,
-  .remittances-how-step,
-  .remittances-security-feature {
-    padding: 20px 16px;
-  }
-
-  .remittances-allows-icon,
-  .remittances-case-icon {
-    width: 56px;
-    height: 56px;
-  }
-
-  .remittances-cta-icon svg {
-    width: 48px;
-    height: 48px;
   }
 }
 

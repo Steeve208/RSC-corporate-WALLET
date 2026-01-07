@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../../styles/landing.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
-import { useTranslation } from '../../contexts/I18nContext';
-import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen } from 'lucide-react';
+import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen, Rocket } from 'lucide-react';
 
 type LandingPageProps = {
   onEnter?: () => void;
@@ -16,21 +15,11 @@ const handleEnter = () => {
 
 
 export function LandingPage({ onEnter }: LandingPageProps) {
-  const { t } = useTranslation();
-  const [transactionStep, setTransactionStep] = useState(0);
   const [activeScreen, setActiveScreen] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   // Activate scroll animations
   useScrollAnimation();
-
-  // Transaction animation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTransactionStep((prev) => (prev + 1) % 4);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
 
   return (
@@ -38,12 +27,12 @@ export function LandingPage({ onEnter }: LandingPageProps) {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section - wRSK Token Sale */}
       <section className="rsc-hero rsc-tech-bg">
         {/* Animated Background Elements */}
         <div className="rsc-tech-bg-glow"></div>
         <div className="rsc-tech-particles">
-          {[...Array(15)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <div key={i} className="rsc-tech-particle" style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -51,117 +40,81 @@ export function LandingPage({ onEnter }: LandingPageProps) {
               animationDuration: `${10 + Math.random() * 10}s`
             }}></div>
           ))}
-          </div>
-        <div className="rsc-hero-container">
-          {/* Left Content */}
-          <div className="rsc-hero-left">
-            <div className="rsc-hero-tag animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <span>{t('hero.tag')}</span>
         </div>
+        
+        {/* wRSK Token Sale Hero Content */}
+        <div className="rsc-sale-hero-container">
+          <div className="rsc-sale-hero-content">
+            {/* Badge */}
+            <div className="rsc-sale-hero-badge animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <span className="rsc-sale-hero-badge-dot"></span>
+              <span>FIRST ROUND - LIVE NOW</span>
+            </div>
 
-            <h1 className="rsc-hero-title animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              {t('hero.title')}
+            {/* Main Title */}
+            <h1 className="rsc-sale-hero-title animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <span className="rsc-sale-hero-title-icon">🚀</span>
+              <span className="rsc-sale-hero-title-highlight">wRSK Token Sale</span>
             </h1>
-            
-            <p className="rsc-hero-subtitle animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              {t('hero.subtitle')}
+
+            {/* Subtitle */}
+            <p className="rsc-sale-hero-subtitle animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              Exclusive opportunity to acquire wRSK tokens with USDT on BSC Mainnet
             </p>
-            
-            <p className="rsc-hero-description animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              {t('hero.description')}
-            </p>
-            
-            <button 
-              className="rsc-hero-cta animate-fade-in-up" 
-              style={{ animationDelay: '0.5s' }}
-              onClick={onEnter || handleEnter}
-            >
-              {t('hero.cta')}
-              <span className="rsc-hero-cta-arrow">→</span>
-          </button>
-        </div>
 
-          {/* Right Phone Mockup */}
-          <div className="rsc-hero-right animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <div className="rsc-phone-mockup">
-              <div className="rsc-phone-frame">
-                <div className="rsc-phone-screen">
-                  {/* Phone Status Bar */}
-                  <div className="rsc-phone-status">
-                    <span className="rsc-phone-time">3:18</span>
-                    <div className="rsc-phone-signals">
-                      <div className="rsc-signal-bars">
-                        <div className="rsc-signal-bar"></div>
-                        <div className="rsc-signal-bar"></div>
-                        <div className="rsc-signal-bar"></div>
-                        <div className="rsc-signal-bar"></div>
-                      </div>
-                      <div className="rsc-battery">
-                        <div className="rsc-battery-level"></div>
-                      </div>
-                    </div>
-        </div>
-
-                  {/* Phone Content - RSC Wallet App */}
-                  <div className="rsc-phone-content">
-                    {/* App Header */}
-                    <div className="rsc-app-header">
-                      <div className="rsc-app-logo-small">
-                        <div className="rsc-app-logo-dots-small">
-                          <div className="rsc-app-dot"></div>
-                          <div className="rsc-app-dot"></div>
-                          <div className="rsc-app-dot"></div>
-                          <div className="rsc-app-dot"></div>
-                          <div className="rsc-app-dot"></div>
-                        </div>
-                      </div>
-                      <span className="rsc-app-title">RSC Wallet</span>
-                    </div>
-
-                    {/* Balance Card */}
-                    <div className="rsc-balance-card">
-                      <p className="rsc-balance-label">Total Balance</p>
-                      <h3 className="rsc-balance-amount">$12,450.80</h3>
-                      <p className="rsc-balance-change">+5.2% today</p>
-                    </div>
-
-                    {/* Transactions */}
-                    <div className="rsc-transactions-list">
-                      {/* Transaction 1 */}
-                      <div className={`rsc-transaction ${transactionStep >= 0 && transactionStep < 2 ? 'rsc-transaction--active' : ''} ${transactionStep === 1 ? 'rsc-transaction--processing' : ''} ${transactionStep >= 2 ? 'rsc-transaction--completed' : ''}`}>
-                        <div className="rsc-transaction-icon rsc-transaction-icon--send">
-                          <ArrowUpRight size={16} />
-                        </div>
-                        <div className="rsc-transaction-details">
-                          <p className="rsc-transaction-type">Sent</p>
-                          <p className="rsc-transaction-to">To: 0x7a3...f2c</p>
-                        </div>
-                        <div className="rsc-transaction-amount">
-                          <span className="rsc-transaction-value">-1,250 RSK</span>
-                          {transactionStep === 1 && <span className="rsc-transaction-status">Processing...</span>}
-                          {transactionStep >= 2 && <Check className="rsc-transaction-check" size={16} />}
-                        </div>
-        </div>
-
-                      {/* Transaction 2 */}
-                      <div className={`rsc-transaction ${transactionStep >= 2 ? 'rsc-transaction--active' : ''} ${transactionStep === 3 ? 'rsc-transaction--processing' : ''}`}>
-                        <div className="rsc-transaction-icon rsc-transaction-icon--receive">
-                          <ArrowDownLeft size={16} />
-          </div>
-                        <div className="rsc-transaction-details">
-                          <p className="rsc-transaction-type">Received</p>
-                          <p className="rsc-transaction-to">From: 0x9b1...a4d</p>
-          </div>
-                        <div className="rsc-transaction-amount">
-                          <span className="rsc-transaction-value rsc-transaction-value--positive">+850 RSK</span>
-                          {transactionStep === 3 && <span className="rsc-transaction-status">Processing...</span>}
-                          {transactionStep === 0 && <Check className="rsc-transaction-check" size={16} />}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            {/* Features Grid */}
+            <div className="rsc-sale-hero-features animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="rsc-sale-hero-feature-card">
+                <div className="rsc-sale-hero-feature-icon">⚡</div>
+                <div className="rsc-sale-hero-feature-content">
+                  <h3 className="rsc-sale-hero-feature-title">25% Immediate</h3>
+                  <p className="rsc-sale-hero-feature-desc">Receive tokens instantly</p>
                 </div>
               </div>
+              <div className="rsc-sale-hero-feature-card">
+                <div className="rsc-sale-hero-feature-icon">📈</div>
+                <div className="rsc-sale-hero-feature-content">
+                  <h3 className="rsc-sale-hero-feature-title">75% Vesting</h3>
+                  <p className="rsc-sale-hero-feature-desc">6 months linear release</p>
+                </div>
+              </div>
+              <div className="rsc-sale-hero-feature-card">
+                <div className="rsc-sale-hero-feature-icon">💰</div>
+                <div className="rsc-sale-hero-feature-content">
+                  <h3 className="rsc-sale-hero-feature-title">Special Price</h3>
+                  <p className="rsc-sale-hero-feature-desc">Best rate available</p>
+                </div>
+              </div>
+              <div className="rsc-sale-hero-feature-card">
+                <div className="rsc-sale-hero-feature-icon">🔒</div>
+                <div className="rsc-sale-hero-feature-content">
+                  <h3 className="rsc-sale-hero-feature-title">Secure</h3>
+                  <p className="rsc-sale-hero-feature-desc">Smart contract verified</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="rsc-sale-hero-cta-wrapper animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+              <button 
+                className="rsc-sale-hero-cta"
+                onClick={() => {
+                  if ((window as any).navigateToPage) {
+                    (window as any).navigateToPage('sale');
+                  }
+                }}
+              >
+                <Rocket size={28} />
+                <span>Join the Token Sale</span>
+                <span className="rsc-sale-hero-cta-arrow">→</span>
+              </button>
+            </div>
+
+            {/* Additional Info */}
+            <div className="rsc-sale-hero-info animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <p className="rsc-sale-hero-info-text">
+                Limited supply available • First come, first served
+              </p>
             </div>
           </div>
         </div>

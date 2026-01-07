@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X } from 'lucide-react';
+import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, Wrench, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Rocket } from 'lucide-react';
 import { useTranslation, Language } from '../../contexts/I18nContext';
 
 export function Navbar() {
@@ -11,7 +11,6 @@ export function Navbar() {
   const [isDesarrolladoresOpen, setIsDesarrolladoresOpen] = useState(false);
   const [isEmpresaOpen, setIsEmpresaOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const individuosDropdownRef = useRef<HTMLDivElement>(null);
   const empresasDropdownRef = useRef<HTMLDivElement>(null);
   const institucionesDropdownRef = useRef<HTMLDivElement>(null);
@@ -96,6 +95,17 @@ export function Navbar() {
         onClick: () => {
           if ((window as any).navigateToPage) {
             (window as any).navigateToPage('education');
+          }
+        }
+      },
+      { 
+        label: 'Token Sale', 
+        description: 'Compra wRSK con USDT en BSC',
+        icon: Rocket,
+        href: '#',
+        onClick: () => {
+          if ((window as any).navigateToPage) {
+            (window as any).navigateToPage('sale');
           }
         }
       },
@@ -445,15 +455,7 @@ export function Navbar() {
     <nav className="rsc-navbar">
       <div className="rsc-navbar-container">
         {/* Logo - Left */}
-        <div 
-          className="rsc-navbar-logo"
-          onClick={() => {
-            if ((window as any).navigateToPage) {
-              (window as any).navigateToPage('landing');
-            }
-          }}
-          style={{ cursor: 'pointer' }}
-        >
+        <div className="rsc-navbar-logo">
           <div className="rsc-logo">
             <div className="rsc-logo-dots">
               <div className="rsc-dot rsc-dot--top"></div>
@@ -466,17 +468,8 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="rsc-mobile-menu-button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
         {/* Center Navigation */}
-        <div className={`rsc-navbar-center ${isMobileMenuOpen ? 'rsc-navbar-center--open' : ''}`}>
+        <div className="rsc-navbar-center">
           {navItems.map((item) => {
             if (item === t('navbar.empresas')) {
               return (
@@ -959,7 +952,7 @@ export function Navbar() {
         </div>
 
         {/* Right Actions */}
-        <div className={`rsc-navbar-right ${isMobileMenuOpen ? 'rsc-navbar-right--open' : ''}`}>
+        <div className="rsc-navbar-right">
           <div className="rsc-nav-dropdown" ref={languageDropdownRef}>
             <button 
               className={`rsc-icon-button ${isLanguageOpen ? 'rsc-icon-button--active' : ''}`} 
@@ -985,7 +978,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <button className="rsc-icon-button rsc-icon-button--search" aria-label="Search">
+          <button className="rsc-icon-button" aria-label="Search">
             <Search className="rsc-icon" size={18} />
           </button>
           <button className="rsc-action-button">
@@ -993,14 +986,6 @@ export function Navbar() {
           </button>
         </div>
       </div>
-      
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="rsc-mobile-menu-overlay"
-          onClick={() => setIsMobileMenuOpen(false)}
-        ></div>
-      )}
     </nav>
   );
 }

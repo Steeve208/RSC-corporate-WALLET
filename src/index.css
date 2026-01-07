@@ -1661,53 +1661,6 @@ html {
   }
 }
 
-/* Mobile Viewport Fixes */
-@supports (-webkit-touch-callout: none) {
-  /* iOS Safari specific fixes */
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-/* Touch Target Sizes - Minimum 44x44px for mobile */
-@media (max-width: 768px) {
-  button,
-  a,
-  input[type="button"],
-  input[type="submit"],
-  .btn {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/* Prevent text size adjustment on iOS */
-@media screen and (max-width: 768px) {
-  html {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-}
-
-/* Safe Area Insets for Notched Devices */
-@supports (padding: max(0px)) {
-  body {
-    padding-left: max(0px, env(safe-area-inset-left));
-    padding-right: max(0px, env(safe-area-inset-right));
-  }
-}
-
-/* Smooth Scrolling for Mobile */
-@media (max-width: 768px) {
-  html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
 /* Improved Button Styles */
 button, .btn {
   touch-action: manipulation;
