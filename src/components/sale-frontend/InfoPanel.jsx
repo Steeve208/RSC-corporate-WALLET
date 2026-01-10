@@ -1,4 +1,5 @@
 import React from 'react';
+import { Coins, Lock, User, CreditCard } from 'lucide-react';
 import { formatNumber } from '../../utils/sale-frontend/web3.js';
 import './InfoPanel.css';
 
@@ -29,7 +30,9 @@ export function InfoPanel({ saleInfo }) {
 
       <div className="info-grid">
         <div className="info-item">
-          <div className="info-icon">💰</div>
+          <div className="info-icon">
+            <Coins size={20} />
+          </div>
           <div className="info-content">
             <div className="info-title">Price</div>
             <div className="info-desc">{formatNumber(saleInfo.price, 6)} USDT per wRSK</div>
@@ -37,7 +40,9 @@ export function InfoPanel({ saleInfo }) {
         </div>
         
         <div className="info-item">
-          <div className="info-icon">🔒</div>
+          <div className="info-icon">
+            <Lock size={20} />
+          </div>
           <div className="info-content">
             <div className="info-title">Vesting</div>
             <div className="info-desc">25% immediate, 75% over 6 months</div>
@@ -45,7 +50,9 @@ export function InfoPanel({ saleInfo }) {
         </div>
         
         <div className="info-item">
-          <div className="info-icon">👤</div>
+          <div className="info-icon">
+            <User size={20} />
+          </div>
           <div className="info-content">
             <div className="info-title">Limit per user</div>
             <div className="info-desc">{formatNumber(saleInfo.maxPerUser, 0)} wRSK</div>
@@ -53,7 +60,9 @@ export function InfoPanel({ saleInfo }) {
         </div>
         
         <div className="info-item">
-          <div className="info-icon">💳</div>
+          <div className="info-icon">
+            <CreditCard size={20} />
+          </div>
           <div className="info-content">
             <div className="info-title">Payment method</div>
             <div className="info-desc">USDT (BSC)</div>

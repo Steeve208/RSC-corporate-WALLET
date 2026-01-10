@@ -55,7 +55,6 @@ export function LandingPage({ onEnter }: LandingPageProps) {
 
             {/* Main Title */}
             <h1 className="rsc-sale-hero-title animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <span className="rsc-sale-hero-title-icon">🚀</span>
               <span className="rsc-sale-hero-title-highlight">wRSK Token Sale</span>
             </h1>
 
@@ -67,28 +66,36 @@ export function LandingPage({ onEnter }: LandingPageProps) {
             {/* Features Grid */}
             <div className="rsc-sale-hero-features animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">⚡</div>
+                <div className="rsc-sale-hero-feature-icon">
+                  <Zap size={24} />
+                </div>
                 <div className="rsc-sale-hero-feature-content">
                   <h3 className="rsc-sale-hero-feature-title">25% Immediate</h3>
                   <p className="rsc-sale-hero-feature-desc">Receive tokens instantly</p>
                 </div>
               </div>
               <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">📈</div>
+                <div className="rsc-sale-hero-feature-icon">
+                  <TrendingUp size={24} />
+                </div>
                 <div className="rsc-sale-hero-feature-content">
                   <h3 className="rsc-sale-hero-feature-title">75% Vesting</h3>
                   <p className="rsc-sale-hero-feature-desc">6 months linear release</p>
                 </div>
               </div>
               <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">💰</div>
+                <div className="rsc-sale-hero-feature-icon">
+                  <Coins size={24} />
+                </div>
                 <div className="rsc-sale-hero-feature-content">
                   <h3 className="rsc-sale-hero-feature-title">Special Price</h3>
                   <p className="rsc-sale-hero-feature-desc">Best rate available</p>
                 </div>
               </div>
               <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">🔒</div>
+                <div className="rsc-sale-hero-feature-icon">
+                  <Shield size={24} />
+                </div>
                 <div className="rsc-sale-hero-feature-content">
                   <h3 className="rsc-sale-hero-feature-title">Secure</h3>
                   <p className="rsc-sale-hero-feature-desc">Smart contract verified</p>
@@ -463,15 +470,21 @@ export function LandingPage({ onEnter }: LandingPageProps) {
                   <div className="rsc-mockup-content">
                     <div className="rsc-mockup-security">
                       <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">🔒</div>
+                        <div className="rsc-mockup-security-icon">
+                          <Lock size={20} />
+                        </div>
                         <div className="rsc-mockup-security-label">PIN Active</div>
                       </div>
                       <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">👆</div>
+                        <div className="rsc-mockup-security-icon">
+                          <Fingerprint size={20} />
+                        </div>
                         <div className="rsc-mockup-security-label">Biometric</div>
                       </div>
                       <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">🔑</div>
+                        <div className="rsc-mockup-security-icon">
+                          <Key size={20} />
+                        </div>
                         <div className="rsc-mockup-security-label">Seed Backup</div>
                       </div>
                     </div>
@@ -1635,7 +1648,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
 
         <div className="vaulto-footer-bottom">
           <p className="vaulto-footer-disclaimer">
-            ⚠️ We do not custody your funds · We do not sell your data · If you lose your key, no one can recover it
+            <AlertCircle size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />
+            We do not custody your funds · We do not sell your data · If you lose your key, no one can recover it
           </p>
           <p className="vaulto-footer-copyright">
             © 2025 RSC Wallet. All rights reserved.
