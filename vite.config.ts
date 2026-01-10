@@ -10,6 +10,7 @@ export default defineConfig({
     },
   })],
   root: './src',
+  publicDir: '../public',
   server: {
     host: '0.0.0.0',
     port: 5173,
