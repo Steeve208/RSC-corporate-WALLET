@@ -1,0 +1,229 @@
+¿p.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Welcome Bonus Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a2e;
+            color: white;
+        }
+        .reset-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #d32f2f;
+        }
+        .success {
+            background: #4caf50;
+        }
+        .success:hover {
+            background: #45a049;
+        }
+        .warning {
+            background: #ff9800;
+        }
+        .warning:hover {
+            background: #f57c00;
+        }
+        .log {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔄 Reset Welcome Bonus Event</h1>
+    
+    <div class="reset-section">
+        <h2>⚠️ WARNING</h2>
+        <p>This tool is for testing only. Do not use it in production.</p>
+        <p>It resets the Follow Bonus event state so it can be tested again.</p>
+    </div>
+
+    <div class="reset-section">
+        <h2>🔍 Current Status</h2>
+        <div id="currentStatus">
+            <p>Checking status...</p>
+        </div>
+    </div>
+
+    <div class="reset-section">
+        <h2>🛠️ Actions</h2>
+        <button onclick="checkStatus()" class="warning">Check Status</button>
+        <button onclick="resetEvent()" class="success">Reset Event</button>
+        <button onclick="clearAllStorage()" class="warning">Clear Local Storage</button>
+        <button onclick="simulateClaim()" class="success">Simulate Claim</button>
+    </div>
+
+    <div class="reset-section">
+        <h2>📝 Logs</h2>
+        <div class="log" id="logs"></div>
+        <button onclick="clearLogs()">Limpiar Logs</button>
+    </div>
+
+    <script>
+        function addLog(message) {
+            const logs = document.getElementById('logs');
+            const timestamp = new Date().toLocaleTimeString();
+            logs.innerHTML += `[${timestamp}] ${message}\n`;
+            logs.scrollTop = logs.scrollHeight;
+        }
+
+        function checkStatus() {
+            addLog('🔍 Checking Follow Bonus status...');
+            
+            const followClaimed = localStorage.getItem('rsc_follow_claimed');
+            const followUser = localStorage.getItem('rsc_follow_user');
+            const followEvent = localStorage.getItem('rsc_follow_event');
+            const userBalance = localStorage.getItem('rsc_user_balance');
+            
+            addLog(`rsc_follow_claimed: ${followClaimed}`);
+            addLog(`rsc_follow_user: ${followUser ? 'Present' : 'Not found'}`);
+            addLog(`rsc_follow_event: ${followEvent ? 'Present' : 'Not found'}`);
+            addLog(`rsc_user_balance: ${userBalance || '0'}`);
+            
+            const statusDiv = document.getElementById('currentStatus');
+            statusDiv.innerHTML = `
+                <p><strong>Claim Status:</strong> ${followClaimed === 'true' ? '✅ CLAIMED' : '❌ NOT CLAIMED'}</p>
+                <p><strong>Current Balance:</strong> ${userBalance || '0'} RSK</p>
+                <p><strong>User Data:</strong> ${followUser ? '✅ Present' : '❌ Missing'}</p>
+                <p><strong>Event Data:</strong> ${followEvent ? '✅ Present' : '❌ Missing'}</p>
+            `;
+        }
+
+        function resetEvent() {
+            addLog('🔄 Resetting Follow Bonus event...');
+            
+            localStorage.removeItem('rsc_follow_claimed');
+            localStorage.removeItem('rsc_follow_claim_date');
+            localStorage.removeItem('rsc_follow_claim_amount');
+            
+            const userData = {
+                hasSeenBanner: false,
+                hasClaimedBonus: false,
+                deviceId: generateDeviceId(),
+                claimDate: null,
+                twitterVerified: false,
+                telegramVerified: false,
+                verificationRequested: false,
+                isNewUser: true
+            };
+            localStorage.setItem('rsc_follow_user', JSON.stringify(userData));
+            
+            const eventData = {
+                id: 'follow_bonus_2025',
+                name: 'Follow & Earn 100 RSK',
+                description: 'Follow on X and join Telegram to receive 100 RSK',
+                reward: 100,
+                rewardCurrency: 'RSK',
+                supabaseBonusType: 'follow_bonus',
+                maxSlots: 20000,
+                duration: 14,
+                startDate: new Date(),
+                endDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+                claimedSlots: 0,
+                isActive: true,
+                requiredActions: {
+                    twitterFollow: true,
+                    telegramJoin: true
+                }
+            };
+            localStorage.setItem('rsc_follow_event', JSON.stringify(eventData));
+            
+            addLog('✅ Follow Bonus reset successfully.');
+            addLog('🔄 Reload the page to see the changes.');
+            
+            checkStatus();
+        }
+
+        function clearAllStorage() {
+            addLog('🗑️ Clearing storage keys related to the Follow Bonus...');
+            
+            const keysToRemove = [
+                'rsc_follow_claimed',
+                'rsc_follow_claim_date', 
+                'rsc_follow_claim_amount',
+                'rsc_follow_user',
+                'rsc_follow_event',
+                'rsc_user_balance',
+                'rsc_balance_history'
+            ];
+            
+            keysToRemove.forEach(key => {
+                localStorage.removeItem(key);
+                addLog(`🗑️ Removed: ${key}`);
+            });
+            
+            addLog('✅ Storage cleared.');
+            checkStatus();
+        }
+
+        function simulateClaim() {
+            addLog('🧪 Simulating follow bonus claim...');
+            
+            localStorage.setItem('rsc_follow_claimed', 'true');
+            localStorage.setItem('rsc_follow_claim_date', new Date().toISOString());
+            localStorage.setItem('rsc_follow_claim_amount', '100');
+            
+            const currentBalance = parseFloat(localStorage.getItem('rsc_user_balance') || '0');
+            const newBalance = currentBalance + 100;
+            localStorage.setItem('rsc_user_balance', newBalance.toString());
+            
+            addLog(`✅ Simulation completed - Balance: ${newBalance}`);
+            checkStatus();
+        }
+
+        function generateDeviceId() {
+            const fingerprint = [
+                navigator.userAgent,
+                navigator.language,
+                screen.width + 'x' + screen.height,
+                new Date().getTimezoneOffset()
+            ].join('|');
+            
+            let hash = 0;
+            for (let i = 0; i < fingerprint.length; i++) {
+                const char = fingerprint.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            
+            return Math.abs(hash).toString(36);
+        }
+
+        function clearLogs() {
+            document.getElementById('logs').innerHTML = '';
+        }
+
+        // Inicializar
+        window.addEventListener('load', function() {
+            addLog('🚀 Reset utility ready');
+            checkStatus();
+        });
+    </script>
+</body>
+</html>

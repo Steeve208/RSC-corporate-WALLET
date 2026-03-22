@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSC Chain - Admin Login</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/admin.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/img/rsc-logo-quantum.svg">
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <img src="../assets/img/rsc-logo-quantum.svg" alt="RSC Chain" class="login-logo">
+        <h1>RSC Chain</h1>
+        <p>Panel de Administración</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="username">
+            <i class="fas fa-user"></i>
+            Usuario
+          </label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Ingresa tu usuario"
+            required
+            autocomplete="username"
+            autofocus
+            style="pointer-events: auto; user-select: text;"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            <i class="fas fa-lock"></i>
+            Contraseña
+          </label>
+          <div class="password-input">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="Ingresa tu contraseña"
+              required
+              autocomplete="current-password"
+              style="pointer-events: auto; user-select: text;"
+            >
+            <button type="button" class="btn-toggle-password" onclick="togglePassword()">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <span>Recordarme</span>
+          </label>
+          <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-login">
+          <span>Iniciar Sesión</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+        <div class="login-divider">
+          <span>O</span>
+        </div>
+
+        <button type="button" class="btn-2fa" onclick="show2FALogin()">
+          <i class="fas fa-shield-alt"></i>
+          Iniciar con 2FA
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p>
+          <i class="fas fa-shield-check"></i>
+          Conexión segura y encriptada
+        </p>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="login-bg">
+      <div class="bg-grid"></div>
+      <div class="bg-particles"></div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Login Script -->
+  <script src="js/modules/auth.js"></script>
+  <script>
+    // Helper functions for login page
+    function showLoading(show) {
+      const overlay = document.getElementById('loadingOverlay');
+      if (overlay) {
+        if (show) {
+          overlay.classList.add('active');
+        } else {
+          overlay.classList.remove('active');
+        }
+      }
+    }
+    
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      if (!container) {
+        // Crear container si no existe
+        const newContainer = document.createElement('div');
+        newContainer.id = 'toastContainer';
+        newContainer.className = 'toast-container';
+        document.body.appendChild(newContainer);
+        return showToast(message, type); // Retry
+      }
+      
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      
+      const icons = {
+        'success': 'fa-check-circle',
+        'error': 'fa-times-circle',
+        'warning': 'fa-exclamation-triangle',
+        'info': 'fa-info-circle'
+      };
+      
+      toast.innerHTML = `
+        <div class="toast-icon">
+          <i class="fas ${icons[type] || icons.info}"></i>
+        </div>
+        <div class="toast-content">
+          <div class="toast-message">${message}</div>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.remove()">
+          <i class="fas fa-times"></i>
+        </button>
+      `;
+      
+      container.appendChild(toast);
+      
+      // Auto remove after 5 seconds
+      setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+      }, 5000);
+    }
+    
+    // Wait for Supabase to load
+    window.addEventListener('load', () => {
+      if (!window.supabase) {
+        console.error('❌ Supabase library no se cargó correctamente');
+        showToast('Error: No se pudo cargar la biblioteca de Supabase. Por favor recarga la página.', 'error');
+      } else {
+        console.log('✅ Supabase library cargada correctamente');
+      }
+      
+      // Verificar que adminLogin esté disponible
+      if (typeof adminLogin !== 'function') {
+        console.error('❌ adminLogin function no está disponible');
+        showToast('Error: Funciones de autenticación no disponibles. Por favor recarga la página.', 'error');
+      }
+    });
+  </script>
+  <script>
+    // Toggle password visibility
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const toggleBtn = document.querySelector('.btn-toggle-password i');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleBtn.classList.remove('fa-eye');
+        toggleBtn.classList.add('fa-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        toggleBtn.classList.remove('fa-eye-slash');
+        toggleBtn.classList.add('fa-eye');
+      }
+    }
+
+    // Show 2FA login
+    function show2FALogin() {
+      showToast('La autenticación de 2 factores estará disponible próximamente', 'info');
+    }
+
+    // Ensure inputs are enabled on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      
+      if (usernameInput) {
+        usernameInput.removeAttribute('disabled');
+        usernameInput.removeAttribute('readonly');
+        usernameInput.style.pointerEvents = 'auto';
+        usernameInput.style.userSelect = 'text';
+      }
+      
+      if (passwordInput) {
+        passwordInput.removeAttribute('disabled');
+        passwordInput.removeAttribute('readonly');
+        passwordInput.style.pointerEvents = 'auto';
+        passwordInput.style.userSelect = 'text';
+      }
+    });
+
+    // Handle login form
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const rememberMe = document.getElementById('rememberMe').checked;
+      
+      // Validar que los campos no estén vacíos
+      if (!username || !password) {
+        showToast('Por favor completa todos los campos', 'error');
+        return;
+      }
+      
+      showLoading(true);
+      
+      try {
+        console.log('🔐 Intentando login...');
+        
+        // Verificar que Supabase esté cargado
+        if (!window.supabase || !window.supabase.createClient) {
+          throw new Error('Supabase library no está cargada. Por favor recarga la página.');
+        }
+        console.log('✅ Supabase library disponible');
+        
+        // Verificar que adminLogin esté disponible
+        if (typeof adminLogin !== 'function') {
+          throw new Error('Funciones de autenticación no disponibles. Por favor recarga la página.');
+        }
+        console.log('✅ adminLogin function disponible');
+        
+        // Llamar a adminLogin (solo acepta email y password)
+        console.log('📧 Intentando login con email:', username);
+        const sessionData = await adminLogin(username, password);
+        
+        if (sessionData && sessionData.id) {
+          console.log('✅ Login exitoso:', sessionData.name);
+          console.log('👤 Datos de sesión:', sessionData);
+          showToast('¡Inicio de sesión exitoso!', 'success');
+          
+          // Guardar rememberMe si está marcado
+          if (rememberMe) {
+            localStorage.setItem('adminRememberMe', 'true');
+          }
+          
+          setTimeout(() => {
+            // Redirigir al panel institucional
+            window.location.href = 'institutional-admin.html';
+          }, 1000);
+        } else {
+          console.error('❌ No se recibieron datos de sesión válidos');
+          throw new Error('No se recibieron datos de sesión. Por favor intenta de nuevo.');
+        }
+      } catch (error) {
+        console.error('❌ Login error completo:', error);
+        console.error('Error stack:', error.stack);
+        console.error('Error name:', error.name);
+        console.error('Error message:', error.message);
+        
+        // Mostrar mensaje de error más descriptivo
+        let errorMessage = 'Error al iniciar sesión.';
+        
+        if (error.message) {
+          errorMessage = error.message;
+        } else if (error.toString) {
+          errorMessage = error.toString();
+        }
+        
+        console.error('📢 Mostrando error al usuario:', errorMessage);
+        showToast(errorMessage, 'error');
+      } finally {
+        showLoading(false);
+      }
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSC Mining Platform - Minería Desactivada</title>
+    <meta http-equiv="refresh" content="0; url=mining-disabled.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/rsc-logo-quantum.svg">
+    <script>
+        // MINERÍA DESACTIVADA - Redirigir a página de desactivación
+        window.location.replace('mining-disabled.html');
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+        }
+        .redirect-message {
+            text-align: center;
+            padding: 40px;
+        }
+        .redirect-message h1 {
+            color: #00ff88;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .redirect-message p {
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 255, 136, 0.1);
+            border-top: 4px solid #00ff88;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px solid #00ff88;
+            transition: all 0.3s;
+        }
+        .link:hover {
+            color: #00cc6a;
+            border-bottom-color: #00cc6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <h1>Minería Desactivada</h1>
+        <div class="spinner"></div>
+        <p>La plataforma de minería ha sido desactivada temporalmente.</p>
+        <p>Si no eres redirigido automáticamente, <a href="mining-disabled.html" class="link">haz clic aquí</a></p>
+    </div>
+</body>
+</html>

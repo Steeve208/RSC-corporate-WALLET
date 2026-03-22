@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSC Wallet  - RSC Management</title>
+    <meta name="description" content="Professional and secure wallet to manage your RSC assets. Trusted interface with maximum security and advanced functionality.">
+    <link rel="icon" href="../assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles/wallet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wallet-container">
+        <!-- Professional Header -->
+        <header class="wallet-header">
+            <div class="container">
+                <div class="flex">
+                    <!-- Logo and Branding -->
+                    <div class="logo">
+                        <img src="../assets/img/logo.png" alt="RSC Chain Pro" width="40" height="40">
+                        <span>RSC Chain Pro</span>
+                    </div>
+                    
+                    <!-- Main Navigation -->
+                    <nav>
+                        <a href="../index.html"> Home</a>
+                        <a href="about.html">ℹ About</a>
+                        <a href="mine.html"> Mining</a>
+                        <a href="p2p.html"> P2P</a>
+                        <a href="staking.html"> Staking</a>
+                    </nav>
+                    
+                    <!-- Header Actions -->
+                    <div class="actions">
+                        <button class="btn btn-secondary">🔐 Connect</button>
+                        <button class="btn btn-primary">🔗 Wallet Pro</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="wallet-main">
+            <!-- Professional Sidebar -->
+            <aside class="wallet-sidebar">
+                <!-- Wallet Navigation -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Navigation</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#overview" class="nav-link active" data-section="overview">
+                                <span class="nav-icon">📊</span>
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#send" class="nav-link" data-section="send">
+                                <span class="nav-icon">📤</span>
+                                Send RSC
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#receive" class="nav-link" data-section="receive">
+                                <span class="nav-icon">📥</span>
+                                Receive RSC
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#transactions" class="nav-link" data-section="transactions">
+                                <span class="nav-icon">📋</span>
+                                Transactions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#mining" class="nav-link" data-section="mining">
+                                <span class="nav-icon">⛏️</span>
+                                Mining
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Quick Actions</h3>
+                    <div class="quick-actions">
+                        <button class="action-btn primary" id="claimMiningBtn">
+                            <span>🎁</span>
+                            Claim Mining
+                        </button>
+                        <button class="action-btn" id="refreshBalanceBtn">
+                            <span>🔄</span>
+                            Update Balance
+                        </button>
+                        <button class="action-btn" id="backupWalletBtn">
+                            <span>💾</span>
+                            Secure Backup
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wallet Status -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Wallet Status</h3>
+                    <div class="wallet-status">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span class="text-sm font-medium">Connected</span>
+                        </div>
+                        <div class="wallet-address" id="walletAddressShort">
+                            0x742d...4d8b6
+                        </div>
+                        <div class="status-actions">
+                            <button class="copy-address-btn">📋 Copy</button>
+                            <button class="qr-code-btn">📱 QR</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="content-area">
+                <!-- Overview Section -->
+                <section id="overview" class="content-section active">
+                    <div class="content-header">
+                        <h1 class="content-title">Overview</h1>
+                        <p class="content-subtitle">Complete summary of your wallet and recent activity</p>
+                    </div>
+
+                    <!-- Main Balance -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h2 class="card-title">Main Balance</h2>
+                                <p class="card-subtitle">Your available balance in RSC</p>
+                            </div>
+                            <button class="btn btn-secondary" id="refreshBalanceBtn">
+                                <span>🔄</span>
+                                Update
+                            </button>
+                        </div>
+                        <div class="balance-display">
+                            <div class="balance-amount" id="mainBalance">0.000000 RSC</div>
+                            <div class="balance-usd" id="balanceUSD">≈ $0.00 USD</div>
+                            <div class="balance-actions">
+                                <button class="btn btn-primary" onclick="wallet.navigateToSection('send')">
+                                    📤 Send RSC
+                                </button>
+                                <button class="btn btn-secondary" onclick="wallet.navigateToSection('receive')">
+                                    📥 Receive RSC
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-value" id="totalBalance">0.000000</div>
+                            <div class="stat-label">Total Balance</div>
+                            <div class="stat-change positive">+0.00%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📤</div>
+                            <div class="stat-value" id="totalSent">0.000000</div>
+                            <div class="stat-label">Total Sent</div>
+                            <div class="stat-change positive">+0.00%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📥</div>
+                            <div class="stat-value" id="totalReceived">0.000000</div>
+                            <div class="stat-label">Total Received</div>
+                            <div class="stat-change positive">+0.00%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">⛏️</div>
+                            <div class="stat-value" id="miningRewards">0.000000</div>
+                            <div class="stat-label">Mining Rewards</div>
+                            <div class="stat-change positive">+0.00%</div>
+                        </div>
+                    </div>
+
+                    <!-- Integration Status -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Integration Status</h2>
+                            <p class="card-subtitle">Connectivity with external services</p>
+                        </div>
+                        <div class="integrations-grid">
+                            <div class="integration-card">
+                                <div class="integration-header">
+                                    <span class="integration-name">RSC Chain</span>
+                                    <span class="integration-status offline" id="blockchainStatus">Disconnected</span>
+                                </div>
+                                <p class="integration-description">Main blockchain for secure transactions</p>
+                            </div>
+                            
+                            <div class="integration-card">
+                                <div class="integration-header">
+                                    <span class="integration-name">Mining System</span>
+                                    <span class="integration-status offline" id="miningIntegrationStatus">Disconnected</span>
+                                </div>
+                                <p class="integration-description">Mining reward system</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Transactions -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Recent Transactions</h2>
+                            <p class="card-subtitle">Latest operations with RSC</p>
+                        </div>
+                        <div id="recentTransactionsList">
+                            <div class="text-center text-secondary py-8">
+                                No recent transactions
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Send Section -->
+                <section id="send" class="content-section hidden">
+                    <div class="content-header">
+                        <h1 class="content-title">Send RSC</h1>
+                        <p class="content-subtitle">Transfer tokens securely to other addresses</p>
+                    </div>
+                    
+                    <div class="card">
+                        <form id="sendForm">
+                            <div class="form-group">
+                                <label for="recipientAddress" class="form-label">Destination Address</label>
+                                <input type="text" id="recipientAddress" class="form-input" placeholder="0x..." required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sendAmount" class="form-label">RSC Amount</label>
+                                <input type="number" id="sendAmount" class="form-input" min="0.000001" step="0.000001" placeholder="0.000000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gasFee" class="form-label">Gas Fee</label>
+                                <select id="gasFee" class="form-select">
+                                    <option value="slow">Slow (0.0001 RSC)</option>
+                                    <option value="normal" selected>Normal (0.0002 RSC)</option>
+                                    <option value="fast">Fast (0.0003 RSC)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="flex gap-3">
+                                <button type="submit" class="btn btn-primary">📤 Send Transaction</button>
+                                <button type="button" class="btn btn-secondary">❌ Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Receive Section -->
+                <section id="receive" class="content-section hidden">
+                    <div class="content-header">
+                        <h1 class="content-title">Receive RSC</h1>
+                        <p class="content-subtitle">Share your address to receive tokens</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="text-center">
+                            <div class="mb-4">
+                                <div class="text-sm text-secondary mb-2">Your RSC Address</div>
+                                <div class="wallet-address" id="walletAddress">
+                                    <div class="wallet-empty-state">
+                                        <h3>🚀 Create your Wallet</h3>
+                                        <p>To use RSC Chain, you need to create a wallet on the blockchain.</p>
+                                        <button class="btn" onclick="window.wallet.createNewWallet()">Create Wallet</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div id="qrCode" class="bg-white p-4 rounded inline-block">
+                                    <!-- QR Code will be generated dynamically -->
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-3 justify-center">
+                                <button class="btn btn-primary" id="copyAddressBtn">
+                                    <span>📋</span>
+                                    Copy Address
+                                </button>
+                                <button class="btn btn-secondary" id="downloadQRBtn">
+                                    <span>📥</span>
+                                    Download QR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transactions Section -->
+                <section id="transactions" class="content-section hidden">
+                    <div class="content-header">
+                        <h1 class="content-title">Transactions</h1>
+                        <p class="content-subtitle">Complete transaction history</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h2 class="card-title">Transaction History</h2>
+                                <p class="card-subtitle">All your RSC transactions</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <select class="form-select" id="transactionFilter">
+                                    <option value="all">All</option>
+                                    <option value="sent">Sent</option>
+                                    <option value="received">Received</option>
+                                    <option value="mining">Mining</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div id="transactionsList">
+                            <div class="text-center text-secondary py-8">
+                                No transactions to show
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mining Section -->
+                <section id="mining" class="content-section hidden">
+                    <div class="content-header">
+                        <h1 class="content-title">RSC Mining</h1>
+                        <p class="content-subtitle">Manage your mining rewards</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Mining Status</h2>
+                            <p class="card-subtitle">Available rewards and statistics</p>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">⛏️</div>
+                                <div class="stat-value" id="miningHashrate">0 H/s</div>
+                                <div class="stat-label">Current Hashrate</div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">🎁</div>
+                                <div class="stat-value" id="pendingRewards">0.000000</div>
+                                <div class="stat-label">Pending Rewards</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <button class="btn btn-primary" id="startMiningBtn">
+                                <span>▶️</span>
+                                Start Mining
+                            </button>
+                            <button class="btn btn-secondary" id="stopMiningBtn">
+                                <span>⏹️</span>
+                                Stop Mining
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- RSC Loader - Sistema de carga unificado -->
+  <script src="../scripts/rsc-loader.js"></script>
+  
+  <script src="../scripts/wallet.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+  {
+    "quarter": "Q2",
+    "year": "2025",
+    "title": "Lanzamiento Blockchain",
+    "desc": "Lanzamiento oficial de RSC Chain Mainnet",
+    "active": false,
+    "future": true,
+    "details": "🔄 Lanzamiento oficial de RSC Chain Mainnet\n🔄 Activación del bloque Génesis\n🔄 Explorador blockchain operativo"
+  },
+  {
+    "quarter": "Q2",
+    "year": "2025",
+    "title": "Comunidad y Ecosistema",
+    "desc": "Programa Global de Embajadores",
+    "active": false,
+    "future": true,
+    "details": "🔄 Programa Global de Embajadores\n🔄 Lanzamiento de minería inicial (beta)\n🔄 Construcción de comunidades regionales"
+  },
+  {
+    "quarter": "Q4",
+    "year": "2025",
+    "title": "Lanzamiento de Apps",
+    "desc": "RSC Wallet (Android/iOS)",
+    "active": false,
+    "future": true,
+    "details": "🔄 RSC Wallet (Android/iOS)\n🔄 App oficial de Minería RSC\n🔄 RSC Bank: pagos rápidos QR"
+  },
+  {
+    "quarter": "Q4",
+    "year": "2025",
+    "title": "Token RSC en el Mercado",
+    "desc": "Primera etapa de listado en exchanges",
+    "active": false,
+    "future": true,
+    "details": "🔄 Primera etapa de listado en exchanges\n🔄 Sistema de Staking activado\n🔄 Plataforma de Trading P2P"
+  },
+  {
+    "quarter": "Q1",
+    "year": "2026",
+    "title": "Innovación y Crecimiento",
+    "desc": "Contratos inteligentes avanzados",
+    "active": false,
+    "future": true,
+    "details": "🔄 Contratos inteligentes avanzados\n🔄 Gobernanza comunitaria (IA integrada)\n🔄 Alianzas estratégicas Web3"
+  },
+  {
+    "quarter": "Q2",
+    "year": "2027",
+    "title": "Expansión Global",
+    "desc": "Integración en Exchanges mayores (CEX)",
+    "active": false,
+    "future": true,
+    "details": "🔄 Integración en Exchanges mayores (CEX)\n🔄 Lanzamiento Tarjeta RSC Bank\n🔄 Acuerdos estratégicos globales"
+  }
+]

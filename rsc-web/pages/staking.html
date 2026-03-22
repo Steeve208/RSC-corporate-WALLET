@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSC Epic Staking - RSC CHAIN</title>
+  <meta name="description" content="Stake RSC and earn epic rewards. Participate in RSC Chain network validation with the most advanced staking system.">
+  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/staking.css">
+  <link rel="stylesheet" href="../styles/notifications.css">
+  <link rel="stylesheet" href="../styles/animations.css">
+  <link rel="stylesheet" href="../styles/app.css">
+  <!-- ===== NAVBAR RESPONSIVE ===== -->
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="dark-mode">
+  <!-- Animated 4D Background -->
+  <div class="background-4d"></div>
+  
+  <!-- Notifications Container -->
+  <div class="notifications-container" id="notificationsContainer"></div>
+
+      <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo Section (Left) -->
+      <div class="navbar-left">
+        <a href="../index.html" class="navbar-logo">
+          <img src="../assets/img/logo.png" alt="RSC Chain Logo">
+        </a>
+      </div>
+      
+      <!-- Center Title -->
+      <div class="navbar-center">
+        <h1 class="navbar-brand">RSC CHAIN</h1>
+      </div>
+      
+      <!-- Hamburger Menu (Right) -->
+      <div class="navbar-right">
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Modern Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">
+        <img src="../assets/img/logo.png" alt="RSC Chain Logo">
+        <span>RSC CHAIN</span>
+      </div>
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">
+        <span>×</span>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+      <!-- Navigation Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Navigation</h3>
+        <ul class="menu-links">
+          <li><a href="../index.html" class="menu-link">
+            <span class="menu-icon">🏠</span>
+            <span>Home</span>
+          </a></li>
+          <li><a href="about.html" class="menu-link">
+            <span class="menu-icon">ℹ️</span>
+            <span>About</span>
+          </a></li>
+          <li><a href="wallet.html" class="menu-link">
+            <span class="menu-icon">👛</span>
+            <span>Wallet</span>
+          </a></li>
+          <li><a href="mine.html" class="menu-link">
+            <span class="menu-icon">⛏️</span>
+            <span>Mine</span>
+          </a></li>
+          <li><a href="p2p.html" class="menu-link">
+            <span class="menu-icon">🤝</span>
+            <span>P2P</span>
+          </a></li>
+          <li><a href="staking.html" class="menu-link">
+            <span class="menu-icon">💰</span>
+            <span>Staking</span>
+          </a></li>
+          <li><a href="explorer.html" class="menu-link">
+            <span class="menu-icon">🔍</span>
+            <span>Explorer</span>
+          </a></li>
+          <li><a href="bank.html" class="menu-link">
+            <span class="menu-icon">🏦</span>
+            <span>Bank</span>
+          </a></li>
+          <li><a href="docs.html" class="menu-link">
+            <span class="menu-icon">📚</span>
+            <span>Docs</span>
+          </a></li>
+        </ul>
+      </div>
+      
+      <!-- Actions Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Actions</h3>
+        <div class="menu-actions">
+          <a href="login.html" class="menu-action login-btn">
+            <span class="action-icon">🔐</span>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <!-- Coming Soon Screen -->
+  <div class="coming-soon-overlay" id="comingSoonOverlay">
+    <!-- Top Right Back Button -->
+    <button class="coming-soon-back-btn" onclick="window.location.href='../index.html'">
+      <i class="fas fa-home"></i>
+      <span>BACK TO HOME</span>
+    </button>
+    
+    <div class="coming-soon-container">
+      <!-- Animated Background -->
+      <div class="blockchain-bg">
+        <div class="blockchain-particles"></div>
+        <div class="blockchain-nodes">
+          <div class="node" style="--delay: 0s; --x: 10%; --y: 20%;"></div>
+          <div class="node" style="--delay: 0.5s; --x: 30%; --y: 40%;"></div>
+          <div class="node" style="--delay: 1s; --x: 60%; --y: 15%;"></div>
+          <div class="node" style="--delay: 1.5s; --x: 80%; --y: 60%;"></div>
+          <div class="node" style="--delay: 2s; --x: 20%; --y: 80%;"></div>
+          <div class="node" style="--delay: 2.5s; --x: 70%; --y: 85%;"></div>
+        </div>
+        <div class="blockchain-connections">
+          <div class="connection" style="--from-x: 10%; --from-y: 20%; --to-x: 30%; --to-y: 40%;"></div>
+          <div class="connection" style="--from-x: 30%; --from-y: 40%; --to-x: 60%; --to-y: 15%;"></div>
+          <div class="connection" style="--from-x: 60%; --from-y: 15%; --to-x: 80%; --to-y: 60%;"></div>
+          <div class="connection" style="--from-x: 80%; --to-y: 60%; --to-x: 20%; --to-y: 80%;"></div>
+          <div class="connection" style="--from-x: 20%; --from-y: 80%; --to-x: 70%; --to-y: 85%;"></div>
+          <div class="connection" style="--from-x: 70%; --from-y: 85%; --to-x: 10%; --to-y: 20%;"></div>
+        </div>
+      </div>
+      
+      <!-- Main Content -->
+      <div class="coming-soon-content">
+        <div class="coming-soon-logo">
+          <img src="../assets/img/logo.png" alt="RSC Chain Logo">
+        </div>
+        
+        <h1 class="coming-soon-title">
+          <span class="title-line">EPIC</span>
+          <span class="title-line">STAKING</span>
+        </h1>
+        
+        <div class="coming-soon-subtitle">
+          <span class="subtitle-text">Coming Soon</span>
+          <div class="subtitle-underline"></div>
+        </div>
+        
+        <p class="coming-soon-description">
+          We're building the most advanced staking system in the world.<br>
+          Get ready to earn epic rewards by participating in network validation.
+        </p>
+        
+        <div class="coming-soon-features">
+          <div class="feature-item">
+            <div class="feature-icon">💰</div>
+            <span>High APY Rewards</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🔒</div>
+            <span>Secure Staking</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <span>Advanced Analytics</span>
+          </div>
+        </div>
+        
+        <div class="coming-soon-actions">
+          <button class="btn btn-primary btn-large" onclick="window.location.href='../index.html'">
+            <i class="fas fa-home"></i>
+            Back to Home
+          </button>
+          <button class="btn btn-secondary btn-large" onclick="window.location.href='mine.html'">
+            <i class="fas fa-hammer"></i>
+            Start Mining
+          </button>
+        </div>
+        
+        <div class="coming-soon-progress">
+          <div class="progress-label">Development Progress</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <div class="progress-text">85% Complete</div>
+        </div>
+      </div>
+      
+      <!-- Floating Elements -->
+      <div class="floating-elements">
+        <div class="floating-block" style="--delay: 0s; --x: 5%; --y: 10%;">Stake: 100 RSC</div>
+        <div class="floating-block" style="--delay: 1s; --x: 85%; --y: 20%;">APY: 15%</div>
+        <div class="floating-block" style="--delay: 2s; --x: 15%; --y: 70%;">Rewards: 50 RSC</div>
+        <div class="floating-block" style="--delay: 3s; --x: 75%; --y: 80%;">Validator: RSC1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content (Hidden) -->
+  <main class="staking-main" style="display: none;">
+    <!-- Epic Staking -->
+    <section class="staking-hero">
+      <!-- Epic Header -->
+      <div class="hero-content">
+        <div class="hero-title">
+          <span class="title-word">EPIC</span>
+          <span class="title-word">STAKING</span>
+        </div>
+        <p class="epic-subtitle">Earn epic rewards by participating in network validation</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">15%</div>
+            <div class="stat-label">APY</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">2.5s</div>
+            <div class="stat-label">Block Time</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">99.9%</div>
+            <div class="stat-label">Uptime</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">∞</div>
+            <div class="stat-label">Rewards</div>
+          </div>
+        </div>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="startStakingBtn">
+            <i class="fas fa-rocket"></i>
+            Start Staking
+          </button>
+          <button class="btn btn-secondary btn-large" id="viewRewardsBtn">
+            <i class="fas fa-gift"></i>
+            View Rewards
+          </button>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="staking-animation">
+          <div class="stake-circle">
+            <div class="stake-particles"></div>
+            <div class="stake-core"></div>
+          </div>
+          <div class="level-indicator">
+            <div class="level-title">Epic Level</div>
+            <div class="level-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <span class="progress-text">Level 3 of 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Epic Sidebar -->
+    <aside class="staking-sidebar">
+      <div class="sidebar-content">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Wallet Status</h3>
+          <div class="wallet-status">
+            <div class="status-indicator">
+              <div class="status-dot connected"></div>
+              <span>Connected</span>
+            </div>
+            <div class="wallet-address" id="walletAddressShort">
+              0x742d...4d8b6
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Quick Stats</h3>
+          <div class="quick-stats">
+            <div class="stat-item">
+              <i class="fas fa-coins"></i>
+              <span>Balance: <strong id="sidebarBalance">0.00 RSC</strong></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-chart-line"></i>
+              <span>APY: <strong id="sidebarAPY">15%</strong></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-gift"></i>
+              <span>Rewards: <strong id="sidebarRewards">0.00 RSC</strong></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Achievements</h3>
+          <div class="achievements">
+            <div class="achievement unlocked">
+              <div class="achievement-icon">🥉</div>
+              <div class="achievement-title">Epic Staker</div>
+              <div class="achievement-desc">Stake 100+ RSC</div>
+            </div>
+            <div class="achievement locked">
+              <div class="achievement-icon">🥈</div>
+              <div class="achievement-title">Legendary Staker</div>
+              <div class="achievement-desc">Stake 1000+ RSC</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Quick Actions</h3>
+          <div class="quick-actions">
+            <button class="action-btn" id="refreshBtn">
+              <span>🔄</span>
+              <span>Update</span>
+            </button>
+            <button class="action-btn" id="claimBtn">
+              <span>🎁</span>
+              <span>Claim</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Staking Interface -->
+    <div class="staking-interface">
+      <!-- Staking Overview -->
+      <section class="staking-overview">
+        <div class="overview-header">
+          <h2>Staking Overview</h2>
+          <div class="overview-stats">
+            <div class="stat-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-value" id="totalStaked">0.000000</div>
+              <div class="stat-label">Total Staked</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎁</div>
+              <div class="stat-value" id="totalRewards">0.000000</div>
+              <div class="stat-label">My Rewards</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📈</div>
+              <div class="stat-value" id="stakingAPY">15.00%</div>
+              <div class="stat-label">Current APY</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-value" id="stakingTime">0 days</div>
+              <div class="stat-label">Staking Time</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="staking-controls">
+          <div class="control-tabs">
+            <button class="control-btn active" data-view="stake">Stake</button>
+            <button class="control-btn" data-view="unstake">Unstake</button>
+            <button class="control-btn" data-view="rewards">Rewards</button>
+          </div>
+          
+          <div class="control-content">
+            <div class="stake-form" id="stakeForm">
+              <div class="form-group">
+                <label for="stakeAmount">Amount to Stake (RSC)</label>
+                <input type="number" id="stakeAmount" min="0.000001" step="0.000001" placeholder="0.000000">
+                <div class="form-helper">
+                  <span>Available: <strong id="availableBalance">0.000000 RSC</strong></span>
+                  <button type="button" class="max-btn" id="maxStakeBtn">Max</button>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="stakingPeriod">Staking Period</label>
+                <select id="stakingPeriod">
+                  <option value="30">30 days (10% APY)</option>
+                  <option value="90" selected>90 days (15% APY)</option>
+                  <option value="365">365 days (20% APY)</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-large" id="stakeSubmitBtn">
+                <i class="fas fa-lock"></i>
+                Stake RSC
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Staking History -->
+      <section class="staking-history">
+        <div class="history-header">
+          <h2>Staking History</h2>
+          <div class="history-filters">
+            <select id="historyFilter">
+              <option value="all">All</option>
+              <option value="staked">Staked</option>
+              <option value="unstaked">Unstaked</option>
+              <option value="rewards">Rewards</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="history-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Rewards</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="stakingHistoryTable">
+              <tr class="no-data">
+                <td colspan="5">No staking history yet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Rewards Section -->
+      <section class="rewards-section">
+        <div class="rewards-header">
+          <h2>Rewards</h2>
+          <div class="rewards-summary">
+            <div class="reward-item">
+              <span class="reward-label">Available:</span>
+              <span class="reward-value" id="availableRewards">0.000000 RSC</span>
+            </div>
+            <div class="reward-item">
+              <span class="reward-label">Total Earned:</span>
+              <span class="reward-value" id="totalEarnedRewards">0.000000 RSC</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="rewards-content">
+          <div class="rewards-chart">
+            <h3>Rewards History</h3>
+            <canvas id="rewardsChart"></canvas>
+          </div>
+          
+          <div class="rewards-actions">
+            <button class="btn btn-primary" id="claimRewardsBtn">
+              <i class="fas fa-gift"></i>
+              Claim All Rewards
+            </button>
+            <button class="btn btn-secondary" id="compoundRewardsBtn">
+              <i class="fas fa-plus"></i>
+              Compound Rewards
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Analytics -->
+      <section class="analytics-section">
+        <div class="analytics-header">
+          <h2>Advanced Analytics</h2>
+          <p>Track your staking performance and optimize your strategy</p>
+        </div>
+        
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <h3>Performance</h3>
+            <canvas id="stakingPerformanceChart"></canvas>
+          </div>
+          
+          <div class="analytics-card">
+            <h3>Predictions</h3>
+            <canvas id="stakingPredictionsChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Staking Modal -->
+  <div class="modal" id="stakingModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Stake RSC</h3>
+        <button class="close-modal" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content will be dynamically generated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Rewards Modal -->
+  <div class="modal" id="rewardsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Epic Rewards!</h3>
+        <button class="close-modal" id="closeRewardsModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="rewards-celebration">
+          <div class="celebration-icon">🎉</div>
+          <div class="rewards-message">You've earned epic rewards!</div>
+          <div class="rewards-amount" id="modalRewardsAmount">0.000000 RSC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Soon Script -->
+  <script>
+    // Coming Soon Screen Management
+    document.addEventListener('DOMContentLoaded', function() {
+      const comingSoonOverlay = document.getElementById('comingSoonOverlay');
+      const mainContent = document.querySelector('.staking-main');
+      
+      // Show coming soon screen by default
+      if (comingSoonOverlay) {
+        comingSoonOverlay.style.display = 'flex';
+        if (mainContent) {
+          mainContent.style.display = 'none';
+        }
+      }
+      
+      // Add click handlers for navigation buttons
+      const homeBtn = document.querySelector('.coming-soon-actions .btn-primary');
+      const mineBtn = document.querySelector('.coming-soon-actions .btn-secondary');
+      
+      if (homeBtn) {
+        homeBtn.addEventListener('click', function() {
+          window.location.href = '../index.html';
+        });
+      }
+      
+      if (mineBtn) {
+        mineBtn.addEventListener('click', function() {
+          window.location.href = 'mine.html';
+        });
+      }
+      
+      // Add some interactive effects
+      const floatingBlocks = document.querySelectorAll('.floating-block');
+      floatingBlocks.forEach(block => {
+        block.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.1) rotate(5deg)';
+          this.style.transition = 'all 0.3s ease';
+        });
+        
+        block.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1) rotate(0deg)';
+        });
+      });
+      
+      // Add particle effect on mouse move
+      document.addEventListener('mousemove', function(e) {
+        const particles = document.querySelector('.blockchain-particles');
+        if (particles) {
+          const x = e.clientX / window.innerWidth;
+          const y = e.clientY / window.innerHeight;
+          
+          particles.style.background = `
+            radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(0, 255, 136, 0.2) 0%, transparent 50%),
+            radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%)
+          `;
+        }
+      });
+    });
+  </script>
+
+  <!-- Scripts -->
+  <!-- RSC Loader - Sistema de carga unificado -->
+  <script src="../scripts/rsc-loader.js"></script>
+  
+  <script src="../scripts/staking.js"></script>
+</body>
+</html>

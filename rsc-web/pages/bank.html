@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSC Bank - RSC CHAIN</title>
+  <meta name="description" content="Professional banking services for RSC Chain. Secure accounts, instant transfers, and advanced financial tools.">
+  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/bank.css">
+  <link rel="stylesheet" href="../styles/notifications.css">
+  <link rel="stylesheet" href="../styles/animations.css">
+  <link rel="stylesheet" href="../styles/app.css">
+  <!-- ===== NAVBAR RESPONSIVE ===== -->
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="dark-mode">
+  <!-- Animated 4D Background -->
+  <div class="background-4d"></div>
+  
+  <!-- Notifications Container -->
+  <div class="notifications-container" id="notificationsContainer"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo Section (Left) -->
+      <div class="navbar-left">
+        <a href="../index.html" class="navbar-logo">
+          <img src="../assets/img/logo.png" alt="RSC Chain Logo">
+        </a>
+      </div>
+      
+      <!-- Center Title -->
+      <div class="navbar-center">
+        <h1 class="navbar-brand">RSC CHAIN</h1>
+      </div>
+      
+      <!-- Hamburger Menu (Right) -->
+      <div class="navbar-right">
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Modern Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">
+        <img src="../assets/img/logo.png" alt="RSC Chain Logo">
+        <span>RSC CHAIN</span>
+      </div>
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">
+        <span>×</span>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+      <!-- Navigation Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Navigation</h3>
+        <ul class="menu-links">
+          <li><a href="../index.html" class="menu-link">
+            <span class="menu-icon">🏠</span>
+            <span>Home</span>
+          </a></li>
+          <li><a href="about.html" class="menu-link">
+            <span class="menu-icon">ℹ️</span>
+            <span>About</span>
+          </a></li>
+          <li><a href="wallet.html" class="menu-link">
+            <span class="menu-icon">👛</span>
+            <span>Wallet</span>
+          </a></li>
+          <li><a href="mine.html" class="menu-link">
+            <span class="menu-icon">⛏️</span>
+            <span>Mine</span>
+          </a></li>
+          <li><a href="p2p.html" class="menu-link">
+            <span class="menu-icon">🤝</span>
+            <span>P2P</span>
+          </a></li>
+          <li><a href="staking.html" class="menu-link">
+            <span class="menu-icon">💰</span>
+            <span>Staking</span>
+          </a></li>
+          <li><a href="explorer.html" class="menu-link">
+            <span class="menu-icon">🔍</span>
+            <span>Explorer</span>
+          </a></li>
+          <li><a href="bank.html" class="menu-link">
+            <span class="menu-icon">🏦</span>
+            <span>Bank</span>
+          </a></li>
+          <li><a href="docs.html" class="menu-link">
+            <span class="menu-icon">📚</span>
+            <span>Docs</span>
+          </a></li>
+        </ul>
+      </div>
+      
+      <!-- Actions Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Actions</h3>
+        <div class="menu-actions">
+          <a href="login.html" class="menu-action login-btn">
+            <span class="menu-icon">🔐</span>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <!-- Main Content -->
+  <main class="bank-main">
+    <!-- Epic Banking -->
+    <section class="bank-hero">
+      <!-- Epic Header -->
+      <div class="hero-content">
+        <div class="hero-title">
+          <span class="title-word">EPIC</span>
+          <span class="title-word">BANKING</span>
+          <span class="title-word">SERVICES</span>
+        </div>
+        <p class="epic-subtitle">Professional banking services for the future of finance</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">0%</div>
+            <div class="stat-label">Fees</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">Available</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">∞</div>
+            <div class="stat-label">Security</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">$0.00</div>
+            <div class="stat-label">Balance</div>
+          </div>
+        </div>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="openAccountBtn">
+            <i class="fas fa-university"></i>
+            Open Account
+          </button>
+          <button class="btn btn-secondary btn-large" id="viewServicesBtn">
+            <i class="fas fa-eye"></i>
+            View Services
+          </button>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="bank-animation">
+          <div class="bank-particles"></div>
+          <div class="bank-chart">
+            <canvas id="heroChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banking Dashboard -->
+    <div class="banking-dashboard">
+      <!-- Epic Sidebar -->
+      <aside class="banking-sidebar-epic">
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Quick Actions</h3>
+            <div class="quick-actions">
+              <button class="action-btn primary" id="transferBtn">
+                <span>💸</span>
+                <span>Transfer</span>
+              </button>
+              <button class="action-btn" id="depositBtn">
+                <span>📥</span>
+                <span>Deposit</span>
+              </button>
+              <button class="action-btn" id="withdrawBtn">
+                <span>📤</span>
+                <span>Withdraw</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">My Stats</h3>
+            <div class="my-stats">
+              <div class="stat-item">
+                <i class="fas fa-coins"></i>
+                <span>Balance: <strong id="myBalance">$0.00</strong></span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-chart-line"></i>
+                <span>APY: <strong id="myAPY">0%</strong></span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span>History</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Navigation</h3>
+            <nav class="sidebar-nav">
+              <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <div class="nav-icon">📊</div>
+                <span>Dashboard</span>
+              </a>
+              <a href="#accounts" class="nav-item" data-section="accounts">
+                <div class="nav-icon">🏦</div>
+                <span>Accounts</span>
+              </a>
+              <a href="#transfers" class="nav-item" data-section="transfers">
+                <div class="nav-icon">💸</div>
+                <span>Transfers</span>
+              </a>
+              <a href="#payments" class="nav-item" data-section="payments">
+                <div class="nav-icon">💳</div>
+                <span>Payments</span>
+              </a>
+              <a href="#loans" class="nav-item" data-section="loans">
+                <div class="nav-icon">🏠</div>
+                <span>Loans</span>
+              </a>
+              <a href="#investments" class="nav-item" data-section="investments">
+                <div class="nav-icon">📈</div>
+                <span>Investments</span>
+              </a>
+              <a href="#history" class="nav-item" data-section="history">
+                <div class="nav-icon">📋</div>
+                <span>History</span>
+              </a>
+              <a href="#contactless" class="nav-item" data-section="contactless">
+                <div class="nav-icon">📱</div>
+                <span>Contactless</span>
+              </a>
+              <a href="#settings" class="nav-item" data-section="settings">
+                <div class="nav-icon">⚙️</div>
+                <span>Settings</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Banking Interface -->
+      <main class="banking-main-epic">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="banking-section active">
+          <div class="section-header">
+            <h2>Banking Dashboard</h2>
+            <div class="section-actions">
+              <button class="refresh-btn" id="refreshBtn">
+                <span class="btn-icon">🔄</span>
+                <span>Refresh</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Real-time Statistics -->
+          <div class="realtime-stats">
+            <div class="stat-card-epic">
+              <div class="stat-header">
+                <div class="stat-icon">💰</div>
+                <div class="stat-status online"></div>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalBalance">$0.00</div>
+                <div class="stat-label">Total Balance</div>
+                <div class="stat-change positive" id="balanceChange">+0.00%</div>
+              </div>
+              <div class="stat-chart">
+                <canvas id="balanceChart" width="200" height="60"></canvas>
+              </div>
+            </div>
+
+            <div class="stat-card-epic">
+              <div class="stat-header">
+                <div class="stat-icon">📈</div>
+                <div class="stat-status online"></div>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalInterest">$0.00</div>
+                <div class="stat-label">Total Interest</div>
+                <div class="stat-change positive" id="interestChange">+0.00%</div>
+              </div>
+              <div class="stat-chart">
+                <canvas id="interestChart" width="200" height="60"></canvas>
+              </div>
+            </div>
+
+            <div class="stat-card-epic">
+              <div class="stat-header">
+                <div class="stat-icon">💳</div>
+                <div class="stat-status online"></div>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value" id="activeCards">0</div>
+                <div class="stat-label">Active Cards</div>
+                <div class="stat-change positive" id="cardsChange">+0</div>
+              </div>
+              <div class="stat-chart">
+                <canvas id="cardsChart" width="200" height="60"></canvas>
+              </div>
+            </div>
+
+            <div class="stat-card-epic">
+              <div class="stat-header">
+                <div class="stat-icon">🏠</div>
+                <div class="stat-status online"></div>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value" id="activeLoans">0</div>
+                <div class="stat-label">Active Loans</div>
+                <div class="stat-change positive" id="loansChange">+0</div>
+              </div>
+              <div class="stat-chart">
+                <canvas id="loansChart" width="200" height="60"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exchange Rates -->
+          <div class="exchange-rates">
+            <h3>Exchange Rate History</h3>
+            <div class="rates-chart">
+              <canvas id="exchangeRatesChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="banking-section">
+          <div class="section-header">
+            <h1>Banking History</h1>
+            <p>All your banking transactions</p>
+          </div>
+          
+          <div class="history-filters">
+            <select id="historyTypeFilter">
+              <option value="all">All Types</option>
+              <option value="transfer">Transfers</option>
+              <option value="deposit">Deposits</option>
+              <option value="withdrawal">Withdrawals</option>
+              <option value="payment">Payments</option>
+              <option value="loan">Loans</option>
+            </select>
+            
+            <select id="historyStatusFilter">
+              <option value="all">All Status</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+            </select>
+            
+            <input type="date" id="historyDateFilter">
+          </div>
+          
+          <div class="history-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody">
+                <!-- History will be loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Contactless Section -->
+        <section id="contactless" class="banking-section">
+          <div class="section-header">
+            <h1>Contactless Payment</h1>
+            <p>Pay with your phone or card without contact</p>
+          </div>
+          
+          <div class="contactless-setup">
+            <div class="setup-card">
+              <h3>Setup</h3>
+              <p>Configure your contactless payment methods</p>
+              <button class="btn btn-primary">Setup Now</button>
+            </div>
+            
+            <div class="setup-card">
+              <h3>Security</h3>
+              <p>Advanced encryption and biometric protection</p>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="banking-section">
+          <div class="section-header">
+            <h1>Banking Settings</h1>
+            <p>Configure your banking preferences and security</p>
+          </div>
+          
+          <div class="settings-content">
+            <div class="settings-section">
+              <h3>Payment Methods</h3>
+              <div class="payment-methods">
+                <div class="payment-method">
+                  <h4>Debit Card</h4>
+                  <p>Payments with linked card</p>
+                  <button class="btn btn-secondary">Configure</button>
+                </div>
+                
+                <div class="payment-method">
+                  <h4>Bank Account</h4>
+                  <p>ACH Transfers</p>
+                  <button class="btn btn-secondary">Configure</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="settings-section">
+              <h3>Notifications</h3>
+              <div class="notification-settings">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="paymentNotifications">
+                  <span>Payment Notifications</span>
+                </label>
+                
+                <label class="checkbox-label">
+                  <input type="checkbox" id="securityNotifications">
+                  <span>Security Alerts</span>
+                </label>
+                
+                <label class="checkbox-label">
+                  <input type="checkbox" id="marketingNotifications">
+                  <span>Marketing Updates</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="settings-section">
+              <h3>Limits and Security</h3>
+              <div class="security-settings">
+                <div class="setting-item">
+                  <label>Daily Transfer Limit</label>
+                  <input type="number" id="dailyTransferLimit" value="1000">
+                </div>
+                
+                <div class="setting-item">
+                  <label>Two-Factor Authentication</label>
+                  <button class="btn btn-primary">Enable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <!-- RSC Loader - Sistema de carga unificado -->
+  <script src="../scripts/rsc-loader.js"></script>
+  
+  <script src="../scripts/bank.js"></script>
+</body>
+</html> 
