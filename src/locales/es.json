@@ -7,6 +7,9 @@
     "empresa": "Empresa",
     "descargar": "Descargar"
   },
+  "rscWeb": {
+    "backToWallet": "Volver al wallet"
+  },
   "dropdowns": {
     "individuos": {
       "title": "Para Todos",
@@ -2075,6 +2078,21 @@
     }
   },
   "landing": {
+    "heroAnimated": {
+      "title": "Tu cartera para el día a día en RSC",
+      "subtitle": "Envía, recibe, paga con QR y mantén el control de tus fondos, todo en un solo lugar.",
+      "urlPreview": "app.rsc.wallet",
+      "balanceLabel": "Saldo total",
+      "actionSend": "Enviar",
+      "actionReceive": "Recibir",
+      "footerHint": "Non-custodial · Tus llaves, tu control",
+      "miningPromo": {
+        "badge": "Ya en Google Play",
+        "title": "App RSC Mining",
+        "description": "Mina desde el móvil. Nuestra app oficial de minería ya está disponible para Android.",
+        "cta": "Descargar en Google Play"
+      }
+    },
     "why": {
       "badge": "Ecosistema RSC",
       "title": "La wallet que conecta",

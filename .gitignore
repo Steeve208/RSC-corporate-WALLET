@@ -37,3 +37,9 @@ lerna-debug.log*
 
 # OS
 Thumbs.db
+
+# Binarios de app (muy pesados para Git; usar Releases u otro almacenamiento)
+**/*.apk
+**/*.aab
+**/__pycache__/
+*.pyc

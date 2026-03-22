@@ -1,11 +1,14 @@
 {
   "navbar": {
-    "individuos": "Individuos",
-    "empresas": "Empresas",
-    "instituciones": "Instituciones",
-    "desarrolladores": "Desarrolladores",
-    "empresa": "Empresa",
-    "descargar": "Descargar"
+    "individuos": "Individuals",
+    "empresas": "Business",
+    "instituciones": "Institutions",
+    "desarrolladores": "Developers",
+    "empresa": "Company",
+    "descargar": "Download"
+  },
+  "rscWeb": {
+    "backToWallet": "Back to wallet"
   },
   "dropdowns": {
     "individuos": {
@@ -2075,6 +2078,21 @@
     }
   },
   "landing": {
+    "heroAnimated": {
+      "title": "Your wallet for everyday money on RSC",
+      "subtitle": "Send, receive, pay with QR, and keep control of your funds—all in one place.",
+      "urlPreview": "app.rsc.wallet",
+      "balanceLabel": "Total balance",
+      "actionSend": "Send",
+      "actionReceive": "Receive",
+      "footerHint": "Non-custodial · You hold the keys",
+      "miningPromo": {
+        "badge": "Now on Google Play",
+        "title": "RSC Mining app",
+        "description": "Mine from your phone. Our official mining app is available for Android.",
+        "cta": "Get it on Google Play"
+      }
+    },
     "why": {
       "badge": "RSC Ecosystem",
       "title": "The wallet that connects",

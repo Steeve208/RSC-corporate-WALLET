@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
-import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Rocket, Menu, X } from 'lucide-react';
+import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X } from 'lucide-react';
 import { useTranslation, Language } from '../../contexts/I18nContext';
+
+const NAV_ITEM_KEYS = ['individuos', 'empresas', 'instituciones', 'desarrolladores', 'empresa'] as const;
+type NavbarItemKey = (typeof NAV_ITEM_KEYS)[number];
 
 export function Navbar() {
   const { t, language, setLanguage } = useTranslation();
-  const [activeNav, setActiveNav] = useState('Individuos');
+  const [activeNavKey, setActiveNavKey] = useState<NavbarItemKey>('individuos');
   const [isIndividuosOpen, setIsIndividuosOpen] = useState(false);
   const [isEmpresasOpen, setIsEmpresasOpen] = useState(false);
   const [isInstitucionesOpen, setIsInstitucionesOpen] = useState(false);
@@ -12,20 +15,17 @@ export function Navbar() {
   const [isEmpresaOpen, setIsEmpresaOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const individuosDropdownRef = useRef<HTMLDivElement>(null);
-  const empresasDropdownRef = useRef<HTMLDivElement>(null);
-  const institucionesDropdownRef = useRef<HTMLDivElement>(null);
-  const desarrolladoresDropdownRef = useRef<HTMLDivElement>(null);
-  const empresaDropdownRef = useRef<HTMLDivElement>(null);
+  const individuosDropdownDesktopRef = useRef<HTMLDivElement>(null);
+  const individuosDropdownMobileRef = useRef<HTMLDivElement>(null);
+  const empresasDropdownDesktopRef = useRef<HTMLDivElement>(null);
+  const empresasDropdownMobileRef = useRef<HTMLDivElement>(null);
+  const institucionesDropdownDesktopRef = useRef<HTMLDivElement>(null);
+  const institucionesDropdownMobileRef = useRef<HTMLDivElement>(null);
+  const desarrolladoresDropdownDesktopRef = useRef<HTMLDivElement>(null);
+  const desarrolladoresDropdownMobileRef = useRef<HTMLDivElement>(null);
+  const empresaDropdownDesktopRef = useRef<HTMLDivElement>(null);
+  const empresaDropdownMobileRef = useRef<HTMLDivElement>(null);
   const languageDropdownRef = useRef<HTMLDivElement>(null);
-
-  const navItems = [
-    t('navbar.individuos'),
-    t('navbar.empresas'),
-    t('navbar.instituciones'),
-    t('navbar.desarrolladores'),
-    t('navbar.empresa')
-  ];
 
   const languages: { code: Language; name: string }[] = [
     { code: 'en', name: t('languages.en') },
@@ -96,17 +96,6 @@ export function Navbar() {
         onClick: () => {
           if ((window as any).navigateToPage) {
             (window as any).navigateToPage('education');
-          }
-        }
-      },
-      { 
-        label: 'Token Sale', 
-        description: 'Compra wRSK con USDT en BSC',
-        icon: Rocket,
-        href: '#',
-        onClick: () => {
-          if ((window as any).navigateToPage) {
-            (window as any).navigateToPage('sale');
           }
         }
       },
@@ -332,7 +321,7 @@ export function Navbar() {
         href: '#',
         onClick: () => {
           if ((window as any).navigateToPage) {
-            (window as any).navigateToPage('institutionalChain');
+            (window as any).navigateToPage('rscWeb');
           }
         }
       },
@@ -350,23 +339,32 @@ export function Navbar() {
     ]
   };
 
-  // Close dropdowns when clicking outside
+  // Cerrar al clic fuera: refs separados escritorio/móvil (un solo ref apuntaba al último nodo y el mega menú de escritorio no pasaba contains()).
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (individuosDropdownRef.current && !individuosDropdownRef.current.contains(event.target as Node)) {
-        setIsIndividuosOpen(false);
-      }
-      if (empresasDropdownRef.current && !empresasDropdownRef.current.contains(event.target as Node)) {
-        setIsEmpresasOpen(false);
-      }
-      if (institucionesDropdownRef.current && !institucionesDropdownRef.current.contains(event.target as Node)) {
-        setIsInstitucionesOpen(false);
-      }
-      if (desarrolladoresDropdownRef.current && !desarrolladoresDropdownRef.current.contains(event.target as Node)) {
-        setIsDesarrolladoresOpen(false);
-      }
-      if (empresaDropdownRef.current && !empresaDropdownRef.current.contains(event.target as Node)) {
-        setIsEmpresaOpen(false);
+      const target = event.target as Node;
+      const insideIndividuos =
+        individuosDropdownDesktopRef.current?.contains(target) ||
+        individuosDropdownMobileRef.current?.contains(target);
+      const insideEmpresas =
+        empresasDropdownDesktopRef.current?.contains(target) ||
+        empresasDropdownMobileRef.current?.contains(target);
+      const insideInstituciones =
+        institucionesDropdownDesktopRef.current?.contains(target) ||
+        institucionesDropdownMobileRef.current?.contains(target);
+      const insideDesarrolladores =
+        desarrolladoresDropdownDesktopRef.current?.contains(target) ||
+        desarrolladoresDropdownMobileRef.current?.contains(target);
+      const insideEmpresa =
+        empresaDropdownDesktopRef.current?.contains(target) ||
+        empresaDropdownMobileRef.current?.contains(target);
+
+      if (isIndividuosOpen && !insideIndividuos) setIsIndividuosOpen(false);
+      if (isEmpresasOpen && !insideEmpresas) setIsEmpresasOpen(false);
+      if (isInstitucionesOpen && !insideInstituciones) setIsInstitucionesOpen(false);
+      if (isDesarrolladoresOpen && !insideDesarrolladores) setIsDesarrolladoresOpen(false);
+      if (isEmpresaOpen && !insideEmpresa) setIsEmpresaOpen(false);
+      if (languageDropdownRef.current && !languageDropdownRef.current.contains(target)) {
       }
       if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
         setIsLanguageOpen(false);
@@ -390,7 +388,7 @@ export function Navbar() {
     setIsDesarrolladoresOpen(false);
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
-    setActiveNav(t('navbar.individuos'));
+    setActiveNavKey('individuos');
     setIsMobileMenuOpen(false);
   };
 
@@ -402,7 +400,7 @@ export function Navbar() {
     setIsDesarrolladoresOpen(false);
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
-    setActiveNav(t('navbar.empresas'));
+    setActiveNavKey('empresas');
     setIsMobileMenuOpen(false);
   };
 
@@ -414,7 +412,7 @@ export function Navbar() {
     setIsDesarrolladoresOpen(false);
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
-    setActiveNav(t('navbar.instituciones'));
+    setActiveNavKey('instituciones');
     setIsMobileMenuOpen(false);
   };
 
@@ -426,7 +424,7 @@ export function Navbar() {
     setIsInstitucionesOpen(false);
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
-    setActiveNav(t('navbar.desarrolladores'));
+    setActiveNavKey('desarrolladores');
     setIsMobileMenuOpen(false);
   };
 
@@ -438,7 +436,7 @@ export function Navbar() {
     setIsInstitucionesOpen(false);
     setIsDesarrolladoresOpen(false);
     setIsLanguageOpen(false);
-    setActiveNav(t('navbar.empresa'));
+    setActiveNavKey('empresa');
     setIsMobileMenuOpen(false);
   };
 
@@ -476,12 +474,13 @@ export function Navbar() {
 
         {/* Desktop Center Navigation */}
         <div className="rsc-navbar-center">
-          {navItems.map((item) => {
-            if (item === t('navbar.empresas')) {
-              return (
-                <div key={item} className="rsc-nav-dropdown" ref={empresasDropdownRef}>
+          {NAV_ITEM_KEYS.map((navKey) => {
+            const item = t(`navbar.${navKey}`);
+                if (navKey === 'empresas') {
+                  return (
+                <div key={navKey} className="rsc-nav-dropdown" ref={empresasDropdownDesktopRef}>
                   <button
-                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNav === item ? 'rsc-nav-button--active' : ''} ${isEmpresasOpen ? 'rsc-nav-button--open' : ''}`}
+                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''} ${isEmpresasOpen ? 'rsc-nav-button--open' : ''}`}
                     onClick={handleEmpresasClick}
                   >
                     {item}
@@ -573,11 +572,11 @@ export function Navbar() {
                 </div>
               );
             }
-            if (item === t('navbar.individuos')) {
-              return (
-                <div key={item} className="rsc-nav-dropdown" ref={individuosDropdownRef}>
+                if (navKey === 'individuos') {
+                  return (
+                <div key={navKey} className="rsc-nav-dropdown" ref={individuosDropdownDesktopRef}>
                   <button
-                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNav === item ? 'rsc-nav-button--active' : ''} ${isIndividuosOpen ? 'rsc-nav-button--open' : ''}`}
+                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''} ${isIndividuosOpen ? 'rsc-nav-button--open' : ''}`}
                     onClick={handleIndividuosClick}
                   >
                     {item}
@@ -667,11 +666,11 @@ export function Navbar() {
                 </div>
               );
             }
-            if (item === t('navbar.desarrolladores')) {
-              return (
-                <div key={item} className="rsc-nav-dropdown" ref={desarrolladoresDropdownRef}>
+                if (navKey === 'desarrolladores') {
+                  return (
+                <div key={navKey} className="rsc-nav-dropdown" ref={desarrolladoresDropdownDesktopRef}>
                   <button
-                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNav === item ? 'rsc-nav-button--active' : ''} ${isDesarrolladoresOpen ? 'rsc-nav-button--open' : ''}`}
+                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''} ${isDesarrolladoresOpen ? 'rsc-nav-button--open' : ''}`}
                     onClick={handleDesarrolladoresClick}
                   >
                     {item}
@@ -763,11 +762,11 @@ export function Navbar() {
                 </div>
               );
             }
-            if (item === t('navbar.instituciones')) {
+            if (navKey === 'instituciones') {
               return (
-                <div key={item} className="rsc-nav-dropdown" ref={institucionesDropdownRef}>
+                <div key={navKey} className="rsc-nav-dropdown" ref={institucionesDropdownDesktopRef}>
                   <button
-                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNav === item ? 'rsc-nav-button--active' : ''} ${isInstitucionesOpen ? 'rsc-nav-button--open' : ''}`}
+                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''} ${isInstitucionesOpen ? 'rsc-nav-button--open' : ''}`}
                     onClick={handleInstitucionesClick}
                   >
                     {item}
@@ -859,11 +858,11 @@ export function Navbar() {
                 </div>
               );
             }
-            if (item === t('navbar.empresa')) {
+            if (navKey === 'empresa') {
               return (
-                <div key={item} className="rsc-nav-dropdown" ref={empresaDropdownRef}>
+                <div key={navKey} className="rsc-nav-dropdown" ref={empresaDropdownDesktopRef}>
                   <button
-                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNav === item ? 'rsc-nav-button--active' : ''} ${isEmpresaOpen ? 'rsc-nav-button--open' : ''}`}
+                    className={`rsc-nav-button rsc-nav-button--dropdown ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''} ${isEmpresaOpen ? 'rsc-nav-button--open' : ''}`}
                     onClick={handleEmpresaClick}
                   >
                     {item}
@@ -957,9 +956,9 @@ export function Navbar() {
             }
             return (
               <button
-                key={item}
-                className={`rsc-nav-button ${activeNav === item ? 'rsc-nav-button--active' : ''}`}
-                onClick={() => setActiveNav(item)}
+                key={navKey}
+                className={`rsc-nav-button ${activeNavKey === navKey ? 'rsc-nav-button--active' : ''}`}
+                onClick={() => setActiveNavKey(navKey)}
               >
                 {item}
               </button>
@@ -1027,10 +1026,11 @@ export function Navbar() {
           {/* Navigation Items */}
           <div className="rsc-mobile-menu-section">
             <div className="rsc-mobile-menu-nav">
-              {navItems.map((item) => {
-                if (item === t('navbar.empresas')) {
+              {NAV_ITEM_KEYS.map((navKey) => {
+                const item = t(`navbar.${navKey}`);
+                if (navKey === 'empresas') {
                   return (
-                    <div key={item} className="rsc-mobile-nav-item" ref={empresasDropdownRef}>
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresasDropdownMobileRef}>
                       <button
                         className={`rsc-mobile-nav-button ${isEmpresasOpen ? 'rsc-mobile-nav-button--open' : ''}`}
                         onClick={handleEmpresasClick}
@@ -1070,9 +1070,9 @@ export function Navbar() {
                     </div>
                   );
                 }
-                if (item === t('navbar.individuos')) {
+                if (navKey === 'individuos') {
                   return (
-                    <div key={item} className="rsc-mobile-nav-item" ref={individuosDropdownRef}>
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={individuosDropdownMobileRef}>
                       <button
                         className={`rsc-mobile-nav-button ${isIndividuosOpen ? 'rsc-mobile-nav-button--open' : ''}`}
                         onClick={handleIndividuosClick}
@@ -1112,9 +1112,9 @@ export function Navbar() {
                     </div>
                   );
                 }
-                if (item === t('navbar.desarrolladores')) {
+                if (navKey === 'desarrolladores') {
                   return (
-                    <div key={item} className="rsc-mobile-nav-item" ref={desarrolladoresDropdownRef}>
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={desarrolladoresDropdownMobileRef}>
                       <button
                         className={`rsc-mobile-nav-button ${isDesarrolladoresOpen ? 'rsc-mobile-nav-button--open' : ''}`}
                         onClick={handleDesarrolladoresClick}
@@ -1154,9 +1154,9 @@ export function Navbar() {
                     </div>
                   );
                 }
-                if (item === t('navbar.instituciones')) {
+                if (navKey === 'instituciones') {
                   return (
-                    <div key={item} className="rsc-mobile-nav-item" ref={institucionesDropdownRef}>
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={institucionesDropdownMobileRef}>
                       <button
                         className={`rsc-mobile-nav-button ${isInstitucionesOpen ? 'rsc-mobile-nav-button--open' : ''}`}
                         onClick={handleInstitucionesClick}
@@ -1175,6 +1175,9 @@ export function Navbar() {
                                 className="rsc-mobile-dropdown-item"
                                 onClick={(e) => {
                                   e.preventDefault();
+                                  e.stopPropagation();
+                                  setIsInstitucionesOpen(false);
+                                  setIsMobileMenuOpen(false);
                                   setIsInstitucionesOpen(false);
                                   setIsMobileMenuOpen(false);
                                   if (menuItem.onClick) {
@@ -1196,9 +1199,9 @@ export function Navbar() {
                     </div>
                   );
                 }
-                if (item === t('navbar.empresa')) {
+                if (navKey === 'empresa') {
                   return (
-                    <div key={item} className="rsc-mobile-nav-item" ref={empresaDropdownRef}>
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresaDropdownMobileRef}>
                       <button
                         className={`rsc-mobile-nav-button ${isEmpresaOpen ? 'rsc-mobile-nav-button--open' : ''}`}
                         onClick={handleEmpresaClick}
@@ -1240,10 +1243,10 @@ export function Navbar() {
                 }
                 return (
                   <button
-                    key={item}
+                    key={navKey}
                     className="rsc-mobile-nav-button"
                     onClick={() => {
-                      setActiveNav(item);
+                      setActiveNavKey(navKey);
                       setIsMobileMenuOpen(false);
                     }}
                   >

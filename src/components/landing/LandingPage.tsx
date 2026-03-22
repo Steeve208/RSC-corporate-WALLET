@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import '../../styles/landing.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
+import { HeroAnimatedVisual } from './HeroAnimatedVisual';
 import { useTranslation } from '../../contexts/I18nContext';
-import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen, Rocket } from 'lucide-react';
+import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen, Smartphone, ExternalLink } from 'lucide-react';
+import { RSC_MINING_PLAY_STORE_URL } from '../../constants/storeLinks';
 
 type LandingPageProps = {
   onEnter?: () => void;
@@ -29,10 +31,24 @@ export function LandingPage({ onEnter }: LandingPageProps) {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section - wRSK Token Sale */}
-      <section className="rsc-hero rsc-tech-bg">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
+      {/* Hero animado: misma narrativa que el vídeo (RSC Chain + navegación web wallet) */}
+      <section className="rsc-hero rsc-tech-bg rsc-hero--animated">
+        <div className="rsc-hero-blockchain-bg" aria-hidden="true">
+          <div className="rsc-hero-blockchain-bg__mesh" />
+          <div className="rsc-hero-blockchain-bg__diagonal" />
+          <div className="rsc-hero-blockchain-bg__row">
+            {Array.from({ length: 9 }).map((_, i) => (
+              <Fragment key={i}>
+                <span
+                  className="rsc-hero-blockchain-bg__block"
+                  style={{ animationDelay: `${i * 0.4}s` }}
+                />
+                {i < 8 && <span className="rsc-hero-blockchain-bg__connector" />}
+              </Fragment>
+            ))}
+          </div>
+        </div>
+        <div className="rsc-tech-bg-glow rsc-tech-bg-glow--hero-chain"></div>
         <div className="rsc-tech-particles">
           {[...Array(20)].map((_, i) => (
             <div key={i} className="rsc-tech-particle" style={{
@@ -43,88 +59,38 @@ export function LandingPage({ onEnter }: LandingPageProps) {
             }}></div>
           ))}
         </div>
-        
-        {/* wRSK Token Sale Hero Content */}
-        <div className="rsc-sale-hero-container">
-          <div className="rsc-sale-hero-content">
-            {/* Badge */}
-            <div className="rsc-sale-hero-badge animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <span className="rsc-sale-hero-badge-dot"></span>
-              <span>FIRST ROUND - LIVE NOW</span>
-            </div>
 
-            {/* Main Title */}
-            <h1 className="rsc-sale-hero-title animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <span className="rsc-sale-hero-title-highlight">wRSK Token Sale</span>
-            </h1>
+        <div className="rsc-hero-animated-section">
+          <div className="rsc-hero-animated-caption animate-fade-in-up">
+            <h1 className="rsc-hero-animated-title">{t('landing.heroAnimated.title')}</h1>
+            <p className="rsc-hero-animated-subtitle">{t('landing.heroAnimated.subtitle')}</p>
+          </div>
 
-            {/* Subtitle */}
-            <p className="rsc-sale-hero-subtitle animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              Exclusive opportunity to acquire wRSK tokens with USDT on BSC Mainnet
-            </p>
-
-            {/* Features Grid */}
-            <div className="rsc-sale-hero-features animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">
-                  <Zap size={24} />
+          <div className="rsc-hero-mining-promo animate-fade-in-up" style={{ animationDelay: '0.05s' }}>
+            <div className="rsc-hero-mining-promo__glow" aria-hidden="true" />
+            <div className="rsc-hero-mining-promo__inner">
+              <span className="rsc-hero-mining-promo__badge">{t('landing.heroAnimated.miningPromo.badge')}</span>
+              <div className="rsc-hero-mining-promo__row">
+                <div className="rsc-hero-mining-promo__copy">
+                  <h2 className="rsc-hero-mining-promo__title">{t('landing.heroAnimated.miningPromo.title')}</h2>
+                  <p className="rsc-hero-mining-promo__desc">{t('landing.heroAnimated.miningPromo.description')}</p>
                 </div>
-                <div className="rsc-sale-hero-feature-content">
-                  <h3 className="rsc-sale-hero-feature-title">25% Immediate</h3>
-                  <p className="rsc-sale-hero-feature-desc">Receive tokens instantly</p>
-                </div>
-              </div>
-              <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">
-                  <TrendingUp size={24} />
-                </div>
-                <div className="rsc-sale-hero-feature-content">
-                  <h3 className="rsc-sale-hero-feature-title">75% Vesting</h3>
-                  <p className="rsc-sale-hero-feature-desc">6 months linear release</p>
-                </div>
-              </div>
-              <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">
-                  <Coins size={24} />
-                </div>
-                <div className="rsc-sale-hero-feature-content">
-                  <h3 className="rsc-sale-hero-feature-title">Special Price</h3>
-                  <p className="rsc-sale-hero-feature-desc">Best rate available</p>
-                </div>
-              </div>
-              <div className="rsc-sale-hero-feature-card">
-                <div className="rsc-sale-hero-feature-icon">
-                  <Shield size={24} />
-                </div>
-                <div className="rsc-sale-hero-feature-content">
-                  <h3 className="rsc-sale-hero-feature-title">Secure</h3>
-                  <p className="rsc-sale-hero-feature-desc">Smart contract verified</p>
-                </div>
+                <a
+                  href={RSC_MINING_PLAY_STORE_URL}
+                  className="rsc-hero-mining-promo__cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Smartphone size={20} strokeWidth={2} aria-hidden />
+                  <span>{t('landing.heroAnimated.miningPromo.cta')}</span>
+                  <ExternalLink size={16} strokeWidth={2} aria-hidden />
+                </a>
               </div>
             </div>
+          </div>
 
-            {/* CTA Button */}
-            <div className="rsc-sale-hero-cta-wrapper animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <button 
-                className="rsc-sale-hero-cta"
-                onClick={() => {
-                  if ((window as any).navigateToPage) {
-                    (window as any).navigateToPage('sale');
-                  }
-                }}
-              >
-                <Rocket size={28} />
-                <span>Join the Token Sale</span>
-                <span className="rsc-sale-hero-cta-arrow">→</span>
-              </button>
-            </div>
-
-            {/* Additional Info */}
-            <div className="rsc-sale-hero-info animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <p className="rsc-sale-hero-info-text">
-                Limited supply available • First come, first served
-              </p>
-            </div>
+          <div className="rsc-hero-animated-wrap animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <HeroAnimatedVisual />
           </div>
         </div>
       </section>
