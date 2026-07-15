@@ -531,6 +531,13 @@ function getMetricsTemplate() {
   `;
 }
 
+export async function render() {
+  return getMetricsTemplate();
+}
+export async function init() {
+  await cargarMetricas();
+}
+
 // Exportar funciones
 window.loadSocialMetrics = loadSocialMetrics;
 window.cargarMetricas = cargarMetricas;

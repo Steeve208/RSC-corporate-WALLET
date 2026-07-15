@@ -36,7 +36,9 @@
           "title": "Educación / Learn",
           "description": "Guías básicas, seguridad, primeros pasos"
         }
-      }
+      },
+      "promoKicker": "Individuos",
+      "promoLine": "Productos digitales para el día a día"
     },
     "empresas": {
       "title": "Para Empresas",
@@ -63,7 +65,9 @@
           "title": "Casos de uso comerciales",
           "description": "Casos de uso comerciales y ejemplos"
         }
-      }
+      },
+      "promoKicker": "Empresas",
+      "promoLine": "Plataformas para compañías modernas"
     },
     "instituciones": {
       "title": "Nuestros Clientes",
@@ -80,13 +84,19 @@
         },
         "chain": {
           "title": "RSC Chain",
-          "description": "Infraestructura blockchain"
+          "description": "Infraestructura blockchain institucional"
         },
         "token": {
           "title": "REESK [RSK] (RSC TOKEN)",
           "description": "Token nativo de RSC Chain"
+        },
+        "realEstate": {
+          "title": "Reeskova",
+          "description": "Plataforma digital inmobiliaria · RSC Group"
         }
-      }
+      },
+      "promoKicker": "Instituciones",
+      "promoLine": "Infraestructura a escala enterprise"
     },
     "desarrolladores": {
       "title": "Para Desarrolladores",
@@ -113,7 +123,9 @@
           "title": "Roadmap técnico",
           "description": "Roadmap técnico y actualizaciones"
         }
-      }
+      },
+      "promoKicker": "Developers",
+      "promoLine": "APIs, docs y herramientas de red"
     },
     "empresa": {
       "title": "Acerca de RSC",
@@ -140,7 +152,9 @@
           "title": "Contacto / Alianzas",
           "description": "Ponte en contacto y oportunidades de alianzas"
         }
-      }
+      },
+      "promoKicker": "RSC Group",
+      "promoLine": "Construyendo plataformas digitales"
     }
   },
   "hero": {
@@ -2079,8 +2093,8 @@
   },
   "landing": {
     "heroAnimated": {
-      "title": "Tu cartera para el día a día en RSC",
-      "subtitle": "Envía, recibe, paga con QR y mantén el control de tus fondos, todo en un solo lugar.",
+      "title": "Infraestructura para dinero digital en RSC Chain",
+      "subtitle": "Wallet, pagos, herramientas empresariales e infraestructura institucional—una plataforma dirigida por RSC Chain.",
       "urlPreview": "app.rsc.wallet",
       "balanceLabel": "Saldo total",
       "actionSend": "Enviar",
@@ -2089,15 +2103,15 @@
       "miningPromo": {
         "badge": "Ya en Google Play",
         "title": "App RSC Mining",
-        "description": "Mina desde el móvil. Nuestra app oficial de minería ya está disponible para Android.",
+        "description": "Participa en la red desde el móvil. Minería oficial para Android—parte de la capa de recompensas de RSC Chain.",
         "cta": "Descargar en Google Play"
       }
     },
     "why": {
       "badge": "Ecosistema RSC",
-      "title": "La wallet que conecta",
-      "title2": "tu economía a RSC Chain",
-      "subtitle": "Gestiona activos, pagos y recompensas desde una sola identidad digital. RSC Wallet está diseñada para operar en el ecosistema RSC con velocidad, control y seguridad.",
+      "title": "Una infraestructura.",
+      "title2": "Muchas formas de operar.",
+      "subtitle": "RSC Chain dirige identidad de wallet, pagos, staking, herramientas comerciales y liquidación institucional—para que usuarios, empresas y builders compartan los mismos rieles.",
       "nonCustodial": {
         "title": "Non-custodial",
         "description": "Tus llaves, tu control. Nadie puede congelar tu saldo ni tomar custodia de tus fondos."
@@ -2209,40 +2223,62 @@
       "disclaimer": "La seguridad final también depende del cuidado del usuario con su frase semilla y su dispositivo."
     },
     "usecases": {
-      "title": "Hecha para personas.",
-      "title2": "Lista para negocios.",
-      "titleGradient": "Abierta a integración.",
+      "eyebrow": "A quién va dirigido",
+      "title": "Una cadena, cuatro entradas claras",
+      "subtitle": "Elige el perfil que te representa—cada ruta enlaza a una vista de producto con capacidades concretas.",
       "individuals": {
-        "title": "Individuos",
-        "item1": "Enviar/recibir RSK al instante",
-        "item2": "Control de balance y actividad",
-        "item3": "Staking y recompensas del ecosistema",
-        "item4": "Pagos con QR en vida diaria"
+        "title": "Personas",
+        "summary": "Wallet non-custodial y pagos del día a día en RSC Chain.",
+        "item1": "Envío y recepción de activos RSC con liquidación rápida",
+        "item2": "Saldos, actividad e historial exportable",
+        "item3": "Staking y recompensas del ecosistema donde aplique",
+        "item4": "Pagos QR entre personas y en comercio",
+        "cta": "Ver resumen de wallet"
       },
       "businesses": {
-        "title": "Empresas / Comercios",
-        "item1": "Cobros rápidos con QR",
-        "item2": "Confirmación clara de pago",
-        "item3": "Historial de transacciones para control interno",
-        "item4": "Preparada para integraciones futuras con RSC Payments"
+        "title": "Empresas y comercios",
+        "summary": "Cobros, conciliación e integración por API cuando hace falta más que una wallet de consumo.",
+        "item1": "Cobros QR con estados de confirmación claros",
+        "item2": "Wallet empresarial e historial orientado a reporting",
+        "item3": "APIs de pagos para apps, e-commerce y TPV",
+        "item4": "Facturación y documentación de casos de uso",
+        "cta": "Explorar wallet empresarial"
       },
       "developers": {
         "title": "Desarrolladores",
-        "item1": "Integración con APIs del ecosistema (REST/WS)",
-        "item2": "Enfoque modular: wallet como puerta al stack RSC",
-        "item3": "Documentación / endpoints (Coming soon)"
+        "summary": "Construye sobre RSC Chain con interfaces documentadas y entornos de prueba.",
+        "item1": "Patrones REST/WebSocket alineados al stack del ecosistema",
+        "item2": "La wallet como puerta de acceso principal para usuarios y apps",
+        "item3": "Documentación técnica, contexto RPC y superficie API en evolución",
+        "cta": "Abrir documentación",
+        "item4": "Testnet, faucet y roadmap público"
+      },
+      "institutions": {
+        "title": "Instituciones",
+        "summary": "Infraestructura y servicios para finanzas reguladas y de alta escala.",
+        "item1": "Arquitectura y consenso de cadena de grado institucional",
+        "item2": "Soluciones corporativas e infra privada",
+        "item3": "Mercados P2P institucionales",
+        "item4": "Utilidad y gobernanza del token REESK (RSK)",
+        "cta": "Abrir RSC Chain"
       }
     },
     "preview": {
       "title": "Diseñada para ser",
       "titleGradient": "clara, rápida y elegante",
       "subtitle": "Una experiencia enfocada en lo importante: control, visibilidad y acciones rápidas.",
-      "backupWarning": "Guarda tu frase de recuperación en un lugar seguro"
+      "backupWarning": "Guarda tu frase de recuperación en un lugar seguro",
+      "surfaceLead": "Sin marcos de móvil ni cuadrículas decorativas: esto es en lo que se apoya el producto de verdad—no una galería de capturas.",
+      "point1": "Non-custodial: las claves en tu dispositivo; no custodiamos tus fondos.",
+      "point2": "Saldos y actividad con estados claros en RSC Chain—no un widget de juguete.",
+      "point3": "Enviar, recibir, QR y staking en una misma superficie de producto.",
+      "point4": "Seguridad operable: PIN, biometría, auto-bloqueo y backup de semilla—sin toggles de demostración.",
+      "cta": "Ver resumen de wallet"
     },
     "ecosystem": {
-      "title": "La puerta de entrada al",
-      "titleGradient": "ecosistema RSC",
-      "subtitle": "RSC Wallet no es una app aislada. Es el punto de acceso a la infraestructura de RSC Chain: identidad, pagos, utilidades y futuras integraciones.",
+      "title": "Dirigido por",
+      "titleGradient": "RSC Chain",
+      "subtitle": "RSC Wallet es la puerta de acceso al consumidor. Detrás, RSC Chain coordina identidad, pagos, utilidades y el roadmap hacia bridge y experiencias de pago de grado bancario.",
       "chain": {
         "title": "Wallet ↔ RSC Chain",
         "description": "Operaciones y confirmaciones conectadas a la red."
@@ -2263,30 +2299,649 @@
     "faq": {
       "title": "Preguntas",
       "titleGradient": "frecuentes",
-      "subtitle": "Todo lo que necesitas saber sobre RSC Wallet",
+      "subtitle": "Respuestas claras sobre RSC Chain, la wallet y la plataforma.",
       "q1": "¿RSC Wallet es custodial?",
-      "a1": "No. Está diseñada como non-custodial: el acceso y control lo mantiene el usuario.",
+      "a1": "No. Está diseñada como non-custodial: tú mantienes el acceso y el control de tus claves y fondos.",
       "q2": "¿Qué pasa si pierdo mi teléfono?",
-      "a2": "Puedes recuperar tu wallet usando tu frase semilla (seed). Por eso es clave guardarla bien.",
+      "a2": "Puedes recuperar tu wallet con tu frase semilla. Guárdala offline y nunca la compartas.",
       "q3": "¿Hay comisiones?",
-      "a3": "Puede haber comisiones de red según la operación. La app mostrará el costo antes de confirmar.",
+      "a3": "Puede haber comisiones de red según la operación. La app muestra el costo antes de confirmar.",
       "q4": "¿Puedo ver mis transacciones?",
-      "a4": "Sí. Tendrás historial con estados y detalles básicos.",
-      "q5": "¿Está disponible en iOS/Android?",
-      "a5": "Sí / Coming soon (usa el estado real que tengas).",
+      "a4": "Sí. Tendrás historial con estados y detalles esenciales, exportables donde esté disponible.",
+      "q5": "¿Está disponible en iOS y Android?",
+      "a5": "La minería en Android está en Google Play. Wallet y clientes adicionales siguen el roadmap del producto—revisa Descargas y Actualizaciones.",
       "q6": "¿RSC Wallet es parte de RSC Chain?",
-      "a6": "Sí. Es el producto oficial para interactuar con el ecosistema y sus utilidades."
+      "a6": "Sí. RSC Wallet es la puerta de acceso oficial para operar en RSC Chain y sus utilidades.",
+      "q7": "¿Qué dirige RSC Chain más allá de la wallet?",
+      "a7": "Pagos y rieles QR, wallet y APIs empresariales, infraestructura institucional, utilidad del token REESK (RSK), minería/recompensas, remesas y herramientas para developers—coordinado como una sola plataforma.",
+      "q8": "¿Cómo se involucran las instituciones?",
+      "a8": "A través de las páginas institucionales de RSC Chain: mercados P2P, servicios corporativos, visión de infraestructura y contacto para partnerships."
     },
     "cta": {
-      "badge": "Listo para empezar",
-      "title": "Crea tu",
-      "titleGradient": "RSC Wallet",
+      "badge": "Construye en RSC",
+      "title": "Empieza con",
+      "titleGradient": "RSC Chain",
       "title2": "hoy",
-      "subtitle": "Accede al ecosistema RSC con control real, transacciones rápidas y seguridad práctica.",
-      "download": "Descargar RSC Wallet",
-      "docs": "Ver documentación / Seguridad",
-      "microcopy": "Disponible para usuarios que buscan operar con libertad y claridad."
+      "subtitle": "Explora la wallet, la infraestructura institucional o la documentación—y elige el camino según tu rol.",
+      "download": "Explorar RSC Wallet",
+      "docs": "Documentación para desarrolladores",
+      "microcopy": "La misma red para personas, empresas, instituciones y builders.",
+      "chain": "Visión de RSC Chain"
+    },
+    "guide": {
+      "navAria": "En esta página",
+      "anchorWhy": "Por qué RSC",
+      "anchorFeatures": "Detalle de wallet",
+      "anchorHow": "Primeros pasos",
+      "anchorSecurity": "Seguridad",
+      "anchorFaq": "Preguntas frecuentes",
+      "eyebrow": "RSC Chain · Infraestructura de wallet y pagos",
+      "heroLead": "Wallet non-custodial, pagos QR instantáneos y herramientas empresariales—explicados en un solo sitio para que elijas el siguiente paso con claridad.",
+      "primaryCta": "Explorar la plataforma",
+      "secondaryCta": "RSC Wallet",
+      "tertiaryCta": "Hablar con nosotros",
+      "pathTitle": "Elige tu camino",
+      "pathSubtitle": "Cuatro entradas claras a todo lo que dirige RSC Chain. Cada una abre una vista con más profundidad.",
+      "individuals": {
+        "title": "Personas",
+        "body": "Dinero del día a día en RSC Chain: wallet non-custodial, pagos QR, staking e historial transparente.",
+        "b1": "Wallet, saldos e historial completo",
+        "b2": "Pagar y cobrar con QR (comercio y P2P)",
+        "b3": "Staking y recompensas del ecosistema",
+        "cta": "Ver resumen de wallet"
+      },
+      "business": {
+        "title": "Empresas y comercios",
+        "body": "Cobros, reporting e integración por API cuando necesitas más que una wallet de consumo.",
+        "b1": "Wallet empresarial y cobros QR",
+        "b2": "APIs de pagos para apps y TPV",
+        "b3": "Facturación y casos de uso documentados",
+        "cta": "Ver wallet empresarial"
+      },
+      "developers": {
+        "title": "Desarrolladores",
+        "body": "Integra con RSC Chain: documentación, contexto de red, APIs y entornos de prueba.",
+        "b1": "Documentación técnica y contexto RPC",
+        "b2": "APIs, testnet y roadmap",
+        "b3": "Visión de la cadena institucional",
+        "cta": "Abrir documentación"
+      },
+      "anchorPlatform": "Plataforma",
+      "brand": "RSC GROUP",
+      "headline": "Construyendo la próxima generación de plataformas digitales.",
+      "subtitle": "Creamos tecnología que impulsa el inmobiliario, las finanzas digitales, las transacciones seguras y el futuro de la infraestructura descentralizada.",
+      "orbitWallet": "Wallet",
+      "orbitPayments": "Pagos",
+      "orbitInfra": "Infraestructura",
+      "institutions": {
+        "title": "Instituciones",
+        "body": "Infraestructura de cadena enterprise, mercados P2P, servicios corporativos y economía REESK (RSK).",
+        "b1": "Rieles institucionales de alto rendimiento",
+        "b2": "Soluciones corporativas y mercados P2P",
+        "b3": "Utilidad y gobernanza del token nativo",
+        "cta": "Ver RSC Chain"
+      }
+    },
+    "siteFooter": {
+      "tagline": "Una empresa tecnológica que construye plataformas digitales para la próxima generación.",
+      "productHeading": "Producto",
+      "resourcesHeading": "Recursos",
+      "companyHeading": "Empresa",
+      "legalHeading": "Legal",
+      "wallet": "RSC Wallet",
+      "payments": "Pagos",
+      "staking": "Staking",
+      "businessWallet": "Wallet empresarial",
+      "faq": "FAQ",
+      "developers": "Desarrolladores",
+      "rscChain": "RSC Chain",
+      "contact": "Contacto",
+      "about": "Sobre RSC",
+      "security": "Seguridad",
+      "careers": "Carreras",
+      "press": "Prensa",
+      "terms": "Términos de uso",
+      "privacy": "Privacidad",
+      "cookies": "Cookies",
+      "compliance": "Cumplimiento",
+      "copyright": "© 2026 RSC Group. Todos los derechos reservados.",
+      "disclaimer": "Non-custodial: no custodiamos tus fondos. Protege tu frase de recuperación; sin claves no hay acceso."
+    },
+    "metrics": {
+      "aria": "Señales de plataforma",
+      "m1": {
+        "value": "10,000+",
+        "label": "Capacidad objetivo de TPS"
+      },
+      "m2": {
+        "value": "< 2s",
+        "label": "Objetivo de confirmación"
+      },
+      "m3": {
+        "value": "99.9%",
+        "label": "Objetivo de uptime"
+      },
+      "m4": {
+        "value": "Non-custodial",
+        "label": "Control de claves del usuario"
+      }
+    },
+    "platform": {
+      "eyebrow": "Lo que dirige RSC Chain",
+      "title": "La plataforma completa bajo una sola infraestructura",
+      "subtitle": "Desde wallets personales hasta liquidación institucional, RSC Chain orquesta los productos, rieles y utilidades del ecosistema.",
+      "wallet": {
+        "title": "RSC Wallet",
+        "description": "Identidad y activos non-custodial—enviar, recibir, stakear y seguir actividad."
+      },
+      "payments": {
+        "title": "Pagos & QR",
+        "description": "Flujos cotidianos de pago por escaneo para personas y comercios, con estados claros."
+      },
+      "business": {
+        "title": "Suite empresarial",
+        "description": "Wallet de negocio, APIs de pago, facturación y casos de uso comerciales."
+      },
+      "institutional": {
+        "title": "Cadena institucional",
+        "description": "Infraestructura blockchain enterprise para cargas reguladas y de alto volumen."
+      },
+      "token": {
+        "title": "REESK (RSK)",
+        "description": "Utilidad del token nativo en staking, gobernanza y participación en el ecosistema."
+      },
+      "mining": {
+        "title": "Minería & recompensas",
+        "description": "Participación en la red y recompensas—incluida la app oficial de minería móvil."
+      },
+      "developers": {
+        "title": "Plataforma para developers",
+        "description": "Docs, APIs, testnet y roadmap para construir sobre RSC Chain."
+      },
+      "remittances": {
+        "title": "Remesas",
+        "description": "Transferencias cross-border pensadas para velocidad, claridad y control."
+      }
+    },
+    "group": {
+      "brand": "RSC GROUP",
+      "heroTitle": "Construyendo la próxima generación de plataformas digitales.",
+      "heroSubtitle": "Creamos tecnología que impulsa el inmobiliario, las finanzas digitales, las transacciones seguras y el futuro de la infraestructura descentralizada.",
+      "ctaEcosystem": "Explorar nuestro ecosistema",
+      "ctaProducts": "Ver productos",
+      "orbitAria": "Ecosistema de productos RSC Group",
+      "manifestoLine1": "No construimos apps.",
+      "manifestoLine2": "Construimos ecosistemas digitales.",
+      "ecoEyebrow": "Nuestro ecosistema",
+      "ecoTitle": "Una empresa. Múltiples plataformas.",
+      "ecoSubtitle": "Cada producto funciona por sí solo—y se vuelve más fuerte dentro del stack de RSC Group.",
+      "productLabel": "Producto",
+      "learnMore": "Saber más",
+      "products": {
+        "reeskova": {
+          "name": "Reeskova",
+          "tagline": "El futuro del real estate",
+          "blurb": "Marketplace inmobiliario digital inteligente",
+          "description": "Compra, vende, alquila e invierte a través de un marketplace digital premium diseñado para la próxima generación de propiedades y capital."
+        },
+        "chain": {
+          "name": "RSC Chain",
+          "tagline": "Infraestructura blockchain",
+          "blurb": "Infraestructura descentralizada enterprise",
+          "description": "Infraestructura blockchain de alto rendimiento para instituciones y builders—una tecnología dentro de una empresa tecnológica más amplia."
+        },
+        "p2p": {
+          "name": "RSC P2P",
+          "tagline": "Marketplace peer-to-peer",
+          "blurb": "Rails P2P institucionales",
+          "description": "Un marketplace sofisticado para intercambio peer-to-peer a escala, diseñado para liquidez, claridad y liquidación segura."
+        },
+        "escrow": {
+          "name": "RSC Escrow",
+          "tagline": "Transacciones digitales seguras",
+          "blurb": "Custodia confiable hasta cumplir condiciones",
+          "description": "Rails de transacciones digitales seguras que retienen valor hasta que todas las partes cumplen condiciones—construidos para confianza y automatización."
+        },
+        "wallet": {
+          "name": "RSC Wallet",
+          "tagline": "Activos digitales",
+          "blurb": "Experiencia cotidiana de activos digitales",
+          "description": "Una experiencia clara de wallet para guardar, enviar, recibir y operar activos en el ecosistema RSC."
+        },
+        "corporate": {
+          "name": "RSC Corporate",
+          "tagline": "Soluciones enterprise",
+          "blurb": "Soluciones para empresas e instituciones",
+          "description": "Plataformas y servicios enterprise que ayudan a las organizaciones a adoptar infraestructura digital con control y claridad."
+        }
+      },
+      "connectEyebrow": "Arquitectura",
+      "connectTitle": "Cómo se conecta todo",
+      "connectSubtitle": "RSC Group está en el centro. Los productos se expanden—y se reconectan a través de infraestructura compartida.",
+      "techEyebrow": "Capacidades",
+      "techTitle": "Nuestra tecnología",
+      "techSubtitle": "Blockchain es una capa. El stack va mucho más allá.",
+      "tech": {
+        "blockchain": {
+          "title": "Blockchain",
+          "description": "Infraestructura descentralizada para liquidación segura y verificable."
+        },
+        "ai": {
+          "title": "Inteligencia Artificial",
+          "description": "Matching inteligente, automatización y soporte a decisiones en los productos."
+        },
+        "cloud": {
+          "title": "Infraestructura cloud",
+          "description": "Fundamentos cloud elásticos para disponibilidad global y escala."
+        },
+        "security": {
+          "title": "Seguridad",
+          "description": "Defensa en profundidad en identidad, transacciones y sistemas."
+        },
+        "analytics": {
+          "title": "Data Analytics",
+          "description": "Insight operativo para mercados, activos y flujos enterprise."
+        },
+        "apis": {
+          "title": "APIs",
+          "description": "Interfaces composables para partners, apps y sistemas institucionales."
+        },
+        "open": {
+          "title": "Plataforma abierta",
+          "description": "Bloques extensibles diseñados para developers y ecosistemas."
+        }
+      },
+      "whyEyebrow": "Por qué RSC",
+      "whyTitle": "Hecho para escalar.",
+      "stats": {
+        "products": {
+          "value": "10+",
+          "label": "Productos"
+        },
+        "integrated": {
+          "value": "100%",
+          "label": "Integrado"
+        },
+        "infra": {
+          "value": "24/7",
+          "label": "Infraestructura"
+        },
+        "scalable": {
+          "value": "∞",
+          "label": "Escalable"
+        },
+        "availability": {
+          "value": "99.99%",
+          "label": "Disponibilidad"
+        }
+      },
+      "audienceEyebrow": "Para todos",
+      "audienceTitle": "Construido para cada etapa de las operaciones digitales",
+      "audienceSubtitle": "Individuos, negocios e instituciones—cada uno con un camino claro al ecosistema.",
+      "audiences": {
+        "individuals": {
+          "title": "Individuos",
+          "description": "Accede a wallets, pagos y herramientas digitales cotidianas diseñadas para claridad y control.",
+          "cta": "Explorar para individuos"
+        },
+        "businesses": {
+          "title": "Empresas",
+          "description": "Cobros, APIs y tooling operativo para compañías y comercios modernos.",
+          "cta": "Explorar para empresas"
+        },
+        "institutions": {
+          "title": "Instituciones",
+          "description": "Infraestructura enterprise, mercados, plataformas corporativas y Reeskova.",
+          "cta": "Explorar para instituciones"
+        }
+      },
+      "timelineEyebrow": "Roadmap",
+      "timelineTitle": "Timeline",
+      "timelineSubtitle": "Un recorrido secuenciado desde productos estrella hasta expansión global.",
+      "timelineYear": "2026",
+      "timeline": {
+        "reeskova": "Reeskova",
+        "wallet": "Wallet",
+        "escrow": "Escrow",
+        "p2p": "P2P",
+        "chain": "Chain",
+        "ai": "IA",
+        "global": "Expansión global"
+      },
+      "valuesEyebrow": "Liderazgo",
+      "valuesTitle": "Lo que defendemos",
+      "valuesSubtitle": "Compartimos valores antes que personas—disciplina, ambición y ejecución confiable.",
+      "values": {
+        "innovation": "Innovación",
+        "integrity": "Integridad",
+        "technology": "Tecnología",
+        "trust": "Confianza",
+        "execution": "Ejecución"
+      },
+      "newsEyebrow": "Noticias",
+      "newsTitle": "Desde RSC Group",
+      "newsRead": "Leer más",
+      "news": {
+        "n1": {
+          "meta": "Producto",
+          "title": "Reeskova se une al ecosistema RSC Group",
+          "excerpt": "Un nuevo marketplace inmobiliario diseñado como plataforma digital estrella bajo RSC Group."
+        },
+        "n2": {
+          "meta": "Empresa",
+          "title": "RSC Group crece como empresa tecnológica multiproducto",
+          "excerpt": "Desde wallets y escrow hasta infraestructura chain, el portafolio crece como un stack conectado."
+        },
+        "n3": {
+          "meta": "Plataforma",
+          "title": "Construyendo para individuos, empresas e instituciones",
+          "excerpt": "Puntos de entrada claros en el ecosistema—con estándares compartidos y una sola marca corporativa."
+        }
+      },
+      "ctaTitle": "¿Listo para construir el futuro?",
+      "ctaSubtitle": "Explora las plataformas que RSC Group construye para real estate, finanzas e infraestructura digital.",
+      "ctaFinal": "Explorar RSC Group",
+      "footerTagline": "Una empresa tecnológica que construye plataformas digitales para la próxima generación.",
+      "footer": {
+        "products": "Productos",
+        "company": "Empresa",
+        "developers": "Developers",
+        "community": "Comunidad",
+        "about": "About",
+        "careers": "Careers",
+        "press": "Press",
+        "legal": "Legal",
+        "api": "API",
+        "docs": "Documentación",
+        "github": "GitHub",
+        "copyright": "© 2026 RSC Group. Todos los derechos reservados."
+      }
+    }
+  },
+  "institutionalRealEstate": {
+    "nav": {
+      "buy": "Comprar",
+      "sell": "Vender",
+      "rent": "Alquilar",
+      "invest": "Invertir",
+      "developers": "Developers",
+      "about": "About",
+      "signIn": "Iniciar sesión",
+      "dashboard": "Dashboard",
+      "getStarted": "Empezar"
+    },
+    "hero": {
+      "eyebrow": "The Future of Real Estate",
+      "line1": "The Future",
+      "line2": "of Real Estate",
+      "line3": "Starts Here.",
+      "subtitle": "Compra, vende, alquila e invierte en un marketplace digital inteligente diseñado para la próxima generación.",
+      "ctaExplore": "Explorar propiedades",
+      "ctaAgent": "Hazte agente",
+      "floatDash": "Pulso de mercado",
+      "floatGrowth": "Crecimiento YoY",
+      "floatCity": "Lisboa · Premium",
+      "floatPrice": "$840,000",
+      "floatAi": "Match IA listo"
+    },
+    "stats": {
+      "s1": {
+        "value": "25K+",
+        "label": "Propiedades"
+      },
+      "s2": {
+        "value": "120+",
+        "label": "Ciudades"
+      },
+      "s3": {
+        "value": "95%",
+        "label": "Satisfacción"
+      },
+      "s4": {
+        "value": "$2B+",
+        "label": "Valor en activos"
+      }
+    },
+    "why": {
+      "eyebrow": "Why Reeskova",
+      "title": "Un marketplace moderno impulsado por tecnología",
+      "subtitle": "Experiencia premium. Descubrimiento inteligente. Profesionales de confianza.",
+      "ai": {
+        "title": "AI Search",
+        "text": "Encuentra propiedades con búsqueda inteligente que entiende cómo vives e inviertes."
+      },
+      "verified": {
+        "title": "Verified Listings",
+        "text": "Los destacados se revisan para que el comprador avance con confianza."
+      },
+      "secure": {
+        "title": "Secure Transactions",
+        "text": "Pensado para negociaciones más seguras y flujos listos para escrow."
+      },
+      "smart": {
+        "title": "Smart Investment",
+        "text": "Señales y analytics para evaluar oportunidad—sin ruido."
+      }
+    },
+    "map": {
+      "eyebrow": "Explorar",
+      "title": "Descubrimiento con mapa interactivo",
+      "subtitle": "Recorre ciudades, haz hover en pins y filtra—sin perder la sensación premium.",
+      "filter1": "Todo",
+      "filter2": "Comprar",
+      "filter3": "Alquilar",
+      "filter4": "Invertir",
+      "pin1": {
+        "title": "Loft céntrico",
+        "meta": "Comprar · 2 hab · 94 m²"
+      },
+      "pin2": {
+        "title": "Residencia costera",
+        "meta": "Comprar · 4 hab · 210 m²"
+      },
+      "pin3": {
+        "title": "Suite urbana",
+        "meta": "Alquilar · 1 hab · 48 m²"
+      },
+      "pin4": {
+        "title": "Activo de renta",
+        "meta": "Invertir · Cap rate 6.2%"
+      }
+    },
+    "featured": {
+      "eyebrow": "Destacados",
+      "title": "Propiedades que merecen tu atención",
+      "viewAll": "Ver todas",
+      "badge": "Featured",
+      "cta": "View Property",
+      "p1": {
+        "price": "$1.2M",
+        "title": "Skyline Residence",
+        "city": "São Paulo",
+        "beds": "3 hab",
+        "area": "168 m²"
+      },
+      "p2": {
+        "price": "$640K",
+        "title": "Harbor Apartment",
+        "city": "Lisboa",
+        "beds": "2 hab",
+        "area": "92 m²"
+      },
+      "p3": {
+        "price": "$890K",
+        "title": "Design Villa",
+        "city": "Miami",
+        "beds": "4 hab",
+        "area": "240 m²"
+      },
+      "p4": {
+        "price": "$415K",
+        "title": "Urban Studio Tower",
+        "city": "Madrid",
+        "beds": "1 hab",
+        "area": "56 m²"
+      }
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "De la búsqueda al mudarte",
+      "subtitle": "Un viaje claro—elegante para compradores, eficiente para agentes.",
+      "s1": {
+        "title": "Search",
+        "text": "Descubre con filtros asistidos por IA y mapa en vivo."
+      },
+      "s2": {
+        "title": "Visit",
+        "text": "Agenda visitas y coordina con profesionales de confianza."
+      },
+      "s3": {
+        "title": "Negotiate",
+        "text": "Mantén conversaciones y propuestas en un flujo premium."
+      },
+      "s4": {
+        "title": "Secure Deal",
+        "text": "Avanza con infraestructura de transacciones más segura."
+      },
+      "s5": {
+        "title": "Move In",
+        "text": "Cierra con claridad—y empieza el siguiente capítulo."
+      }
+    },
+    "audience": {
+      "eyebrow": "For everyone",
+      "title": "Para compradores, agentes y developers",
+      "subtitle": "Una plataforma. Caminos distintos. Misma tecnología.",
+      "buyers": {
+        "title": "Buyers",
+        "text": "Explora, compara y contacta con una experiencia de producto de nueva generación.",
+        "b1": "Búsqueda inteligente y mapa",
+        "b2": "Inventario verificado y agentes trust",
+        "b3": "Contacto y visitas transparentes"
+      },
+      "agents": {
+        "title": "Agents",
+        "text": "Capta demanda cualificada y presenta anuncios con presentación de marca.",
+        "b1": "Canales de lead que convierten",
+        "b2": "Storytelling premium de listings",
+        "b3": "Herramientas alineadas a CRM moderno"
+      },
+      "developers": {
+        "title": "Developers",
+        "text": "Muestra lanzamientos y obra nueva a una audiencia digital global.",
+        "b1": "Superficies de spotlight para launches",
+        "b2": "Media rica y framing de inversión",
+        "b3": "Pipeline hacia equipos comerciales"
+      }
+    },
+    "invest": {
+      "eyebrow": "Investment",
+      "title": "Invierte en oportunidades con confianza.",
+      "subtitle": "ROI, rentabilidad y crecimiento—con la sobriedad de un producto financiero premium.",
+      "m1": {
+        "value": "6.8%",
+        "label": "Señal ROI media"
+      },
+      "m2": {
+        "value": "12%",
+        "label": "Índice de rentabilidad"
+      },
+      "m3": {
+        "value": "+18%",
+        "label": "Outlook de crecimiento"
+      },
+      "chartLabel": "Trayectoria ilustrativa de portafolio"
+    },
+    "tech": {
+      "eyebrow": "Technology",
+      "title": "Powered by",
+      "titleAccent": "RSC Group Technology",
+      "subtitle": "Reeskova no es un catálogo estático. Corre sobre infraestructura para la próxima generación de plataformas digitales.",
+      "ai": {
+        "title": "AI",
+        "text": "Inteligencia de matching y discovery."
+      },
+      "data": {
+        "title": "Big Data",
+        "text": "Capas de insight de mercado e inventario."
+      },
+      "cloud": {
+        "title": "Cloud",
+        "text": "Entrega elástica y lista para escala global."
+      },
+      "chain": {
+        "title": "Blockchain Ready",
+        "text": "Preparada para rieles de settlement on-chain."
+      },
+      "analytics": {
+        "title": "Smart Analytics",
+        "text": "Apoyo a decisiones sin saturación."
+      },
+      "escrow": {
+        "title": "Escrow Ready",
+        "text": "Caminos de infraestructura transaccional segura."
+      }
+    },
+    "group": {
+      "eyebrow": "RSC Group",
+      "title": "Construyendo la próxima generación de plataformas digitales.",
+      "lead": "Reeskova es el marketplace inmobiliario insignia de RSC Group.",
+      "text": "Fortalecemos la marca matriz sin distraer a quien busca vivienda—y dejamos espacio para el siguiente producto del ecosistema.",
+      "p1": {
+        "name": "Reeskova",
+        "role": "Real Estate Marketplace"
+      },
+      "p2": {
+        "name": "RSC P2P",
+        "role": "Peer-to-Peer Trading"
+      },
+      "p3": {
+        "name": "RSC Escrow",
+        "role": "Secure Transaction Infrastructure"
+      },
+      "p4": {
+        "name": "Future Financial Solutions",
+        "role": "Ampliando el stack de RSC Group"
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Voces",
+      "title": "Confianza de quien mueve mercado",
+      "t1": {
+        "quote": "Reeskova se siente como una empresa de producto—no como un clasificado clásico. La experiencia genera confianza.",
+        "name": "Ana Moreira",
+        "role": "Compradora · Lisboa"
+      },
+      "t2": {
+        "quote": "Como agente, por fin tengo una puerta de entrada a la altura de las propiedades que represento.",
+        "name": "Carlos Nieto",
+        "role": "Agente · Madrid"
+      },
+      "t3": {
+        "quote": "El framing de inversión es limpio y corporativo. Exactamente lo que esperan clientes institucionales.",
+        "name": "Sofia Alvarez",
+        "role": "Partnerships de developers"
+      }
+    },
+    "cta": {
+      "line1": "Ready to discover",
+      "line2": "your next property?",
+      "button": "Start Now"
+    },
+    "footer": {
+      "tagline": "Un marketplace moderno impulsado por tecnología—parte de RSC Group.",
+      "product": "Producto",
+      "company": "Empresa",
+      "social": "Social",
+      "marketplace": "Marketplace",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "careers": "Careers",
+      "rscGroup": "RSC Group",
+      "copyright": "© 2026 Reeskova. Todos los derechos reservados.",
+      "backToRsc": "Volver a RSC Chain"
     }
   }
 }
-

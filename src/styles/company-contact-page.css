@@ -1,8 +1,8 @@
 /* Company Contact Page Styles */
 .company-contact-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .company-contact-container {
@@ -15,7 +15,7 @@
 .company-contact-hero {
   padding: 140px 0 80px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .company-contact-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,19 +66,19 @@
 
 .company-contact-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
 /* Form Section */
 .company-contact-form-section {
   padding: 80px 0;
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-contact-form-wrapper {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 48px;
 }
@@ -89,7 +89,7 @@
 }
 
 .company-contact-form-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -97,12 +97,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-contact-form-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -127,17 +127,17 @@
 .company-contact-form-label {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 .company-contact-form-input,
 .company-contact-form-select,
 .company-contact-form-textarea {
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 14px 16px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -147,7 +147,7 @@
 .company-contact-form-select:focus,
 .company-contact-form-textarea:focus {
   outline: none;
-  border-color: #14b8a6;
+  border-color: #2563EB;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -162,21 +162,21 @@
   justify-content: center;
   gap: 12px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   border: none;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
   margin-top: 8px;
 }
 
 .company-contact-form-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .company-contact-form-submit-icon {
@@ -197,7 +197,7 @@
 }
 
 .company-contact-email-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -205,12 +205,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-contact-email-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -225,23 +225,23 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 24px;
   text-decoration: none;
-  color: #ffffff;
+  color: #0F172A;
   transition: all 0.3s ease;
 }
 
 .company-contact-email-link:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateX(4px);
 }
 
 .company-contact-email-link-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -255,17 +255,17 @@
 
 .company-contact-email-link-label {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
 }
 
 .company-contact-email-link-address {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-contact-email-link-arrow {
-  color: rgba(255, 255, 255, 0.5);
+  color: #64748B;
   flex-shrink: 0;
 }
 

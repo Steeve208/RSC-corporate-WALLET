@@ -31,14 +31,14 @@
       <form id="loginForm" class="login-form">
         <div class="form-group">
           <label for="username">
-            <i class="fas fa-user"></i>
-            Usuario
+            <i class="fas fa-envelope"></i>
+            Email
           </label>
           <input 
-            type="text" 
+            type="email" 
             id="username" 
             name="username" 
-            placeholder="Ingresa tu usuario"
+            placeholder="tu-email@rscchain.com"
             required
             autocomplete="username"
             autofocus
@@ -115,7 +115,8 @@
 
   <!-- Supabase Client -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
+  <script src="js/config.js"></script>
+  <script src="js/api-client.js"></script>
   <!-- Login Script -->
   <script src="js/modules/auth.js"></script>
   <script>
@@ -277,9 +278,8 @@
           }
           
           setTimeout(() => {
-            // Redirigir al panel institucional
             window.location.href = 'institutional-admin.html';
-          }, 1000);
+          }, 600);
         } else {
           console.error('❌ No se recibieron datos de sesión válidos');
           throw new Error('No se recibieron datos de sesión. Por favor intenta de nuevo.');

@@ -3,7 +3,7 @@
   padding: 2rem;
   background: #f0f4ff;
   border-radius: 12px;
-  border: 2px solid #667eea;
+  border: 2px solid #255F9E;
 }
 
 .claim-section h3 {
@@ -29,7 +29,7 @@
 }
 
 .info-row.highlight {
-  background: #667eea;
+  background: #255F9E;
   color: white;
   font-weight: 600;
 }
@@ -60,7 +60,7 @@
 
 .btn-claim {
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #255F9E 0%, #163A5F 100%);
   color: white;
   border: none;
   padding: 1.2rem;

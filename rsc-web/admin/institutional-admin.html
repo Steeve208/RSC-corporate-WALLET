@@ -23,6 +23,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/institutional-admin.css">
   <link rel="stylesheet" href="css/modules.css">
+  <link rel="stylesheet" href="css/admin-mission.css">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../assets/img/rsc-logo-quantum.svg">
@@ -43,6 +44,13 @@
         <button class="sidebar-toggle" id="sidebarToggle">
           <i class="fas fa-bars"></i>
         </button>
+      </div>
+
+      <div class="inst-sidebar-exit">
+        <a href="../../" class="inst-sidebar-exit__link" id="instBackToWallet">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          <span>Back to wallet</span>
+        </a>
       </div>
 
       <!-- User Info -->
@@ -324,6 +332,27 @@
             <span>Automation</span>
           </a>
         </div>
+
+        <!-- Platform & mining API -->
+        <div class="nav-section">
+          <div class="nav-section-title">Platform</div>
+          <a href="#" class="nav-item" data-module="users" data-permission="users.view">
+            <i class="fas fa-user-cog"></i>
+            <span>User management</span>
+          </a>
+          <a href="#" class="nav-item" data-module="admins" data-permission="settings.view">
+            <i class="fas fa-user-shield"></i>
+            <span>Administrators</span>
+          </a>
+          <a href="#" class="nav-item" data-module="social-metrics" data-permission="reports.view">
+            <i class="fas fa-chart-bar"></i>
+            <span>Social metrics</span>
+          </a>
+          <a href="#" class="nav-item" data-module="mining-api" data-permission="mining.view">
+            <i class="fas fa-plug"></i>
+            <span>Mining &amp; movements</span>
+          </a>
+        </div>
       </nav>
 
       <!-- Sidebar Footer -->
@@ -347,7 +376,7 @@
             <i class="fas fa-bars"></i>
           </button>
           <div class="breadcrumb" id="breadcrumb">
-            <span class="breadcrumb-item active">Dashboard</span>
+            <span class="breadcrumb-item active" id="pageTitle">Dashboard</span>
           </div>
         </div>
         <div class="header-right">
@@ -460,6 +489,7 @@
   <!-- Admin Panel Scripts -->
   <!-- IMPORTANTE: auth.js debe cargarse ANTES de institutional-admin.js -->
   <script src="js/config.js"></script>
+  <script src="js/api-client.js"></script>
   <script src="js/modules/auth.js"></script>
   <script src="js/institutional-admin.js"></script>
   <script>

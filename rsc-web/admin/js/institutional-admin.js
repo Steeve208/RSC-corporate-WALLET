@@ -3,8 +3,8 @@
 // Professional Financial Institution Admin System
 // =====================================================
 
-// TEST: Desactivar login para desarrollo/pruebas. Poner a false en producción.
-const ADMIN_SKIP_LOGIN_FOR_TEST = true;
+// true = entra sin Supabase (solo pruebas UI). false = login real vía login.html (equipo / producción).
+const ADMIN_SKIP_LOGIN_FOR_TEST = false;
 window.ADMIN_SKIP_LOGIN_FOR_TEST = ADMIN_SKIP_LOGIN_FOR_TEST;
 
 // Usuario ficticio cuando el login está desactivado para test
@@ -453,13 +453,38 @@ const ROLES = {
   },
   
   // Viewers & Interns
+  CONTENT_MANAGER: {
+    id: 'content_manager',
+    name: 'Content Manager',
+    level: 40,
+    permissions: ['dashboard.view', 'content.*', 'campaigns.view', 'mining.view'],
+  },
+  USER_MANAGER: {
+    id: 'user_manager',
+    name: 'User Manager',
+    level: 40,
+    permissions: ['dashboard.view', 'employees.view', 'employees.*', 'mining.view'],
+  },
+  METRICS_MANAGER: {
+    id: 'metrics_manager',
+    name: 'Metrics Manager',
+    level: 40,
+    permissions: ['dashboard.view', 'analytics.*', 'reports.view', 'mining.view'],
+  },
+  FINANCE_MANAGER: {
+    id: 'finance_manager',
+    name: 'Finance Manager',
+    level: 40,
+    permissions: ['dashboard.view', 'transactions.view', 'treasury.view', 'mining.view'],
+  },
   VIEWER: {
     id: 'viewer',
     name: 'Viewer',
     level: 10,
     permissions: [
       'dashboard.view',
-      'reports.view'
+      'reports.view',
+      'mining.view',
     ]
   },
   INTERN: {
@@ -517,9 +542,13 @@ async function initInstitutionalAdmin() {
               name: session.name || session.display_name || session.email?.split('@')[0] || 'Admin',
               avatar: session.avatar || session.avatar_url
             };
+            const slug2 =
+              typeof session.role === 'string'
+                ? session.role
+                : session.role?.name || 'viewer';
             AdminState.currentRole = {
-              id: session.role_id || session.role || 'viewer',
-              name: typeof session.role === 'string' ? session.role : (session.role?.name || 'viewer')
+              id: slug2,
+              name: typeof session.role === 'string' ? session.role.replace(/_/g, ' ') : session.role?.name || slug2,
             };
             AdminState.authenticated = true;
             updateUserInfo();
@@ -679,16 +708,20 @@ async function checkAuthentication() {
       avatar: session.avatar || session.avatar_url
     };
     
-    // Map role from session to AdminState
-    if (session.role_id || session.role) {
+    // Map role: usar slug string (p. ej. super_admin) para ROLES; no usar solo role_id numérico.
+    if (session.role || session.role_id) {
+      const slug =
+        typeof session.role === 'string'
+          ? session.role
+          : session.role?.name || 'viewer';
       AdminState.currentRole = {
-        id: session.role_id || session.role,
-        name: typeof session.role === 'string' ? session.role : (session.role?.name || 'viewer')
+        id: slug,
+        name: typeof session.role === 'string' ? session.role.replace(/_/g, ' ') : session.role?.name || slug,
       };
     } else {
       AdminState.currentRole = {
         id: 'viewer',
-        name: 'Viewer'
+        name: 'Viewer',
       };
     }
     
@@ -770,12 +803,19 @@ function loadPermissions() {
     AdminState.permissions = [];
     return;
   }
-  
-  // Get role definition
-  const roleDef = ROLES[role.id?.toUpperCase()] || ROLES.VIEWER;
+
+  const slug = String(role.id || role.name || 'viewer')
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/-/g, '_');
+  const key = slug.toUpperCase();
+  const roleDef =
+    ROLES[key] ||
+    Object.values(ROLES).find((r) => r.id === slug) ||
+    ROLES.VIEWER;
   AdminState.permissions = roleDef.permissions;
-  
-  console.log('📋 Loaded permissions:', AdminState.permissions);
+
+  console.log('📋 Loaded permissions:', AdminState.permissions, '(rol:', key, ')');
 }
 
 // Apply Permissions to UI
@@ -951,6 +991,35 @@ function setupNavigation() {
   });
 }
 
+/** Mapa de módulos con archivo propio (resto → inst-shell + __INST_MOD__). */
+const INSTITUTIONAL_MODULE_LOADERS = {
+  dashboard: () => import('./modules/dashboard-simple.js'),
+  'mining-api': () => import('./modules/mining-api.js'),
+  executive: () => import('./modules/executive.js'),
+  projects: () => import('./modules/projects.js'),
+  tasks: () => import('./modules/tasks.js'),
+  employees: () => import('./modules/employees.js'),
+  messages: () => import('./modules/messages.js'),
+  channels: () => import('./modules/channels.js'),
+  meetings: () => import('./modules/meetings.js'),
+  campaigns: () => import('./modules/campaigns.js'),
+  'design-assets': () => import('./modules/design-assets.js'),
+  users: () => import('./modules/users.js'),
+  content: () => import('./modules/content.js'),
+  admins: () => import('./modules/admins.js'),
+  'social-metrics': () => import('./modules/social-metrics.js'),
+};
+
+async function importInstitutionalModule(moduleName) {
+  const loader = INSTITUTIONAL_MODULE_LOADERS[moduleName];
+  if (loader) {
+    delete window.__INST_MOD__;
+    return loader();
+  }
+  window.__INST_MOD__ = moduleName;
+  return import('./modules/inst-shell.js');
+}
+
 // Load Module
 async function loadModule(moduleName) {
   const content = document.getElementById('adminContent');
@@ -993,47 +1062,8 @@ async function loadModule(moduleName) {
     }, 10000); // 10 segundos timeout
     
     try {
-      let module = null;
-      
-      // Para dashboard, intentar primero con versión simple
-      if (moduleName === 'dashboard') {
-        try {
-          console.log(`📦 Intentando dashboard-simple primero...`);
-          module = await import(`./modules/dashboard-simple.js`);
-          console.log(`✅ Dashboard simple cargado`);
-        } catch (simpleError) {
-          console.log(`⚠️ Dashboard simple no disponible, usando normal`);
-        }
-      }
-      
-      // Si no se cargó, intentar módulo normal
-      if (!module) {
-        console.log(`📦 Importando módulo normal: ${moduleName}`);
-        
-        // Intentar múltiples rutas
-        const paths = [
-          `./modules/${moduleName}.js`,
-          `js/modules/${moduleName}.js`,
-          `/admin/js/modules/${moduleName}.js`
-        ];
-        
-        let imported = false;
-        for (const path of paths) {
-          try {
-            console.log(`🔄 Intentando: ${path}`);
-            module = await import(path);
-            console.log(`✅ Import exitoso desde: ${path}`);
-            imported = true;
-            break;
-          } catch (err) {
-            console.warn(`⚠️ Falló: ${path} - ${err.message}`);
-          }
-        }
-        
-        if (!imported) {
-          throw new Error(`No se pudo importar ${moduleName} desde ninguna ruta`);
-        }
-      }
+      console.log(`📦 Cargando módulo: ${moduleName}`);
+      const module = await importInstitutionalModule(moduleName);
       
       clearTimeout(loadTimeout);
       
@@ -1144,12 +1174,21 @@ async function loadModule(moduleName) {
   }
 }
 
+function humanizeModuleTitle(moduleName) {
+  if (!moduleName) return 'Dashboard';
+  return moduleName
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
 // Update Page Title
 function updatePageTitle(moduleName) {
   const pageTitle = document.getElementById('pageTitle');
   if (pageTitle) {
     const titles = {
       dashboard: 'Dashboard',
+      executive: 'Executive view',
       transactions: 'Transactions',
       treasury: 'Treasury',
       payments: 'Payments',
@@ -1158,16 +1197,26 @@ function updatePageTitle(moduleName) {
       compliance: 'Compliance Center',
       audit: 'Audit Log',
       approvals: 'Approvals',
-      users: 'User Management',
+      users: 'User management',
+      admins: 'Administrators',
       content: 'Content Management',
       campaigns: 'Campaigns',
       analytics: 'Analytics',
       reports: 'Reports',
       settings: 'Settings',
-      security: 'Security'
+      security: 'Security',
+      'social-metrics': 'Social metrics',
+      'mining-api': 'Mining & movements',
+      'design-assets': 'Design assets',
+      'time-tracking': 'Time tracking',
+      'social-media': 'Social media',
+      'brand-guidelines': 'Brand guidelines',
+      'media-library': 'Media library',
+      'hr-dashboard': 'HR dashboard',
+      'knowledge-base': 'Knowledge base',
     };
-    
-    pageTitle.textContent = titles[moduleName] || moduleName.charAt(0).toUpperCase() + moduleName.slice(1);
+
+    pageTitle.textContent = titles[moduleName] || humanizeModuleTitle(moduleName);
   }
   
   // Update breadcrumb

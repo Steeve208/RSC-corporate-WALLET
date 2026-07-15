@@ -1,0 +1,640 @@
+/* =============================================================================
+   Reeskova design system — site-wide light premium theme
+   Applied after landing.css / page CSS to unify the entire marketing site.
+   ============================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --rk-primary: #081A33;
+  --rk-gold: #D4A017;
+  --rk-accent: #2563EB;
+  --rk-bg: #FFFFFF;
+  --rk-surface: #F8FAFC;
+  --rk-border: #E2E8F0;
+  --rk-text: #0F172A;
+  --rk-gray: #64748B;
+  --rk-font-head: 'Manrope', system-ui, sans-serif;
+  --rk-font-body: 'Inter', system-ui, sans-serif;
+  --rk-font-num: 'Space Grotesk', system-ui, sans-serif;
+
+  /* Bridge legacy tokens → Reeskova */
+  --color-primary: #2563EB;
+  --color-primary-dark: #081A33;
+  --color-primary-light: #3B82F6;
+  --color-secondary: #2563EB;
+  --color-secondary-dark: #1D4ED8;
+  --color-accent: #D4A017;
+  --color-accent-light: #E0B028;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+  --color-text-disabled: #94A3B8;
+  --color-bg-dark: #FFFFFF;
+  --color-bg-medium: #F8FAFC;
+  --color-bg-light: #F1F5F9;
+  --color-border: rgba(8, 26, 51, 0.1);
+  --color-border-hover: rgba(37, 99, 235, 0.35);
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  --font-family: var(--rk-font-body);
+}
+
+html,
+body,
+#root {
+  background: var(--rk-bg) !important;
+  color: var(--rk-text);
+  font-family: var(--rk-font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--rk-font-head);
+  letter-spacing: -0.03em;
+  color: var(--rk-primary);
+}
+
+/* ---------- Landing shell ---------- */
+.vaulto-landing,
+.vaulto-landing.vaulto-landing--corporate {
+  --corp-max: 72rem;
+  --corp-radius: 12px;
+  --corp-bg: #FFFFFF !important;
+  --corp-bg-elevated: #F8FAFC !important;
+  --corp-bg-card: #FFFFFF !important;
+  --corp-border: #E2E8F0 !important;
+  --corp-text: #0F172A !important;
+  --corp-text-muted: #64748B !important;
+  --corp-text-soft: #334155 !important;
+  --corp-accent: #2563EB !important;
+  --corp-accent-dim: #D4A017 !important;
+
+  background: #FFFFFF !important;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(37, 99, 235, 0.08), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 0% 20%, rgba(212, 160, 23, 0.06), transparent 50%) !important;
+  color: #0F172A !important;
+  font-family: var(--rk-font-body) !important;
+}
+
+.vaulto-landing h1,
+.vaulto-landing h2,
+.vaulto-landing h3,
+.vaulto-landing--corporate h1,
+.vaulto-landing--corporate h2,
+.vaulto-landing--corporate h3 {
+  font-family: var(--rk-font-head) !important;
+  color: #081A33 !important;
+}
+
+.vaulto-landing--corporate .corp-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.vaulto-landing--corporate .corp-hero__brand,
+.vaulto-landing--corporate .corp-hero__eyebrow,
+.vaulto-landing--corporate .corp-platform__eyebrow,
+.vaulto-landing--corporate .corp-audience__eyebrow {
+  color: #2563EB !important;
+}
+
+.vaulto-landing--corporate .corp-hero__title,
+.vaulto-landing--corporate .corp-platform__title,
+.vaulto-landing--corporate .corp-audience__title,
+.vaulto-landing--corporate .rsc-path-heading,
+.vaulto-landing--corporate .rsc-why-title,
+.vaulto-landing--corporate .rsc-features-title,
+.vaulto-landing--corporate .rsc-how-title,
+.vaulto-landing--corporate .rsc-security-title,
+.vaulto-landing--corporate .rsc-faq-title,
+.vaulto-landing--corporate .rsc-cta-final-title,
+.vaulto-landing--corporate .rsc-ecosystem-title {
+  color: #081A33 !important;
+  -webkit-text-fill-color: #081A33 !important;
+}
+
+.vaulto-landing--corporate .rsc-why-title-gradient,
+.vaulto-landing--corporate .rsc-features-title-gradient,
+.vaulto-landing--corporate .rsc-how-title-gradient,
+.vaulto-landing--corporate .rsc-security-title-gradient,
+.vaulto-landing--corporate .rsc-faq-title-gradient,
+.vaulto-landing--corporate .rsc-cta-final-title-gradient,
+.vaulto-landing--corporate .rsc-ecosystem-title-gradient,
+.vaulto-landing--corporate .rsc-preview-title-gradient {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #2563EB !important;
+  -webkit-text-fill-color: #2563EB !important;
+}
+
+.vaulto-landing--corporate .corp-hero__subtitle,
+.vaulto-landing--corporate .corp-hero__lead,
+.vaulto-landing--corporate .corp-platform__subtitle,
+.vaulto-landing--corporate .rsc-path-sub,
+.vaulto-landing--corporate .corp-audience__subtitle,
+.vaulto-landing--corporate .rsc-why-subtitle,
+.vaulto-landing--corporate .rsc-faq-subtitle,
+.vaulto-landing--corporate .rsc-cta-final-subtitle,
+.vaulto-landing--corporate .rsc-ecosystem-subtitle {
+  color: #64748B !important;
+}
+
+.vaulto-landing--corporate .corp-btn--primary,
+.vaulto-landing--corporate .rsc-btn-corp--primary,
+.vaulto-landing--corporate .rsc-cta-final-primary,
+.vaulto-landing--corporate .corp-audience-card__cta {
+  background: #D4A017 !important;
+  color: #081A33 !important;
+  border-color: rgba(212, 160, 23, 0.45) !important;
+  border-radius: 999px !important;
+}
+
+.vaulto-landing--corporate .corp-btn--primary:hover,
+.vaulto-landing--corporate .rsc-btn-corp--primary:hover,
+.vaulto-landing--corporate .rsc-cta-final-primary:hover,
+.vaulto-landing--corporate .corp-audience-card__cta:hover {
+  background: #E0B028 !important;
+}
+
+.vaulto-landing--corporate .corp-btn--outline,
+.vaulto-landing--corporate .rsc-btn-corp--secondary,
+.vaulto-landing--corporate .rsc-cta-final-secondary {
+  background: #FFFFFF !important;
+  color: #081A33 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 999px !important;
+}
+
+.vaulto-landing--corporate .corp-metrics,
+.vaulto-landing--corporate .rsc-path-section,
+.vaulto-landing--corporate .corp-audience,
+.vaulto-landing--corporate .corp-platform,
+.vaulto-landing--corporate .rsc-why-section,
+.vaulto-landing--corporate .rsc-features-section,
+.vaulto-landing--corporate .rsc-how-section,
+.vaulto-landing--corporate .rsc-security-section,
+.vaulto-landing--corporate .rsc-faq-section,
+.vaulto-landing--corporate .rsc-preview-section,
+.vaulto-landing--corporate .rsc-ecosystem-section,
+.vaulto-landing--corporate .rsc-cta-final-section,
+.vaulto-landing--corporate .corp-mining-strip {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+.vaulto-landing--corporate .rsc-path-section,
+.vaulto-landing--corporate .corp-audience,
+.vaulto-landing--corporate .rsc-features-section,
+.vaulto-landing--corporate .rsc-security-section,
+.vaulto-landing--corporate .rsc-ecosystem-section {
+  background: #F8FAFC !important;
+}
+
+.vaulto-landing--corporate .rsc-path-card,
+.vaulto-landing--corporate .corp-platform-card,
+.vaulto-landing--corporate .rsc-why-card,
+.vaulto-landing--corporate .rsc-feature-block,
+.vaulto-landing--corporate .corp-audience-card,
+.vaulto-landing--corporate .corp-ecosystem-card,
+.vaulto-landing--corporate .rsc-faq-item,
+.vaulto-landing--corporate .corp-hero-card,
+.vaulto-landing--corporate .corp-product-surface {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #0F172A !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.vaulto-landing--corporate .rsc-path-card h3,
+.vaulto-landing--corporate .corp-platform-card__title,
+.vaulto-landing--corporate .rsc-why-card-title,
+.vaulto-landing--corporate .rsc-feature-block-title,
+.vaulto-landing--corporate .corp-audience-card__title,
+.vaulto-landing--corporate .corp-ecosystem-card__title,
+.vaulto-landing--corporate .rsc-faq-question-text {
+  color: #081A33 !important;
+}
+
+.vaulto-landing--corporate .rsc-path-card > p,
+.vaulto-landing--corporate .rsc-path-bullets,
+.vaulto-landing--corporate .corp-platform-card__desc,
+.vaulto-landing--corporate .rsc-why-card-description,
+.vaulto-landing--corporate .rsc-feature-block-text,
+.vaulto-landing--corporate .corp-audience-card__summary,
+.vaulto-landing--corporate .corp-audience-card__list li,
+.vaulto-landing--corporate .corp-ecosystem-card__text {
+  color: #64748B !important;
+}
+
+.vaulto-landing--corporate .corp-metrics__value,
+.vaulto-landing--corporate .rsc-step-number-text,
+.vaulto-landing--corporate .corp-hero-visual__mark-sub {
+  color: #D4A017 !important;
+  font-family: var(--rk-font-num) !important;
+}
+
+.vaulto-landing--corporate .rsc-inpage-nav {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-color: #E2E8F0 !important;
+  backdrop-filter: blur(14px);
+}
+
+.vaulto-landing--corporate .rsc-inpage-nav-inner a {
+  color: #64748B !important;
+}
+
+.vaulto-landing--corporate .rsc-inpage-nav-inner a:hover {
+  color: #081A33 !important;
+  background: #F8FAFC !important;
+}
+
+.vaulto-landing--corporate .corp-hero-visual__core,
+.vaulto-landing--corporate .corp-hero__atmosphere,
+.vaulto-landing--corporate .rsc-why-bg,
+.vaulto-landing--corporate .rsc-tech-bg-glow,
+.vaulto-landing--corporate .rsc-tech-particles {
+  opacity: 0.55;
+  filter: saturate(0.85);
+}
+
+/* Footer — navy Reeskova (wins over page CSS) */
+.vaulto-footer,
+.vaulto-landing .vaulto-footer,
+.vaulto-landing--corporate .vaulto-footer {
+  background: #081A33 !important;
+  color: #CBD5E1 !important;
+  border-top: none !important;
+}
+
+.vaulto-footer::before,
+.vaulto-footer::after {
+  opacity: 0.35 !important;
+  background: radial-gradient(ellipse at 20% 0%, rgba(37, 99, 235, 0.25), transparent 55%) !important;
+}
+
+.vaulto-footer-brand,
+.vaulto-landing--corporate .vaulto-footer-brand,
+.vaulto-footer-section h4,
+.vaulto-landing--corporate .vaulto-footer-section h4 {
+  color: #FFFFFF !important;
+}
+
+.vaulto-footer-section a,
+.vaulto-footer-link-btn,
+.vaulto-landing--corporate .vaulto-footer-section a,
+.vaulto-landing--corporate .vaulto-footer-link-btn {
+  color: #94A3B8 !important;
+}
+
+.vaulto-footer-section a:hover,
+.vaulto-footer-link-btn:hover,
+.vaulto-landing--corporate .vaulto-footer-section a:hover,
+.vaulto-landing--corporate .vaulto-footer-link-btn:hover {
+  color: #FFFFFF !important;
+}
+
+.vaulto-footer-tagline,
+.vaulto-footer-placeholder,
+.vaulto-footer-copyright,
+.vaulto-footer-disclaimer,
+.vaulto-landing--corporate .vaulto-footer-tagline,
+.vaulto-landing--corporate .vaulto-footer-placeholder,
+.vaulto-landing--corporate .vaulto-footer-copyright,
+.vaulto-landing--corporate .vaulto-footer-disclaimer {
+  color: #94A3B8 !important;
+}
+
+.vaulto-footer-bottom,
+.vaulto-landing--corporate .vaulto-footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.vaulto-social-link {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #E2E8F0 !important;
+}
+
+.vaulto-social-link:hover {
+  background: rgba(212, 160, 23, 0.2) !important;
+  border-color: rgba(212, 160, 23, 0.45) !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- Global navbar (Reeskova light) ---------- */
+.rsc-navbar {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: none !important;
+  transition: background 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.rsc-navbar.rsc-navbar--scrolled {
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06), 0 10px 28px rgba(15, 23, 42, 0.05) !important;
+}
+
+.rsc-navbar::before {
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.25), transparent) !important;
+}
+
+.rsc-logo-text,
+.rsc-nav-button,
+.rsc-mobile-menu-toggle {
+  color: #081A33 !important;
+  font-family: var(--rk-font-head) !important;
+}
+
+.rsc-logo-text {
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.rsc-dot {
+  background: #2563EB !important;
+}
+
+.rsc-dot--center {
+  background: #D4A017 !important;
+}
+
+.rsc-nav-button {
+  font-family: var(--rk-font-body) !important;
+  font-weight: 500 !important;
+}
+
+.rsc-nav-button:hover {
+  color: #2563EB !important;
+  background: #F8FAFC !important;
+}
+
+.rsc-nav-button--active {
+  color: #081A33 !important;
+}
+
+.rsc-nav-button--active::after {
+  background: #D4A017 !important;
+}
+
+.rsc-navbar-center--mobile-open,
+.rsc-navbar-right--mobile-open {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1) !important;
+}
+
+.rsc-dropdown-menu {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12) !important;
+}
+
+.rsc-dropdown-card {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.rsc-dropdown-card:hover {
+  background: #F8FAFC !important;
+}
+
+.rsc-dropdown-card-title {
+  color: #081A33 !important;
+}
+
+.rsc-dropdown-card-description,
+.rsc-dropdown-promo-text {
+  color: #64748B !important;
+}
+
+.rsc-dropdown-promo {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+.rsc-dropdown-promo-title {
+  color: #081A33 !important;
+}
+
+.rsc-download-button,
+.rsc-navbar .rsc-btn-download,
+button.rsc-download-btn,
+.rsc-navbar-right a.rsc-download,
+.rsc-navbar-right .rsc-download,
+.rsc-action-button,
+.rsc-mobile-action-button--primary,
+.vaulto-cta-primary,
+.corp-btn--primary,
+.rsc-btn-corp--primary,
+.rsc-cta-final-primary,
+.corp-audience-card__cta {
+  background: #D4A017 !important;
+  color: #081A33 !important;
+  border-radius: 999px !important;
+  border: none !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 22px rgba(212, 160, 23, 0.28) !important;
+}
+
+.rsc-action-button:hover,
+.rsc-mobile-action-button--primary:hover,
+.vaulto-cta-primary:hover,
+.corp-btn--primary:hover,
+.rsc-btn-corp--primary:hover,
+.rsc-cta-final-primary:hover,
+.corp-audience-card__cta:hover {
+  background: #E0B028 !important;
+  color: #081A33 !important;
+}
+
+.rsc-icon-button {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.rsc-icon-button,
+.rsc-icon {
+  color: #081A33 !important;
+}
+
+.rsc-mobile-action-button,
+.corp-btn--outline,
+.rsc-btn-corp--secondary,
+.rsc-cta-final-secondary,
+.vaulto-cta-secondary {
+  background: #FFFFFF !important;
+  color: #081A33 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 999px !important;
+}
+
+.rsc-hero-mining-promo__cta,
+.rsc-presale-cta-button,
+.rsc-sale-cta,
+.vaulto-pricing-cta {
+  background: #D4A017 !important;
+  color: #081A33 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 22px rgba(212, 160, 23, 0.28) !important;
+  font-weight: 700 !important;
+  animation: none !important;
+}
+
+/* Language selector */
+.rsc-language-button,
+.rsc-language-dropdown {
+  color: #081A33 !important;
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* ---------- Inner product pages ---------- */
+.wallet-page,
+.payments-page,
+.staking-page,
+.education-page,
+.remittances-page,
+.business-wallet-page,
+.business-payments-page,
+.business-api-page,
+.business-usecases-page,
+.business-billing-page,
+.institutional-p2p-page,
+.institutional-chain-page,
+.institutional-corporate-page,
+.institutional-rsk-page,
+.developers-docs-page,
+.developers-chain-page,
+.developers-apis-page,
+.developers-testnet-page,
+.developers-roadmap-page,
+.company-about-page,
+.company-security-page,
+.company-careers-page,
+.company-contact-page,
+.company-press-page {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  font-family: var(--rk-font-body) !important;
+}
+
+.wallet-page h1, .wallet-page h2, .wallet-page h3,
+.payments-page h1, .payments-page h2, .payments-page h3,
+.staking-page h1, .staking-page h2, .staking-page h3,
+.education-page h1, .education-page h2, .education-page h3,
+.remittances-page h1, .remittances-page h2, .remittances-page h3,
+.business-wallet-page h1, .business-wallet-page h2, .business-wallet-page h3,
+.business-payments-page h1, .business-payments-page h2, .business-payments-page h3,
+.business-api-page h1, .business-api-page h2, .business-api-page h3,
+.business-usecases-page h1, .business-usecases-page h2, .business-usecases-page h3,
+.business-billing-page h1, .business-billing-page h2, .business-billing-page h3,
+.institutional-p2p-page h1, .institutional-p2p-page h2, .institutional-p2p-page h3,
+.institutional-chain-page h1, .institutional-chain-page h2, .institutional-chain-page h3,
+.institutional-corporate-page h1, .institutional-corporate-page h2, .institutional-corporate-page h3,
+.institutional-rsk-page h1, .institutional-rsk-page h2, .institutional-rsk-page h3,
+.developers-docs-page h1, .developers-docs-page h2, .developers-docs-page h3,
+.developers-chain-page h1, .developers-chain-page h2, .developers-chain-page h3,
+.developers-apis-page h1, .developers-apis-page h2, .developers-apis-page h3,
+.developers-testnet-page h1, .developers-testnet-page h2, .developers-testnet-page h3,
+.developers-roadmap-page h1, .developers-roadmap-page h2, .developers-roadmap-page h3,
+.company-about-page h1, .company-about-page h2, .company-about-page h3,
+.company-security-page h1, .company-security-page h2, .company-security-page h3,
+.company-careers-page h1, .company-careers-page h2, .company-careers-page h3,
+.company-contact-page h1, .company-contact-page h2, .company-contact-page h3,
+.company-press-page h1, .company-press-page h2, .company-press-page h3 {
+  font-family: var(--rk-font-head) !important;
+  color: #081A33 !important;
+  -webkit-text-fill-color: #081A33 !important;
+  background: none !important;
+}
+
+.wallet-hero, .payments-hero, .staking-hero, .education-hero, .remittances-hero,
+.business-wallet-hero, .business-payments-hero, .business-api-hero,
+.business-usecases-hero, .business-billing-hero, .institutional-p2p-hero,
+.institutional-chain-hero, .institutional-corporate-hero, .institutional-rsk-hero,
+.developers-docs-hero, .developers-chain-hero, .developers-apis-hero,
+.developers-testnet-hero, .developers-roadmap-hero, .company-about-hero,
+.company-security-hero, .company-careers-hero, .company-contact-hero,
+.company-press-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%) !important;
+}
+
+/* Primary CTAs across all marketing pages */
+[class$="-cta-primary"],
+[class*="-cta-primary "],
+[class$="-cta-button"],
+[class*="-cta-button--primary"],
+[class*="-cta-button-primary"],
+[class$="-cta-final-button"],
+[class*="-cta-final-button"],
+.wallet-cta-primary,
+.wallet-cta-final-button,
+.payments-cta-button,
+.staking-cta-button,
+.remittances-cta-button,
+.institutional-p2p-cta-button,
+.institutional-corporate-cta-button,
+.institutional-chain-cta-button--primary,
+.business-wallet-cta-button--primary,
+.business-payments-cta-button--primary,
+.developers-roadmap-cta-button-primary {
+  background: #D4A017 !important;
+  color: #081A33 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 22px rgba(212, 160, 23, 0.28) !important;
+  font-weight: 700 !important;
+}
+
+[class$="-cta-secondary"],
+[class*="-cta-button--secondary"],
+[class*="-cta-button-secondary"],
+.wallet-cta-secondary,
+.institutional-chain-cta-button--secondary,
+.business-wallet-cta-button--secondary,
+.business-payments-cta-button--secondary,
+.developers-roadmap-cta-button-secondary {
+  background: #FFFFFF !important;
+  color: #081A33 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 999px !important;
+}
+
+/* Page footers that reused vaulto-footer class */
+[class*="-page"] .vaulto-footer,
+[class*="-page"] footer.vaulto-footer {
+  background: #081A33 !important;
+}
+
+/* RSC Group landing — keep brand hierarchy (not crypto-first) */
+.vaulto-landing--group .rg-hero__title,
+.vaulto-landing--group .rg-manifesto__title,
+.vaulto-landing--group .rg-product__copy h3,
+.vaulto-landing--group .rg-cta h2 {
+  font-family: var(--rk-font-head) !important;
+}
+
+.vaulto-landing--group .rg-btn--primary,
+.vaulto-landing--group .rg-btn--gold {
+  background: #D4A017 !important;
+  color: #081A33 !important;
+}
+
+.vaulto-landing--group .rg-footer {
+  background: #081A33 !important;
+}
+
+/* Keep Reeskova page CSS authority; do not override .reeskova internals */
+.reeskova .rk-btn--primary {
+  /* leave page-owned styles */
+}
+
+.rsc-web-embedded-page {
+  background: #081A33 !important;
+  color: #F8FAFC !important;
+}

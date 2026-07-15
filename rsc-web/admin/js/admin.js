@@ -26,6 +26,10 @@ async function initAdminPanel() {
     
     // Update UI with admin info
     updateAdminInfo();
+
+    if (session && session.role) {
+      document.body.dataset.adminRole = session.role;
+    }
     
     // Configure navigation by permissions
     setupNavigation();
@@ -275,7 +279,7 @@ async function handleLogin(event) {
 // Ocultar módulos no autorizados en el menú
 function hideUnauthorizedModules() {
   const allowedModules = getAllowedModules();
-  const navLinks = document.querySelectorAll('.nav-link[data-module]');
+  const navLinks = document.querySelectorAll('.nav-item[data-module], .nav-link[data-module]');
   
   navLinks.forEach(link => {
     const module = link.getAttribute('data-module');
@@ -312,7 +316,8 @@ function formatRoleName(role) {
     'user_manager': 'User Manager',
     'metrics_manager': 'Metrics Manager',
     'finance_manager': 'Finance Manager',
-    'viewer': 'Viewer'
+    'viewer': 'Viewer',
+    'mining_ops': 'Mining operations'
   };
   
   return roles[role] || role || 'Admin';
@@ -349,18 +354,13 @@ async function loadModule(moduleName) {
     
     // Update page title
     const titles = {
-      'dashboard': 'Dashboard',
-      'content': 'Content Management',
-      'users': 'Users Management',
-      'social-metrics': '📊 Social Metrics - Real-time Update',
-      'metrics': 'System Metrics',
-      'campaigns': 'Campaigns and Events',
-      'rewards': 'Rewards Engine',
-      'jobs': 'Automation Tasks',
-      'treasury': 'Treasury',
-      'admins': 'Administrators and Roles',
-      'audit': 'Audit Log',
-      'settings': 'System Settings'
+      'dashboard': 'Resumen',
+      'content': 'Contenido',
+      'users': 'Usuarios',
+      'social-metrics': 'Métricas sociales',
+      'metrics': 'Métricas sistema',
+      'admins': 'Administradores',
+      'mining-ops': 'Mining API',
     };
     
     document.getElementById('pageTitle').textContent = titles[moduleName] || 'Admin Panel';
@@ -384,19 +384,18 @@ async function loadModule(moduleName) {
     
     console.log('✅ AdminTemplates disponible:', Object.keys(window.AdminTemplates));
     
-    // Load template if available
-    if (window.AdminTemplates[moduleName]) {
-      console.log('✅ Template encontrado para:', moduleName);
-      contentContainer.innerHTML = window.AdminTemplates[moduleName]();
-      console.log('✅ Template renderizado');
+    const tplFn = window.AdminTemplates && window.AdminTemplates[moduleName];
+    if (typeof tplFn === 'function') {
+      const html = tplFn();
+      console.log('✅ Template para:', moduleName, html ? '(con HTML)' : '(vacío, lo rellena el módulo)');
+      contentContainer.innerHTML = html || '';
     } else {
       console.warn('⚠️ Template no encontrado para:', moduleName);
-      // Fallback for modules without templates yet
       contentContainer.innerHTML = `
         <div style="text-align: center; padding: 4rem;">
           <i class="fas fa-tools" style="font-size: 4rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
-          <h2 style="color: var(--text-secondary);">Module in development</h2>
-          <p style="color: var(--text-muted);">This module will be available soon</p>
+          <h2 style="color: var(--text-secondary);">Módulo no disponible</h2>
+          <p style="color: var(--text-muted);">Este módulo no está cargado en esta versión del panel.</p>
         </div>
       `;
     }
@@ -407,14 +406,9 @@ async function loadModule(moduleName) {
       'content': window.loadContent,
       'users': window.loadUsers,
       'social-metrics': window.loadSocialMetrics,
-      'metrics': window.loadSocialMetrics, // Same as social-metrics
-      'campaigns': window.loadCampaigns,
-      'rewards': window.loadRewards,
-      'jobs': window.loadJobs,
-      'treasury': window.loadTreasury,
+      'metrics': window.loadSocialMetrics,
       'admins': window.loadAdminsModule,
-      'audit': window.loadAudit,
-      'settings': window.loadSettings
+      'mining-ops': window.loadMiningOps,
     };
     
     if (loadFunctions[moduleName] && typeof loadFunctions[moduleName] === 'function') {

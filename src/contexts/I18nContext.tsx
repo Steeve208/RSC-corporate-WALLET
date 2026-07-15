@@ -1,13 +1,25 @@
-import { createContext, useContext, useState, useEffect, ReactNode, useMemo } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react';
 import enTranslations from '../locales/en.json';
 import esTranslations from '../locales/es.json';
 
-export type Language = 'en' | 'es' | 'pt' | 'fr' | 'de' | 'it' | 'zh' | 'ja' | 'ko' | 'ar';
+/** Languages with a real locale file (not English fallback). */
+export type Language = 'en' | 'es';
+
+export const SUPPORTED_LANGUAGES: readonly Language[] = ['en', 'es'] as const;
 
 interface I18nContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  availableLanguages: readonly Language[];
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -20,73 +32,77 @@ export const useTranslation = () => {
   return context;
 };
 
+const translationsMap: Record<Language, Record<string, unknown>> = {
+  en: enTranslations as Record<string, unknown>,
+  es: esTranslations as Record<string, unknown>,
+};
+
+function resolveKey(tree: unknown, key: string): unknown {
+  const parts = key.split('.');
+  let value: unknown = tree;
+  for (const part of parts) {
+    if (value == null || typeof value !== 'object') return undefined;
+    value = (value as Record<string, unknown>)[part];
+  }
+  return value;
+}
+
+function readStoredLanguage(): Language {
+  if (typeof window === 'undefined') return 'en';
+  const saved = localStorage.getItem('rsc-language');
+  if (saved && (SUPPORTED_LANGUAGES as readonly string[]).includes(saved)) {
+    return saved as Language;
+  }
+  // Legacy codes (pt/fr/…) used English content — reset to English
+  if (saved && saved !== 'en' && saved !== 'es') {
+    localStorage.setItem('rsc-language', 'en');
+  }
+  return 'en';
+}
+
 interface I18nProviderProps {
   children: ReactNode;
 }
 
-// Translation files mapping
-const translationsMap: Record<Language, any> = {
-  en: enTranslations,
-  es: esTranslations,
-  pt: enTranslations, // Fallback to English for now
-  fr: enTranslations,
-  de: enTranslations,
-  it: enTranslations,
-  zh: enTranslations,
-  ja: enTranslations,
-  ko: enTranslations,
-  ar: enTranslations,
-};
-
 export const I18nProvider = ({ children }: I18nProviderProps) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    // Default to English - only use saved language if explicitly set by user
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('rsc-language') as Language;
-      // Validate saved language exists in translations map
-      if (saved && translationsMap[saved]) {
-        return saved;
-      }
-      // Default to English and save it
-      localStorage.setItem('rsc-language', 'en');
-      return 'en';
-    }
-    return 'en';
-  });
+  const [language, setLanguageState] = useState<Language>(() => readStoredLanguage());
 
-  const setLanguage = (lang: Language) => {
-    if (translationsMap[lang]) {
-      setLanguageState(lang);
-      localStorage.setItem('rsc-language', lang);
-      // Update HTML lang attribute
-      document.documentElement.lang = lang;
-    }
-  };
+  const setLanguage = useCallback((lang: Language) => {
+    if (!(SUPPORTED_LANGUAGES as readonly string[]).includes(lang)) return;
+    setLanguageState(lang);
+    localStorage.setItem('rsc-language', lang);
+    document.documentElement.lang = lang;
+  }, []);
 
   useEffect(() => {
-    // Set initial HTML lang attribute
     document.documentElement.lang = language;
   }, [language]);
 
-  const translations = useMemo(() => translationsMap[language] || translationsMap['en'], [language]);
+  const t = useCallback(
+    (key: string): string => {
+      const fromActive = resolveKey(translationsMap[language], key);
+      if (typeof fromActive === 'string') return fromActive;
 
-  const t = (key: string): string => {
-    const keys = key.split('.');
-    let value: any = translations;
-    for (const k of keys) {
-      value = value?.[k];
-      if (value === undefined) {
+      const fromEn = resolveKey(translationsMap.en, key);
+      if (typeof fromEn === 'string') return fromEn;
+
+      if (import.meta.env.DEV) {
         console.warn(`Translation key "${key}" not found for language "${language}"`);
-        return key;
       }
-    }
-    return value || key;
-  };
-
-  return (
-    <I18nContext.Provider value={{ language, setLanguage, t }}>
-      {children}
-    </I18nContext.Provider>
+      return key;
+    },
+    [language]
   );
-};
 
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      t,
+      availableLanguages: SUPPORTED_LANGUAGES,
+    }),
+    [language, setLanguage, t]
+  );
+
+  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+};

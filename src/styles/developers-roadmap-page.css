@@ -1,8 +1,8 @@
 /* Developers Roadmap Page Styles */
 .developers-roadmap-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .developers-roadmap-container {
@@ -15,7 +15,7 @@
 .developers-roadmap-hero {
   padding: 140px 0 100px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .developers-roadmap-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 32px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .developers-roadmap-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 700px;
@@ -79,10 +79,10 @@
   align-items: center;
   gap: 12px;
   padding: 18px 40px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
@@ -90,8 +90,8 @@
 }
 
 .developers-roadmap-hero-cta:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #E2E8F0;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-2px);
 }
 
@@ -103,7 +103,7 @@
 /* Roadmap Sections */
 .developers-roadmap-sections {
   padding: 80px 0;
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .developers-roadmap-section {
@@ -131,15 +131,15 @@
 }
 
 .developers-roadmap-badge-now {
-  background: rgba(20, 184, 166, 0.2);
-  color: #14b8a6;
-  border: 1px solid rgba(20, 184, 166, 0.3);
+  background: rgba(37, 99, 235, 0.2);
+  color: #2563EB;
+  border: 1px solid rgba(212, 160, 23, 0.28);
 }
 
 .developers-roadmap-badge-next {
-  background: rgba(6, 182, 212, 0.2);
-  color: #06b6d4;
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  background: rgba(59, 122, 192, 0.2);
+  color: #2563EB;
+  border: 1px solid rgba(59, 122, 192, 0.3);
 }
 
 .developers-roadmap-badge-later {
@@ -152,12 +152,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .developers-roadmap-section-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -171,16 +171,16 @@
 }
 
 .developers-roadmap-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
 }
 
 .developers-roadmap-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-2px);
 }
 
@@ -194,7 +194,7 @@
 .developers-roadmap-item-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #0F172A;
   margin: 0;
 }
 
@@ -206,8 +206,8 @@
 
 .developers-roadmap-item-version {
   font-size: 0.875rem;
-  color: #14b8a6;
-  background: rgba(20, 184, 166, 0.1);
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.1);
   padding: 4px 12px;
   border-radius: 8px;
   font-weight: 600;
@@ -215,7 +215,7 @@
 
 .developers-roadmap-item-date {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -231,7 +231,7 @@
 
 .developers-roadmap-item-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -240,7 +240,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
@@ -248,7 +248,7 @@
 }
 
 .developers-roadmap-item-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 10px;
 }
 
@@ -265,7 +265,7 @@
 }
 
 .developers-roadmap-cta-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 32px;
 }
 
@@ -273,12 +273,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .developers-roadmap-cta-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -303,25 +303,25 @@
 }
 
 .developers-roadmap-cta-button-primary {
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  background: #D4A017;
+  color: #081A33;
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
 }
 
 .developers-roadmap-cta-button-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .developers-roadmap-cta-button-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
 }
 
 .developers-roadmap-cta-button-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #E2E8F0;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-2px);
 }
 

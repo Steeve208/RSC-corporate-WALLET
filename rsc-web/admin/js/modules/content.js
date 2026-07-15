@@ -852,6 +852,13 @@ function getContentTemplate() {
   `;
 }
 
+export async function render() {
+  return getContentTemplate();
+}
+export async function init() {
+  await cargarAnuncios();
+}
+
 // Exportar
 window.loadContent = loadContent;
 window.cargarAnuncios = cargarAnuncios;

@@ -1,8 +1,8 @@
 /* Business Wallet Page Styles */
 .business-wallet-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .business-wallet-container {
@@ -15,7 +15,7 @@
 .business-wallet-hero {
   padding: 140px 0 80px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .business-wallet-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .business-wallet-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .business-wallet-designed {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .business-wallet-multiuser {
@@ -88,7 +88,7 @@
 }
 
 .business-wallet-payments {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .business-wallet-reports {
@@ -96,7 +96,7 @@
 }
 
 .business-wallet-cases {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .business-wallet-section-title {
@@ -104,7 +104,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .business-wallet-section-header {
@@ -115,13 +115,13 @@
 }
 
 .business-wallet-section-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
 .business-wallet-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 900px;
@@ -137,7 +137,7 @@
 
 .business-wallet-designed-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.8;
   margin-bottom: 32px;
 }
@@ -153,11 +153,11 @@
   align-items: center;
   gap: 12px;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 .business-wallet-check-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -168,8 +168,8 @@
 }
 
 .business-wallet-visual-card {
-  background: rgba(20, 184, 166, 0.1);
-  border: 2px solid rgba(20, 184, 166, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  border: 2px solid rgba(212, 160, 23, 0.28);
   border-radius: 24px;
   padding: 60px;
   text-align: center;
@@ -177,13 +177,13 @@
 }
 
 .business-wallet-visual-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 20px;
 }
 
 .business-wallet-visual-label {
   font-size: 1.125rem;
-  color: #14b8a6;
+  color: #2563EB;
   font-weight: 500;
 }
 
@@ -196,16 +196,16 @@
 }
 
 .business-wallet-role-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .business-wallet-role-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -213,25 +213,25 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 24px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .business-wallet-role-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
   text-align: center;
 }
 
 .business-wallet-role-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 20px;
   line-height: 1.6;
   text-align: center;
@@ -248,7 +248,7 @@
 
 .business-wallet-role-permissions li {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.6;
   padding-left: 24px;
   position: relative;
@@ -258,7 +258,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #14b8a6;
+  color: #2563EB;
   font-weight: 700;
 }
 
@@ -274,27 +274,27 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .business-wallet-payment-feature:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 .business-wallet-payment-feature-icon {
   width: 48px;
   height: 48px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -306,12 +306,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .business-wallet-payment-feature-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -324,8 +324,8 @@
 }
 
 .business-wallet-report-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   text-align: center;
@@ -333,13 +333,13 @@
 }
 
 .business-wallet-report-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .business-wallet-report-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 20px;
 }
 
@@ -347,12 +347,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .business-wallet-report-description {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -364,16 +364,16 @@
 }
 
 .business-wallet-case-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 40px;
   transition: all 0.3s ease;
 }
 
 .business-wallet-case-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -381,25 +381,25 @@
   width: 80px;
   height: 80px;
   margin: 0 auto 24px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .business-wallet-case-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
   text-align: center;
 }
 
 .business-wallet-case-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 24px;
   line-height: 1.6;
   text-align: center;
@@ -416,13 +416,13 @@
   align-items: center;
   gap: 12px;
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 /* CTA */
 .business-wallet-cta {
   padding: 100px 0;
-  background: linear-gradient(180deg, #050509 0%, rgba(10, 10, 10, 0.95) 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 100%);
   text-align: center;
 }
 
@@ -432,7 +432,7 @@
 }
 
 .business-wallet-cta-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -440,12 +440,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .business-wallet-cta-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 32px;
   line-height: 1.6;
 }
@@ -471,24 +471,24 @@
 }
 
 .business-wallet-cta-button--primary {
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  background: #D4A017;
+  color: #081A33;
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
 }
 
 .business-wallet-cta-button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .business-wallet-cta-button--secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
 }
 
 .business-wallet-cta-button--secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #E2E8F0;
   border-color: rgba(255, 255, 255, 0.2);
 }
 

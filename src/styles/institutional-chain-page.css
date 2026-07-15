@@ -1,8 +1,8 @@
 /* Institutional Chain Page Styles */
 .institutional-chain-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .institutional-chain-container {
@@ -15,7 +15,7 @@
 .institutional-chain-hero {
   padding: 140px 0 80px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .institutional-chain-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .institutional-chain-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .institutional-chain-what {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .institutional-chain-architecture {
@@ -88,7 +88,7 @@
 }
 
 .institutional-chain-consensus {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .institutional-chain-scalability {
@@ -96,7 +96,7 @@
 }
 
 .institutional-chain-cases {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .institutional-chain-section-header {
@@ -107,20 +107,20 @@
 }
 
 .institutional-chain-section-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
 .institutional-chain-section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #0F172A;
   margin: 0;
 }
 
 .institutional-chain-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 900px;
@@ -135,16 +135,16 @@
 }
 
 .institutional-chain-feature-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .institutional-chain-feature-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -152,25 +152,25 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 20px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .institutional-chain-feature-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
   text-align: center;
 }
 
 .institutional-chain-feature-description {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   text-align: center;
 }
@@ -188,8 +188,8 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
@@ -203,7 +203,7 @@
   top: 100%;
   width: 2px;
   height: 24px;
-  background: rgba(20, 184, 166, 0.3);
+  background: rgba(212, 160, 23, 0.28);
 }
 
 .institutional-chain-layer:last-child::before {
@@ -211,21 +211,21 @@
 }
 
 .institutional-chain-layer:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 .institutional-chain-layer-number {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0F172A;
   flex-shrink: 0;
 }
 
@@ -237,12 +237,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .institutional-chain-layer-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -259,27 +259,27 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .institutional-chain-consensus-feature:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 .institutional-chain-consensus-feature-icon {
   width: 64px;
   height: 64px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -291,12 +291,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .institutional-chain-consensus-feature-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -309,8 +309,8 @@
 }
 
 .institutional-chain-metric-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 40px;
   text-align: center;
@@ -318,15 +318,15 @@
 }
 
 .institutional-chain-metric-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .institutional-chain-metric-value {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -335,7 +335,7 @@
 
 .institutional-chain-metric-label {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
 }
 
 /* Use Cases */
@@ -347,16 +347,16 @@
 }
 
 .institutional-chain-case-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 40px;
   transition: all 0.3s ease;
 }
 
 .institutional-chain-case-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -364,25 +364,25 @@
   width: 80px;
   height: 80px;
   margin: 0 auto 24px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .institutional-chain-case-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
   text-align: center;
 }
 
 .institutional-chain-case-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 24px;
   line-height: 1.6;
   text-align: center;
@@ -399,18 +399,18 @@
   align-items: center;
   gap: 12px;
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 .institutional-chain-check-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
 /* CTA Section */
 .institutional-chain-cta {
   padding: 100px 0;
-  background: linear-gradient(180deg, #050509 0%, rgba(10, 10, 10, 0.95) 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 100%);
 }
 
 .institutional-chain-cta-content {
@@ -432,7 +432,7 @@
   padding: 18px 40px;
   border: none;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
@@ -444,23 +444,23 @@
 }
 
 .institutional-chain-cta-button--primary {
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  background: #D4A017;
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
 }
 
 .institutional-chain-cta-button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .institutional-chain-cta-button--secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
 }
 
 .institutional-chain-cta-button--secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #E2E8F0;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-2px);
 }
 

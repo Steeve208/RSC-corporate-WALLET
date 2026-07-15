@@ -13,7 +13,7 @@ function loadingTemplate(label) {
 }
 
 const AdminTemplates = {
-  dashboard: () => loadingTemplate('dashboard'),
+  dashboard: () => '',
   content: () => loadingTemplate('content management'),
   users: () => loadingTemplate('users'),
   'social-metrics': () => loadingTemplate('social metrics'),
@@ -24,7 +24,8 @@ const AdminTemplates = {
   treasury: () => loadingTemplate('Treasury'),
   settings: () => loadingTemplate('Settings'),
   audit: () => loadingTemplate('Audit log'),
-  admins: () => loadingTemplate('administrators')
+  admins: () => loadingTemplate('administrators'),
+  'mining-ops': () => loadingTemplate('Mining API')
 };
 
 // Export

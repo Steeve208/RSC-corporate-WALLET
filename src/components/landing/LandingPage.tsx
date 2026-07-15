@@ -1,1628 +1,578 @@
-import { useState, Fragment } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../../styles/landing.css';
+import '../../styles/landing-corporate.css';
+import '../../styles/landing-group.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
-import { HeroAnimatedVisual } from './HeroAnimatedVisual';
 import { useTranslation } from '../../contexts/I18nContext';
-import { ArrowUpRight, ArrowDownLeft, Check, Key, Zap, Coins, QrCode, FileText, Network, Wallet, Shield, ArrowRight, Play, Lock, Fingerprint, Eye, AlertCircle, User, Building2, Code, Send, TrendingUp, Clock, ChevronLeft, ChevronRight, History, Bell, Link2, Activity, Layers, Banknote, Download, BookOpen, Smartphone, ExternalLink } from 'lucide-react';
-import { RSC_MINING_PLAY_STORE_URL } from '../../constants/storeLinks';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Building2,
+  Cloud,
+  Code2,
+  Database,
+  Fingerprint,
+  Handshake,
+  Landmark,
+  Layers,
+  Network,
+  Shield,
+  ShieldCheck,
+  Sparkles,
+  User,
+  Wallet,
+} from 'lucide-react';
 
-type LandingPageProps = {
-  onEnter?: () => void;
-};
+type AppNavigatePage =
+  | 'wallet'
+  | 'payments'
+  | 'staking'
+  | 'education'
+  | 'remittances'
+  | 'businessWallet'
+  | 'businessPayments'
+  | 'businessAPI'
+  | 'businessUseCases'
+  | 'businessBilling'
+  | 'institutionalP2P'
+  | 'institutionalChain'
+  | 'institutionalCorporate'
+  | 'institutionalRSK'
+  | 'institutionalRealEstate'
+  | 'rscWeb'
+  | 'developersDocs'
+  | 'developersChain'
+  | 'developersAPIs'
+  | 'developersTestnet'
+  | 'developersRoadmap'
+  | 'companyAbout'
+  | 'companySecurity'
+  | 'companyCareers'
+  | 'companyContact'
+  | 'companyPress';
 
-const handleEnter = () => {
-  // Placeholder function - can be implemented later if needed
-  console.log('Enter clicked');
-};
+function navigateToPage(page: AppNavigatePage) {
+  const w = window as Window & { navigateToPage?: (p: AppNavigatePage) => void };
+  w.navigateToPage?.(page);
+}
 
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-export function LandingPage({ onEnter }: LandingPageProps) {
-  const { t } = useTranslation();
-  const [activeScreen, setActiveScreen] = useState(0);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+const SOCIAL = {
+  x: 'https://x.com/Reeskcap',
+  discord: 'https://discord.gg/KDpJRnaBwB',
+  telegram: 'https://t.me/RSCchain',
+  github: 'https://github.com/rscchain',
+  linkedin: 'https://www.linkedin.com/',
+} as const;
 
-  // Activate scroll animations
+const ORBIT_PRODUCTS = [
+  { key: 'reeskova', page: 'institutionalRealEstate' as const, angle: -90, image: '/ecosystem/reeskova-v2.jpg', Icon: Landmark },
+  { key: 'chain', page: 'institutionalChain' as const, angle: -30, image: '/ecosystem/chain.jpg', Icon: Network },
+  { key: 'wallet', page: 'wallet' as const, angle: 30, image: '/ecosystem/wallet-v2.jpg', Icon: Wallet },
+  { key: 'p2p', page: 'institutionalP2P' as const, angle: 90, image: '/ecosystem/p2p.jpg', Icon: Handshake },
+  { key: 'escrow', page: 'institutionalP2P' as const, angle: 150, image: '/ecosystem/escrow.jpg', Icon: ShieldCheck },
+  { key: 'corporate', page: 'institutionalCorporate' as const, angle: 210, image: '/ecosystem/corporate.jpg', Icon: Building2 },
+] as const;
+
+const ECOSYSTEM = [
+  { key: 'reeskova', page: 'institutionalRealEstate' as const, tone: 'navy' },
+  { key: 'chain', page: 'institutionalChain' as const, tone: 'surface' },
+  { key: 'p2p', page: 'institutionalP2P' as const, tone: 'navy' },
+  { key: 'escrow', page: 'institutionalP2P' as const, tone: 'surface' },
+  { key: 'wallet', page: 'wallet' as const, tone: 'navy' },
+  { key: 'corporate', page: 'institutionalCorporate' as const, tone: 'surface' },
+] as const;
+
+const TECH = [
+  { key: 'blockchain', icon: Network },
+  { key: 'ai', icon: Sparkles },
+  { key: 'cloud', icon: Cloud },
+  { key: 'security', icon: Shield },
+  { key: 'analytics', icon: Database },
+  { key: 'apis', icon: Code2 },
+  { key: 'open', icon: Layers },
+] as const;
+
+const AUDIENCES = [
+  { key: 'individuals', icon: User, page: 'wallet' as const },
+  { key: 'businesses', icon: Building2, page: 'businessWallet' as const },
+  { key: 'institutions', icon: Landmark, page: 'institutionalCorporate' as const },
+] as const;
+
+const TIMELINE = ['reeskova', 'wallet', 'escrow', 'p2p', 'chain', 'ai', 'global'] as const;
+const VALUES = ['innovation', 'integrity', 'technology', 'trust', 'execution'] as const;
+const STATS = ['products', 'integrated', 'infra', 'scalable', 'availability'] as const;
+
+export function LandingPage() {
+  const { t, language } = useTranslation();
+  const [activeOrbit, setActiveOrbit] = useState<string | null>('reeskova');
+  const [orbitPaused, setOrbitPaused] = useState(false);
+  const orbitIdx = useRef(0);
   useScrollAnimation();
 
+  useEffect(() => {
+    if (orbitPaused) return;
+    const id = window.setInterval(() => {
+      orbitIdx.current = (orbitIdx.current + 1) % ORBIT_PRODUCTS.length;
+      setActiveOrbit(ORBIT_PRODUCTS[orbitIdx.current].key);
+    }, 3200);
+    return () => window.clearInterval(id);
+  }, [orbitPaused]);
+
+  const activeProduct = ORBIT_PRODUCTS.find((p) => p.key === activeOrbit) ?? ORBIT_PRODUCTS[0];
 
   return (
-    <div className="vaulto-landing">
-      {/* Navbar */}
+    <div key={language} className="vaulto-landing vaulto-landing--corporate vaulto-landing--group">
       <Navbar />
 
-      {/* Hero animado: misma narrativa que el vídeo (RSC Chain + navegación web wallet) */}
-      <section className="rsc-hero rsc-tech-bg rsc-hero--animated">
-        <div className="rsc-hero-blockchain-bg" aria-hidden="true">
-          <div className="rsc-hero-blockchain-bg__mesh" />
-          <div className="rsc-hero-blockchain-bg__diagonal" />
-          <div className="rsc-hero-blockchain-bg__row">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <Fragment key={i}>
-                <span
-                  className="rsc-hero-blockchain-bg__block"
-                  style={{ animationDelay: `${i * 0.4}s` }}
-                />
-                {i < 8 && <span className="rsc-hero-blockchain-bg__connector" />}
-              </Fragment>
+      {/* Hero */}
+      <section className="rg-hero" aria-labelledby="rg-hero-title">
+        <div className="rg-hero__atmosphere" aria-hidden>
+          <div className="rg-hero__mesh" />
+          <div className="rg-hero__glow rg-hero__glow--a" />
+          <div className="rg-hero__glow rg-hero__glow--b" />
+          <div className="rg-hero__glow rg-hero__glow--c" />
+          <div className="rg-hero__particles">
+            {Array.from({ length: 24 }).map((_, i) => (
+              <span key={i} className={`rg-particle rg-particle--${(i % 8) + 1}`} />
             ))}
           </div>
         </div>
-        <div className="rsc-tech-bg-glow rsc-tech-bg-glow--hero-chain"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
 
-        <div className="rsc-hero-animated-section">
-          <div className="rsc-hero-animated-caption animate-fade-in-up">
-            <h1 className="rsc-hero-animated-title">{t('landing.heroAnimated.title')}</h1>
-            <p className="rsc-hero-animated-subtitle">{t('landing.heroAnimated.subtitle')}</p>
-          </div>
-
-          <div className="rsc-hero-mining-promo animate-fade-in-up" style={{ animationDelay: '0.05s' }}>
-            <div className="rsc-hero-mining-promo__glow" aria-hidden="true" />
-            <div className="rsc-hero-mining-promo__inner">
-              <span className="rsc-hero-mining-promo__badge">{t('landing.heroAnimated.miningPromo.badge')}</span>
-              <div className="rsc-hero-mining-promo__row">
-                <div className="rsc-hero-mining-promo__copy">
-                  <h2 className="rsc-hero-mining-promo__title">{t('landing.heroAnimated.miningPromo.title')}</h2>
-                  <p className="rsc-hero-mining-promo__desc">{t('landing.heroAnimated.miningPromo.description')}</p>
-                </div>
-                <a
-                  href={RSC_MINING_PLAY_STORE_URL}
-                  className="rsc-hero-mining-promo__cta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Smartphone size={20} strokeWidth={2} aria-hidden />
-                  <span>{t('landing.heroAnimated.miningPromo.cta')}</span>
-                  <ExternalLink size={16} strokeWidth={2} aria-hidden />
-                </a>
-              </div>
+        <div className="rg-hero__inner">
+          <div className="rg-hero__copy">
+            <p className="rg-hero__brand">{t('landing.group.brand')}</p>
+            <h1 id="rg-hero-title" className="rg-hero__title">
+              {t('landing.group.heroTitle')}
+            </h1>
+            <p className="rg-hero__subtitle">{t('landing.group.heroSubtitle')}</p>
+            <div className="rg-hero__actions">
+              <button
+                type="button"
+                className="rg-btn rg-btn--primary"
+                onClick={() => scrollToSection('ecosystem')}
+              >
+                {t('landing.group.ctaEcosystem')}
+                <ArrowRight size={18} strokeWidth={2} aria-hidden />
+              </button>
+              <button
+                type="button"
+                className="rg-btn rg-btn--outline"
+                onClick={() => scrollToSection('products')}
+              >
+                {t('landing.group.ctaProducts')}
+              </button>
             </div>
           </div>
 
-          <div className="rsc-hero-animated-wrap animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <HeroAnimatedVisual />
-          </div>
-        </div>
-      </section>
-
-      {/* Why RSC Wallet Section */}
-      <section className="rsc-why-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-why-bg">
-          <div className="rsc-why-bg-grid"></div>
-          <div className="rsc-why-bg-glow"></div>
-          <div className="rsc-why-particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="rsc-why-particle" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${10 + Math.random() * 10}s`
-              }}></div>
-            ))}
-              </div>
-              </div>
-
-        <div className="rsc-why-container">
-          <div className="rsc-why-header">
-            <div className="rsc-why-badge">
-              <span className="rsc-why-badge-dot"></span>
-              <span>{t('landing.why.badge')}</span>
-            </div>
-            <h2 className="rsc-why-title">
-              <span className="rsc-why-title-gradient">{t('landing.why.title')}</span>
-              <br />
-              <span>{t('landing.why.title2')}</span>
-            </h2>
-            <p className="rsc-why-subtitle">
-              {t('landing.why.subtitle')}
-            </p>
+          <div
+            className={`rg-orbit${orbitPaused ? ' is-paused' : ''}`}
+            aria-label={t('landing.group.orbitAria')}
+            onMouseEnter={() => setOrbitPaused(true)}
+            onMouseLeave={() => setOrbitPaused(false)}
+          >
+            <div className="rg-orbit__depth" aria-hidden>
+              <span className="rg-orbit__blob rg-orbit__blob--1" />
+              <span className="rg-orbit__blob rg-orbit__blob--2" />
+              <span className="rg-orbit__blob rg-orbit__blob--3" />
             </div>
 
-          <div className="rsc-why-grid">
-            <div className="rsc-why-card" data-card="1">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <Key size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-                </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.nonCustodial.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.nonCustodial.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
-                </div>
+            <div className="rg-orbit__stage">
+              <svg className="rg-orbit__lines" viewBox="0 0 420 420" aria-hidden>
+                <defs>
+                  <linearGradient id="rgSpokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#2563EB" stopOpacity="0.05" />
+                    <stop offset="50%" stopColor="#D4A017" stopOpacity="0.55" />
+                    <stop offset="100%" stopColor="#2563EB" stopOpacity="0.05" />
+                  </linearGradient>
+                  <filter id="rgGlow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <circle cx="210" cy="210" r="155" className="rg-orbit__ring rg-orbit__ring--outer" />
+                <circle cx="210" cy="210" r="118" className="rg-orbit__ring" />
+                <circle cx="210" cy="210" r="78" className="rg-orbit__ring rg-orbit__ring--inner" />
+                {ORBIT_PRODUCTS.map((p) => {
+                  const rad = ((p.angle - 90) * Math.PI) / 180;
+                  const x = 210 + Math.cos(rad) * 118;
+                  const y = 210 + Math.sin(rad) * 118;
+                  const active = activeOrbit === p.key;
+                  return (
+                    <g key={p.key}>
+                      <line
+                        x1="210"
+                        y1="210"
+                        x2={x}
+                        y2={y}
+                        className={`rg-orbit__spoke${active ? ' is-active' : ''}`}
+                      />
+                      {active && (
+                        <circle
+                          className="rg-orbit__pulse-dot"
+                          r="3.5"
+                          filter="url(#rgGlow)"
+                        >
+                          <animateMotion
+                            dur="2.4s"
+                            repeatCount="indefinite"
+                            path={`M210,210 L${x},${y}`}
+                          />
+                        </circle>
+                      )}
+                    </g>
+                  );
+                })}
+              </svg>
 
-            <div className="rsc-why-card" data-card="2">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <Zap size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-                </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.instant.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.instant.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
+              <div className="rg-orbit__core" aria-hidden>
+                <span className="rg-orbit__core-pulse" />
+                <span className="rg-orbit__core-pulse rg-orbit__core-pulse--delay" />
+                <span className="rg-orbit__core-sphere">
+                  <span className="rg-orbit__core-shine" />
+                  <span className="rg-orbit__core-label">{t('landing.group.brand')}</span>
+                </span>
               </div>
 
-            <div className="rsc-why-card" data-card="3">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <Coins size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-                </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.staking.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.staking.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
-                </div>
-
-            <div className="rsc-why-card" data-card="4">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <QrCode size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-                </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.qrPayments.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.qrPayments.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
-              </div>
-
-            <div className="rsc-why-card" data-card="5">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <FileText size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-            </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.history.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.history.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
-          </div>
-
-            <div className="rsc-why-card" data-card="6">
-              <div className="rsc-why-card-glow"></div>
-              <div className="rsc-why-card-border"></div>
-              <div className="rsc-why-card-icon">
-                <div className="rsc-why-icon-bg"></div>
-                <Network size={32} className="rsc-why-icon" />
-                <div className="rsc-why-icon-pulse"></div>
-              </div>
-              <h3 className="rsc-why-card-title">{t('landing.why.ecosystem.title')}</h3>
-              <p className="rsc-why-card-description">
-                {t('landing.why.ecosystem.description')}
-              </p>
-              <div className="rsc-why-card-shine"></div>
-              </div>
-            </div>
-        </div>
-      </section>
-
-      {/* Features Deep Dive Section */}
-      <section className="rsc-features-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-features-container">
-          <div className="rsc-features-header">
-            <h2 className="rsc-features-title">
-              {t('landing.features.title')} <span className="rsc-features-title-gradient">{t('landing.features.titleGradient')}</span>
-            </h2>
-                  </div>
-
-          <div className="rsc-features-grid">
-            {/* Bloque A - Send & Receive */}
-            <div className="rsc-feature-block" data-block="a">
-              <div className="rsc-feature-content">
-                <div className="rsc-feature-header-block">
-                  <div className="rsc-feature-icon-wrapper">
-                    <div className="rsc-feature-icon-bg"></div>
-                    <ArrowUpRight size={28} className="rsc-feature-icon" />
-                      </div>
-                  <h3 className="rsc-feature-block-title">{t('landing.features.sendReceive.title')}</h3>
-                    </div>
-                <p className="rsc-feature-block-text">
-                  {t('landing.features.sendReceive.description')}
-                </p>
-                <ul className="rsc-feature-bullets">
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>{t('landing.features.sendReceive.bullet1')}</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>{t('landing.features.sendReceive.bullet2')}</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>{t('landing.features.sendReceive.bullet3')}</span>
-                  </li>
-                </ul>
-                      </div>
-              <div className="rsc-feature-mockup">
-                <div className="rsc-mockup-card">
-                  <div className="rsc-mockup-header">
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                    </div>
-                  <div className="rsc-mockup-content">
-                    <div className="rsc-mockup-transaction">
-                      <div className="rsc-mockup-tx-icon">→</div>
-                      <div className="rsc-mockup-tx-info">
-                        <div className="rsc-mockup-tx-label">{t('landing.features.sendReceive.mockupSending')}</div>
-                        <div className="rsc-mockup-tx-amount">1,250 RSK</div>
-                      </div>
-                      <div className="rsc-mockup-tx-status">Pending</div>
-                    </div>
-                    <div className="rsc-mockup-qr">
-                      <div className="rsc-mockup-qr-grid"></div>
-                    </div>
-                  </div>
-                </div>
-                  </div>
-                </div>
-
-            {/* Bloque B - Balance + Overview */}
-            <div className="rsc-feature-block" data-block="b">
-              <div className="rsc-feature-content">
-                <div className="rsc-feature-header-block">
-                  <div className="rsc-feature-icon-wrapper">
-                    <div className="rsc-feature-icon-bg"></div>
-                    <FileText size={28} className="rsc-feature-icon" />
-                    </div>
-                  <h3 className="rsc-feature-block-title">Your portfolio, simple and visible</h3>
-                  </div>
-                <p className="rsc-feature-block-text">
-                  Total balance, recent movements, and basic metrics. Designed to understand your money in seconds.
-                </p>
-                <ul className="rsc-feature-bullets">
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Total balance + daily variation (if applicable)</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Latest transactions</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Separation by assets</span>
-                  </li>
-                </ul>
-                  </div>
-              <div className="rsc-feature-mockup">
-                <div className="rsc-mockup-card">
-                  <div className="rsc-mockup-header">
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                </div>
-                  <div className="rsc-mockup-content">
-                    <div className="rsc-mockup-balance">
-                      <div className="rsc-mockup-balance-label">Total Balance</div>
-                      <div className="rsc-mockup-balance-amount">$12,450.80</div>
-                      <div className="rsc-mockup-balance-change">+5.2% today</div>
-              </div>
-                    <div className="rsc-mockup-assets">
-                      <div className="rsc-mockup-asset">RSK: 1,250</div>
-                      <div className="rsc-mockup-asset">ETH: 78.381</div>
-            </div>
-          </div>
-        </div>
-              </div>
+              {ORBIT_PRODUCTS.map((p) => {
+                const Icon = p.Icon;
+                const active = activeOrbit === p.key;
+                return (
+                  <button
+                    key={p.key}
+                    type="button"
+                    className={`rg-orbit__node rg-orbit__node--${p.key}${active ? ' is-active' : ''}`}
+                    style={{ ['--a' as string]: `${p.angle}deg` }}
+                    onMouseEnter={() => {
+                      setOrbitPaused(true);
+                      setActiveOrbit(p.key);
+                      orbitIdx.current = ORBIT_PRODUCTS.findIndex((x) => x.key === p.key);
+                    }}
+                    onFocus={() => {
+                      setOrbitPaused(true);
+                      setActiveOrbit(p.key);
+                    }}
+                    onClick={() => navigateToPage(p.page)}
+                    aria-pressed={active}
+                  >
+                    <span
+                      className="rg-orbit__node-media"
+                      style={{ backgroundImage: `url(${p.image})` }}
+                      aria-hidden
+                    />
+                    <span className="rg-orbit__node-body">
+                      <span className="rg-orbit__node-icon" aria-hidden>
+                        <Icon size={14} strokeWidth={2.25} />
+                      </span>
+                      <span className="rg-orbit__node-label">{t(`landing.group.products.${p.key}.name`)}</span>
+                    </span>
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Bloque C - Staking */}
-            <div className="rsc-feature-block" data-block="c">
-              <div className="rsc-feature-content">
-                <div className="rsc-feature-header-block">
-                  <div className="rsc-feature-icon-wrapper">
-                    <div className="rsc-feature-icon-bg"></div>
-                    <Coins size={28} className="rsc-feature-icon" />
-                  </div>
-                  <h3 className="rsc-feature-block-title">Staking integrated into the flow</h3>
-                </div>
-                <p className="rsc-feature-block-text">
-                  Stake without leaving the product. Transparent rewards and timing.
-                </p>
-                <ul className="rsc-feature-bullets">
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Staked amount / available</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Estimated and accumulated rewards</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Clear actions: Stake / Unstake</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="rsc-feature-mockup">
-                <div className="rsc-mockup-card">
-                  <div className="rsc-mockup-header">
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                  </div>
-                  <div className="rsc-mockup-content">
-                    <div className="rsc-mockup-staking">
-                      <div className="rsc-mockup-staking-label">Staked</div>
-                      <div className="rsc-mockup-staking-amount">5,000 RSK</div>
-                      <div className="rsc-mockup-staking-rewards">Rewards: +125 RSK</div>
-                      <div className="rsc-mockup-staking-actions">
-                        <div className="rsc-mockup-btn">Stake</div>
-                        <div className="rsc-mockup-btn">Unstake</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bloque D - Seguridad */}
-            <div className="rsc-feature-block" data-block="d">
-              <div className="rsc-feature-content">
-                <div className="rsc-feature-header-block">
-                  <div className="rsc-feature-icon-wrapper">
-                    <div className="rsc-feature-icon-bg"></div>
-                    <Key size={28} className="rsc-feature-icon" />
-                </div>
-                  <h3 className="rsc-feature-block-title">Practical security, not empty promises</h3>
-              </div>
-                <p className="rsc-feature-block-text">
-                  Real user-oriented protections: lock, backup, and control.
-                </p>
-                <ul className="rsc-feature-bullets">
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>PIN / Biometric</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Auto-lock and background protection</span>
-                  </li>
-                  <li>
-                    <span className="rsc-bullet-icon">✓</span>
-                    <span>Backup with seed phrase</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="rsc-feature-mockup">
-                <div className="rsc-mockup-card">
-                  <div className="rsc-mockup-header">
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-                    <div className="rsc-mockup-dot"></div>
-            </div>
-                  <div className="rsc-mockup-content">
-                    <div className="rsc-mockup-security">
-                      <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">
-                          <Lock size={20} />
-                        </div>
-                        <div className="rsc-mockup-security-label">PIN Active</div>
-                      </div>
-                      <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">
-                          <Fingerprint size={20} />
-                        </div>
-                        <div className="rsc-mockup-security-label">Biometric</div>
-                      </div>
-                      <div className="rsc-mockup-security-item">
-                        <div className="rsc-mockup-security-icon">
-                          <Key size={20} />
-                        </div>
-                        <div className="rsc-mockup-security-label">Seed Backup</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How it Works Section */}
-      <section className="rsc-how-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(10)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-how-container">
-          <div className="rsc-how-header">
-            <h2 className="rsc-how-title">
-              <span className="rsc-how-title-gradient">{t('landing.how.title')}</span> {t('landing.how.titleGradient')}
-        </h2>
-          </div>
-
-          <div className="rsc-how-steps">
-            {/* Step 1 */}
-            <div className="rsc-how-step" data-step="1">
-              <div className="rsc-step-number">
-                <div className="rsc-step-number-bg"></div>
-                <span className="rsc-step-number-text">1</span>
-                <div className="rsc-step-number-pulse"></div>
-              </div>
-              <div className="rsc-step-content">
-                <div className="rsc-step-icon-wrapper">
-                  <div className="rsc-step-icon-bg"></div>
-                  <Wallet size={32} className="rsc-step-icon" />
-                </div>
-                <h3 className="rsc-step-title">{t('landing.how.step1.title')}</h3>
-                <p className="rsc-step-description">
-                  {t('landing.how.step1.description')}
-                </p>
-              </div>
-              <div className="rsc-step-connector">
-                <ArrowRight size={24} className="rsc-step-arrow" />
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="rsc-how-step" data-step="2">
-              <div className="rsc-step-number">
-                <div className="rsc-step-number-bg"></div>
-                <span className="rsc-step-number-text">2</span>
-                <div className="rsc-step-number-pulse"></div>
-              </div>
-              <div className="rsc-step-content">
-                <div className="rsc-step-icon-wrapper">
-                  <div className="rsc-step-icon-bg"></div>
-                  <Shield size={32} className="rsc-step-icon" />
-                </div>
-                <h3 className="rsc-step-title">{t('landing.how.step2.title')}</h3>
-                <p className="rsc-step-description">
-                  {t('landing.how.step2.description')}
-                </p>
-              </div>
-              <div className="rsc-step-connector">
-                <ArrowRight size={24} className="rsc-step-arrow" />
-              </div>
-        </div>
-
-            {/* Step 3 */}
-            <div className="rsc-how-step" data-step="3">
-              <div className="rsc-step-number">
-                <div className="rsc-step-number-bg"></div>
-                <span className="rsc-step-number-text">3</span>
-                <div className="rsc-step-number-pulse"></div>
-              </div>
-              <div className="rsc-step-content">
-                <div className="rsc-step-icon-wrapper">
-                  <div className="rsc-step-icon-bg"></div>
-                  <QrCode size={32} className="rsc-step-icon" />
-            </div>
-                <h3 className="rsc-step-title">{t('landing.how.step3.title')}</h3>
-                <p className="rsc-step-description">
-                  {t('landing.how.step3.description')}
-                </p>
-              </div>
-              <div className="rsc-step-connector">
-                <ArrowRight size={24} className="rsc-step-arrow" />
-            </div>
-          </div>
-
-            {/* Step 4 */}
-            <div className="rsc-how-step" data-step="4">
-              <div className="rsc-step-number">
-                <div className="rsc-step-number-bg"></div>
-                <span className="rsc-step-number-text">4</span>
-                <div className="rsc-step-number-pulse"></div>
-              </div>
-              <div className="rsc-step-content">
-                <div className="rsc-step-icon-wrapper">
-                  <div className="rsc-step-icon-bg"></div>
-                  <Play size={32} className="rsc-step-icon" />
-                </div>
-                <h3 className="rsc-step-title">{t('landing.how.step4.title')}</h3>
-                <p className="rsc-step-description">
-                  {t('landing.how.step4.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="rsc-how-microcopy">
-            <p className="rsc-how-microcopy-text">
-              {t('landing.how.microcopy')}
-            </p>
-              </div>
-        </div>
-      </section>
-
-      {/* Security & Trust Section */}
-      <section className="rsc-security-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-            ))}
-          </div>
-
-        <div className="rsc-security-container">
-          <div className="rsc-security-header">
-            <div className="rsc-security-icon-main">
-              <div className="rsc-security-icon-main-bg"></div>
-              <Shield size={48} className="rsc-security-icon-main-icon" />
-              <div className="rsc-security-icon-main-pulse"></div>
-        </div>
-            <h2 className="rsc-security-title">
-              {t('landing.security.title')} <span className="rsc-security-title-gradient">{t('landing.security.titleGradient')}</span>
-            </h2>
-          </div>
-
-          <div className="rsc-security-content">
-            <div className="rsc-security-text">
-              <p className="rsc-security-paragraph">
-                {t('landing.security.paragraph1')}
-              </p>
-              <p className="rsc-security-paragraph">
-                {t('landing.security.paragraph2')}
-              </p>
-              </div>
-
-            <div className="rsc-security-features">
-              <div className="rsc-security-feature">
-                <div className="rsc-security-feature-icon-wrapper">
-                  <div className="rsc-security-feature-icon-bg"></div>
-                  <Shield size={24} className="rsc-security-feature-icon" />
-            </div>
-                <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Non-custodial</h4>
-                  <p className="rsc-security-feature-description">Control del usuario sobre su acceso</p>
-              </div>
-            </div>
-
-              <div className="rsc-security-feature">
-                <div className="rsc-security-feature-icon-wrapper">
-                  <div className="rsc-security-feature-icon-bg"></div>
-                  <Key size={24} className="rsc-security-feature-icon" />
-              </div>
-                <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">{t('landing.security.seedPhrase.title')}</h4>
-                  <p className="rsc-security-feature-description">{t('landing.security.seedPhrase.description')}</p>
-            </div>
-          </div>
-
-              <div className="rsc-security-feature">
-                <div className="rsc-security-feature-icon-wrapper">
-                  <div className="rsc-security-feature-icon-bg"></div>
-                  <Fingerprint size={24} className="rsc-security-feature-icon" />
-                </div>
-                <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">{t('landing.security.access.title')}</h4>
-                  <p className="rsc-security-feature-description">{t('landing.security.access.description')}</p>
-          </div>
-        </div>
-
-              <div className="rsc-security-feature">
-                <div className="rsc-security-feature-icon-wrapper">
-                  <div className="rsc-security-feature-icon-bg"></div>
-                  <Lock size={24} className="rsc-security-feature-icon" />
-            </div>
-                <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Protected sensitive data</h4>
-                  <p className="rsc-security-feature-description">Local encryption (if implemented)</p>
-            </div>
-          </div>
-
-              <div className="rsc-security-feature">
-                <div className="rsc-security-feature-icon-wrapper">
-                  <div className="rsc-security-feature-icon-bg"></div>
-                  <Eye size={24} className="rsc-security-feature-icon" />
-                </div>
-                <div className="rsc-security-feature-content">
-                  <h4 className="rsc-security-feature-title">Best practices</h4>
-                  <p className="rsc-security-feature-description">Anti-phishing reminders and address verification</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rsc-security-disclaimer">
-            <div className="rsc-security-disclaimer-icon">
-              <AlertCircle size={20} />
-            </div>
-            <p className="rsc-security-disclaimer-text">
-              {t('landing.security.disclaimer')}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="rsc-usecases-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(15)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-usecases-container">
-          <div className="rsc-usecases-header">
-            <h2 className="rsc-usecases-title">
-              <span className="rsc-usecases-title-gradient">{t('landing.usecases.title')}</span> {t('landing.usecases.title2')} <span className="rsc-usecases-title-gradient">{t('landing.usecases.titleGradient')}</span>
-            </h2>
-              </div>
-
-          <div className="rsc-usecases-grid">
-            {/* Columna 1 - Individuos */}
-            <div className="rsc-usecase-column" data-column="1">
-              <div className="rsc-usecase-header-column">
-                <div className="rsc-usecase-icon-column">
-                  <div className="rsc-usecase-icon-column-bg"></div>
-                  <User size={32} className="rsc-usecase-icon-column-icon" />
-            </div>
-                <h3 className="rsc-usecase-column-title">{t('landing.usecases.individuals.title')}</h3>
-              </div>
-              <ul className="rsc-usecase-list">
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Send size={20} />
-                  </div>
-                  <span>{t('landing.usecases.individuals.item1')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <TrendingUp size={20} />
-                  </div>
-                  <span>{t('landing.usecases.individuals.item2')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Coins size={20} />
-                  </div>
-                  <span>{t('landing.usecases.individuals.item3')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <QrCode size={20} />
-                  </div>
-                  <span>{t('landing.usecases.individuals.item4')}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Columna 2 - Empresas / Comercios */}
-            <div className="rsc-usecase-column" data-column="2">
-              <div className="rsc-usecase-header-column">
-                <div className="rsc-usecase-icon-column">
-                  <div className="rsc-usecase-icon-column-bg"></div>
-                  <Building2 size={32} className="rsc-usecase-icon-column-icon" />
-                </div>
-                <h3 className="rsc-usecase-column-title">{t('landing.usecases.businesses.title')}</h3>
-              </div>
-              <ul className="rsc-usecase-list">
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <QrCode size={20} />
-                  </div>
-                  <span>{t('landing.usecases.businesses.item1')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Check size={20} />
-                  </div>
-                  <span>{t('landing.usecases.businesses.item2')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <FileText size={20} />
-                  </div>
-                  <span>{t('landing.usecases.businesses.item3')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Network size={20} />
-                  </div>
-                  <span>{t('landing.usecases.businesses.item4')}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Columna 3 - Desarrolladores */}
-            <div className="rsc-usecase-column" data-column="3">
-              <div className="rsc-usecase-header-column">
-                <div className="rsc-usecase-icon-column">
-                  <div className="rsc-usecase-icon-column-bg"></div>
-                  <Code size={32} className="rsc-usecase-icon-column-icon" />
-                </div>
-                <h3 className="rsc-usecase-column-title">{t('landing.usecases.developers.title')}</h3>
-              </div>
-              <ul className="rsc-usecase-list">
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Network size={20} />
-                  </div>
-                  <span>{t('landing.usecases.developers.item1')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <Wallet size={20} />
-                  </div>
-                  <span>{t('landing.usecases.developers.item2')}</span>
-                </li>
-                <li className="rsc-usecase-item">
-                  <div className="rsc-usecase-item-icon">
-                    <FileText size={20} />
-                  </div>
-                  <span>{t('landing.usecases.developers.item3')}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* UI Preview / Screens Section */}
-      <section className="rsc-preview-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-preview-container">
-          <div className="rsc-preview-header">
-            <h2 className="rsc-preview-title">
-              Designed to be <span className="rsc-preview-title-gradient">clear, fast, and elegant</span>
-            </h2>
-            <p className="rsc-preview-subtitle">
-              An experience focused on what matters: control, visibility, and quick actions.
-            </p>
-              </div>
-
-          <div className="rsc-preview-carousel-wrapper">
-            <div 
-              className="rsc-preview-carousel"
-              style={{ transform: `translateX(-${activeScreen * 100}%)` }}
+            <button
+              type="button"
+              className="rg-orbit__spotlight"
+              aria-live="polite"
+              onClick={() => navigateToPage(activeProduct.page)}
             >
-              {/* Screen 1 - Home / Total Balance */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <div className="rsc-preview-screen-title">RSC Wallet</div>
-                      </div>
-                      <div className="rsc-preview-balance-section">
-                        <div className="rsc-preview-balance-label">Total Balance</div>
-                        <div className="rsc-preview-balance-amount">$12,450.80</div>
-                        <div className="rsc-preview-balance-change">+5.2% today</div>
-                      </div>
-                      <div className="rsc-preview-quick-actions">
-                        <div className="rsc-preview-action-btn">Send</div>
-                        <div className="rsc-preview-action-btn">Receive</div>
-                        <div className="rsc-preview-action-btn">Stake</div>
-                      </div>
-                      <div className="rsc-preview-recent-txs">
-                        <div className="rsc-preview-tx-item">
-                          <ArrowUpRight size={16} />
-                          <span>Sent 1,250 RSK</span>
-                          <span className="rsc-preview-tx-status">Confirmed</span>
-                        </div>
-                        <div className="rsc-preview-tx-item">
-                          <ArrowDownLeft size={16} />
-                          <span>Received 850 RSK</span>
-                          <span className="rsc-preview-tx-status">Confirmed</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Home / Total Balance</div>
-              </div>
-
-              {/* Screen 2 - Send */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Send</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-send-section">
-                        <div className="rsc-preview-input-group">
-                          <label>To Address</label>
-                          <div className="rsc-preview-input">0x7a3...f2c</div>
-                        </div>
-                        <div className="rsc-preview-input-group">
-                          <label>Amount</label>
-                          <div className="rsc-preview-input-large">1,250 RSK</div>
-                        </div>
-                        <div className="rsc-preview-fee-info">
-                          <span>Network Fee: 0.001 RSK</span>
-                        </div>
-                        <div className="rsc-preview-send-button">Confirm Send</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Send</div>
-              </div>
-
-              {/* Screen 3 - Receive (QR) */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Receive</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-receive-section">
-                        <div className="rsc-preview-qr-large">
-                          <div className="rsc-preview-qr-grid-large"></div>
-                        </div>
-                        <div className="rsc-preview-address-display">
-                          <div className="rsc-preview-address-label">Your Address</div>
-                          <div className="rsc-preview-address-value">0x9b1...a4d</div>
-                          <div className="rsc-preview-copy-btn">Copy</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Receive (QR)</div>
-              </div>
-
-              {/* Screen 4 - Staking */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Staking</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-staking-section">
-                        <div className="rsc-preview-staking-balance">
-                          <div className="rsc-preview-staking-label">Staked Amount</div>
-                          <div className="rsc-preview-staking-amount">5,000 RSK</div>
-                        </div>
-                        <div className="rsc-preview-staking-rewards">
-                          <div className="rsc-preview-reward-item">
-                            <span>Total Rewards</span>
-                            <span>+125 RSK</span>
-                          </div>
-                          <div className="rsc-preview-reward-item">
-                            <span>APY</span>
-                            <span>8.5%</span>
-                          </div>
-                        </div>
-                        <div className="rsc-preview-staking-actions">
-                          <div className="rsc-preview-stake-btn">Stake More</div>
-                          <div className="rsc-preview-unstake-btn">Unstake</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Staking</div>
-              </div>
-
-              {/* Screen 5 - Transaction History */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">History</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-history-section">
-                        <div className="rsc-preview-history-item">
-                          <ArrowUpRight size={20} className="rsc-preview-history-icon-send" />
-                          <div className="rsc-preview-history-details">
-                            <div className="rsc-preview-history-type">Sent</div>
-                            <div className="rsc-preview-history-to">To: 0x7a3...f2c</div>
-                          </div>
-                          <div className="rsc-preview-history-amount">-1,250 RSK</div>
-                        </div>
-                        <div className="rsc-preview-history-item">
-                          <ArrowDownLeft size={20} className="rsc-preview-history-icon-receive" />
-                          <div className="rsc-preview-history-details">
-                            <div className="rsc-preview-history-type">Received</div>
-                            <div className="rsc-preview-history-to">From: 0x9b1...a4d</div>
-                          </div>
-                          <div className="rsc-preview-history-amount positive">+850 RSK</div>
-                        </div>
-                        <div className="rsc-preview-history-item">
-                          <Coins size={20} className="rsc-preview-history-icon-stake" />
-                          <div className="rsc-preview-history-details">
-                            <div className="rsc-preview-history-type">Staking Reward</div>
-                            <div className="rsc-preview-history-to">Auto-compound</div>
-                          </div>
-                          <div className="rsc-preview-history-amount positive">+12.5 RSK</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Transaction History</div>
-              </div>
-
-              {/* Screen 6 - Security Settings */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Security</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-security-section">
-                        <div className="rsc-preview-security-item">
-                          <Lock size={20} />
-                          <span>PIN Protection</span>
-                          <div className="rsc-preview-toggle active"></div>
-                        </div>
-                        <div className="rsc-preview-security-item">
-                          <Fingerprint size={20} />
-                          <span>Biometric Auth</span>
-                          <div className="rsc-preview-toggle active"></div>
-                        </div>
-                        <div className="rsc-preview-security-item">
-                          <Clock size={20} />
-                          <span>Auto-lock (5 min)</span>
-                          <div className="rsc-preview-toggle active"></div>
-                        </div>
-                        <div className="rsc-preview-security-item">
-                          <Shield size={20} />
-                          <span>Transaction Confirmation</span>
-                          <div className="rsc-preview-toggle active"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Security Settings</div>
-              </div>
-
-              {/* Screen 7 - Backup / Recovery */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Backup</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-backup-section">
-                        <div className="rsc-preview-backup-warning">
-                          <AlertCircle size={24} />
-                          <div className="rsc-preview-backup-warning-text">
-                            Save your recovery phrase in a safe place
-                          </div>
-                        </div>
-                        <div className="rsc-preview-seed-words">
-                          <div className="rsc-preview-seed-word">word</div>
-                          <div className="rsc-preview-seed-word">example</div>
-                          <div className="rsc-preview-seed-word">phrase</div>
-                          <div className="rsc-preview-seed-word">...</div>
-                          <div className="rsc-preview-seed-word">24</div>
-                          <div className="rsc-preview-seed-word">words</div>
-                        </div>
-                        <div className="rsc-preview-backup-button">I've Saved It</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Backup / Recovery</div>
-              </div>
-
-              {/* Screen 8 - Notifications */}
-              <div className="rsc-preview-screen">
-                <div className="rsc-preview-phone">
-                  <div className="rsc-preview-phone-frame">
-                    <div className="rsc-preview-phone-content">
-                      <div className="rsc-preview-screen-header">
-                        <ChevronLeft size={20} />
-                        <div className="rsc-preview-screen-title">Notifications</div>
-                        <div></div>
-                      </div>
-                      <div className="rsc-preview-notifications-section">
-                        <div className="rsc-preview-notification-item">
-                          <Check size={20} className="rsc-preview-notification-icon-success" />
-                          <div className="rsc-preview-notification-content">
-                            <div className="rsc-preview-notification-title">Transaction Confirmed</div>
-                            <div className="rsc-preview-notification-text">1,250 RSK sent successfully</div>
-                          </div>
-                          <div className="rsc-preview-notification-time">2m ago</div>
-                        </div>
-                        <div className="rsc-preview-notification-item">
-                          <Coins size={20} className="rsc-preview-notification-icon-reward" />
-                          <div className="rsc-preview-notification-content">
-                            <div className="rsc-preview-notification-title">Staking Reward</div>
-                            <div className="rsc-preview-notification-text">+12.5 RSK earned</div>
-                          </div>
-                          <div className="rsc-preview-notification-time">1h ago</div>
-                        </div>
-                        <div className="rsc-preview-notification-item">
-                          <Shield size={20} className="rsc-preview-notification-icon-security" />
-                          <div className="rsc-preview-notification-content">
-                            <div className="rsc-preview-notification-title">Security Alert</div>
-                            <div className="rsc-preview-notification-text">New device login detected</div>
-                          </div>
-                          <div className="rsc-preview-notification-time">2d ago</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rsc-preview-label">Notifications</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Thumbnails */}
-          <div className="rsc-preview-thumbnails">
-            {[
-              { label: 'Home', icon: Wallet },
-              { label: 'Send', icon: Send },
-              { label: 'Receive', icon: QrCode },
-              { label: 'Staking', icon: Coins },
-              { label: 'History', icon: History },
-              { label: 'Security', icon: Shield },
-              { label: 'Backup', icon: Key },
-              { label: 'Notifications', icon: Bell }
-            ].map((screen, index) => (
-              <button
-                key={index}
-                className={`rsc-preview-thumbnail ${activeScreen === index ? 'active' : ''}`}
-                onClick={() => setActiveScreen(index)}
-                aria-label={screen.label}
-              >
-                <div className="rsc-preview-thumbnail-icon">
-                  <screen.icon size={20} />
-                </div>
-                <span className="rsc-preview-thumbnail-label">{screen.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Navigation Arrows */}
-              <button
-            className="rsc-preview-nav rsc-preview-nav-prev"
-            onClick={() => setActiveScreen((prev) => (prev > 0 ? prev - 1 : 7))}
-            aria-label="Previous screen"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button 
-            className="rsc-preview-nav rsc-preview-nav-next"
-            onClick={() => setActiveScreen((prev) => (prev < 7 ? prev + 1 : 0))}
-            aria-label="Next screen"
-          >
-            <ChevronRight size={24} />
-              </button>
-            </div>
-      </section>
-
-      {/* Ecosystem Integration Section */}
-      <section className="rsc-ecosystem-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(15)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-ecosystem-container">
-          <div className="rsc-ecosystem-header">
-            <h2 className="rsc-ecosystem-title">
-              The gateway to the <span className="rsc-ecosystem-title-gradient">RSC ecosystem</span>
-            </h2>
-            <p className="rsc-ecosystem-subtitle">
-              RSC Wallet is not an isolated app. It's the access point to RSC Chain infrastructure: identity, payments, utilities, and future integrations.
-            </p>
-          </div>
-
-          <div className="rsc-ecosystem-map">
-            {/* Central Wallet Node */}
-            <div className="rsc-ecosystem-center">
-              <div className="rsc-ecosystem-wallet-node">
-                <div className="rsc-ecosystem-wallet-icon-bg"></div>
-                <Wallet size={48} className="rsc-ecosystem-wallet-icon" />
-                <div className="rsc-ecosystem-wallet-pulse"></div>
-                <div className="rsc-ecosystem-wallet-label">RSC Wallet</div>
-              </div>
-            </div>
-
-            {/* Connection Blocks */}
-            <div className="rsc-ecosystem-blocks">
-              {/* Block 1 - RSC Chain */}
-              <div className="rsc-ecosystem-block" data-block="1">
-                <div className="rsc-ecosystem-connection-line"></div>
-                <div className="rsc-ecosystem-block-content">
-                  <div className="rsc-ecosystem-block-icon-wrapper">
-                    <div className="rsc-ecosystem-block-icon-bg"></div>
-                    <Network size={32} className="rsc-ecosystem-block-icon" />
-        </div>
-                  <div className="rsc-ecosystem-block-connection">
-                    <Wallet size={20} />
-                    <Link2 size={16} />
-                    <Network size={20} />
-                  </div>
-                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ RSC Chain</h3>
-                  <p className="rsc-ecosystem-block-description">
-                    Operations and confirmations connected to the network.
-                  </p>
-                </div>
-              </div>
-
-              {/* Block 2 - Rewards / Mining / Events */}
-              <div className="rsc-ecosystem-block" data-block="2">
-                <div className="rsc-ecosystem-connection-line"></div>
-                <div className="rsc-ecosystem-block-content">
-                  <div className="rsc-ecosystem-block-icon-wrapper">
-                    <div className="rsc-ecosystem-block-icon-bg"></div>
-                    <Activity size={32} className="rsc-ecosystem-block-icon" />
-                  </div>
-                  <div className="rsc-ecosystem-block-connection">
-                    <Wallet size={20} />
-                    <Link2 size={16} />
-                    <Activity size={20} />
-                  </div>
-                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ Rewards / Mining / Events</h3>
-                  <p className="rsc-ecosystem-block-description">
-                    Rewards and utilities within the ecosystem.
-                  </p>
-              </div>
-              </div>
-
-              {/* Block 3 - Bridge (Roadmap) */}
-              <div className="rsc-ecosystem-block" data-block="3">
-                <div className="rsc-ecosystem-connection-line"></div>
-                <div className="rsc-ecosystem-block-content">
-                  <div className="rsc-ecosystem-block-icon-wrapper">
-                    <div className="rsc-ecosystem-block-icon-bg"></div>
-                    <Layers size={32} className="rsc-ecosystem-block-icon" />
-            </div>
-                  <div className="rsc-ecosystem-block-connection">
-                    <Wallet size={20} />
-                    <Link2 size={16} />
-                    <Layers size={20} />
-                  </div>
-                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ Bridge <span className="rsc-ecosystem-roadmap-badge">(Roadmap)</span></h3>
-                  <p className="rsc-ecosystem-block-description">
-                    Connection to other networks via official bridge when enabled.
-                  </p>
-                </div>
-              </div>
-
-              {/* Block 4 - RSC Bank / Payments (Visión) */}
-              <div className="rsc-ecosystem-block" data-block="4">
-                <div className="rsc-ecosystem-connection-line"></div>
-                <div className="rsc-ecosystem-block-content">
-                  <div className="rsc-ecosystem-block-icon-wrapper">
-                    <div className="rsc-ecosystem-block-icon-bg"></div>
-                    <Banknote size={32} className="rsc-ecosystem-block-icon" />
-                  </div>
-                  <div className="rsc-ecosystem-block-connection">
-                    <Wallet size={20} />
-                    <Link2 size={16} />
-                    <Banknote size={20} />
-                  </div>
-                  <h3 className="rsc-ecosystem-block-title">Wallet ↔ RSC Bank / Payments <span className="rsc-ecosystem-vision-badge">(Vision)</span></h3>
-                  <p className="rsc-ecosystem-block-description">
-                    Daily payments, conversion, and crypto-first banking experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="rsc-faq-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(10)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
-          ))}
-        </div>
-
-        <div className="rsc-faq-container">
-          <div className="rsc-faq-header">
-            <h2 className="rsc-faq-title">
-              {t('landing.faq.title')} <span className="rsc-faq-title-gradient">{t('landing.faq.titleGradient')}</span>
-            </h2>
-            <p className="rsc-faq-subtitle">
-              {t('landing.faq.subtitle')}
-          </p>
-        </div>
-
-          <div className="rsc-faq-list">
-            {/* FAQ 1 */}
-            <div className={`rsc-faq-item ${openFaq === 0 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}
-                aria-expanded={openFaq === 0}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q1')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 0 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+              <div
+                className="rg-orbit__spotlight-media"
+                style={{ backgroundImage: `url(${activeProduct.image})` }}
+              />
+              <div className="rg-orbit__spotlight-copy">
+                <p className="rg-orbit__spotlight-kicker">{t('landing.group.brand')}</p>
+                <h3>{t(`landing.group.products.${activeProduct.key}.name`)}</h3>
+                <p>{t(`landing.group.products.${activeProduct.key}.blurb`)}</p>
+                <span className="rg-orbit__spotlight-cta">
+                  {t('landing.group.learnMore')}
+                  <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
                 </span>
-              </button>
-              <div className={`rsc-faq-answer ${openFaq === 0 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a1')}</p>
               </div>
-            </div>
-
-            {/* FAQ 2 */}
-            <div className={`rsc-faq-item ${openFaq === 1 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
-                aria-expanded={openFaq === 1}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q2')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 1 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <div className={`rsc-faq-answer ${openFaq === 1 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a2')}</p>
-        </div>
-            </div>
-
-            {/* FAQ 3 */}
-            <div className={`rsc-faq-item ${openFaq === 2 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
-                aria-expanded={openFaq === 2}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q3')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 2 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
             </button>
-              <div className={`rsc-faq-answer ${openFaq === 2 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a3')}</p>
-          </div>
-            </div>
-
-            {/* FAQ 4 */}
-            <div className={`rsc-faq-item ${openFaq === 3 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
-                aria-expanded={openFaq === 3}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q4')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 3 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-              </svg>
-                </span>
-              </button>
-              <div className={`rsc-faq-answer ${openFaq === 3 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a4')}</p>
-            </div>
-            </div>
-
-            {/* FAQ 5 */}
-            <div className={`rsc-faq-item ${openFaq === 4 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}
-                aria-expanded={openFaq === 4}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q5')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 4 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-              </svg>
-                </span>
-              </button>
-              <div className={`rsc-faq-answer ${openFaq === 4 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a5')}</p>
-            </div>
-            </div>
-
-            {/* FAQ 6 */}
-            <div className={`rsc-faq-item ${openFaq === 5 ? 'rsc-faq-item--open' : ''}`}>
-              <button
-                className="rsc-faq-question"
-                onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}
-                aria-expanded={openFaq === 5}
-              >
-                <span className="rsc-faq-question-text">{t('landing.faq.q6')}</span>
-                <span className="rsc-faq-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d={openFaq === 5 ? "M5 12L19 12" : "M12 5L12 19M5 12L19 12"}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-              </svg>
-                </span>
-              </button>
-              <div className={`rsc-faq-answer ${openFaq === 5 ? 'rsc-faq-answer--open' : ''}`}>
-                <p>{t('landing.faq.a6')}</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="rsc-cta-final-section rsc-tech-bg animate-on-scroll">
-        {/* Animated Background Elements */}
-        <div className="rsc-tech-bg-glow"></div>
-        <div className="rsc-tech-particles">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className="rsc-tech-particle" style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}></div>
+      {/* Manifesto */}
+      <section className="rg-manifesto animate-on-scroll" aria-labelledby="rg-manifesto-title">
+        <h2 id="rg-manifesto-title" className="rg-manifesto__title">
+          <span>{t('landing.group.manifestoLine1')}</span>
+          <span className="rg-manifesto__accent">{t('landing.group.manifestoLine2')}</span>
+        </h2>
+      </section>
+
+      {/* Ecosystem full-bleed */}
+      <section id="ecosystem" className="rg-eco" aria-labelledby="rg-eco-title">
+        <header className="rg-section-head rg-section-head--pad">
+          <p className="rg-eyebrow">{t('landing.group.ecoEyebrow')}</p>
+          <h2 id="rg-eco-title">{t('landing.group.ecoTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.ecoSubtitle')}</p>
+        </header>
+
+        <div id="products">
+          {ECOSYSTEM.map((item, i) => (
+            <article
+              key={item.key}
+              className={`rg-product rg-product--${item.tone} animate-on-scroll`}
+              aria-labelledby={`rg-product-${item.key}`}
+            >
+              <div className="rg-product__inner">
+                <div className={`rg-product__visual rg-product__visual--${item.key}`}>
+                  <div className="rg-product__visual-glow" />
+                  <span className="rg-product__visual-mark">
+                    {t(`landing.group.products.${item.key}.name`)}
+                  </span>
+                </div>
+                <div className="rg-product__copy">
+                  <p className="rg-eyebrow">{`${String(i + 1).padStart(2, '0')} · ${t('landing.group.productLabel')}`}</p>
+                  <h3 id={`rg-product-${item.key}`}>{t(`landing.group.products.${item.key}.name`)}</h3>
+                  <p className="rg-product__tagline">{t(`landing.group.products.${item.key}.tagline`)}</p>
+                  <p className="rg-product__desc">{t(`landing.group.products.${item.key}.description`)}</p>
+                  <button
+                    type="button"
+                    className="rg-btn rg-btn--primary"
+                    onClick={() => navigateToPage(item.page)}
+                  >
+                    {t('landing.group.learnMore')}
+                    <ArrowUpRight size={18} strokeWidth={2} aria-hidden />
+                  </button>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
+      </section>
 
-        <div className="rsc-cta-final-container">
-          <div className="rsc-cta-final-content">
-            <div className="rsc-cta-final-badge">
-              <span className="rsc-cta-final-badge-dot"></span>
-              <span>{t('landing.cta.badge')}</span>
-            </div>
-            
-            <h2 className="rsc-cta-final-title">
-              {t('landing.cta.title')} <span className="rsc-cta-final-title-gradient">{t('landing.cta.titleGradient')}</span> {t('landing.cta.title2')}
-            </h2>
-            
-            <p className="rsc-cta-final-subtitle">
-              {t('landing.cta.subtitle')}
-            </p>
+      {/* How everything connects */}
+      <section id="connects" className="rg-connect animate-on-scroll" aria-labelledby="rg-connect-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.connectEyebrow')}</p>
+          <h2 id="rg-connect-title">{t('landing.group.connectTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.connectSubtitle')}</p>
+        </header>
 
-            <div className="rsc-cta-final-actions">
-              <button 
-                className="rsc-cta-final-primary"
-                onClick={onEnter || handleEnter}
-              >
-                <Download size={20} />
-                <span>{t('landing.cta.download')}</span>
-                <ArrowRight size={20} />
-              </button>
-              
-              <button 
-                className="rsc-cta-final-secondary"
-                onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-              >
-                <BookOpen size={20} />
-                <span>{t('landing.cta.docs')}</span>
-              </button>
-            </div>
-
-            <p className="rsc-cta-final-microcopy">
-              {t('landing.cta.microcopy')}
-            </p>
+        <div className="rg-diagram" role="img" aria-label={t('landing.group.connectTitle')}>
+          <div className="rg-diagram__node rg-diagram__node--root">
+            {t('landing.group.brand')}
           </div>
-
-          {/* Decorative Elements */}
-          <div className="rsc-cta-final-decoration">
-            <div className="rsc-cta-final-ring rsc-cta-final-ring-1"></div>
-            <div className="rsc-cta-final-ring rsc-cta-final-ring-2"></div>
-            <div className="rsc-cta-final-ring rsc-cta-final-ring-3"></div>
+          <div className="rg-diagram__row rg-diagram__row--mid">
+            <button type="button" className="rg-diagram__node" onClick={() => navigateToPage('institutionalRealEstate')}>
+              {t('landing.group.products.reeskova.name')}
+            </button>
+            <button type="button" className="rg-diagram__node" onClick={() => navigateToPage('institutionalChain')}>
+              {t('landing.group.products.chain.name')}
+            </button>
+            <button type="button" className="rg-diagram__node" onClick={() => navigateToPage('institutionalCorporate')}>
+              {t('landing.group.products.corporate.name')}
+            </button>
+          </div>
+          <div className="rg-diagram__row">
+            <button type="button" className="rg-diagram__node" onClick={() => navigateToPage('wallet')}>
+              {t('landing.group.products.wallet.name')}
+            </button>
+            <button type="button" className="rg-diagram__node" onClick={() => navigateToPage('institutionalP2P')}>
+              {t('landing.group.products.escrow.name')}
+            </button>
+          </div>
+          <div className="rg-diagram__row">
+            <button type="button" className="rg-diagram__node rg-diagram__node--accent" onClick={() => navigateToPage('institutionalP2P')}>
+              {t('landing.group.products.p2p.name')}
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Footer Completo */}
-      <footer className="vaulto-footer">
-        <div className="vaulto-footer-content">
-          <div className="vaulto-footer-section">
-            <div className="vaulto-footer-logo">
-              <div className="vaulto-logo-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="url(#footer-gradient)" />
-                  <defs>
-                    <linearGradient id="footer-gradient" x1="2" y1="7" x2="22" y2="17" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#14b8a6" />
-                      <stop offset="0.5" stopColor="#06b6d4" />
-                      <stop offset="1" stopColor="#8b5cf6" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+      {/* Technology */}
+      <section id="technology" className="rg-tech animate-on-scroll" aria-labelledby="rg-tech-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.techEyebrow')}</p>
+          <h2 id="rg-tech-title">{t('landing.group.techTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.techSubtitle')}</p>
+        </header>
+        <ul className="rg-tech__grid">
+          {TECH.map(({ key, icon: Icon }) => (
+            <li key={key} className="rg-tech__card">
+              <span className="rg-tech__icon" aria-hidden>
+                <Icon size={22} strokeWidth={2} />
+              </span>
+              <h3>{t(`landing.group.tech.${key}.title`)}</h3>
+              <p>{t(`landing.group.tech.${key}.description`)}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Why RSC — numbers only */}
+      <section id="why" className="rg-why animate-on-scroll" aria-labelledby="rg-why-title">
+        <header className="rg-section-head rg-section-head--light">
+          <p className="rg-eyebrow rg-eyebrow--light">{t('landing.group.whyEyebrow')}</p>
+          <h2 id="rg-why-title" className="rg-why__title">{t('landing.group.whyTitle')}</h2>
+        </header>
+        <div className="rg-why__grid">
+          {STATS.map((key) => (
+            <div key={key} className="rg-why__item">
+              <span className="rg-why__value">{t(`landing.group.stats.${key}.value`)}</span>
+              <span className="rg-why__label">{t(`landing.group.stats.${key}.label`)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* For everyone */}
+      <section id="audiences" className="rg-audience animate-on-scroll" aria-labelledby="rg-audience-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.audienceEyebrow')}</p>
+          <h2 id="rg-audience-title">{t('landing.group.audienceTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.audienceSubtitle')}</p>
+        </header>
+        <div className="rg-audience__grid">
+          {AUDIENCES.map(({ key, icon: Icon, page }) => (
+            <article key={key} className="rg-audience__card">
+              <div className={`rg-audience__art rg-audience__art--${key}`} aria-hidden>
+                <Icon size={36} strokeWidth={1.5} />
               </div>
-              <span className="vaulto-footer-brand">RSC Wallet</span>
+              <h3>{t(`landing.group.audiences.${key}.title`)}</h3>
+              <p>{t(`landing.group.audiences.${key}.description`)}</p>
+              <button type="button" className="rg-btn rg-btn--outline" onClick={() => navigateToPage(page)}>
+                {t(`landing.group.audiences.${key}.cta`)}
+                <ArrowRight size={16} strokeWidth={2} aria-hidden />
+              </button>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section id="timeline" className="rg-timeline animate-on-scroll" aria-labelledby="rg-timeline-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.timelineEyebrow')}</p>
+          <h2 id="rg-timeline-title">{t('landing.group.timelineTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.timelineSubtitle')}</p>
+        </header>
+        <ol className="rg-timeline__track">
+          {TIMELINE.map((key, i) => (
+            <li key={key} className="rg-timeline__item">
+              <span className="rg-timeline__dot" aria-hidden />
+              {i === 0 && <span className="rg-timeline__year">{t('landing.group.timelineYear')}</span>}
+              <span className="rg-timeline__label">{t(`landing.group.timeline.${key}`)}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Leadership values */}
+      <section id="leadership" className="rg-values animate-on-scroll" aria-labelledby="rg-values-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.valuesEyebrow')}</p>
+          <h2 id="rg-values-title">{t('landing.group.valuesTitle')}</h2>
+          <p className="rg-section-sub">{t('landing.group.valuesSubtitle')}</p>
+        </header>
+        <ul className="rg-values__grid">
+          {VALUES.map((key) => (
+            <li key={key} className="rg-values__card">
+              <Fingerprint size={22} strokeWidth={2} aria-hidden />
+              <h3>{t(`landing.group.values.${key}`)}</h3>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* News */}
+      <section id="news" className="rg-news animate-on-scroll" aria-labelledby="rg-news-title">
+        <header className="rg-section-head">
+          <p className="rg-eyebrow">{t('landing.group.newsEyebrow')}</p>
+          <h2 id="rg-news-title">{t('landing.group.newsTitle')}</h2>
+        </header>
+        <div className="rg-news__grid">
+          {[1, 2, 3].map((n) => (
+            <article key={n} className="rg-news__card">
+              <p className="rg-news__meta">{t(`landing.group.news.n${n}.meta`)}</p>
+              <h3>{t(`landing.group.news.n${n}.title`)}</h3>
+              <p>{t(`landing.group.news.n${n}.excerpt`)}</p>
+              <button type="button" className="rg-link" onClick={() => navigateToPage('companyPress')}>
+                {t('landing.group.newsRead')}
+                <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
+              </button>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="rg-cta" aria-labelledby="rg-cta-title">
+        <div className="rg-cta__inner">
+          <h2 id="rg-cta-title">{t('landing.group.ctaTitle')}</h2>
+          <p>{t('landing.group.ctaSubtitle')}</p>
+          <button
+            type="button"
+            className="rg-btn rg-btn--gold"
+            onClick={() => scrollToSection('ecosystem')}
+          >
+            {t('landing.group.ctaFinal')}
+            <ArrowRight size={18} strokeWidth={2} aria-hidden />
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="rg-footer">
+        <div className="rg-footer__inner">
+          <div className="rg-footer__brand">
+            <span className="rg-footer__logo">{t('landing.group.brand')}</span>
+            <p>{t('landing.group.footerTagline')}</p>
+            <div className="rg-footer__social">
+              <a href={SOCIAL.discord} target="_blank" rel="noopener noreferrer">Discord</a>
+              <a href={SOCIAL.x} target="_blank" rel="noopener noreferrer">X</a>
+              <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <p className="vaulto-footer-tagline">
-              Your sovereign economy on the RSC Chain
-            </p>
-            <div className="vaulto-footer-social">
-              <a href="#" className="vaulto-social-link" aria-label="Twitter">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
-                </svg>
-              </a>
-              <a href="#" className="vaulto-social-link" aria-label="Discord">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C2.451 6.018 1.73 7.74 1.43 9.497a.082.082 0 0 0 .031.084 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.084c-.3-1.759-1.022-3.48-2.216-5.1a.051.051 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" fill="currentColor"/>
-                </svg>
-              </a>
-              <a href="#" className="vaulto-social-link" aria-label="Telegram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.559z" fill="currentColor"/>
-                </svg>
-              </a>
-              <a href="#" className="vaulto-social-link" aria-label="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
-                </svg>
-              </a>
-            </div>
           </div>
 
-          <div className="vaulto-footer-section">
-            <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#" onClick={onEnter || handleEnter}>Dashboard</a>
+          <div className="rg-footer__col">
+            <h4>{t('landing.group.footer.products')}</h4>
+            <button type="button" onClick={() => navigateToPage('institutionalRealEstate')}>{t('landing.group.products.reeskova.name')}</button>
+            <button type="button" onClick={() => navigateToPage('wallet')}>{t('landing.group.products.wallet.name')}</button>
+            <button type="button" onClick={() => navigateToPage('institutionalP2P')}>{t('landing.group.products.escrow.name')}</button>
+            <button type="button" onClick={() => navigateToPage('institutionalP2P')}>{t('landing.group.products.p2p.name')}</button>
+            <button type="button" onClick={() => navigateToPage('institutionalChain')}>{t('landing.group.products.chain.name')}</button>
+            <button type="button" onClick={() => navigateToPage('institutionalCorporate')}>{t('landing.group.products.corporate.name')}</button>
           </div>
 
-          <div className="vaulto-footer-section">
-            <h4>Resources</h4>
-            <a href="#faq">FAQ</a>
-            <a href="#">Documentation</a>
-            <a href="#">API</a>
-            <a href="#">Blog</a>
+          <div className="rg-footer__col">
+            <h4>{t('landing.group.footer.company')}</h4>
+            <button type="button" onClick={() => navigateToPage('companyAbout')}>{t('landing.group.footer.about')}</button>
+            <button type="button" onClick={() => navigateToPage('companyCareers')}>{t('landing.group.footer.careers')}</button>
+            <button type="button" onClick={() => navigateToPage('companyPress')}>{t('landing.group.footer.press')}</button>
+            <button type="button" onClick={() => navigateToPage('companySecurity')}>{t('landing.group.footer.legal')}</button>
           </div>
 
-          <div className="vaulto-footer-section">
-            <h4>Company</h4>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
-            <a href="#">Press</a>
+          <div className="rg-footer__col">
+            <h4>{t('landing.group.footer.developers')}</h4>
+            <button type="button" onClick={() => navigateToPage('developersAPIs')}>{t('landing.group.footer.api')}</button>
+            <button type="button" onClick={() => navigateToPage('developersDocs')}>{t('landing.group.footer.docs')}</button>
+            <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer">{t('landing.group.footer.github')}</a>
           </div>
 
-          <div className="vaulto-footer-section">
-            <h4>Legal</h4>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Compliance</a>
+          <div className="rg-footer__col">
+            <h4>{t('landing.group.footer.community')}</h4>
+            <a href={SOCIAL.discord} target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href={SOCIAL.x} target="_blank" rel="noopener noreferrer">X</a>
+            <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
-
-        <div className="vaulto-footer-bottom">
-          <p className="vaulto-footer-disclaimer">
-            <AlertCircle size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />
-            We do not custody your funds · We do not sell your data · If you lose your key, no one can recover it
-          </p>
-          <p className="vaulto-footer-copyright">
-            © 2025 RSC Wallet. All rights reserved.
-          </p>
+        <div className="rg-footer__bottom">
+          <p>{t('landing.group.footer.copyright')}</p>
         </div>
       </footer>
     </div>
   );
 }
-

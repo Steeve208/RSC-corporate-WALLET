@@ -1,9 +1,42 @@
 import { useState, useRef, useEffect } from 'react';
-import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X } from 'lucide-react';
+import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X, Landmark } from 'lucide-react';
 import { useTranslation, Language } from '../../contexts/I18nContext';
 
 const NAV_ITEM_KEYS = ['individuos', 'empresas', 'instituciones', 'desarrolladores', 'empresa'] as const;
 type NavbarItemKey = (typeof NAV_ITEM_KEYS)[number];
+type PromoVariant = NavbarItemKey;
+
+const PROMO_IMAGES: Record<PromoVariant, string> = {
+  individuos: '/ecosystem/wallet-v2.jpg',
+  empresas: '/ecosystem/corporate.jpg',
+  instituciones: '/ecosystem/reeskova-v2.jpg',
+  desarrolladores: '/ecosystem/chain.jpg',
+  empresa: '/ecosystem/corporate.jpg',
+};
+
+function DropdownPromoVisual({
+  variant,
+  kicker,
+  line,
+}: {
+  variant: PromoVariant;
+  kicker: string;
+  line: string;
+}) {
+  return (
+    <div
+      className={`rsc-dropdown-promo-visual rsc-dropdown-promo-visual--${variant}`}
+      style={{ backgroundImage: `url(${PROMO_IMAGES[variant]})` }}
+      aria-hidden
+    >
+      <div className="rsc-dropdown-promo-veil" />
+      <div className="rsc-dropdown-promo-caption">
+        <span className="rsc-dropdown-promo-kicker">{kicker}</span>
+        <span className="rsc-dropdown-promo-line">{line}</span>
+      </div>
+    </div>
+  );
+}
 
 export function Navbar() {
   const { t, language, setLanguage } = useTranslation();
@@ -15,6 +48,7 @@ export function Navbar() {
   const [isEmpresaOpen, setIsEmpresaOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [navScrolled, setNavScrolled] = useState(false);
   const individuosDropdownDesktopRef = useRef<HTMLDivElement>(null);
   const individuosDropdownMobileRef = useRef<HTMLDivElement>(null);
   const empresasDropdownDesktopRef = useRef<HTMLDivElement>(null);
@@ -30,14 +64,6 @@ export function Navbar() {
   const languages: { code: Language; name: string }[] = [
     { code: 'en', name: t('languages.en') },
     { code: 'es', name: t('languages.es') },
-    { code: 'pt', name: t('languages.pt') },
-    { code: 'fr', name: t('languages.fr') },
-    { code: 'de', name: t('languages.de') },
-    { code: 'it', name: t('languages.it') },
-    { code: 'zh', name: t('languages.zh') },
-    { code: 'ja', name: t('languages.ja') },
-    { code: 'ko', name: t('languages.ko') },
-    { code: 'ar', name: t('languages.ar') },
   ];
 
   const individuosMenuItems = {
@@ -312,6 +338,17 @@ export function Navbar() {
           }
         }
       },
+      {
+        label: t('dropdowns.instituciones.items.realEstate.title'),
+        description: t('dropdowns.instituciones.items.realEstate.description'),
+        icon: Landmark,
+        href: '#',
+        onClick: () => {
+          if ((window as any).navigateToPage) {
+            (window as any).navigateToPage('institutionalRealEstate');
+          }
+        }
+      },
     ],
     right: [
       { 
@@ -321,7 +358,7 @@ export function Navbar() {
         href: '#',
         onClick: () => {
           if ((window as any).navigateToPage) {
-            (window as any).navigateToPage('rscWeb');
+            (window as any).navigateToPage('institutionalChain');
           }
         }
       },
@@ -338,6 +375,13 @@ export function Navbar() {
       },
     ]
   };
+
+  useEffect(() => {
+    const onScroll = () => setNavScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Cerrar al clic fuera: refs separados escritorio/móvil (un solo ref apuntaba al último nodo y el mega menú de escritorio no pasaba contains()).
   useEffect(() => {
@@ -456,11 +500,20 @@ export function Navbar() {
   };
 
   return (
-    <nav className="rsc-navbar">
+    <nav className={`rsc-navbar ${navScrolled ? 'rsc-navbar--scrolled' : ''}`}>
       <div className="rsc-navbar-container">
         {/* Logo - Left */}
         <div className="rsc-navbar-logo">
-          <div className="rsc-logo">
+          <button
+            type="button"
+            className="rsc-logo"
+            onClick={() => {
+              if ((window as any).navigateToPage) {
+                (window as any).navigateToPage('landing');
+              }
+            }}
+            aria-label="RSC Group home"
+          >
             <div className="rsc-logo-dots">
               <div className="rsc-dot rsc-dot--top"></div>
               <div className="rsc-dot rsc-dot--left"></div>
@@ -468,8 +521,8 @@ export function Navbar() {
               <div className="rsc-dot rsc-dot--right"></div>
               <div className="rsc-dot rsc-dot--bottom"></div>
             </div>
-            <span className="rsc-logo-text">RSC CHAIN</span>
-          </div>
+            <span className="rsc-logo-text">RSC GROUP</span>
+          </button>
         </div>
 
         {/* Desktop Center Navigation */}
@@ -554,13 +607,7 @@ export function Navbar() {
 
                       {/* Promotional Block */}
                       <div className="rsc-dropdown-promo">
-                        <div className="rsc-dropdown-promo-visual">
-                          <div className="rsc-dropdown-promo-dots">
-                            {Array.from({ length: 50 }).map((_, i) => (
-                              <div key={i} className="rsc-dropdown-promo-dot"></div>
-                            ))}
-                          </div>
-                        </div>
+                        <DropdownPromoVisual variant="empresas" kicker={t('dropdowns.empresas.promoKicker')} line={t('dropdowns.empresas.promoLine')} />
                         <div className="rsc-dropdown-promo-content">
                           <h3 className="rsc-dropdown-promo-title">{t('dropdowns.empresas.title')}</h3>
                           <p className="rsc-dropdown-promo-text">{t('dropdowns.empresas.subtitle')}</p>
@@ -648,13 +695,7 @@ export function Navbar() {
 
                       {/* Promotional Block */}
                       <div className="rsc-dropdown-promo">
-                        <div className="rsc-dropdown-promo-visual">
-                          <div className="rsc-dropdown-promo-dots">
-                            {Array.from({ length: 50 }).map((_, i) => (
-                              <div key={i} className="rsc-dropdown-promo-dot"></div>
-                            ))}
-                          </div>
-                        </div>
+                        <DropdownPromoVisual variant="individuos" kicker={t('dropdowns.individuos.promoKicker')} line={t('dropdowns.individuos.promoLine')} />
                         <div className="rsc-dropdown-promo-content">
                           <h3 className="rsc-dropdown-promo-title">{t('dropdowns.individuos.title')}</h3>
                           <p className="rsc-dropdown-promo-text">{t('dropdowns.individuos.subtitle')}</p>
@@ -744,13 +785,7 @@ export function Navbar() {
 
                       {/* Promotional Block */}
                       <div className="rsc-dropdown-promo">
-                        <div className="rsc-dropdown-promo-visual">
-                          <div className="rsc-dropdown-promo-dots">
-                            {Array.from({ length: 50 }).map((_, i) => (
-                              <div key={i} className="rsc-dropdown-promo-dot"></div>
-                            ))}
-                          </div>
-                        </div>
+                        <DropdownPromoVisual variant="desarrolladores" kicker={t('dropdowns.desarrolladores.promoKicker')} line={t('dropdowns.desarrolladores.promoLine')} />
                         <div className="rsc-dropdown-promo-content">
                           <h3 className="rsc-dropdown-promo-title">{t('dropdowns.desarrolladores.title')}</h3>
                           <p className="rsc-dropdown-promo-text">{t('dropdowns.desarrolladores.subtitle')}</p>
@@ -840,13 +875,7 @@ export function Navbar() {
 
                       {/* Promotional Block */}
                       <div className="rsc-dropdown-promo">
-                        <div className="rsc-dropdown-promo-visual">
-                          <div className="rsc-dropdown-promo-dots">
-                            {Array.from({ length: 50 }).map((_, i) => (
-                              <div key={i} className="rsc-dropdown-promo-dot"></div>
-                            ))}
-                          </div>
-                        </div>
+                        <DropdownPromoVisual variant="instituciones" kicker={t('dropdowns.instituciones.promoKicker')} line={t('dropdowns.instituciones.promoLine')} />
                         <div className="rsc-dropdown-promo-content">
                           <h3 className="rsc-dropdown-promo-title">{t('dropdowns.instituciones.title')}</h3>
                           <p className="rsc-dropdown-promo-text">{t('dropdowns.instituciones.subtitle')}</p>
@@ -936,13 +965,7 @@ export function Navbar() {
 
                       {/* Promotional Block */}
                       <div className="rsc-dropdown-promo">
-                        <div className="rsc-dropdown-promo-visual">
-                          <div className="rsc-dropdown-promo-dots">
-                            {Array.from({ length: 50 }).map((_, i) => (
-                              <div key={i} className="rsc-dropdown-promo-dot"></div>
-                            ))}
-                          </div>
-                        </div>
+                        <DropdownPromoVisual variant="empresa" kicker={t('dropdowns.empresa.promoKicker')} line={t('dropdowns.empresa.promoLine')} />
                         <div className="rsc-dropdown-promo-content">
                           <h3 className="rsc-dropdown-promo-title">{t('dropdowns.empresa.title')}</h3>
                           <p className="rsc-dropdown-promo-text">{t('dropdowns.empresa.subtitle')}</p>
@@ -995,9 +1018,6 @@ export function Navbar() {
           </div>
           <button className="rsc-icon-button" aria-label="Search">
             <Search className="rsc-icon" size={18} />
-          </button>
-          <button className="rsc-action-button">
-            {t('navbar.descargar')}
           </button>
         </div>
 
@@ -1294,11 +1314,6 @@ export function Navbar() {
             <button className="rsc-mobile-action-button">
               <Search size={20} />
               <span>Buscar / Search</span>
-            </button>
-
-            {/* Download Button */}
-            <button className="rsc-mobile-action-button rsc-mobile-action-button--primary">
-              {t('navbar.descargar')}
             </button>
           </div>
         </div>

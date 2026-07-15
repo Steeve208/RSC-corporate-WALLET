@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import "./styles/reeskova-theme.css";
 import App from "./App.tsx";
 import { I18nProvider } from "./contexts/I18nContext";
 
@@ -26,13 +27,13 @@ try {
   root.render(
     <div style={{ 
       padding: '40px', 
-      background: '#050509', 
-      color: '#fff', 
+      background: '#FFFFFF', 
+      color: '#0F172A', 
       minHeight: '100vh',
-      fontFamily: 'system-ui, sans-serif'
+      fontFamily: 'Inter, system-ui, sans-serif'
     }}>
-      <h1 style={{ color: '#f00' }}>Error al cargar la aplicación</h1>
-      <pre style={{ color: '#f00', whiteSpace: 'pre-wrap', marginTop: '20px' }}>
+      <h1 style={{ color: '#081A33' }}>Error al cargar la aplicación</h1>
+      <pre style={{ color: '#64748B', whiteSpace: 'pre-wrap', marginTop: '20px' }}>
         {String(error)}
         {error instanceof Error ? `\n\nStack:\n${error.stack}` : ''}
       </pre>

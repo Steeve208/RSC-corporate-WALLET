@@ -12,6 +12,7 @@ import { InstitutionalP2PPage } from './components/pages/InstitutionalP2PPage';
 import { InstitutionalChainPage } from './components/pages/InstitutionalChainPage';
 import { InstitutionalCorporatePage } from './components/pages/InstitutionalCorporatePage';
 import { InstitutionalRSKPage } from './components/pages/InstitutionalRSKPage';
+import { InstitutionalRealEstatePage } from './components/pages/InstitutionalRealEstatePage';
 import { DevelopersDocsPage } from './components/pages/DevelopersDocsPage';
 import { DevelopersChainPage } from './components/pages/DevelopersChainPage';
 import { DevelopersAPIsPage } from './components/pages/DevelopersAPIsPage';
@@ -25,8 +26,10 @@ import { BusinessBillingPage } from './components/pages/BusinessBillingPage';
 import { DevelopersRoadmapPage } from './components/pages/DevelopersRoadmapPage';
 import { CompanyPressPage } from './components/pages/CompanyPressPage';
 import { RscWebEmbeddedPage } from './components/pages/RscWebEmbeddedPage';
+/* Load Reeskova theme last so it wins over page-level CSS imports */
+import './styles/reeskova-theme.css';
 
-type Page = 'landing' | 'wallet' | 'payments' | 'staking' | 'education' | 'remittances' | 'businessWallet' | 'businessPayments' | 'businessAPI' | 'businessUseCases' | 'businessBilling' | 'institutionalP2P' | 'institutionalChain' | 'institutionalCorporate' | 'institutionalRSK' | 'rscWeb' | 'developersDocs' | 'developersChain' | 'developersAPIs' | 'developersTestnet' | 'developersRoadmap' | 'companyAbout' | 'companySecurity' | 'companyCareers' | 'companyContact' | 'companyPress';
+type Page = 'landing' | 'wallet' | 'payments' | 'staking' | 'education' | 'remittances' | 'businessWallet' | 'businessPayments' | 'businessAPI' | 'businessUseCases' | 'businessBilling' | 'institutionalP2P' | 'institutionalChain' | 'institutionalCorporate' | 'institutionalRSK' | 'institutionalRealEstate' | 'rscWeb' | 'developersDocs' | 'developersChain' | 'developersAPIs' | 'developersTestnet' | 'developersRoadmap' | 'companyAbout' | 'companySecurity' | 'companyCareers' | 'companyContact' | 'companyPress';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('landing');
@@ -92,6 +95,10 @@ export default function App() {
 
   if (currentPage === 'institutionalRSK') {
     return <InstitutionalRSKPage />;
+  }
+
+  if (currentPage === 'institutionalRealEstate') {
+    return <InstitutionalRealEstatePage />;
   }
 
   if (currentPage === 'rscWeb') {

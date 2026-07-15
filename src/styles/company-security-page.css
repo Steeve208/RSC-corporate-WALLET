@@ -1,8 +1,8 @@
 /* Company Security Page Styles */
 .company-security-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .company-security-container {
@@ -15,7 +15,7 @@
 .company-security-hero {
   padding: 140px 0 80px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .company-security-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .company-security-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .company-security-model {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-security-responsibilities {
@@ -86,7 +86,7 @@
 }
 
 .company-security-practices {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-security-section-header {
@@ -97,20 +97,20 @@
 }
 
 .company-security-section-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
 .company-security-section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #0F172A;
   margin: 0;
 }
 
 .company-security-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 900px;
@@ -129,27 +129,27 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .company-security-model-feature:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 .company-security-model-feature-icon {
   width: 64px;
   height: 64px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -161,12 +161,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-security-model-feature-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -179,21 +179,21 @@
 }
 
 .company-security-responsibility-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .company-security-responsibility-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .company-security-check-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin-bottom: 16px;
 }
 
@@ -201,12 +201,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-security-responsibility-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -224,17 +224,17 @@
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
   transition: all 0.3s ease;
 }
 
 .company-security-practice-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 /* Responsive */

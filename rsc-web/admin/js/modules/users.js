@@ -673,6 +673,14 @@ function getUsersTemplate() {
   `;
 }
 
+// ES module (institutional-admin): mismo HTML que loadUsers()
+export async function render() {
+  return getUsersTemplate();
+}
+export async function init() {
+  await cargarDatos();
+}
+
 // Exportar funciones al scope global
 window.loadUsers = loadUsers;
 window.cargarDatos = cargarDatos;

@@ -1,8 +1,8 @@
 /* Company About Page Styles */
 .company-about-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .company-about-container {
@@ -13,11 +13,12 @@
 
 /* Hero Section */
 .company-about-hero {
-  padding: 140px 0 80px;
+  padding: 120px 0 72px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: #FFFFFF;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .company-about-hero::before {
@@ -27,7 +28,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -46,28 +47,32 @@
 }
 
 .company-about-hero-icon {
-  color: #14b8a6;
-  margin: 0 auto 24px;
+  color: rgba(37, 99, 235, 0.85);
+  margin: 0 auto 20px;
   display: flex;
   justify-content: center;
 }
 
+.company-about-hero-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
 .company-about-hero-title {
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  color: #081A33;
+  letter-spacing: -0.035em;
 }
 
 .company-about-hero-subtitle {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  font-size: clamp(1.05rem, 1.75vw, 1.25rem);
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.65;
+  max-width: 36rem;
+  margin-inline: auto;
 }
 
 /* Section Styles */
@@ -78,15 +83,15 @@
 }
 
 .company-about-vision {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-about-mission {
-  background: rgba(10, 10, 10, 0.5);
+  background: #F8FAFC;
 }
 
 .company-about-philosophy {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-about-section-header {
@@ -97,22 +102,28 @@
 }
 
 .company-about-section-icon {
-  color: #14b8a6;
+  color: rgba(37, 99, 235, 0.9);
   flex-shrink: 0;
 }
 
+.company-about-section-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
 .company-about-section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  color: #ffffff;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 600;
+  color: #0F172A;
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 .company-about-description {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
-  max-width: 800px;
+  font-size: 1.0625rem;
+  color: rgba(226, 232, 240, 0.82);
+  line-height: 1.75;
+  max-width: 42rem;
 }
 
 /* Philosophy Principles */
@@ -124,30 +135,29 @@
 }
 
 .company-about-principle-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 32px;
-  transition: all 0.3s ease;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .company-about-principle-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
-  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(37, 99, 235, 0.22);
 }
 
 .company-about-principle-title {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 12px;
-  color: #ffffff;
+  margin-bottom: 10px;
+  color: #081A33;
 }
 
 .company-about-principle-description {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  color: rgba(203, 213, 225, 0.85);
+  line-height: 1.65;
 }
 
 /* Responsive */

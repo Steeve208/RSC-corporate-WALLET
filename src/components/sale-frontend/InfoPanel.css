@@ -34,7 +34,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #255F9E 0%, #163A5F 100%);
   transition: width 0.3s ease;
 }
 
@@ -68,7 +68,7 @@
   height: 40px;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
   border-radius: 10px;
-  color: #667eea;
+  color: #255F9E;
   flex-shrink: 0;
 }
 

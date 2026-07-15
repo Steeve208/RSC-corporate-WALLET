@@ -978,6 +978,17 @@ function getAdminsTemplate() {
   `;
 }
 
+export async function render() {
+  return getAdminsTemplate();
+}
+export async function init() {
+  ensureAdminFormListener();
+  if (rolesList.length === 0) {
+    rolesList = [...ROLES_PREDEFINIDOS];
+  }
+  await Promise.all([cargarRoles(), cargarAdmins()]);
+}
+
 // Exportar funciones
 window.loadAdminsModule = loadAdminsModule;
 window.cargarAdmins = cargarAdmins;

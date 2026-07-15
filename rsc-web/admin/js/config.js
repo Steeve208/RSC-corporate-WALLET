@@ -38,6 +38,10 @@ const ADMIN_CONFIG = {
   api: {
     // Base URL de tu API (si tienes backend separado)
     baseUrl: 'https://api.rscchain.com',
+
+    // Backend Express del repo (backend/index.js): JWT en /auth/admin/login, datos en /admin/*
+    // Producción: misma URL que sirve el panel o tu API pública.
+    miningBackendUrl: 'http://127.0.0.1:4000',
     
     // Timeout de requests (milisegundos)
     timeout: 30000,

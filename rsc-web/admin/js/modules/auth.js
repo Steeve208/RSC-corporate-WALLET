@@ -163,6 +163,16 @@ async function adminLogin(email, password) {
     localStorage.setItem('adminSession', JSON.stringify(sessionData));
     localStorage.setItem('admin_session', JSON.stringify({ user: sessionData, role: { id: sessionData.role_id, name: sessionData.role } }));
     currentAdmin = sessionData;
+
+    try {
+      if (typeof window.exchangeMiningBackendSession === 'function') {
+        const synced = await window.exchangeMiningBackendSession(email.toLowerCase().trim(), password);
+        if (synced) console.log('✅ Sesión del API de minería (PostgreSQL admins) sincronizada');
+        else console.log('ℹ️ API de minería: sin JWT (el email debe existir en la tabla admins del backend PostgreSQL con la misma contraseña).');
+      }
+    } catch (syncErr) {
+      console.warn('API minería sync:', syncErr);
+    }
     
     // Registrar en audit log
     try {
@@ -199,6 +209,8 @@ async function adminLogout() {
     }
     
     localStorage.removeItem('adminSession');
+    localStorage.removeItem('admin_session');
+    if (typeof window.clearMiningAdminJwt === 'function') window.clearMiningAdminJwt();
     currentAdmin = null;
     
     // Recargar página para mostrar login
@@ -207,6 +219,8 @@ async function adminLogout() {
   } catch (error) {
     console.error('Error en logout:', error);
     localStorage.removeItem('adminSession');
+    localStorage.removeItem('admin_session');
+    if (typeof window.clearMiningAdminJwt === 'function') window.clearMiningAdminJwt();
     window.location.reload();
   }
 }
@@ -294,8 +308,12 @@ function hasPermission(module) {
   
   // Dashboard siempre permitido
   if (module === 'dashboard') return true;
-  
-  return false;
+
+  try {
+    return getAllowedModules().includes(module);
+  } catch (e) {
+    return false;
+  }
 }
 
 // Obtener módulos permitidos
@@ -305,9 +323,13 @@ function getAllowedModules() {
   
   if (session.role === 'super_admin' || (session.permissions && session.permissions.includes('all'))) {
     return [
-      'dashboard', 'content', 'users', 'social-metrics', 
-      'metrics', 'campaigns', 'rewards', 'jobs', 
-      'treasury', 'admins', 'audit', 'settings'
+      'dashboard',
+      'mining-ops',
+      'users',
+      'content',
+      'social-metrics',
+      'metrics',
+      'admins',
     ];
   }
   
@@ -325,7 +347,9 @@ function getAllowedModules() {
     'treasury': ['treasury'],
     'payments': ['treasury'],
     'dashboard': ['dashboard'],
-    'reports': ['dashboard', 'audit']
+    'reports': ['dashboard', 'audit'],
+    'mining_ops': ['mining-ops'],
+    'mining': ['mining-ops']
   };
   
   const modules = new Set(['dashboard']);

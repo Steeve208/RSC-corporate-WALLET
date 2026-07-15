@@ -1,8 +1,8 @@
 /* Company Press Page Styles */
 .company-press-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .company-press-container {
@@ -15,7 +15,7 @@
 .company-press-hero {
   padding: 140px 0 100px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .company-press-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 32px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .company-press-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 700px;
@@ -79,20 +79,20 @@
   align-items: center;
   gap: 12px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   border: none;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
 }
 
 .company-press-hero-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .company-press-hero-cta-icon {
@@ -112,7 +112,7 @@
 }
 
 .company-press-statements {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-press-news {
@@ -120,7 +120,7 @@
 }
 
 .company-press-coverage {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-press-announcements {
@@ -128,7 +128,7 @@
 }
 
 .company-press-media-kit {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-press-contact {
@@ -136,7 +136,7 @@
 }
 
 .company-press-form-section {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .company-press-section-header {
@@ -145,7 +145,7 @@
 }
 
 .company-press-section-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -153,12 +153,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-section-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -172,16 +172,16 @@
 }
 
 .company-press-statement-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .company-press-statement-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -190,7 +190,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
   margin-bottom: 16px;
 }
 
@@ -198,12 +198,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-statement-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -212,7 +212,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
@@ -220,7 +220,7 @@
 }
 
 .company-press-statement-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 12px;
 }
 
@@ -232,27 +232,27 @@
 }
 
 .company-press-news-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .company-press-news-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .company-press-news-image {
   width: 100%;
   height: 180px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .company-press-news-content {
@@ -264,7 +264,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
   margin-bottom: 12px;
 }
 
@@ -272,12 +272,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-news-description {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -286,7 +286,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -294,7 +294,7 @@
 }
 
 .company-press-news-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 8px;
 }
 
@@ -306,23 +306,23 @@
 }
 
 .company-press-coverage-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
 }
 
 .company-press-coverage-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .company-press-coverage-source {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #14b8a6;
+  color: #2563EB;
   margin-bottom: 12px;
 }
 
@@ -330,7 +330,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-coverage-date {
@@ -338,7 +338,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
   margin-bottom: 16px;
 }
 
@@ -346,7 +346,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -354,7 +354,7 @@
 }
 
 .company-press-coverage-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 8px;
 }
 
@@ -368,8 +368,8 @@
 }
 
 .company-press-announcement-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   display: flex;
@@ -378,14 +378,14 @@
 }
 
 .company-press-announcement-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
 }
 
 .company-press-announcement-badge {
   padding: 8px 16px;
-  background: rgba(20, 184, 166, 0.2);
-  color: #14b8a6;
+  background: rgba(37, 99, 235, 0.2);
+  color: #2563EB;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -401,12 +401,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-announcement-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -422,7 +422,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748B;
 }
 
 /* Media Kit */
@@ -433,8 +433,8 @@
 }
 
 .company-press-media-kit-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 40px;
   text-align: center;
@@ -442,13 +442,13 @@
 }
 
 .company-press-media-kit-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
 .company-press-media-kit-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -456,12 +456,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-media-kit-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -470,7 +470,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -478,7 +478,7 @@
 }
 
 .company-press-media-kit-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 12px;
 }
 
@@ -490,7 +490,7 @@
 }
 
 .company-press-contact-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 32px;
 }
 
@@ -498,12 +498,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-contact-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 32px;
   line-height: 1.6;
 }
@@ -511,26 +511,26 @@
 .company-press-contact-email {
   display: inline-block;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   border: none;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
 }
 
 .company-press-contact-email:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 /* Media Form */
 .company-press-form-wrapper {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 48px;
   max-width: 800px;
@@ -543,7 +543,7 @@
 }
 
 .company-press-form-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
 }
 
@@ -551,12 +551,12 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .company-press-form-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -581,17 +581,17 @@
 .company-press-form-label {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 .company-press-form-input,
 .company-press-form-select,
 .company-press-form-textarea {
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 14px 16px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -601,7 +601,7 @@
 .company-press-form-select:focus,
 .company-press-form-textarea:focus {
   outline: none;
-  border-color: #14b8a6;
+  border-color: #2563EB;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -616,21 +616,21 @@
   justify-content: center;
   gap: 12px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background: #D4A017;
   border: none;
   border-radius: 12px;
-  color: #ffffff;
+  color: #0F172A;
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.28);
   margin-top: 8px;
 }
 
 .company-press-form-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 160, 23, 0.35);
 }
 
 .company-press-form-submit-icon {

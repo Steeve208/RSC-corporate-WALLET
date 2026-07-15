@@ -1,8 +1,8 @@
 /* Developers APIs Page Styles */
 .developers-apis-page {
   min-height: 100vh;
-  background: #050509;
-  color: #ffffff;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
 .developers-apis-container {
@@ -15,7 +15,7 @@
 .developers-apis-hero {
   padding: 140px 0 80px;
   margin-top: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050509 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .developers-apis-hero-icon {
-  color: #14b8a6;
+  color: #2563EB;
   margin: 0 auto 24px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #2563EB 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
 
 .developers-apis-hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .developers-apis-wallet-sdk {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .developers-apis-payments-sdk {
@@ -87,7 +87,7 @@
 }
 
 .developers-apis-examples {
-  background: #050509;
+  background: #FFFFFF;
 }
 
 .developers-apis-versioning {
@@ -102,20 +102,20 @@
 }
 
 .developers-apis-section-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
 .developers-apis-section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #0F172A;
   margin: 0;
 }
 
 .developers-apis-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748B;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 900px;
@@ -134,11 +134,11 @@
   align-items: center;
   gap: 12px;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #64748B;
 }
 
 .developers-apis-check-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -151,13 +151,13 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .developers-apis-code-block {
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 16px 48px 16px 16px;
 }
@@ -165,7 +165,7 @@
 .developers-apis-code-block code {
   font-family: 'Courier New', monospace;
   font-size: 0.9375rem;
-  color: #14b8a6;
+  color: #2563EB;
   line-height: 1.6;
   display: block;
 }
@@ -174,18 +174,18 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #E2E8F0;
+  border: 1px solid #E2E8F0;
   border-radius: 6px;
   padding: 8px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .developers-apis-copy-button:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 /* Examples */
@@ -197,16 +197,16 @@
 }
 
 .developers-apis-example-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 40px;
   transition: all 0.3s ease;
 }
 
 .developers-apis-example-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -214,25 +214,25 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 24px;
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #14b8a6;
+  color: #2563EB;
 }
 
 .developers-apis-example-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0F172A;
   text-align: center;
 }
 
 .developers-apis-example-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   margin-bottom: 20px;
   line-height: 1.6;
   text-align: center;
@@ -240,7 +240,7 @@
 
 .developers-apis-example-code {
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 24px;
@@ -249,7 +249,7 @@
 .developers-apis-example-code code {
   font-family: 'Courier New', monospace;
   font-size: 0.875rem;
-  color: #14b8a6;
+  color: #2563EB;
   line-height: 1.6;
   display: block;
   text-align: center;
@@ -259,7 +259,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -270,7 +270,7 @@
 }
 
 .developers-apis-example-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 12px;
 }
 
@@ -288,16 +288,16 @@
 }
 
 .developers-apis-version-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .developers-apis-version-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: #FFFFFF;
+  border-color: rgba(212, 160, 23, 0.28);
   transform: translateY(-4px);
 }
 
@@ -309,7 +309,7 @@
 }
 
 .developers-apis-version-icon {
-  color: #14b8a6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 
@@ -321,13 +321,13 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 4px;
-  color: #ffffff;
+  color: #0F172A;
 }
 
 .developers-apis-version-tag {
   display: inline-block;
-  background: rgba(20, 184, 166, 0.2);
-  color: #14b8a6;
+  background: rgba(37, 99, 235, 0.2);
+  color: #2563EB;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 4px 12px;
@@ -337,7 +337,7 @@
 
 .developers-apis-version-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -346,7 +346,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #14b8a6;
+  color: #2563EB;
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
@@ -354,7 +354,7 @@
 }
 
 .developers-apis-version-link:hover {
-  color: #06b6d4;
+  color: #2563EB;
   gap: 12px;
 }
 

@@ -6,6 +6,7 @@
 :root {
   /* Colors */
   --primary: #00ff88;
+  --role-accent: #00ff88;
   --primary-dark: #00cc6a;
   --secondary: #6366f1;
   --danger: #ff4444;
@@ -1224,5 +1225,18 @@ body {
   .action-btns {
     flex-wrap: wrap;
   }
+}
+
+/* Acento por rol Supabase (interfaz distinta por miembro del equipo) */
+body[data-admin-role="viewer"] { --role-accent: #38bdf8; }
+body[data-admin-role="content_manager"] { --role-accent: #a78bfa; }
+body[data-admin-role="user_manager"] { --role-accent: #f472b6; }
+body[data-admin-role="metrics_manager"] { --role-accent: #22d3ee; }
+body[data-admin-role="finance_manager"] { --role-accent: #fbbf24; }
+body[data-admin-role="super_admin"] { --role-accent: #00ff88; }
+
+.mining-ops h2 {
+  border-left: 3px solid var(--role-accent);
+  padding-left: 0.65rem;
 }
 
