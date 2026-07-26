@@ -421,7 +421,7 @@ export function CompanySignDocsPage() {
                                   key={s.id}
                                   className={s.signed ? 'chip-signed' : 'chip-pending'}
                                 >
-                                  {s.roleLabel}: {s.email}
+                                  {s.name} · {s.roleLabel}
                                 </span>
                               ))}
                             </div>
@@ -509,7 +509,6 @@ export function CompanySignDocsPage() {
                         <div>
                           <strong>{s.name}</strong>
                           <span>{s.roleLabel}</span>
-                          <small>{s.email}</small>
                         </div>
                       </li>
                     ))}
