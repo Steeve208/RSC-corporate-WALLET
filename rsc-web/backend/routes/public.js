@@ -10,10 +10,14 @@ const {
 } = require('../services/leaderboardService');
 const { parsePagination, buildPaginatedResponse } = require('../utils/pagination');
 
+const signDocsRoutes = require('./sign-docs');
+
 const router = express.Router();
 
 // Aplicar rate limiting para API pública
 router.use(publicApiLimiter);
+
+router.use('/sign-docs', signDocsRoutes);
 
 /**
  * GET /public/leaderboard

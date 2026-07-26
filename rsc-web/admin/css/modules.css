@@ -2951,3 +2951,163 @@
   }
 }
 
+/* ===== SIGN DOCS MODULE ===== */
+.sign-docs-module {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.sign-docs-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.sign-docs-stats .stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.sign-docs-stats .stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.sign-docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sign-docs-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.sign-docs-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sign-docs-card-head h3 {
+  margin: 0 0 0.25rem;
+}
+
+.sign-docs-card-head p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.sign-docs-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.sign-docs-badge--open {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.sign-docs-badge--completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.sign-docs-progress {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sign-docs-signers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sign-docs-signer-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.8fr auto;
+  gap: var(--spacing-sm);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  align-items: center;
+}
+
+.sign-docs-signer-row.signed .signer-status {
+  color: #22c55e;
+}
+
+.sign-docs-signer-row.pending .signer-status {
+  color: var(--text-muted);
+}
+
+.sign-docs-card-meta {
+  margin-top: var(--spacing-sm);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.sign-docs-empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+.sign-docs-empty i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.sign-docs-modal {
+  max-width: 560px;
+  width: 100%;
+}
+
+.sign-docs-signers-block {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.sign-docs-signers-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.sign-docs-signers-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sign-docs-signer-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr auto;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sign-docs-error-detail {
+  font-size: 0.8rem;
+  color: #ef4444;
+}
+

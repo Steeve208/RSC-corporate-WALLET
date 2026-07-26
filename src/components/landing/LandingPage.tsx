@@ -50,7 +50,8 @@ type AppNavigatePage =
   | 'companySecurity'
   | 'companyCareers'
   | 'companyContact'
-  | 'companyPress';
+  | 'companyPress'
+  | 'companySignDocs';
 
 function navigateToPage(page: AppNavigatePage) {
   const w = window as Window & { navigateToPage?: (p: AppNavigatePage) => void };

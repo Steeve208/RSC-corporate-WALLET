@@ -25,11 +25,12 @@ import { RemittancesPage } from './components/pages/RemittancesPage';
 import { BusinessBillingPage } from './components/pages/BusinessBillingPage';
 import { DevelopersRoadmapPage } from './components/pages/DevelopersRoadmapPage';
 import { CompanyPressPage } from './components/pages/CompanyPressPage';
+import { CompanySignDocsPage } from './components/pages/CompanySignDocsPage';
 import { RscWebEmbeddedPage } from './components/pages/RscWebEmbeddedPage';
 /* Load Reeskova theme last so it wins over page-level CSS imports */
 import './styles/reeskova-theme.css';
 
-type Page = 'landing' | 'wallet' | 'payments' | 'staking' | 'education' | 'remittances' | 'businessWallet' | 'businessPayments' | 'businessAPI' | 'businessUseCases' | 'businessBilling' | 'institutionalP2P' | 'institutionalChain' | 'institutionalCorporate' | 'institutionalRSK' | 'institutionalRealEstate' | 'rscWeb' | 'developersDocs' | 'developersChain' | 'developersAPIs' | 'developersTestnet' | 'developersRoadmap' | 'companyAbout' | 'companySecurity' | 'companyCareers' | 'companyContact' | 'companyPress';
+type Page = 'landing' | 'wallet' | 'payments' | 'staking' | 'education' | 'remittances' | 'businessWallet' | 'businessPayments' | 'businessAPI' | 'businessUseCases' | 'businessBilling' | 'institutionalP2P' | 'institutionalChain' | 'institutionalCorporate' | 'institutionalRSK' | 'institutionalRealEstate' | 'rscWeb' | 'developersDocs' | 'developersChain' | 'developersAPIs' | 'developersTestnet' | 'developersRoadmap' | 'companyAbout' | 'companySecurity' | 'companyCareers' | 'companyContact' | 'companyPress' | 'companySignDocs';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('landing');
@@ -143,6 +144,10 @@ export default function App() {
 
   if (currentPage === 'companyPress') {
     return <CompanyPressPage />;
+  }
+
+  if (currentPage === 'companySignDocs') {
+    return <CompanySignDocsPage />;
   }
 
   return <LandingPage />;

@@ -4,7 +4,8 @@
 // =====================================================
 
 // true = entra sin Supabase (solo pruebas UI). false = login real vía login.html (equipo / producción).
-const ADMIN_SKIP_LOGIN_FOR_TEST = false;
+const ADMIN_SKIP_LOGIN_FOR_TEST =
+  (typeof ADMIN_CONFIG !== 'undefined' && ADMIN_CONFIG.skipLoginForTest) || true;
 window.ADMIN_SKIP_LOGIN_FOR_TEST = ADMIN_SKIP_LOGIN_FOR_TEST;
 
 // Usuario ficticio cuando el login está desactivado para test
@@ -414,6 +415,7 @@ const ROLES = {
       'audit.*',
       'risk.*',
       'legal.*',
+      'signdocs.*',
       'transactions.view',
       'approvals.view',
       'approvals.approve'
@@ -1008,6 +1010,7 @@ const INSTITUTIONAL_MODULE_LOADERS = {
   content: () => import('./modules/content.js'),
   admins: () => import('./modules/admins.js'),
   'social-metrics': () => import('./modules/social-metrics.js'),
+  'sign-docs': () => import('./modules/sign-docs.js'),
 };
 
 async function importInstitutionalModule(moduleName) {
@@ -1214,6 +1217,7 @@ function updatePageTitle(moduleName) {
       'media-library': 'Media library',
       'hr-dashboard': 'HR dashboard',
       'knowledge-base': 'Knowledge base',
+      'sign-docs': 'Sign Docs',
     };
 
     pageTitle.textContent = titles[moduleName] || humanizeModuleTitle(moduleName);
@@ -1474,6 +1478,18 @@ const AdminAPI = {
     return null;
   },
   
+  // Get Supabase client for Sign Docs (partnership signing project)
+  getSignDocsServiceClient() {
+    const cfg = (typeof ADMIN_CONFIG !== 'undefined' && ADMIN_CONFIG.signDocs) || {};
+    const url = cfg.url || 'https://upybmyvbpqfegeozdsaz.supabase.co';
+    const key = cfg.serviceKey || cfg.anonKey;
+    if (window.supabase?.createClient && url && key) {
+      return window.supabase.createClient(url, key);
+    }
+    console.error('❌ Sign Docs Supabase not configured (set ADMIN_CONFIG.signDocs.serviceKey)');
+    return null;
+  },
+
   // Get Supabase client with service role (for admin operations)
   getAdminServiceClient() {
     if (typeof getAdminServiceClient === 'function') {

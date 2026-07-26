@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X, Landmark } from 'lucide-react';
+import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X, Landmark, PenLine } from 'lucide-react';
 import { useTranslation, Language } from '../../contexts/I18nContext';
 
 const NAV_ITEM_KEYS = ['individuos', 'empresas', 'instituciones', 'desarrolladores', 'empresa'] as const;
@@ -308,6 +308,17 @@ export function Navbar() {
         onClick: () => {
           if ((window as any).navigateToPage) {
             (window as any).navigateToPage('companyContact');
+          }
+        }
+      },
+      { 
+        label: t('dropdowns.empresa.items.signDocs.title'), 
+        description: t('dropdowns.empresa.items.signDocs.description'),
+        icon: PenLine,
+        href: '#',
+        onClick: () => {
+          if ((window as any).navigateToPage) {
+            (window as any).navigateToPage('companySignDocs');
           }
         }
       },

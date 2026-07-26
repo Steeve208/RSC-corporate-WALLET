@@ -16,6 +16,17 @@ const ADMIN_CONFIG = {
     serviceKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhwaHJzaWRjaXV5aWVqYXp6b25sIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NTY1ODYyMiwiZXhwIjoyMDgxMjM0NjIyfQ.zIq2r7RKcpkXQZZo0hDUKGXXBrHo6lnpC8oFPVq_Q64'
   },
 
+  // Sign Docs — partnership PDF signing (separate Supabase project)
+  signDocs: {
+    url: 'https://upybmyvbpqfegeozdsaz.supabase.co',
+    anonKey: 'sb_publishable_tIpBrz6EWqoJHnruX5h-jw_fr9PQNu2',
+    // service_role from Supabase Dashboard → Settings → API (required for uploads)
+    serviceKey: ''
+  },
+
+  // Bypass institutional login locally (Sign Docs admin has its own page)
+  skipLoginForTest: true,
+
   // ===== AUTHENTICATION =====
   auth: {
     // Duración de sesión (milisegundos)

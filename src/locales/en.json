@@ -151,6 +151,10 @@
         "contact": {
           "title": "Contact / Partnerships",
           "description": "Get in touch and partnership opportunities"
+        },
+        "signDocs": {
+          "title": "Sign Docs",
+          "description": "Sign partnership agreements and documents"
         }
       },
       "promoKicker": "RSC Group",
@@ -1856,6 +1860,55 @@
         "label": "Partnerships",
         "email": "partnerships@rscchain.io"
       }
+    }
+  },
+  "companySignDocs": {
+    "hero": {
+      "title": "Sign Docs",
+      "subtitle": "Sign partnership agreements and institutional documents with RSC and partners"
+    },
+    "gate": {
+      "title": "Enter your email",
+      "description": "RSC admins manage documents here. Partners use the email assigned to their agreement.",
+      "emailPlaceholder": "you@company.com",
+      "submit": "Access documents"
+    },
+    "list": {
+      "title": "Your documents",
+      "signatures": "signatures"
+    },
+    "admin": {
+      "createTitle": "New partnership document",
+      "createHint": "Upload a PDF, assign partner emails, and sign as RSC Group.",
+      "title": "Document title",
+      "description": "Description",
+      "pdf": "PDF file",
+      "partners": "Partner signers",
+      "addPartner": "Add partner",
+      "partnerName": "Full name",
+      "rscAuto": "You (RSC Group) are added automatically as the first signer.",
+      "submit": "Create document",
+      "allDocs": "All documents",
+      "empty": "No documents yet. Create the first one above.",
+      "needTitlePdf": "Title and PDF are required.",
+      "viewOnly": "You can view this document but are not listed as a signer."
+    },
+    "sign": {
+      "signersTitle": "Signers",
+      "drawTitle": "Your signature",
+      "drawHint": "Draw your signature in the box below, then submit.",
+      "clear": "Clear",
+      "submit": "Submit signature",
+      "alreadySigned": "You have already signed this document."
+    },
+    "actions": {
+      "changeEmail": "Change email",
+      "backToList": "Back to documents",
+      "download": "Download signed PDF"
+    },
+    "errors": {
+      "noDocuments": "No documents found for this email.",
+      "generic": "Something went wrong. Please try again."
     }
   },
   "companyPress": {

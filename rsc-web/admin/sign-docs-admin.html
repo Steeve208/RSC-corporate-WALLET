@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Docs Admin — RSC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/institutional-admin.css">
+  <link rel="stylesheet" href="css/modules.css">
+  <style>
+    body { margin: 0; background: #0f1419; color: #e2e8f0; font-family: Inter, system-ui, sans-serif; }
+    .sd-admin-wrap { max-width: 960px; margin: 0 auto; padding: 24px; }
+    .sd-admin-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .sd-admin-top h1 { margin: 0; font-size: 1.5rem; }
+    .sd-admin-top a { color: #60a5fa; text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="sd-admin-wrap">
+    <div class="sd-admin-top">
+      <h1><i class="fas fa-file-signature"></i> Sign Docs Admin</h1>
+      <a href="institutional-admin.html">Panel completo →</a>
+    </div>
+    <div id="adminContent"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script>
+    window.hasPermission = () => true;
+    window.showToast = function (msg, type) {
+      const el = document.createElement('div');
+      el.textContent = msg;
+      el.style.cssText = 'position:fixed;bottom:24px;right:24px;padding:12px 20px;border-radius:8px;z-index:9999;color:#fff;background:' +
+        (type === 'error' ? '#dc2626' : type === 'success' ? '#16a34a' : '#2563eb');
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 4000);
+    };
+  </script>
+  <script type="module">
+    import * as signDocs from './js/modules/sign-docs.js';
+    const root = document.getElementById('adminContent');
+    root.innerHTML = await signDocs.render();
+    await signDocs.init();
+  </script>
+</body>
+</html>

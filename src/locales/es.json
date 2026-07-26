@@ -151,6 +151,10 @@
         "contact": {
           "title": "Contacto / Alianzas",
           "description": "Ponte en contacto y oportunidades de alianzas"
+        },
+        "signDocs": {
+          "title": "Sign Docs",
+          "description": "Firma acuerdos de partnership y documentos"
         }
       },
       "promoKicker": "RSC Group",
@@ -1856,6 +1860,55 @@
         "label": "Asociaciones",
         "email": "partnerships@rscchain.io"
       }
+    }
+  },
+  "companySignDocs": {
+    "hero": {
+      "title": "Sign Docs",
+      "subtitle": "Firma acuerdos de partnership y documentos institucionales con RSC y partners"
+    },
+    "gate": {
+      "title": "Ingresa tu email",
+      "description": "Admins RSC gestionan documentos aquí. Partners usan el email asignado a su acuerdo.",
+      "emailPlaceholder": "tu@empresa.com",
+      "submit": "Acceder a documentos"
+    },
+    "list": {
+      "title": "Tus documentos",
+      "signatures": "firmas"
+    },
+    "admin": {
+      "createTitle": "Nuevo documento de partnership",
+      "createHint": "Sube un PDF, asigna emails de partners y firma como RSC Group.",
+      "title": "Título del documento",
+      "description": "Descripción",
+      "pdf": "Archivo PDF",
+      "partners": "Firmantes partners",
+      "addPartner": "Agregar partner",
+      "partnerName": "Nombre completo",
+      "rscAuto": "Tú (RSC Group) se agrega automáticamente como primer firmante.",
+      "submit": "Crear documento",
+      "allDocs": "Todos los documentos",
+      "empty": "Aún no hay documentos. Crea el primero arriba.",
+      "needTitlePdf": "Título y PDF son obligatorios.",
+      "viewOnly": "Puedes ver este documento pero no estás como firmante."
+    },
+    "sign": {
+      "signersTitle": "Firmantes",
+      "drawTitle": "Tu firma",
+      "drawHint": "Dibuja tu firma en el recuadro y envía.",
+      "clear": "Limpiar",
+      "submit": "Enviar firma",
+      "alreadySigned": "Ya firmaste este documento."
+    },
+    "actions": {
+      "changeEmail": "Cambiar email",
+      "backToList": "Volver a documentos",
+      "download": "Descargar PDF firmado"
+    },
+    "errors": {
+      "noDocuments": "No hay documentos para este email.",
+      "generic": "Ocurrió un error. Intenta de nuevo."
     }
   },
   "companyPress": {
