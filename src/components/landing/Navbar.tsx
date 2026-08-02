@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X, Landmark, PenLine } from 'lucide-react';
 import { useTranslation, Language } from '../../contexts/I18nContext';
 
@@ -435,6 +436,15 @@ export function Navbar() {
     };
   }, [isIndividuosOpen, isEmpresasOpen, isInstitucionesOpen, isDesarrolladoresOpen, isEmpresaOpen, isLanguageOpen]);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
   const handleIndividuosClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsIndividuosOpen(!isIndividuosOpen);
@@ -444,7 +454,6 @@ export function Navbar() {
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
     setActiveNavKey('individuos');
-    setIsMobileMenuOpen(false);
   };
 
   const handleEmpresasClick = (e: React.MouseEvent) => {
@@ -456,7 +465,6 @@ export function Navbar() {
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
     setActiveNavKey('empresas');
-    setIsMobileMenuOpen(false);
   };
 
   const handleInstitucionesClick = (e: React.MouseEvent) => {
@@ -468,7 +476,6 @@ export function Navbar() {
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
     setActiveNavKey('instituciones');
-    setIsMobileMenuOpen(false);
   };
 
   const handleDesarrolladoresClick = (e: React.MouseEvent) => {
@@ -480,7 +487,6 @@ export function Navbar() {
     setIsEmpresaOpen(false);
     setIsLanguageOpen(false);
     setActiveNavKey('desarrolladores');
-    setIsMobileMenuOpen(false);
   };
 
   const handleEmpresaClick = (e: React.MouseEvent) => {
@@ -492,7 +498,6 @@ export function Navbar() {
     setIsDesarrolladoresOpen(false);
     setIsLanguageOpen(false);
     setActiveNavKey('empresa');
-    setIsMobileMenuOpen(false);
   };
 
   const handleLanguageClick = (e: React.MouseEvent) => {
@@ -510,8 +515,296 @@ export function Navbar() {
     setIsLanguageOpen(false);
   };
 
+  const mobileMenu = (
+    <>
+      {isMobileMenuOpen && (
+        <div
+          className="rsc-mobile-menu-overlay"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden
+        />
+      )}
+
+      <div
+        className={`rsc-mobile-menu ${isMobileMenuOpen ? 'rsc-mobile-menu--open' : ''}`}
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div className="rsc-mobile-menu-content">
+          <div className="rsc-mobile-menu-section">
+            <div className="rsc-mobile-menu-nav">
+              {NAV_ITEM_KEYS.map((navKey) => {
+                const item = t(`navbar.${navKey}`);
+                if (navKey === 'empresas') {
+                  return (
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresasDropdownMobileRef}>
+                      <button
+                        className={`rsc-mobile-nav-button ${isEmpresasOpen ? 'rsc-mobile-nav-button--open' : ''}`}
+                        onClick={handleEmpresasClick}
+                      >
+                        {item}
+                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
+                      </button>
+                      {isEmpresasOpen && (
+                        <div className="rsc-mobile-dropdown">
+                          {[...empresasMenuItems.left, ...empresasMenuItems.right].map((menuItem, index) => {
+                            const Icon = menuItem.icon;
+                            return (
+                              <a
+                                key={index}
+                                href={menuItem.href}
+                                className="rsc-mobile-dropdown-item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setIsEmpresasOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  if (menuItem.onClick) {
+                                    menuItem.onClick();
+                                  }
+                                }}
+                              >
+                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
+                                <div className="rsc-mobile-dropdown-content">
+                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
+                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
+                                </div>
+                                <ArrowRight size={16} />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                if (navKey === 'individuos') {
+                  return (
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={individuosDropdownMobileRef}>
+                      <button
+                        className={`rsc-mobile-nav-button ${isIndividuosOpen ? 'rsc-mobile-nav-button--open' : ''}`}
+                        onClick={handleIndividuosClick}
+                      >
+                        {item}
+                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
+                      </button>
+                      {isIndividuosOpen && (
+                        <div className="rsc-mobile-dropdown">
+                          {[...individuosMenuItems.left, ...individuosMenuItems.right].map((menuItem, index) => {
+                            const Icon = menuItem.icon;
+                            return (
+                              <a
+                                key={index}
+                                href={menuItem.href}
+                                className="rsc-mobile-dropdown-item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setIsIndividuosOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  if (menuItem.onClick) {
+                                    menuItem.onClick();
+                                  }
+                                }}
+                              >
+                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
+                                <div className="rsc-mobile-dropdown-content">
+                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
+                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
+                                </div>
+                                <ArrowRight size={16} />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                if (navKey === 'desarrolladores') {
+                  return (
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={desarrolladoresDropdownMobileRef}>
+                      <button
+                        className={`rsc-mobile-nav-button ${isDesarrolladoresOpen ? 'rsc-mobile-nav-button--open' : ''}`}
+                        onClick={handleDesarrolladoresClick}
+                      >
+                        {item}
+                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
+                      </button>
+                      {isDesarrolladoresOpen && (
+                        <div className="rsc-mobile-dropdown">
+                          {[...desarrolladoresMenuItems.left, ...desarrolladoresMenuItems.right].map((menuItem, index) => {
+                            const Icon = menuItem.icon;
+                            return (
+                              <a
+                                key={index}
+                                href={menuItem.href}
+                                className="rsc-mobile-dropdown-item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setIsDesarrolladoresOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  if (menuItem.onClick) {
+                                    menuItem.onClick();
+                                  }
+                                }}
+                              >
+                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
+                                <div className="rsc-mobile-dropdown-content">
+                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
+                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
+                                </div>
+                                <ArrowRight size={16} />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                if (navKey === 'instituciones') {
+                  return (
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={institucionesDropdownMobileRef}>
+                      <button
+                        className={`rsc-mobile-nav-button ${isInstitucionesOpen ? 'rsc-mobile-nav-button--open' : ''}`}
+                        onClick={handleInstitucionesClick}
+                      >
+                        {item}
+                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
+                      </button>
+                      {isInstitucionesOpen && (
+                        <div className="rsc-mobile-dropdown">
+                          {[...institucionesMenuItems.left, ...institucionesMenuItems.right].map((menuItem, index) => {
+                            const Icon = menuItem.icon;
+                            return (
+                              <a
+                                key={index}
+                                href={menuItem.href}
+                                className="rsc-mobile-dropdown-item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  setIsInstitucionesOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  if (menuItem.onClick) {
+                                    menuItem.onClick();
+                                  }
+                                }}
+                              >
+                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
+                                <div className="rsc-mobile-dropdown-content">
+                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
+                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
+                                </div>
+                                <ArrowRight size={16} />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                if (navKey === 'empresa') {
+                  return (
+                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresaDropdownMobileRef}>
+                      <button
+                        className={`rsc-mobile-nav-button ${isEmpresaOpen ? 'rsc-mobile-nav-button--open' : ''}`}
+                        onClick={handleEmpresaClick}
+                      >
+                        {item}
+                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
+                      </button>
+                      {isEmpresaOpen && (
+                        <div className="rsc-mobile-dropdown">
+                          {[...empresaMenuItems.left, ...empresaMenuItems.right].map((menuItem, index) => {
+                            const Icon = menuItem.icon;
+                            return (
+                              <a
+                                key={index}
+                                href={menuItem.href}
+                                className="rsc-mobile-dropdown-item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setIsEmpresaOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  if (menuItem.onClick) {
+                                    menuItem.onClick();
+                                  }
+                                }}
+                              >
+                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
+                                <div className="rsc-mobile-dropdown-content">
+                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
+                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
+                                </div>
+                                <ArrowRight size={16} />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                return (
+                  <button
+                    key={navKey}
+                    className="rsc-mobile-nav-button"
+                    onClick={() => {
+                      setActiveNavKey(navKey);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    {item}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="rsc-mobile-menu-section rsc-mobile-menu-actions">
+            <div className="rsc-mobile-menu-divider"></div>
+
+            <div className="rsc-mobile-action-item">
+              <button
+                className="rsc-mobile-action-button"
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              >
+                <Globe size={20} />
+                <span>Idioma / Language</span>
+                <ChevronDown className={`rsc-mobile-nav-chevron ${isLanguageOpen ? 'rsc-mobile-nav-chevron--open' : ''}`} size={18} />
+              </button>
+              {isLanguageOpen && (
+                <div className="rsc-mobile-language-menu">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      className={`rsc-mobile-language-item ${language === lang.code ? 'rsc-mobile-language-item--active' : ''}`}
+                      onClick={() => {
+                        handleLanguageSelect(lang.code);
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      <span>{lang.name}</span>
+                      {language === lang.code && <Check size={16} />}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <button className="rsc-mobile-action-button">
+              <Search size={20} />
+              <span>Buscar / Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
   return (
-    <nav className={`rsc-navbar ${navScrolled ? 'rsc-navbar--scrolled' : ''}`}>
+    <>
+    <nav className={`rsc-navbar ${navScrolled ? 'rsc-navbar--scrolled' : ''} ${isMobileMenuOpen ? 'rsc-navbar--menu-open' : ''}`}>
       <div className="rsc-navbar-container">
         {/* Logo - Left */}
         <div className="rsc-navbar-logo">
@@ -1042,293 +1335,8 @@ export function Navbar() {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="rsc-mobile-menu-overlay"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-      
-      {/* Mobile Menu - Contains all navbar components */}
-      <div className={`rsc-mobile-menu ${isMobileMenuOpen ? 'rsc-mobile-menu--open' : ''}`}>
-        <div className="rsc-mobile-menu-content">
-          {/* Navigation Items */}
-          <div className="rsc-mobile-menu-section">
-            <div className="rsc-mobile-menu-nav">
-              {NAV_ITEM_KEYS.map((navKey) => {
-                const item = t(`navbar.${navKey}`);
-                if (navKey === 'empresas') {
-                  return (
-                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresasDropdownMobileRef}>
-                      <button
-                        className={`rsc-mobile-nav-button ${isEmpresasOpen ? 'rsc-mobile-nav-button--open' : ''}`}
-                        onClick={handleEmpresasClick}
-                      >
-                        {item}
-                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
-                      </button>
-                      {isEmpresasOpen && (
-                        <div className="rsc-mobile-dropdown">
-                          {[...empresasMenuItems.left, ...empresasMenuItems.right].map((menuItem, index) => {
-                            const Icon = menuItem.icon;
-                            return (
-                              <a
-                                key={index}
-                                href={menuItem.href}
-                                className="rsc-mobile-dropdown-item"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setIsEmpresasOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  if (menuItem.onClick) {
-                                    menuItem.onClick();
-                                  }
-                                }}
-                              >
-                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
-                                <div className="rsc-mobile-dropdown-content">
-                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
-                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
-                                </div>
-                                <ArrowRight size={16} />
-                              </a>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                if (navKey === 'individuos') {
-                  return (
-                    <div key={navKey} className="rsc-mobile-nav-item" ref={individuosDropdownMobileRef}>
-                      <button
-                        className={`rsc-mobile-nav-button ${isIndividuosOpen ? 'rsc-mobile-nav-button--open' : ''}`}
-                        onClick={handleIndividuosClick}
-                      >
-                        {item}
-                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
-                      </button>
-                      {isIndividuosOpen && (
-                        <div className="rsc-mobile-dropdown">
-                          {[...individuosMenuItems.left, ...individuosMenuItems.right].map((menuItem, index) => {
-                            const Icon = menuItem.icon;
-                            return (
-                              <a
-                                key={index}
-                                href={menuItem.href}
-                                className="rsc-mobile-dropdown-item"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setIsIndividuosOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  if (menuItem.onClick) {
-                                    menuItem.onClick();
-                                  }
-                                }}
-                              >
-                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
-                                <div className="rsc-mobile-dropdown-content">
-                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
-                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
-                                </div>
-                                <ArrowRight size={16} />
-                              </a>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                if (navKey === 'desarrolladores') {
-                  return (
-                    <div key={navKey} className="rsc-mobile-nav-item" ref={desarrolladoresDropdownMobileRef}>
-                      <button
-                        className={`rsc-mobile-nav-button ${isDesarrolladoresOpen ? 'rsc-mobile-nav-button--open' : ''}`}
-                        onClick={handleDesarrolladoresClick}
-                      >
-                        {item}
-                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
-                      </button>
-                      {isDesarrolladoresOpen && (
-                        <div className="rsc-mobile-dropdown">
-                          {[...desarrolladoresMenuItems.left, ...desarrolladoresMenuItems.right].map((menuItem, index) => {
-                            const Icon = menuItem.icon;
-                            return (
-                              <a
-                                key={index}
-                                href={menuItem.href}
-                                className="rsc-mobile-dropdown-item"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setIsDesarrolladoresOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  if (menuItem.onClick) {
-                                    menuItem.onClick();
-                                  }
-                                }}
-                              >
-                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
-                                <div className="rsc-mobile-dropdown-content">
-                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
-                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
-                                </div>
-                                <ArrowRight size={16} />
-                              </a>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                if (navKey === 'instituciones') {
-                  return (
-                    <div key={navKey} className="rsc-mobile-nav-item" ref={institucionesDropdownMobileRef}>
-                      <button
-                        className={`rsc-mobile-nav-button ${isInstitucionesOpen ? 'rsc-mobile-nav-button--open' : ''}`}
-                        onClick={handleInstitucionesClick}
-                      >
-                        {item}
-                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
-                      </button>
-                      {isInstitucionesOpen && (
-                        <div className="rsc-mobile-dropdown">
-                          {[...institucionesMenuItems.left, ...institucionesMenuItems.right].map((menuItem, index) => {
-                            const Icon = menuItem.icon;
-                            return (
-                              <a
-                                key={index}
-                                href={menuItem.href}
-                                className="rsc-mobile-dropdown-item"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  setIsInstitucionesOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  setIsInstitucionesOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  if (menuItem.onClick) {
-                                    menuItem.onClick();
-                                  }
-                                }}
-                              >
-                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
-                                <div className="rsc-mobile-dropdown-content">
-                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
-                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
-                                </div>
-                                <ArrowRight size={16} />
-                              </a>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                if (navKey === 'empresa') {
-                  return (
-                    <div key={navKey} className="rsc-mobile-nav-item" ref={empresaDropdownMobileRef}>
-                      <button
-                        className={`rsc-mobile-nav-button ${isEmpresaOpen ? 'rsc-mobile-nav-button--open' : ''}`}
-                        onClick={handleEmpresaClick}
-                      >
-                        {item}
-                        <ChevronDown className="rsc-mobile-nav-chevron" size={18} />
-                      </button>
-                      {isEmpresaOpen && (
-                        <div className="rsc-mobile-dropdown">
-                          {[...empresaMenuItems.left, ...empresaMenuItems.right].map((menuItem, index) => {
-                            const Icon = menuItem.icon;
-                            return (
-                              <a
-                                key={index}
-                                href={menuItem.href}
-                                className="rsc-mobile-dropdown-item"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setIsEmpresaOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  if (menuItem.onClick) {
-                                    menuItem.onClick();
-                                  }
-                                }}
-                              >
-                                <Icon size={20} className="rsc-mobile-dropdown-icon" />
-                                <div className="rsc-mobile-dropdown-content">
-                                  <span className="rsc-mobile-dropdown-title">{menuItem.label}</span>
-                                  <span className="rsc-mobile-dropdown-desc">{menuItem.description}</span>
-                                </div>
-                                <ArrowRight size={16} />
-                              </a>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                return (
-                  <button
-                    key={navKey}
-                    className="rsc-mobile-nav-button"
-                    onClick={() => {
-                      setActiveNavKey(navKey);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    {item}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Actions Section */}
-          <div className="rsc-mobile-menu-section rsc-mobile-menu-actions">
-            <div className="rsc-mobile-menu-divider"></div>
-            
-            {/* Language Selector */}
-            <div className="rsc-mobile-action-item">
-              <button 
-                className="rsc-mobile-action-button"
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-              >
-                <Globe size={20} />
-                <span>Idioma / Language</span>
-                <ChevronDown className={`rsc-mobile-nav-chevron ${isLanguageOpen ? 'rsc-mobile-nav-chevron--open' : ''}`} size={18} />
-              </button>
-              {isLanguageOpen && (
-                <div className="rsc-mobile-language-menu">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className={`rsc-mobile-language-item ${language === lang.code ? 'rsc-mobile-language-item--active' : ''}`}
-                      onClick={() => {
-                        handleLanguageSelect(lang.code);
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      <span>{lang.name}</span>
-                      {language === lang.code && <Check size={16} />}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Search */}
-            <button className="rsc-mobile-action-button">
-              <Search size={20} />
-              <span>Buscar / Search</span>
-            </button>
-          </div>
-        </div>
-      </div>
     </nav>
+    {typeof document !== 'undefined' && createPortal(mobileMenu, document.body)}
+    </>
   );
 }
