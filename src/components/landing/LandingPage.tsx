@@ -8,11 +8,13 @@ import { useTranslation } from '../../contexts/I18nContext';
 import {
   ArrowRight,
   ArrowUpRight,
+  Boxes,
   Building2,
   Cloud,
   Code2,
   Database,
   Fingerprint,
+  Globe2,
   Handshake,
   Landmark,
   Layers,
@@ -21,6 +23,7 @@ import {
   ShieldCheck,
   Sparkles,
   User,
+  Users,
   Wallet,
 } from 'lucide-react';
 
@@ -505,6 +508,45 @@ export function LandingPage() {
               </button>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Team — photo on pure white + HTML brand bar (responsive) */}
+      <section className="rg-team" aria-label={t('landing.group.teamAlt')}>
+        <div className="rg-team__photo">
+          <img
+            className="rg-team__img"
+            src="/rsc-team-clean.png"
+            alt={t('landing.group.teamAlt')}
+            width={1021}
+            height={494}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div className="rg-team__bar">
+          <div className="rg-team__brand">
+            <span className="rg-team__brand-name">{t('landing.group.brand')}</span>
+            <span className="rg-team__brand-tag">{t('landing.group.teamTagline')}</span>
+          </div>
+          <ul className="rg-team__pillars">
+            <li>
+              <Boxes size={22} strokeWidth={1.6} aria-hidden />
+              <span>{t('landing.group.teamPillars.growth')}</span>
+            </li>
+            <li>
+              <Globe2 size={22} strokeWidth={1.6} aria-hidden />
+              <span>{t('landing.group.teamPillars.impact')}</span>
+            </li>
+            <li>
+              <ShieldCheck size={22} strokeWidth={1.6} aria-hidden />
+              <span>{t('landing.group.teamPillars.secure')}</span>
+            </li>
+            <li>
+              <Users size={22} strokeWidth={1.6} aria-hidden />
+              <span>{t('landing.group.teamPillars.together')}</span>
+            </li>
+          </ul>
         </div>
       </section>
 

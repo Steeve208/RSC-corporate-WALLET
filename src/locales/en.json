@@ -2691,6 +2691,14 @@
           "excerpt": "Clear entry points across the ecosystem—with shared standards and a single corporate brand."
         }
       },
+      "teamAlt": "RSC Group team",
+      "teamTagline": "Building the future",
+      "teamPillars": {
+        "growth": "Investing for growth",
+        "impact": "Innovating for impact",
+        "secure": "Securing your future",
+        "together": "Building together"
+      },
       "ctaTitle": "Ready to build the future?",
       "ctaSubtitle": "Explore the platforms RSC Group is building for real estate, finance, and digital infrastructure.",
       "ctaFinal": "Explore RSC Group",
