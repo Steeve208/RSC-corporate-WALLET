@@ -2,17 +2,18 @@
    Reeskova design system — site-wide light premium theme
    Applied after landing.css / page CSS to unify the entire marketing site.
    ============================================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
   --rk-primary: #081A33;
   --rk-gold: #D4A017;
   --rk-accent: #2563EB;
-  --rk-bg: #FFFFFF;
-  --rk-surface: #F8FAFC;
+  --rk-bg: #F7F4EE;
+  --rk-surface: #EFEBE3;
   --rk-border: #E2E8F0;
   --rk-text: #0F172A;
   --rk-gray: #64748B;
+  --rk-font-display: 'Cormorant Garamond', Georgia, serif;
   --rk-font-head: 'Manrope', system-ui, sans-serif;
   --rk-font-body: 'Inter', system-ui, sans-serif;
   --rk-font-num: 'Space Grotesk', system-ui, sans-serif;
@@ -57,10 +58,10 @@ h1, h2, h3, h4, h5, h6 {
 .vaulto-landing,
 .vaulto-landing.vaulto-landing--corporate {
   --corp-max: 72rem;
-  --corp-radius: 12px;
-  --corp-bg: #FFFFFF !important;
-  --corp-bg-elevated: #F8FAFC !important;
-  --corp-bg-card: #FFFFFF !important;
+  --corp-radius: 20px;
+  --corp-bg: #F7F4EE !important;
+  --corp-bg-elevated: #EFEBE3 !important;
+  --corp-bg-card: #F7F4EE !important;
   --corp-border: #E2E8F0 !important;
   --corp-text: #0F172A !important;
   --corp-text-muted: #64748B !important;
@@ -68,10 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   --corp-accent: #2563EB !important;
   --corp-accent-dim: #D4A017 !important;
 
-  background: #FFFFFF !important;
+  background: #F7F4EE !important;
   background-image:
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(37, 99, 235, 0.08), transparent 55%),
-    radial-gradient(ellipse 40% 30% at 0% 20%, rgba(212, 160, 23, 0.06), transparent 50%) !important;
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(212, 160, 23, 0.08), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 0% 20%, rgba(8, 26, 51, 0.05), transparent 50%) !important;
   color: #0F172A !important;
   font-family: var(--rk-font-body) !important;
 }
@@ -351,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .rsc-logo-text {
   font-weight: 800 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.03em !important;
 }
 
 .rsc-dot {
@@ -517,8 +518,9 @@ button.rsc-download-btn,
 .company-security-page,
 .company-careers-page,
 .company-contact-page,
-.company-press-page {
-  background: #FFFFFF !important;
+.company-press-page,
+.company-sign-docs-page {
+  background: #F7F4EE !important;
   color: #0F172A !important;
   font-family: var(--rk-font-body) !important;
 }
@@ -546,8 +548,10 @@ button.rsc-download-btn,
 .company-security-page h1, .company-security-page h2, .company-security-page h3,
 .company-careers-page h1, .company-careers-page h2, .company-careers-page h3,
 .company-contact-page h1, .company-contact-page h2, .company-contact-page h3,
-.company-press-page h1, .company-press-page h2, .company-press-page h3 {
-  font-family: var(--rk-font-head) !important;
+.company-press-page h1, .company-press-page h2, .company-press-page h3,
+.company-sign-docs-page h1, .company-sign-docs-page h2, .company-sign-docs-page h3 {
+  font-family: var(--rk-font-display) !important;
+  font-weight: 500 !important;
   color: #081A33 !important;
   -webkit-text-fill-color: #081A33 !important;
   background: none !important;
@@ -560,8 +564,8 @@ button.rsc-download-btn,
 .developers-docs-hero, .developers-chain-hero, .developers-apis-hero,
 .developers-testnet-hero, .developers-roadmap-hero, .company-about-hero,
 .company-security-hero, .company-careers-hero, .company-contact-hero,
-.company-press-hero {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%) !important;
+.company-press-hero, .company-sign-docs-hero {
+  background: linear-gradient(180deg, #F7F4EE 0%, #EFEBE3 100%) !important;
 }
 
 /* Primary CTAs across all marketing pages */
@@ -611,12 +615,26 @@ button.rsc-download-btn,
   background: #081A33 !important;
 }
 
-/* RSC Group landing — keep brand hierarchy (not crypto-first) */
+/* Reesk'Cap Coorp landing — editorial serif on display type */
 .vaulto-landing--group .rg-hero__title,
 .vaulto-landing--group .rg-manifesto__title,
-.vaulto-landing--group .rg-product__copy h3,
-.vaulto-landing--group .rg-cta h2 {
-  font-family: var(--rk-font-head) !important;
+.vaulto-landing--group .rg-chapter__copy h3,
+.vaulto-landing--group .rg-cta h2,
+.vaulto-landing--group .rg-section-head h2,
+.vaulto-landing--group .rg-why__title {
+  font-family: var(--rk-font-display) !important;
+  font-weight: 500 !important;
+}
+
+.vaulto-landing--group .rg-hero__title,
+.vaulto-landing--group .rg-hero__aux {
+  color: #081A33 !important;
+  -webkit-text-fill-color: #081A33 !important;
+}
+
+.vaulto-landing--group .rg-hero__lead {
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
 }
 
 .vaulto-landing--group .rg-btn--primary,

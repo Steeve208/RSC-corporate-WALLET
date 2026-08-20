@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Map, 
   Code, 
@@ -21,7 +22,7 @@ export function DevelopersRoadmapPage() {
       
       {/* Hero Section */}
       <section className="developers-roadmap-hero">
-        <div className="developers-roadmap-hero-container">
+        <div className="developers-roadmap-hero-container rk-hero-split">
           <div className="developers-roadmap-hero-content">
             <div className="developers-roadmap-hero-icon">
               <Map size={64} />
@@ -33,6 +34,7 @@ export function DevelopersRoadmapPage() {
               <ExternalLink className="developers-roadmap-hero-cta-icon" size={20} />
             </a>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

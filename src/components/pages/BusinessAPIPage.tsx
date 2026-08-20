@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Code, 
   ShoppingCart, 
@@ -26,7 +27,7 @@ export function BusinessAPIPage() {
       
       {/* Hero Section */}
       <section className="business-api-hero">
-        <div className="business-api-hero-container">
+        <div className="business-api-hero-container rk-hero-split">
           <div className="business-api-hero-content">
             <div className="business-api-hero-icon">
               <Code size={64} />
@@ -34,6 +35,7 @@ export function BusinessAPIPage() {
             <h1 className="business-api-hero-title">{t('businessAPI.hero.title')}</h1>
             <p className="business-api-hero-subtitle">{t('businessAPI.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

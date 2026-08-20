@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Network, 
   Server, 
@@ -20,7 +21,7 @@ export function DevelopersChainPage() {
       
       {/* Hero Section */}
       <section className="developers-chain-hero">
-        <div className="developers-chain-hero-container">
+        <div className="developers-chain-hero-container rk-hero-split">
           <div className="developers-chain-hero-content">
             <div className="developers-chain-hero-icon">
               <Network size={64} />
@@ -28,6 +29,7 @@ export function DevelopersChainPage() {
             <h1 className="developers-chain-hero-title">{t('developersChain.hero.title')}</h1>
             <p className="developers-chain-hero-subtitle">{t('developersChain.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Briefcase, 
   Users, 
@@ -19,7 +20,7 @@ export function CompanyCareersPage() {
       
       {/* Hero Section */}
       <section className="company-careers-hero">
-        <div className="company-careers-hero-container">
+        <div className="company-careers-hero-container rk-hero-split">
           <div className="company-careers-hero-content">
             <div className="company-careers-hero-icon">
               <Briefcase size={64} />
@@ -27,6 +28,7 @@ export function CompanyCareersPage() {
             <h1 className="company-careers-hero-title">{t('companyCareers.hero.title')}</h1>
             <p className="company-careers-hero-subtitle">{t('companyCareers.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

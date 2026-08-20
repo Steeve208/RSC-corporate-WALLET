@@ -51,7 +51,7 @@ export function InstitutionalRealEstatePage() {
     const prevDesc = meta?.getAttribute('content') ?? '';
     meta?.setAttribute(
       'content',
-      'Discover properties, connect with trusted professionals, and invest smarter through Reeskova, the next-generation real estate marketplace powered by RSC Group.'
+      'Discover properties, connect with trusted professionals, and invest smarter through Reeskova, the next-generation real estate marketplace powered by Reesk\'Cap Coorp.'
     );
     return () => {
       document.title = prev;
@@ -387,7 +387,7 @@ export function InstitutionalRealEstatePage() {
         </div>
       </section>
 
-      {/* TECHNOLOGY + RSC GROUP */}
+      {/* TECHNOLOGY + REESK'CAP COORP */}
       <section id="rk-tech" className="rk-section">
         <div className="rk-container">
           <header className="rk-head">
@@ -493,7 +493,7 @@ export function InstitutionalRealEstatePage() {
           </div>
           <div>
             <h4>{t('institutionalRealEstate.footer.company')}</h4>
-            <button type="button" onClick={() => go('companyAbout')}>{t('institutionalRealEstate.footer.rscGroup')}</button>
+            <button type="button" onClick={() => go('companyAbout')}>{t('institutionalRealEstate.footer.reeskCapCoorp')}</button>
             <button type="button" onClick={() => go('companyCareers')}>{t('institutionalRealEstate.footer.careers')}</button>
             <button type="button" onClick={() => go('landing')}>{t('institutionalRealEstate.footer.privacy')}</button>
             <button type="button" onClick={() => go('landing')}>{t('institutionalRealEstate.footer.terms')}</button>

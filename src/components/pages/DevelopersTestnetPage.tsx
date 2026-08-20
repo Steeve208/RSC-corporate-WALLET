@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   FlaskConical, 
   Droplet, 
@@ -21,7 +22,7 @@ export function DevelopersTestnetPage() {
       
       {/* Hero Section */}
       <section className="developers-testnet-hero">
-        <div className="developers-testnet-hero-container">
+        <div className="developers-testnet-hero-container rk-hero-split">
           <div className="developers-testnet-hero-content">
             <div className="developers-testnet-hero-icon">
               <FlaskConical size={64} />
@@ -29,6 +30,7 @@ export function DevelopersTestnetPage() {
             <h1 className="developers-testnet-hero-title">{t('developersTestnet.hero.title')}</h1>
             <p className="developers-testnet-hero-subtitle">{t('developersTestnet.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

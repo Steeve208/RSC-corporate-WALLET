@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Building2, 
   Users, 
@@ -24,7 +25,7 @@ export function InstitutionalCorporatePage() {
       
       {/* Hero Section */}
       <section className="institutional-corporate-hero">
-        <div className="institutional-corporate-hero-container">
+        <div className="institutional-corporate-hero-container rk-hero-split">
           <div className="institutional-corporate-hero-content">
             <div className="institutional-corporate-hero-icon">
               <Building2 size={64} />
@@ -32,6 +33,7 @@ export function InstitutionalCorporatePage() {
             <h1 className="institutional-corporate-hero-title">{t('institutionalCorporate.hero.title')}</h1>
             <p className="institutional-corporate-hero-subtitle">{t('institutionalCorporate.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

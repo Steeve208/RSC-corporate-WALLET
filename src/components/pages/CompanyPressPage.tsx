@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Newspaper, 
   Download, 
@@ -24,7 +25,7 @@ export function CompanyPressPage() {
       
       {/* Hero Section */}
       <section className="company-press-hero">
-        <div className="company-press-hero-container">
+        <div className="company-press-hero-container rk-hero-split">
           <div className="company-press-hero-content">
             <div className="company-press-hero-icon">
               <Newspaper size={64} />
@@ -36,6 +37,7 @@ export function CompanyPressPage() {
               <Download className="company-press-hero-cta-icon" size={20} />
             </a>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

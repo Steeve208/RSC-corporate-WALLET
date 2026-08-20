@@ -27,8 +27,9 @@ import { DevelopersRoadmapPage } from './components/pages/DevelopersRoadmapPage'
 import { CompanyPressPage } from './components/pages/CompanyPressPage';
 import { CompanySignDocsPage } from './components/pages/CompanySignDocsPage';
 import { RscWebEmbeddedPage } from './components/pages/RscWebEmbeddedPage';
-/* Load Reeskova theme last so it wins over page-level CSS imports */
+/* Theme, then site-wide editorial layer so inner pages match the landing */
 import './styles/reeskova-theme.css';
+import './styles/site-editorial.css';
 
 type Page = 'landing' | 'wallet' | 'payments' | 'staking' | 'education' | 'remittances' | 'businessWallet' | 'businessPayments' | 'businessAPI' | 'businessUseCases' | 'businessBilling' | 'institutionalP2P' | 'institutionalChain' | 'institutionalCorporate' | 'institutionalRSK' | 'institutionalRealEstate' | 'rscWeb' | 'developersDocs' | 'developersChain' | 'developersAPIs' | 'developersTestnet' | 'developersRoadmap' | 'companyAbout' | 'companySecurity' | 'companyCareers' | 'companyContact' | 'companyPress' | 'companySignDocs';
 

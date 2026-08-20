@@ -217,8 +217,8 @@ export async function createSignDocument(input: {
     {
       document_id: docId,
       email: adminEmail,
-      name: input.adminName || 'RSC Group',
-      role_label: 'RSC Group',
+      name: input.adminName || "Reesk'Cap Coorp",
+      role_label: "Reesk'Cap Coorp",
       page: -1,
       pos_x: 10,
       pos_y: 15,

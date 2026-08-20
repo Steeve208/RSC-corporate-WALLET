@@ -38,7 +38,7 @@
         }
       },
       "promoKicker": "Individuals",
-      "promoLine": "Everyday digital products"
+      "promoLine": "Everyday wallet and payments. The same standard as the rest of the house."
     },
     "empresas": {
       "title": "For Business",
@@ -67,7 +67,7 @@
         }
       },
       "promoKicker": "Business",
-      "promoLine": "Platforms for modern companies"
+      "promoLine": "Collections, APIs, and business wallets. One operational desk."
     },
     "instituciones": {
       "title": "Our Clients",
@@ -92,11 +92,11 @@
         },
         "realEstate": {
           "title": "Reeskova",
-          "description": "Digital real estate platform · RSC Group"
+          "description": "Digital real estate platform · Reesk'Cap Coorp"
         }
       },
       "promoKicker": "Institutions",
-      "promoLine": "Infrastructure at enterprise scale"
+      "promoLine": "Reeskova, P2P, Corporate, and Chain. Formal contracts, one counterpart."
     },
     "desarrolladores": {
       "title": "For Developers",
@@ -125,15 +125,15 @@
         }
       },
       "promoKicker": "Developers",
-      "promoLine": "APIs, docs, and network tools"
+      "promoLine": "RPC, testnet, and stable APIs. Integrate without rewriting the stack."
     },
     "empresa": {
-      "title": "About RSC",
-      "subtitle": "The organization behind the RSC ecosystem.",
+      "title": "About Reesk'Cap Coorp",
+      "subtitle": "The organization behind the Reesk'Cap Coorp ecosystem.",
       "learnMore": "Learn more",
       "items": {
         "about": {
-          "title": "About RSC",
+          "title": "About Reesk'Cap Coorp",
           "description": "Vision, mission, and values"
         },
         "security": {
@@ -157,8 +157,8 @@
           "description": "Sign partnership agreements and documents"
         }
       },
-      "promoKicker": "RSC Group",
-      "promoLine": "Building digital platforms"
+      "promoKicker": "Reesk'Cap Coorp",
+      "promoLine": "Technology holding. Six platforms, one quality standard."
     }
   },
   "hero": {
@@ -169,6 +169,8 @@
     "cta": "Create RSC Wallet"
   },
   "languages": {
+    "menu": "Language",
+    "search": "Search",
     "en": "English",
     "es": "Español",
     "pt": "Português",
@@ -1703,8 +1705,8 @@
   },
   "companyAbout": {
     "hero": {
-      "title": "About RSC",
-      "subtitle": "The organization behind the RSC ecosystem"
+      "title": "About Reesk'Cap Coorp",
+      "subtitle": "The organization behind the Reesk'Cap Coorp ecosystem"
     },
     "vision": {
       "title": "Vision",
@@ -1879,14 +1881,14 @@
     },
     "admin": {
       "createTitle": "New partnership document",
-      "createHint": "Upload a PDF, assign partner emails, and sign as RSC Group.",
+      "createHint": "Upload a PDF, assign partner emails, and sign as Reesk'Cap Coorp.",
       "title": "Document title",
       "description": "Description",
       "pdf": "PDF file",
       "partners": "Partner signers",
       "addPartner": "Add partner",
       "partnerName": "Full name",
-      "rscAuto": "You (RSC Group) are added automatically as the first signer.",
+      "rscAuto": "You (Reesk'Cap Coorp) are added automatically as the first signer.",
       "submit": "Create document",
       "allDocs": "All documents",
       "empty": "No documents yet. Create the first one above.",
@@ -2420,7 +2422,7 @@
         "cta": "Open developer docs"
       },
       "anchorPlatform": "Platform",
-      "brand": "RSC GROUP",
+      "brand": "Reesk'Cap Coorp",
       "headline": "Building the Next Generation of Digital Platforms.",
       "subtitle": "We create technology that powers real estate, digital finance, secure transactions and the future of decentralized infrastructure.",
       "orbitWallet": "Wallet",
@@ -2449,7 +2451,7 @@
       "developers": "Developers",
       "rscChain": "RSC Chain",
       "contact": "Contact",
-      "about": "About RSC",
+      "about": "About Reesk'Cap Coorp",
       "security": "Security",
       "careers": "Careers",
       "press": "Press",
@@ -2457,7 +2459,7 @@
       "privacy": "Privacy",
       "cookies": "Cookies",
       "compliance": "Compliance",
-      "copyright": "© 2026 RSC Group. All rights reserved.",
+      "copyright": "© 2026 Reesk'Cap Coorp. All rights reserved.",
       "disclaimer": "Non-custodial: we do not hold your funds. Protect your recovery phrase; loss of keys means loss of access."
     },
     "metrics": {
@@ -2517,192 +2519,301 @@
       }
     },
     "group": {
-      "brand": "RSC GROUP",
-      "heroTitle": "Building the Next Generation of Digital Platforms.",
-      "heroSubtitle": "We create technology that powers real estate, digital finance, secure transactions and the future of decentralized infrastructure.",
-      "ctaEcosystem": "Explore Our Ecosystem",
-      "ctaProducts": "View Products",
-      "orbitAria": "RSC Group product ecosystem",
-      "manifestoLine1": "We don't build apps.",
-      "manifestoLine2": "We build digital ecosystems.",
-      "ecoEyebrow": "Our Ecosystem",
-      "ecoTitle": "One company. Multiple platforms.",
-      "ecoSubtitle": "Each product stands on its own—and becomes stronger inside the RSC Group stack.",
-      "productLabel": "Product",
-      "learnMore": "Learn More",
+      "brand": "Reesk'Cap Coorp",
+      "heroKicker": "Technology holding · Six platforms · One house",
+      "heroTitle": "Digital platforms with institutional standards.",
+      "heroLead": "Reesk'Cap Coorp designs and operates proprietary products across real estate, digital finance, custody, and blockchain infrastructure. We are not an exchange or a standalone app: we are the organization that builds, integrates, and maintains each layer under shared standards.",
+      "heroAux": "Six platforms. One house.",
+      "ctaEcosystem": "Explore platforms",
+      "ctaProducts": "Read chapters",
+      "houseAria": "Isometric illustration of Reesk'Cap group with its six platforms",
+      "manifestoTitle": "Why Reesk'Cap exists",
+      "manifestoBody": "We exist because the markets we serve — property, payments, custody, settlement — deserve more than disconnected products. Reesk'Cap was not created to launch a trendy single app or to chase crypto headlines. We were built to sustain platforms that stand alone and strengthen one another: Reeskova for real assets, RSC Wallet and Escrow for value in motion, P2P and Corporate for multi-party operations, RSC Chain as the layer of record and settlement. Every product line has an owner, a roadmap, and a quality bar inside the same house.",
+      "ecoEyebrow": "Portfolio",
+      "ecoTitle": "Six chapters, one standard",
+      "ecoSubtitle": "Each line has a market, an interface, and an owner. What the group shares is not branding: it is how value is held, settled, and recorded.",
+      "productLabel": "Chapter",
+      "learnMore": "Learn more",
       "products": {
         "reeskova": {
           "name": "Reeskova",
-          "tagline": "The future of real estate",
-          "blurb": "Intelligent digital real-estate marketplace",
-          "description": "Buy, sell, rent and invest through a premium digital marketplace designed for the next generation of property and capital."
+          "positioning": "Digital operation of real-estate assets at premium market standards.",
+          "p1": "Reeskova brings buy, sell, rent, and invest into one marketplace built for serious operators: agents, developers, funds, and buyers who need document clarity, traceability, and an experience worthy of the asset.",
+          "p2": "It is not a classifieds portal. It is the commercial layer where property is presented, negotiated, and prepared to close using the group's custody and settlement rails.",
+          "p3": "Inside Reesk'Cap, Reeskova is the flagship real-estate platform — the institutional entry point to a digitized physical market.",
+          "points": [
+            "Listings with structured data and market context",
+            "Reservation and investment flows aligned with Escrow",
+            "Corporate integration for operators and partners"
+          ]
         },
         "chain": {
           "name": "RSC Chain",
-          "tagline": "Blockchain Infrastructure",
-          "blurb": "Enterprise-grade decentralized infrastructure",
-          "description": "High-performance blockchain infrastructure for institutions and builders—one technology inside a broader technology company."
+          "positioning": "Record and settlement layer for group products and authorized partners.",
+          "p1": "RSC Chain is the blockchain infrastructure that supports verifiable settlement, contracts, and traceability across platforms. It is not sold as an experiment: it is the technical floor Wallet, Escrow, and P2P can rely on with clear rules.",
+          "p2": "Institutions and builders find RPC, documentation, and test environments to integrate without rebuilding every product from scratch.",
+          "p3": "In the group's architecture, Chain is the lower layer — stable, auditable, shared.",
+          "points": [
+            "On-chain settlement for internal flows",
+            "Documentation and testnet for developers",
+            "Upgrade policy coordinated with Corporate"
+          ]
         },
         "p2p": {
           "name": "RSC P2P",
-          "tagline": "Peer-to-peer Marketplace",
-          "blurb": "Institutional peer-to-peer rails",
-          "description": "A sophisticated marketplace for peer-to-peer exchange at scale, designed for liquidity, clarity, and secure settlement."
+          "positioning": "Counterparty exchange with visible rules and backed settlement.",
+          "p1": "RSC P2P structures peer-to-peer exchange when buyer and seller need a market with rules, not an informal chat. The platform exposes offers, states, and closing conditions in readable form.",
+          "p2": "It relies on Escrow to hold value until conditions are met and on Chain to record outcomes when required.",
+          "p3": "It is the group's counterparty marketplace — built for volume, not noisy speculation.",
+          "points": [
+            "Order book with auditable states",
+            "Closing coupled to Escrow",
+            "APIs for institutional integrators"
+          ]
         },
         "escrow": {
           "name": "RSC Escrow",
-          "tagline": "Secure Digital Transactions",
-          "blurb": "Trusted custody until conditions are met",
-          "description": "Secure digital transaction rails that hold value until all parties fulfill conditions—built for confidence and automation."
+          "positioning": "Value custody until agreed conditions are fulfilled.",
+          "p1": "Escrow holds funds or digital assets while parties complete verifications, deliveries, or contractual milestones. It reduces trust asymmetry between strangers or between subsidiaries.",
+          "p2": "Reeskova, P2P, and Corporate consume Escrow as a common rail — one custody standard instead of ad hoc solutions per product.",
+          "p3": "Progressive automation of release according to defined rules, with traceability for audit.",
+          "points": [
+            "Hold until conditions are verified",
+            "Native integration with Wallet and Chain",
+            "Multi-party flows for corporate operations"
+          ]
         },
         "wallet": {
           "name": "RSC Wallet",
-          "tagline": "Digital Assets",
-          "blurb": "Everyday digital-asset experience",
-          "description": "A clear digital wallet experience for holding, sending, receiving and operating assets across the RSC ecosystem."
+          "positioning": "Everyday access to digital assets in the RSC ecosystem.",
+          "p1": "RSC Wallet is the interface where people and teams hold, send, and receive assets compatible with RSC Chain. It prioritizes balance clarity, history, and permissions over visual effects.",
+          "p2": "It connects to QR payments, staking, and business products when an organization needs an operational wallet, not only a personal one.",
+          "p3": "It is the user gateway to the group — the first layer many clients touch before Escrow, P2P, or Reeskova.",
+          "points": [
+            "Non-custodial key control",
+            "Readable history and permissions",
+            "Bridge to ecosystem payments and staking"
+          ]
         },
         "corporate": {
           "name": "RSC Corporate",
-          "tagline": "Enterprise Solutions",
-          "blurb": "Solutions for enterprises and institutions",
-          "description": "Enterprise-grade platforms and services that help organizations adopt digital infrastructure with control and clarity."
+          "positioning": "Services and platforms for organizations operating at scale.",
+          "p1": "RSC Corporate groups institutional onboarding, agreements, reporting, and tooling for teams deploying the group's stack in regulated or multi-site environments.",
+          "p2": "Partners, correspondent banks, and real-estate operators find a single counterparty and contracts aligned with Sign Docs and Security.",
+          "p3": "It is the enterprise face of Reesk'Cap — where policy, compliance, and implementation meet.",
+          "points": [
+            "Centralized onboarding and agreements",
+            "Cross-product operational reports",
+            "Single channel for institutional alliances"
+          ]
+        }
+      },
+      "escrowFlow": {
+        "step1": {
+          "title": "Deposit",
+          "description": "Parties agree on conditions and value enters custody."
+        },
+        "step2": {
+          "title": "Verification",
+          "description": "Milestones, documents, or deliveries are validated against rules."
+        },
+        "step3": {
+          "title": "Release",
+          "description": "Value is released automatically or with explicit approval."
         }
       },
       "connectEyebrow": "Architecture",
-      "connectTitle": "How Everything Connects",
-      "connectSubtitle": "RSC Group sits at the center. Products branch out—and reconnect through shared infrastructure.",
-      "techEyebrow": "Capabilities",
-      "techTitle": "Our Technology",
-      "techSubtitle": "Blockchain is one layer. The stack goes much further.",
-      "tech": {
-        "blockchain": {
-          "title": "Blockchain",
-          "description": "Decentralized infrastructure for secure, verifiable settlement."
+      "connectTitle": "Three layers, one group",
+      "connectBody": "Reesk'Cap Coorp does not stack logos: it stacks responsibilities. The upper layer is business platforms — Reeskova, Wallet, P2P, Corporate — where the client experience lives. The middle layer is shared rails — Escrow, payment APIs, operational identity — so custody and rules are not duplicated in every product. The lower layer is RSC Chain: record, settlement, and contracts with traceability. When a Reeskova property closing needs to hold funds, Escrow already speaks the same language as Wallet; when P2P settles, Chain receives the outcome without reimplementing logic in every team.",
+      "stackLayers": {
+        "products": {
+          "label": "Business platforms",
+          "items": [
+            "Reeskova",
+            "Wallet",
+            "P2P",
+            "Corporate"
+          ]
         },
-        "ai": {
-          "title": "Artificial Intelligence",
-          "description": "Intelligent matching, automation, and decision support across products."
+        "rails": {
+          "label": "Shared rails",
+          "items": [
+            "Escrow",
+            "Payments",
+            "APIs"
+          ]
+        },
+        "chain": {
+          "label": "Infrastructure",
+          "items": [
+            "RSC Chain",
+            "Contracts",
+            "Settlement"
+          ]
+        }
+      },
+      "techEyebrow": "Technical stack",
+      "techTitle": "More than a blockchain",
+      "techIntro": "Blockchain is the record layer; the rest of the stack supports identity, operational data, availability, and composition across products. We design so a Reeskova team and a Wallet team do not rewrite custody or observability every quarter.",
+      "techIntro2": "The capabilities below repeat across the portfolio with common interfaces — not as slide buzzwords, but as internal contracts between platforms.",
+      "techLayers": {
+        "identity": {
+          "title": "Identity and permissions",
+          "description": "Shared roles, access, and operation traces across corporate products and operational wallets."
+        },
+        "data": {
+          "title": "Operational data",
+          "description": "Market events, transactions, and custody states available for reporting and decisions."
         },
         "cloud": {
-          "title": "Cloud Infrastructure",
-          "description": "Elastic cloud foundations for global availability and scale."
+          "title": "Availability",
+          "description": "Elastic services for multi-region deployment without duplicating business logic."
         },
-        "security": {
-          "title": "Security",
-          "description": "Defense-in-depth across identity, transactions, and systems."
-        },
-        "analytics": {
-          "title": "Data Analytics",
-          "description": "Operational insight for markets, assets, and enterprise workflows."
+        "chain": {
+          "title": "Record and settlement",
+          "description": "RSC Chain as the common floor for flows requiring public or private verification."
         },
         "apis": {
-          "title": "APIs",
-          "description": "Composable interfaces for partners, apps, and institutional systems."
-        },
-        "open": {
-          "title": "Open Platform",
-          "description": "Extensible building blocks designed for developers and ecosystems."
+          "title": "Composition",
+          "description": "Stable APIs so partners integrate payments, escrow, and queries without forking internal code."
         }
       },
-      "whyEyebrow": "Why RSC",
-      "whyTitle": "Built for scale.",
-      "stats": {
-        "products": {
-          "value": "10+",
-          "label": "Products"
+      "whyEyebrow": "Standard",
+      "whyTitle": "Why one house, not six startups",
+      "whyTheses": {
+        "discipline": {
+          "title": "Product discipline",
+          "body": "Each platform has a roadmap and owners inside the group. We avoid orphan features that do not connect to custody, identity, or settlement."
         },
-        "integrated": {
-          "value": "100%",
-          "label": "Integrated"
+        "integration": {
+          "title": "Real integration",
+          "body": "Escrow, Chain, and Wallet are not partner slides: they are components other products invoke. That reduces friction for clients operating in more than one market."
         },
-        "infra": {
-          "value": "24/7",
-          "label": "Infrastructure"
-        },
-        "scalable": {
-          "value": "∞",
-          "label": "Scalable"
-        },
-        "availability": {
-          "value": "99.99%",
-          "label": "Availability"
+        "horizon": {
+          "title": "Long horizon",
+          "body": "We build for regimes where property, payments, and digital record coexist for years, not for quarterly hype cycles."
         }
       },
-      "audienceEyebrow": "For Everyone",
-      "audienceTitle": "Built for every stage of digital operations",
-      "audienceSubtitle": "Individuals, businesses, and institutions—each with a clear path into the ecosystem.",
+      "audienceEyebrow": "Audiences",
+      "audienceTitle": "Three entries, one standard",
+      "audienceSubtitle": "Individuals, businesses, and institutions do not see the same screen, but they do see the same quality of process.",
       "audiences": {
         "individuals": {
           "title": "Individuals",
-          "description": "Access wallets, payments, and everyday digital tools designed for clarity and control.",
-          "cta": "Explore for individuals"
+          "p1": "People who need a clear wallet, everyday payments, and gradual access to staking or remittances without unnecessary jargon.",
+          "p2": "They enter through RSC Wallet and payment products; as wealth or operations scale, they find the same group behind them.",
+          "products": "RSC Wallet · Payments · Staking · Education",
+          "cta": "View products for individuals"
         },
         "businesses": {
           "title": "Businesses",
-          "description": "Collections, APIs, and operational tooling for modern companies and merchants.",
-          "cta": "Explore for businesses"
+          "p1": "Merchants and teams that collect, settle, and report with APIs and business wallets connected to the RSC stack.",
+          "p2": "Business Wallet, QR payments, and billing share operational identity with Escrow as complexity grows.",
+          "products": "Business Wallet · Payments · API · Billing",
+          "cta": "View products for businesses"
         },
         "institutions": {
           "title": "Institutions",
-          "description": "Enterprise infrastructure, markets, corporate platforms, and Reeskova.",
-          "cta": "Explore for institutions"
+          "p1": "Real-estate operators, market desks, and organizations that need Reeskova, P2P, Corporate, and Chain with formal contracts.",
+          "p2": "The channel runs through RSC Corporate, Sign Docs, and Security — one desk for alliances and deployment.",
+          "products": "Reeskova · P2P · Corporate · RSC Chain",
+          "cta": "View institutional products"
         }
       },
-      "timelineEyebrow": "Roadmap",
-      "timelineTitle": "Timeline",
-      "timelineSubtitle": "A sequenced journey from flagship products to global expansion.",
+      "timelineEyebrow": "Sequence",
+      "timelineTitle": "Building in layers",
+      "timelineSubtitle": "The portfolio grows in waves — visible product first, shared rails next, geographic expansion last.",
       "timelineYear": "2026",
       "timeline": {
-        "reeskova": "Reeskova",
-        "wallet": "Wallet",
-        "escrow": "Escrow",
-        "p2p": "P2P",
-        "chain": "Chain",
-        "ai": "AI",
-        "global": "Global Expansion"
-      },
-      "valuesEyebrow": "Leadership",
-      "valuesTitle": "What we stand for",
-      "valuesSubtitle": "We share values before people—discipline, ambition, and trustworthy execution.",
-      "values": {
-        "innovation": "Innovation",
-        "integrity": "Integrity",
-        "technology": "Technology",
-        "trust": "Trust",
-        "execution": "Execution"
-      },
-      "newsEyebrow": "News",
-      "newsTitle": "From RSC Group",
-      "newsRead": "Read more",
-      "news": {
-        "n1": {
-          "meta": "Product",
-          "title": "Reeskova joins the RSC Group ecosystem",
-          "excerpt": "A new real-estate marketplace designed as a flagship digital platform under RSC Group."
+        "reeskova": {
+          "label": "Reeskova",
+          "note": "Real-estate marketplace as the group's flagship platform."
         },
-        "n2": {
-          "meta": "Company",
-          "title": "RSC Group expands as a multi-product technology company",
-          "excerpt": "From wallets and escrow to chain infrastructure, the portfolio grows as one connected stack."
+        "wallet": {
+          "label": "Wallet",
+          "note": "User access and operational base for RSC assets."
         },
-        "n3": {
-          "meta": "Platform",
-          "title": "Building for individuals, businesses, and institutions",
-          "excerpt": "Clear entry points across the ecosystem—with shared standards and a single corporate brand."
+        "escrow": {
+          "label": "Escrow",
+          "note": "Common custody for property closings and P2P."
+        },
+        "p2p": {
+          "label": "P2P",
+          "note": "Counterparty market coupled to escrow and chain."
+        },
+        "chain": {
+          "label": "Chain",
+          "note": "Consolidated record and settlement infrastructure."
+        },
+        "ai": {
+          "label": "Operational AI",
+          "note": "Matching, automation, and decision support in products."
+        },
+        "global": {
+          "label": "Expansion",
+          "note": "Regional deployment with the same three-layer architecture."
         }
       },
-      "teamAlt": "RSC Group team",
-      "teamTagline": "Building the future",
-      "teamPillars": {
-        "growth": "Investing for growth",
-        "impact": "Innovating for impact",
-        "secure": "Securing your future",
-        "together": "Building together"
+      "valuesEyebrow": "Principles",
+      "valuesTitle": "What we do not compromise",
+      "valuesSubtitle": "These principles guide contracts, roadmaps, and priorities — they do not decorate a wall.",
+      "values": {
+        "innovation": {
+          "title": "Purposeful innovation",
+          "body": "We experiment where it removes real friction — custody, closings, settlement — not where it only impresses in a demo."
+        },
+        "integrity": {
+          "title": "Operational integrity",
+          "body": "States, balances, and conditions must be readable for clients and auditable for partners."
+        },
+        "technology": {
+          "title": "Shared technology",
+          "body": "We prefer reusable components across platforms over six isolated stacks."
+        },
+        "trust": {
+          "title": "Explicit trust",
+          "body": "Escrow, contracts, and permissions exist so trust does not depend on informal conversations."
+        },
+        "execution": {
+          "title": "Sustained execution",
+          "body": "Roadmaps measured in shippable quarters, not infinite roadmap promises."
+        }
       },
-      "ctaTitle": "Ready to build the future?",
-      "ctaSubtitle": "Explore the platforms RSC Group is building for real estate, finance, and digital infrastructure.",
-      "ctaFinal": "Explore RSC Group",
-      "footerTagline": "A technology company building digital platforms for the next generation.",
+      "newsEyebrow": "Notes",
+      "newsTitle": "From the house",
+      "newsRead": "Read full note",
+      "news": {
+        "n1": {
+          "date": "Mar 2026",
+          "meta": "Product",
+          "title": "Reeskova as flagship platform under Reesk'Cap",
+          "excerpt": "The real-estate marketplace is presented as the portfolio's central chapter, with reservation flows designed to connect with Escrow and Corporate from the first pilot closing."
+        },
+        "n2": {
+          "date": "Feb 2026",
+          "meta": "Company",
+          "title": "A three-layer stack for six products",
+          "excerpt": "Reesk'Cap formalizes the products–rails–chain architecture to avoid duplicating custody and settlement in every business line. Internal documentation becomes a contract between teams."
+        },
+        "n3": {
+          "date": "Jan 2026",
+          "meta": "Institutional",
+          "title": "Clear channels for individuals, businesses, and institutions",
+          "excerpt": "Three commercial entries share visual identity and quality standards, with RSC Corporate as the single desk for alliances, Sign Docs, and security."
+        }
+      },
+      "teamAlt": "Reesk'Cap Coorp team",
+      "teamTagline": "One team, one standard",
+      "teamPillars": {
+        "growth": "Growth measured in shipped products",
+        "impact": "Impact in real markets, not vanity metrics alone",
+        "secure": "Security and custody as requirement, not feature",
+        "together": "Cross-functional teams over product silos"
+      },
+      "ctaTitle": "Let's discuss your operation",
+      "ctaBody": "If you represent an institution, a real-estate operator, or a business that needs payments and custody under the same standard, Reesk'Cap offers a single channel through Corporate and Sign Docs.",
+      "ctaFinal": "Explore platforms",
+      "footerTagline": "Reesk'Cap Coorp — technology holding. Real estate, digital finance, custody, and blockchain infrastructure under one roof.",
       "footer": {
         "products": "Products",
         "company": "Company",
@@ -2715,7 +2826,7 @@
         "api": "API",
         "docs": "Documentation",
         "github": "GitHub",
-        "copyright": "© 2026 RSC Group. All rights reserved."
+        "copyright": "© 2026 Reesk'Cap Coorp. All rights reserved."
       }
     }
   },
@@ -2916,7 +3027,7 @@
     "tech": {
       "eyebrow": "Technology",
       "title": "Powered by",
-      "titleAccent": "RSC Group Technology",
+      "titleAccent": "Reesk'Cap Coorp Technology",
       "subtitle": "Reeskova is not a static catalog. It rides on infrastructure designed for the next generation of digital platforms.",
       "ai": {
         "title": "AI",
@@ -2944,9 +3055,9 @@
       }
     },
     "group": {
-      "eyebrow": "RSC Group",
+      "eyebrow": "Reesk'Cap Coorp",
       "title": "Building the next generation of digital platforms.",
-      "lead": "Reeskova is the flagship real-estate marketplace of RSC Group.",
+      "lead": "Reeskova is the flagship real-estate marketplace of Reesk'Cap Coorp.",
       "text": "We strengthen the parent brand without distracting people who arrive looking for homes—while leaving room for the next product in the ecosystem.",
       "p1": {
         "name": "Reeskova",
@@ -2962,7 +3073,7 @@
       },
       "p4": {
         "name": "Future Financial Solutions",
-        "role": "Expanding the RSC Group stack"
+        "role": "Expanding the Reesk'Cap Coorp stack"
       }
     },
     "testimonials": {
@@ -2990,7 +3101,7 @@
       "button": "Start Now"
     },
     "footer": {
-      "tagline": "A modern property marketplace powered by technology—part of RSC Group.",
+      "tagline": "A modern property marketplace powered by technology—part of Reesk'Cap Coorp.",
       "product": "Product",
       "company": "Company",
       "social": "Social",
@@ -3000,7 +3111,7 @@
       "privacy": "Privacy",
       "terms": "Terms",
       "careers": "Careers",
-      "rscGroup": "RSC Group",
+      "reeskCapCoorp": "Reesk'Cap Coorp",
       "copyright": "© 2026 Reeskova. All rights reserved.",
       "backToRsc": "Back to RSC Chain"
     }

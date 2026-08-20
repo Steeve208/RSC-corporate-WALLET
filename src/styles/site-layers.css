@@ -1,0 +1,158 @@
+/* Compact 3D layer stack for inner marketing pages */
+.rk-3d {
+  --mx: 0;
+  --my: 0;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 340px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.rk-3d__floor {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(8, 26, 51, 0.16), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.rk-3d__world {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(8deg + var(--my) * 4deg)) rotateY(calc(-12deg + var(--mx) * 8deg));
+  transition: transform 0.45s ease;
+}
+
+.rk-3d__layer {
+  width: 100%;
+  transform: translateZ(var(--z, 0px));
+  opacity: 0;
+}
+
+.rk-3d.is-live .rk-3d__layer--top {
+  opacity: 1;
+  animation: rk-3d-enter 0.7s 0.05s cubic-bezier(0.22, 1, 0.36, 1) both, rk-3d-idle 7.5s 1s ease-in-out infinite;
+}
+.rk-3d.is-live .rk-3d__layer:nth-child(2) {
+  opacity: 1;
+  animation: rk-3d-enter 0.7s 0.16s cubic-bezier(0.22, 1, 0.36, 1) both, rk-3d-idle 7.5s 1.15s ease-in-out infinite;
+}
+.rk-3d.is-live .rk-3d__layer:nth-child(3) {
+  opacity: 1;
+  animation: rk-3d-enter 0.7s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both, rk-3d-idle 7.5s 1.3s ease-in-out infinite;
+}
+
+.rk-3d-tiles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.rk-3d-tile {
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0.45rem 0.3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(8, 26, 51, 0.12);
+  animation: rk-3d-tile 5.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.18s);
+}
+
+.rk-3d-tile span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #F7F4EE;
+}
+
+.rk-3d-tile--reeskova { background: #D4A017; }
+.rk-3d-tile--reeskova span,
+.rk-3d-tile--p2p span,
+.rk-3d-tile--escrow span { color: #081A33; }
+.rk-3d-tile--wallet { background: #1D4ED8; }
+.rk-3d-tile--p2p { background: #C4940F; }
+.rk-3d-tile--corporate { background: #081A33; }
+.rk-3d-tile--escrow { background: #E0B028; }
+.rk-3d-tile--chain { background: #2563EB; }
+
+.rk-3d-plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 48px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(8, 26, 51, 0.12);
+}
+
+.rk-3d-plate--gold {
+  background: #D4A017;
+  justify-content: space-between;
+}
+
+.rk-3d-plate--gold span {
+  flex: 1;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #081A33;
+}
+
+.rk-3d-plate--navy {
+  background: #081A33;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+}
+
+.rk-3d-plate--navy strong {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #F7F4EE;
+}
+
+@keyframes rk-3d-enter {
+  from { opacity: 0; transform: translateY(20px) translateZ(var(--z, 0px)); }
+  to { opacity: 1; transform: translateY(0) translateZ(var(--z, 0px)); }
+}
+
+@keyframes rk-3d-idle {
+  0%, 100% { opacity: 1; transform: translateY(0) translateZ(var(--z, 0px)); }
+  50% { opacity: 1; transform: translateY(-6px) translateZ(var(--z, 0px)); }
+}
+
+@keyframes rk-3d-tile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (max-width: 900px) {
+  .rk-3d { height: 280px; max-width: 360px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rk-3d.is-live .rk-3d__layer,
+  .rk-3d-tile {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .rk-3d__world { transform: none; }
+}

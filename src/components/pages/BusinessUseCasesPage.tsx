@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Store, 
   Monitor, 
@@ -23,11 +24,12 @@ export function BusinessUseCasesPage() {
       
       {/* Hero Section */}
       <section className="business-usecases-hero">
-        <div className="business-usecases-hero-container">
+        <div className="business-usecases-hero-container rk-hero-split">
           <div className="business-usecases-hero-content">
             <h1 className="business-usecases-hero-title">{t('businessUseCases.hero.title')}</h1>
             <p className="business-usecases-hero-subtitle">{t('businessUseCases.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Book, 
   Rocket, 
@@ -24,7 +25,7 @@ export function DevelopersDocsPage() {
       
       {/* Hero Section */}
       <section className="developers-docs-hero">
-        <div className="developers-docs-hero-container">
+        <div className="developers-docs-hero-container rk-hero-split">
           <div className="developers-docs-hero-content">
             <div className="developers-docs-hero-icon">
               <Book size={64} />
@@ -32,6 +33,7 @@ export function DevelopersDocsPage() {
             <h1 className="developers-docs-hero-title">{t('developersDocs.hero.title')}</h1>
             <p className="developers-docs-hero-subtitle">{t('developersDocs.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

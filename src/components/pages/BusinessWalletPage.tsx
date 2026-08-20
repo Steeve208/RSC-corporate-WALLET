@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Briefcase, 
   Users, 
@@ -27,7 +28,7 @@ export function BusinessWalletPage() {
       
       {/* Hero Section */}
       <section className="business-wallet-hero">
-        <div className="business-wallet-hero-container">
+        <div className="business-wallet-hero-container rk-hero-split">
           <div className="business-wallet-hero-content">
             <div className="business-wallet-hero-icon">
               <Briefcase size={64} />
@@ -35,6 +36,7 @@ export function BusinessWalletPage() {
             <h1 className="business-wallet-hero-title">{t('businessWallet.hero.title')}</h1>
             <p className="business-wallet-hero-subtitle">{t('businessWallet.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

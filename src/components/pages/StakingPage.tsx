@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   TrendingUp, 
   Coins, 
@@ -26,7 +27,7 @@ export function StakingPage() {
       
       {/* Hero Section */}
       <section className="staking-hero">
-        <div className="staking-hero-container">
+        <div className="staking-hero-container rk-hero-split">
           <div className="staking-hero-content">
             <div className="staking-hero-icon">
               <TrendingUp size={64} />
@@ -34,6 +35,7 @@ export function StakingPage() {
             <h1 className="staking-hero-title">{t('staking.hero.title')}</h1>
             <p className="staking-hero-subtitle">{t('staking.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

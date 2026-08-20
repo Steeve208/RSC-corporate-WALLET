@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate RSC Group investor & company overview PDF."""
+"""Generate Reesk'Cap Coorp investor & company overview PDF."""
 
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
@@ -39,7 +39,7 @@ GREEN = HexColor("#0D9488")
 PAGE_W, PAGE_H = A4
 MARGIN = 18 * mm
 
-OUTPUT = os.path.join(os.path.dirname(__file__), "RSC_Group_Overview_Investors_Companies.pdf")
+OUTPUT = os.path.join(os.path.dirname(__file__), "ReeskCap_Coorp_Overview_Investors_Companies.pdf")
 
 
 class ColoredBox(Flowable):
@@ -233,12 +233,12 @@ def add_page_number(canv, doc):
     canv.rect(0, PAGE_H - 8 * mm, PAGE_W, 8 * mm, fill=1, stroke=0)
     canv.setFillColor(white)
     canv.setFont("DejaVu", 7)
-    canv.drawString(MARGIN, PAGE_H - 5.2 * mm, "RSC GROUP  ·  Documento corporativo para inversores y empresas")
+    canv.drawString(MARGIN, PAGE_H - 5.2 * mm, "Reesk'Cap Coorp  ·  Documento corporativo para inversores y empresas")
     canv.setFillColor(LIGHT_BG)
     canv.rect(0, 0, PAGE_W, 10 * mm, fill=1, stroke=0)
     canv.setFillColor(MUTED)
     canv.setFont("DejaVu", 7.5)
-    canv.drawString(MARGIN, 4 * mm, "Confidencial — Uso informativo  |  rscgroup.com  ·  rscchain.com")
+    canv.drawString(MARGIN, 4 * mm, "Confidencial — Uso informativo  |  www.rscchain.com")
     canv.drawRightString(PAGE_W - MARGIN, 4 * mm, f"{page}")
     canv.setStrokeColor(ACCENT)
     canv.setLineWidth(1.5)
@@ -255,9 +255,9 @@ def build():
         rightMargin=MARGIN,
         topMargin=14 * mm,
         bottomMargin=16 * mm,
-        title="RSC Group — Overview para Inversores y Empresas",
-        author="RSC Group",
-        subject="Documento corporativo del ecosistema RSC Group",
+        title="Reesk'Cap Coorp — Overview para Inversores y Empresas",
+        author="Reesk'Cap Coorp",
+        subject="Documento corporativo del ecosistema Reesk'Cap Coorp",
     )
 
     story = []
@@ -266,7 +266,7 @@ def build():
     # ========== COVER ==========
     story.append(Spacer(1, 25 * mm))
     cover_box = ColoredBox(
-        "RSC GROUP",
+        "Reesk'Cap Coorp",
         "Building the Next Generation of Digital Platforms",
         height=42 * mm,
         title_size=26,
@@ -279,7 +279,7 @@ def build():
         styles["H1"],
     ))
     story.append(Paragraph(
-        "Qué es RSC Group, cómo funciona su ecosistema y qué hace cada uno de sus componentes — "
+        "Qué es Reesk'Cap Coorp, cómo funciona su ecosistema y qué hace cada uno de sus componentes — "
         "pensado para inversores, socios estratégicos, empresas e instituciones.",
         styles["Body"],
     ))
@@ -290,7 +290,7 @@ def build():
         ["Audiencia", "Inversores · Empresas · Instituciones · Partners"],
         ["Idioma", "Español"],
         ["Versión", f"{year}.1"],
-        ["Sitios web", "rscgroup.com  ·  rscchain.com"],
+        ["Sitios web", "www.rscchain.com"],
         ["Redes", "@Reeskcap  ·  t.me/RSCchain  ·  github.com/rscchain"],
     ]
     meta_data = [[
@@ -315,7 +315,7 @@ def build():
     ))
     story.append(Spacer(1, 8 * mm))
     story.append(Paragraph(
-        "Este documento describe la arquitectura de negocio y de producto de RSC Group: "
+        "Este documento describe la arquitectura de negocio y de producto de Reesk'Cap Coorp: "
         "Reeskova (real estate), RSC Chain (infraestructura blockchain), RSC Wallet, "
         "pagos, P2P, Escrow, Corporate, Mining, el token REESK (RSK) y las suites para "
         "empresas, instituciones y desarrolladores.",
@@ -328,7 +328,7 @@ def build():
     story.append(Spacer(1, 4 * mm))
     toc = [
         ("01", "Resumen ejecutivo"),
-        ("02", "Qué es RSC Group"),
+        ("02", "Qué es Reesk'Cap Coorp"),
         ("03", "Visión, misión y filosofía"),
         ("04", "Mapa del ecosistema"),
         ("05", "Reeskova — Real Estate"),
@@ -367,7 +367,7 @@ def build():
     story.append(SectionBar("01", "Resumen ejecutivo"))
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph(
-        "RSC Group es una empresa tecnológica multiproducto que construye plataformas digitales "
+        "Reesk'Cap Coorp es una empresa tecnológica multiproducto que construye plataformas digitales "
         "para inmobiliario, finanzas digitales, transacciones seguras e infraestructura "
         "descentralizada. No es un único producto: es un stack integrado bajo una misma "
         "marca corporativa y una infraestructura compartida (RSC Chain).",
@@ -414,10 +414,10 @@ def build():
     story.append(PageBreak())
 
     # ========== 02 WHAT IS ==========
-    story.append(SectionBar("02", "Qué es RSC Group"))
+    story.append(SectionBar("02", "Qué es Reesk'Cap Coorp"))
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph(
-        "RSC Group es la marca matriz (holding tecnológico) detrás de un portfolio de plataformas "
+        "Reesk'Cap Coorp es la marca matriz (holding tecnológico) detrás de un portfolio de plataformas "
         "digitales. Su propuesta no se limita a “otra wallet” o “otra chain”: organiza productos "
         "verticales (inmobiliario, pagos, trading P2P, escrow) sobre una capa horizontal de "
         "infraestructura, seguridad, APIs y datos.",
@@ -441,7 +441,7 @@ def build():
     story.append(Paragraph("Marcas del grupo", styles["H2"]))
     brands = [
         ["Marca", "Rol"],
-        ["RSC Group", "Empresa matriz / marca corporativa (rscgroup.com)"],
+        ["Reesk'Cap Coorp", "Empresa matriz / marca corporativa (www.rscchain.com)"],
         ["Reeskova", "Producto estrella de real estate digital"],
         ["RSC Chain", "Infraestructura blockchain y marca crypto (rscchain.com)"],
         ["REESK / RSK / wRSK", "Token nativo (y representación en venta BSC cuando aplique)"],
@@ -491,7 +491,7 @@ def build():
     story.append(SectionBar("04", "Mapa del ecosistema"))
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph(
-        "RSC Group está en el centro. Los productos se expanden como órbita y se reconectan "
+        "Reesk'Cap Coorp está en el centro. Los productos se expanden como órbita y se reconectan "
         "a través de infraestructura compartida (cadena, APIs, seguridad, identidad).",
         styles["Body"],
     ))
@@ -534,7 +534,7 @@ def build():
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph("El futuro del real estate", styles["Tagline"]))
     story.append(Paragraph(
-        "Reeskova es el marketplace inmobiliario insignia de RSC Group. Permite comprar, vender, "
+        "Reeskova es el marketplace inmobiliario insignia de Reesk'Cap Coorp. Permite comprar, vender, "
         "alquilar e invertir a través de una plataforma digital premium diseñada para la próxima "
         "generación de propiedades y capital. No es un clasificado estático: corre sobre "
         "tecnología del grupo (IA, big data, cloud, analytics, escrow-ready y blockchain-ready).",
@@ -567,7 +567,7 @@ def build():
         "Investors — framing de ROI, rentabilidad y crecimiento con sobriedad institucional.",
     ], styles))
     story.append(Paragraph(
-        "Reeskova fortalece la marca matriz RSC Group sin distraer a quien busca vivienda, "
+        "Reeskova fortalece la marca matriz Reesk'Cap Coorp sin distraer a quien busca vivienda, "
         "y deja espacio para el siguiente producto del ecosistema (P2P, Escrow, soluciones "
         "financieras futuras).",
         styles["Body"],
@@ -814,7 +814,7 @@ def build():
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph("Participación en la red", styles["H2"]))
     story.append(Paragraph(
-        "Además del staking on-product, RSC Group opera una capa de participación y recompensas "
+        "Además del staking on-product, Reesk'Cap Coorp opera una capa de participación y recompensas "
         "que incluye minería móvil (app oficial en Google Play: RSC Mining), dashboard web, "
         "pools, earnings, referidos y eventos temporales (p. ej. campañas Snow Mining / Christmas).",
         styles["Body"],
@@ -838,7 +838,7 @@ def build():
     story.append(SectionBar("13", "Plataforma para desarrolladores"))
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph(
-        "RSC Group abre la infraestructura a builders: documentación, APIs/SDKs, testnet/faucet "
+        "Reesk'Cap Coorp abre la infraestructura a builders: documentación, APIs/SDKs, testnet/faucet "
         "y roadmap técnico público.",
         styles["Body"],
     ))
@@ -896,7 +896,7 @@ def build():
     ))
     arch = [
         ["Capa", "Componentes", "Notas"],
-        ["Marca / Web corporativa", "Sitio RSC Group (React/Vite), i18n EN/ES", "Narrativa inversores y clientes"],
+        ["Marca / Web corporativa", "Sitio Reesk'Cap Coorp (React/Vite), i18n EN/ES", "Narrativa inversores y clientes"],
         ["Consumer web", "rsc-web: wallet, mining, staking, P2P, explorer", "Experiencia usuario + campañas"],
         ["Mobile", "App RSC Mining (Android / Play Store)", "Adquisición y engagement"],
         ["Backend plataforma", "APIs, Supabase/Postgres, sesiones mining, referidos", "Persistencia y ops"],
@@ -942,7 +942,7 @@ def build():
     # ========== 17 INVESTORS ==========
     story.append(SectionBar("17", "Propuesta de valor para inversores"))
     story.append(Spacer(1, 3 * mm))
-    story.append(Paragraph("Por qué RSC Group es una tesis multiproducto", styles["H2"]))
+    story.append(Paragraph("Por qué Reesk'Cap Coorp es una tesis multiproducto", styles["H2"]))
     story.extend(bullets([
         "Diversificación interna — real estate + fintech + infra + markets, no un solo KPI de wallet.",
         "Shared infrastructure — menor costo marginal al lanzar el siguiente producto sobre Chain/APIs.",
@@ -965,7 +965,7 @@ def build():
     story.append(Spacer(1, 4 * mm))
     story.append(Paragraph(
         "Este briefing facilita la conversación inicial. Un data room completo (métricas, "
-        "contratos, auditorías, cap table) debe solicitarse al equipo de RSC Group en el "
+        "contratos, auditorías, cap table) debe solicitarse al equipo de Reesk'Cap Coorp en el "
         "proceso formal de inversión o partnership.",
         styles["Small"],
     ))
@@ -1031,7 +1031,7 @@ def build():
     story.append(Spacer(1, 3 * mm))
     story.append(Paragraph(
         "Si representa un fondo, family office, empresa o institución interesada en el ecosistema "
-        "RSC Group, los siguientes pasos recomendados son:",
+        "Reesk'Cap Coorp, los siguientes pasos recomendados son:",
         styles["Body"],
     ))
     story.extend(bullets([
@@ -1044,7 +1044,7 @@ def build():
     story.append(Paragraph("Canales", styles["H2"]))
     contact = [
         ["Canal", "Referencia"],
-        ["Web corporativa", "rscgroup.com"],
+        ["Web corporativa", "www.rscchain.com"],
         ["RSC Chain", "rscchain.com"],
         ["X / Twitter", "@Reeskcap"],
         ["Telegram", "t.me/RSCchain"],
@@ -1056,14 +1056,14 @@ def build():
     story.append(Spacer(1, 8 * mm))
     story.append(ColoredBox(
         "¿Listo para construir el futuro?",
-        "Explora las plataformas que RSC Group construye para real estate, finanzas e infraestructura digital.",
+        "Explora las plataformas que Reesk'Cap Coorp construye para real estate, finanzas e infraestructura digital.",
         height=24 * mm,
         title_size=14,
         sub_size=9,
     ))
     story.append(Spacer(1, 8 * mm))
     story.append(Paragraph(
-        f"© {year} RSC Group. Todos los derechos reservados. Documento informativo. "
+        f"© {year} Reesk'Cap Coorp. Todos los derechos reservados. Documento informativo. "
         "Non-custodial: RSC no custodia fondos de usuarios finales. Protege tu frase de recuperación. "
         "La información de producto y métricas puede evolucionar; valide siempre contra fuentes oficiales "
         "y documentación vigente antes de tomar decisiones de inversión o integración.",
@@ -1076,7 +1076,7 @@ def build():
     story.append(Spacer(1, 3 * mm))
     gloss = [
         ["Término", "Definición breve"],
-        ["RSC Group", "Empresa tecnológica matriz del ecosistema"],
+        ["Reesk'Cap Coorp", "Empresa tecnológica matriz del ecosistema"],
         ["Reeskova", "Marketplace inmobiliario digital del grupo"],
         ["RSC Chain", "Blockchain / infraestructura de liquidación"],
         ["REESK / RSK", "Token nativo de utilidad en el ecosistema"],
@@ -1097,7 +1097,7 @@ def build():
     story.append(info_table(gloss, styles, [40 * mm, 130 * mm]))
     story.append(Spacer(1, 8 * mm))
     story.append(Paragraph(
-        "Fin del documento — RSC Group Overview para Inversores y Empresas",
+        "Fin del documento — Reesk'Cap Coorp Overview para Inversores y Empresas",
         styles["BodyCenter"],
     ))
     story.append(Paragraph(

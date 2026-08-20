@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Send, 
   Wallet, 
@@ -25,7 +26,7 @@ export function WalletPage() {
       
       {/* Hero Section */}
       <section className="wallet-hero">
-        <div className="wallet-hero-container">
+        <div className="wallet-hero-container rk-hero-split">
           <div className="wallet-hero-content">
             <h1 className="wallet-hero-title">{t('wallet.hero.title')}</h1>
             <p className="wallet-hero-subtitle">{t('wallet.hero.subtitle')}</p>
@@ -38,6 +39,7 @@ export function WalletPage() {
               </button>
             </div>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

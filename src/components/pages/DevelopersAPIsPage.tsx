@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Code, 
   Wallet, 
@@ -23,7 +24,7 @@ export function DevelopersAPIsPage() {
       
       {/* Hero Section */}
       <section className="developers-apis-hero">
-        <div className="developers-apis-hero-container">
+        <div className="developers-apis-hero-container rk-hero-split">
           <div className="developers-apis-hero-content">
             <div className="developers-apis-hero-icon">
               <Code size={64} />
@@ -31,6 +32,7 @@ export function DevelopersAPIsPage() {
             <h1 className="developers-apis-hero-title">{t('developersAPIs.hero.title')}</h1>
             <p className="developers-apis-hero-subtitle">{t('developersAPIs.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

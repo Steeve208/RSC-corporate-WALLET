@@ -4,9 +4,9 @@
    ============================================================================= */
 .vaulto-landing.vaulto-landing--corporate {
   --corp-max: 72rem;
-  --corp-radius: 8px;
-  --corp-bg: #FFFFFF;
-  --corp-bg-elevated: #F8FAFC;
+  --corp-radius: 20px;
+  --corp-bg: #F7F4EE;
+  --corp-bg-elevated: #EFEBE3;
   --corp-bg-card: #FFFFFF;
   --corp-border: #E2E8F0;
   --corp-text: #0F172A;

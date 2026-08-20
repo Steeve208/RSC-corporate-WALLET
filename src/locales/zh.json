@@ -1,0 +1,3119 @@
+{
+  "navbar": {
+    "individuos": "个人",
+    "empresas": "企业",
+    "instituciones": "机构",
+    "desarrolladores": "开发者",
+    "empresa": "公司",
+    "descargar": "下载"
+  },
+  "rscWeb": {
+    "backToWallet": "返回钱包"
+  },
+  "dropdowns": {
+    "individuos": {
+      "title": "面向所有人",
+      "subtitle": "面向日常生活的去中心化金融解决方案。",
+      "learnMore": "了解更多",
+      "items": {
+        "wallet": {
+          "title": "RSC Wallet",
+          "description": "个人钱包、支付、质押与资产管控"
+        },
+        "qrPayments": {
+          "title": "QR 支付",
+          "description": "在手机上便捷发送与支付"
+        },
+        "staking": {
+          "title": "质押与奖励",
+          "description": "在 RSC 生态中获得收益"
+        },
+        "remittances": {
+          "title": "汇款 / 转账",
+          "description": "快速、安全地汇出资金"
+        },
+        "education": {
+          "title": "教育 / 学习",
+          "description": "基础指南、安全与入门步骤"
+        }
+      },
+      "promoKicker": "个人",
+      "promoLine": "日常钱包与支付。与集团其他业务同一标准。"
+    },
+    "empresas": {
+      "title": "面向企业",
+      "subtitle": "面向现代企业的支付与金融基础设施。",
+      "learnMore": "了解更多",
+      "items": {
+        "businessWallet": {
+          "title": "RSC Business Wallet",
+          "description": "具备管控与报表能力的企业钱包"
+        },
+        "payments": {
+          "title": "RSC Payments",
+          "description": "QR 收款，快速结算"
+        },
+        "api": {
+          "title": "支付 API",
+          "description": "集成于应用、电子商务与 POS"
+        },
+        "billing": {
+          "title": "账单 / 报表",
+          "description": "账单与财务报表"
+        },
+        "useCases": {
+          "title": "商业用例",
+          "description": "商业用例与示例"
+        }
+      },
+      "promoKicker": "企业",
+      "promoLine": "收款、API 与企业钱包。统一运营台。"
+    },
+    "instituciones": {
+      "title": "我们的客户",
+      "subtitle": "受到全球机构与政府的信赖。",
+      "learnMore": "了解更多",
+      "items": {
+        "p2p": {
+          "title": "P2P 市场",
+          "description": "点对点交易平台"
+        },
+        "corporate": {
+          "title": "RSC Corporate",
+          "description": "企业级解决方案与服务"
+        },
+        "chain": {
+          "title": "RSC Chain",
+          "description": "机构级区块链基础设施"
+        },
+        "token": {
+          "title": "REESK [RSK]（RSC TOKEN）",
+          "description": "RSC Chain 原生代币"
+        },
+        "realEstate": {
+          "title": "Reeskova",
+          "description": "数字化房地产平台 · Reesk'Cap Coorp"
+        }
+      },
+      "promoKicker": "机构",
+      "promoLine": "Reeskova、P2P、Corporate 与 Chain。正式合同，单一对手方。"
+    },
+    "desarrolladores": {
+      "title": "面向开发者",
+      "subtitle": "以开放、可扩展的工具在 RSC Chain 上构建。",
+      "learnMore": "了解更多",
+      "items": {
+        "docs": {
+          "title": "开发者文档",
+          "description": "技术指南、RPC、节点"
+        },
+        "chain": {
+          "title": "RSC Chain",
+          "description": "区块链基础设施"
+        },
+        "apis": {
+          "title": "API 与 SDK",
+          "description": "钱包、支付、智能合约"
+        },
+        "testnet": {
+          "title": "测试网 / 水龙头",
+          "description": "测试网络与代币水龙头"
+        },
+        "roadmap": {
+          "title": "技术路线图",
+          "description": "技术路线图与更新"
+        }
+      },
+      "promoKicker": "开发者",
+      "promoLine": "RPC、测试网与稳定 API。无需重写技术栈即可集成。"
+    },
+    "empresa": {
+      "title": "关于 Reesk'Cap Coorp",
+      "subtitle": "Reesk'Cap Coorp 生态背后的组织。",
+      "learnMore": "了解更多",
+      "items": {
+        "about": {
+          "title": "关于 Reesk'Cap Coorp",
+          "description": "愿景、使命与价值观"
+        },
+        "security": {
+          "title": "安全与合规",
+          "description": "安全实践与合规"
+        },
+        "careers": {
+          "title": "招聘",
+          "description": "加入 RSC 团队"
+        },
+        "press": {
+          "title": "新闻 / 媒体",
+          "description": "新闻稿与媒体资料"
+        },
+        "contact": {
+          "title": "联系 / 合作",
+          "description": "取得联系与合作机会"
+        },
+        "signDocs": {
+          "title": "Sign Docs",
+          "description": "签署合作协议与文件"
+        }
+      },
+      "promoKicker": "Reesk'Cap Coorp",
+      "promoLine": "科技控股。六大平台，同一品质标准。"
+    }
+  },
+  "hero": {
+    "tag": "数字钱包",
+    "title": "RSC Wallet",
+    "subtitle": "您在 RSC Chain 上的完整经济体系",
+    "description": "RSC Wallet 是进入 RSC Chain 生态的门户。在同一非托管钱包中管理资产、执行即时交易、参与质押并使用 DeFi。您的身份、资金与支付直接运行于 RSC Chain。",
+    "cta": "创建 RSC Wallet"
+  },
+  "languages": {
+    "menu": "语言",
+    "search": "搜索",
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  },
+  "wallet": {
+    "hero": {
+      "title": "RSC Wallet",
+      "subtitle": "用于在 RSC Chain 上操作的非托管钱包",
+      "ctaDownload": "下载",
+      "ctaCreate": "创建钱包"
+    },
+    "features": {
+      "title": "您可以做什么",
+      "sendReceive": {
+        "title": "发送 / 接收资产",
+        "description": "即时转账 RSK 及兼容资产，全程透明"
+      },
+      "balance": {
+        "title": "查看余额与活动",
+        "description": "实时监控资产与交易记录"
+      },
+      "staking": {
+        "title": "质押与奖励",
+        "description": "通过质押 RSK 代币获得被动收益"
+      },
+      "qrPayments": {
+        "title": "QR 支付",
+        "description": "使用 QR 码便捷支付与收款"
+      }
+    },
+    "howItWorks": {
+      "title": "运作方式",
+      "step1": {
+        "title": "创建钱包",
+        "description": "下载应用，数秒即可创建钱包"
+      },
+      "step2": {
+        "title": "安全访问",
+        "description": "备份助记词，并设置 PIN 或生物识别安全"
+      },
+      "step3": {
+        "title": "使用并掌控资金",
+        "description": "开始发送、接收并管理您的资产"
+      }
+    },
+    "security": {
+      "title": "安全",
+      "nonCustodial": {
+        "title": "非托管",
+        "description": "私钥由您掌控。我们从未接触您的资金"
+      },
+      "seedPhrase": {
+        "title": "助记词",
+        "description": "用于备份与恢复钱包的 12 个单词助记词"
+      },
+      "biometry": {
+        "title": "PIN / 生物识别",
+        "description": "以 PIN 码或指纹/面容识别作为额外安全层"
+      }
+    },
+    "screenshots": {
+      "title": "实际界面截图",
+      "home": "首页",
+      "sendReceive": "发送 / 接收",
+      "staking": "质押",
+      "settings": "设置"
+    },
+    "cta": {
+      "title": "准备开始？",
+      "description": "下载 RSC Wallet，掌控您的数字资产",
+      "button": "下载应用"
+    }
+  },
+  "payments": {
+    "hero": {
+      "title": "RSC Payments",
+      "subtitle": "在 RSC Chain 上通过 QR 码即时收付款"
+    },
+    "what": {
+      "title": "什么是 RSC Payments？",
+      "description": "RSC Payments 是基于 RSC Chain 构建的快速、安全、去中心化支付系统。使用 QR 码即时收发 RSK 代币，无需中介，也无需高额手续费。",
+      "benefit1": "RSC Chain 上的即时交易",
+      "benefit2": "低交易手续费",
+      "benefit3": "无需中介",
+      "benefit4": "安全且透明",
+      "qrLabel": "扫码支付"
+    },
+    "qr": {
+      "title": "QR 码支付",
+      "description": "轻轻一扫即可支付。生成或扫描 QR 码，即时收付款。",
+      "step1": "打开 RSC Wallet",
+      "step2": "扫描 QR 码或生成您自己的码",
+      "step3": "确认并即时发送"
+    },
+    "instant": {
+      "title": "用户之间的即时转账",
+      "description": "数秒内将 RSK 代币直接发送给 RSC Chain 上的任意用户，无需等待确认，也无需支付高额手续费。",
+      "benefit1": "实时转账",
+      "benefit2": "无需等待",
+      "benefit3": "直接点对点"
+    },
+    "cases": {
+      "title": "用例",
+      "friends": {
+        "title": "向朋友付款",
+        "description": "即时分摊账单、偿还借款或向朋友汇款。",
+        "example": "与朋友分摊餐费"
+      },
+      "merchants": {
+        "title": "向商户付款",
+        "description": "在商店、餐厅与网店使用 QR 码付款。",
+        "example": "在咖啡店用 QR 付款"
+      }
+    },
+    "security": {
+      "title": "安全与确认",
+      "description": "每笔交易均由 RSC Chain 区块链技术保障，即时确认、全程透明。",
+      "feature1": "区块链保障的交易",
+      "feature2": "即时确认",
+      "feature3": "完整交易记录",
+      "feature4": "私钥掌控"
+    },
+    "cta": {
+      "title": "开始使用支付",
+      "description": "在 RSC Wallet 应用中使用 RSC Payments。立即下载，开始即时付款。",
+      "button": "在 RSC Wallet 中使用"
+    }
+  },
+  "staking": {
+    "hero": {
+      "title": "质押与奖励",
+      "subtitle": "在 RSC Chain 上质押 RSK 代币，获得被动收益"
+    },
+    "what": {
+      "title": "RSC 中的质押是什么？",
+      "description": "质押可将 RSK 代币锁定，以支持 RSC Chain 网络并获得奖励。这是在参与网络安全的同时获得被动收益的方式。",
+      "benefit1": {
+        "title": "获得奖励",
+        "description": "通过质押代币获得被动收益"
+      },
+      "benefit2": {
+        "title": "支持网络",
+        "description": "助力 RSC Chain 网络的安全与验证"
+      },
+      "benefit3": {
+        "title": "低风险",
+        "description": "规则透明、可控的安全质押"
+      },
+      "visual": {
+        "label": "已质押数量"
+      }
+    },
+    "rewards": {
+      "title": "如何获得奖励",
+      "step1": {
+        "title": "质押您的代币",
+        "description": "将 RSK 代币锁定在质押池中"
+      },
+      "step2": {
+        "title": "获得奖励",
+        "description": "根据已质押数量自动获得奖励"
+      },
+      "step3": {
+        "title": "复投或提取",
+        "description": "将奖励再投资，或提取至钱包"
+      },
+      "visual": {
+        "title": "已获奖励",
+        "period": "近 30 天"
+      }
+    },
+    "rules": {
+      "title": "基本规则",
+      "lock": {
+        "title": "锁定期",
+        "description": "代币将锁定特定期限，以保障网络安全。",
+        "detail": "最短锁定：30 天"
+      },
+      "rewards": {
+        "title": "奖励",
+        "description": "根据已质押数量与当前 APY 获得奖励。",
+        "detail": "APY：最高每年 5%"
+      },
+      "unstake": {
+        "title": "解除质押",
+        "description": "锁定期结束后，即可解除质押。",
+        "detail": "解除质押周期：7 天"
+      }
+    },
+    "transparency": {
+      "title": "透明与掌控",
+      "description": "质押操作全程透明。实时监控已质押数量、奖励与全部交易。",
+      "feature1": "实时质押控制台",
+      "feature2": "完整交易记录",
+      "feature3": "透明的奖励计算",
+      "feature4": "完全掌控已质押代币"
+    },
+    "cta": {
+      "title": "立即开始质押",
+      "description": "直接在 RSC Wallet 中质押 RSK 代币，开始获得奖励。",
+      "button": "从钱包开始质押"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "学习与教育",
+      "subtitle": "开始使用 RSC Wallet 所需了解的全部内容"
+    },
+    "wallet": {
+      "title": "什么是钱包？",
+      "description": "加密货币钱包是用于存储、发送与接收加密资产的数字工具。可将其理解为数字银行账户，但资金完全由您掌控。",
+      "feature1": "存放 RSK 代币及其他加密货币",
+      "feature2": "即时收付款",
+      "feature3": "使用 DeFi 服务与 dApps",
+      "feature4": "完全掌控您的数字资产"
+    },
+    "noncustodial": {
+      "title": "什么是非托管？",
+      "description": "非托管钱包意味着私钥由您掌控，任何第三方均无法动用您的资金。这与由公司持有密钥的托管式钱包不同。",
+      "custodial": {
+        "title": "托管式钱包",
+        "point1": "公司掌控您的私钥",
+        "point2": "您依赖于该公司的安全能力",
+        "point3": "若公司出现问题，可能失去访问权限"
+      },
+      "noncustodial": {
+        "title": "非托管钱包（RSC Wallet）",
+        "point1": "私钥由您掌控",
+        "point2": "任何第三方均无法动用您的资金",
+        "point3": "完全独立与安全保障"
+      }
+    },
+    "seed": {
+      "title": "如何保护助记词",
+      "warning": "助记词是钱包的主密钥。切勿与任何人分享，并妥善保管。",
+      "step1": {
+        "title": "手写记录",
+        "description": "将 12 个单词的助记词写在纸上。切勿以数字形式保存或截图。"
+      },
+      "step2": {
+        "title": "安全存放",
+        "description": "存放于防火保险箱或银行保管箱等安全处所。建议另行备份一份。"
+      },
+      "step3": {
+        "title": "切勿分享",
+        "description": "切勿向任何人透露助记词。正规服务绝不会索要助记词。"
+      },
+      "step4": {
+        "title": "验证备份",
+        "description": "在测试设备上恢复钱包，以验证备份可用。"
+      }
+    },
+    "firstSteps": {
+      "title": "RSC 入门步骤",
+      "step1": {
+        "title": "下载 RSC Wallet",
+        "description": "从官方网站或应用商店下载 RSC Wallet 应用。"
+      },
+      "step2": {
+        "title": "创建您的钱包",
+        "description": "按引导创建新钱包，并妥善保存助记词。"
+      },
+      "step3": {
+        "title": "保护您的钱包",
+        "description": "设置 PIN 或生物识别认证，以增强安全。"
+      },
+      "step4": {
+        "title": "开始使用",
+        "description": "已准备就绪。开始接收 RSK 代币、进行支付，并探索 DeFi 功能。"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "question": "RSC Wallet 是否免费使用？",
+        "answer": "是的，RSC Wallet 完全免费下载与使用。您仅需支付 RSC Chain 上的网络手续费。"
+      },
+      "q2": {
+        "question": "如果丢失助记词会怎样？",
+        "answer": "若丢失助记词，将永久失去对钱包与资金的访问。因此必须妥善保管，切勿分享。"
+      },
+      "q3": {
+        "question": "可以用助记词恢复钱包吗？",
+        "answer": "可以。使用 12 个单词的助记词即可在任意设备上恢复钱包。因此务必妥善保管。"
+      },
+      "q4": {
+        "question": "RSC Wallet 安全吗？",
+        "answer": "是的。RSC Wallet 是具备行业标准安全能力的非托管钱包。私钥不会离开您的设备，我们从未接触您的资金。"
+      },
+      "q5": {
+        "question": "可以在多台设备上使用 RSC Wallet 吗？",
+        "answer": "可以。使用助记词即可在多台设备导入钱包。请确保每台设备均安全可靠。"
+      },
+      "q6": {
+        "question": "RSC Wallet 支持哪些加密货币？",
+        "answer": "RSC Wallet 主要支持 RSK 代币及 RSC Chain 上的其他代币。完整支持列表请在应用内查看。"
+      }
+    }
+  },
+  "remittances": {
+    "hero": {
+      "title": "无国界汇款",
+      "subtitle": "以速度与掌控力向全球发送价值，无需不必要的中介。",
+      "cta": "使用 RSC Wallet 发送"
+    },
+    "allows": {
+      "title": "功能说明",
+      "feature1": {
+        "title": "国际 P2P 转账",
+        "description": "无需中介，直接从钱包向全球任何人汇款。"
+      },
+      "feature2": {
+        "title": "RSC 用户之间的即时转账",
+        "description": "即时向任意 RSC Wallet 用户转账 RSK 代币，并在区块链上立即确认。"
+      },
+      "feature3": {
+        "title": "确认前费用可见",
+        "description": "确认交易前即可查看全部费用。无隐藏收费，无意外支出。"
+      }
+    },
+    "how": {
+      "title": "运作方式",
+      "step1": {
+        "title": "用户 A 从钱包发送",
+        "description": "打开 RSC Wallet，输入收款地址或扫描其 QR 码，并确认金额。"
+      },
+      "step2": {
+        "title": "用户 B 即时收款",
+        "description": "收款方立即在 RSC Wallet 中收到资金，并即时确认。"
+      },
+      "step3": {
+        "title": "链上确认",
+        "description": "每笔交易均记录于 RSC Chain 区块链，提供透明与安全保障。"
+      }
+    },
+    "cases": {
+      "title": "实际场景",
+      "case1": {
+        "title": "家庭汇款",
+        "description": "快速、安全地向海外家人汇款，无需高额手续费或漫长等待。"
+      },
+      "case2": {
+        "title": "自由职业者",
+        "description": "即时收取全球客户付款，无需传统银行延误。"
+      },
+      "case3": {
+        "title": "定期付款",
+        "description": "为订阅、租金或月度资助等定期付款设置自动转账。"
+      }
+    },
+    "security": {
+      "title": "安全",
+      "feature1": {
+        "title": "已验证地址",
+        "description": "发送前核验收款地址，确保资金到达正确目的地。"
+      },
+      "feature2": {
+        "title": "清晰确认",
+        "description": "最终确认前即可查看全部明细，获得清晰的交易确认。"
+      },
+      "feature3": {
+        "title": "完整记录",
+        "description": "查阅全部交易的完整记录，全程透明、可追溯。"
+      }
+    },
+    "cta": {
+      "title": "准备向全球汇款？",
+      "description": "创建 RSC Wallet，开始无国界、快速且安全的汇款。",
+      "button": "创建 RSC Wallet"
+    }
+  },
+  "businessWallet": {
+    "hero": {
+      "title": "RSC Business Wallet",
+      "subtitle": "为企业设计的企业钱包，具备多用户管理与高级管控"
+    },
+    "designed": {
+      "title": "为企业设计的钱包",
+      "description": "RSC Business Wallet 专为需要高级财务管理、团队协作与完整报表工具的企业而构建。",
+      "feature1": "基于角色权限的多用户访问",
+      "feature2": "高级支付管控与限额",
+      "feature3": "完整交易记录与报表",
+      "feature4": "企业级安全与合规",
+      "visual": {
+        "label": "企业解决方案"
+      }
+    },
+    "multiuser": {
+      "title": "多用户（角色）",
+      "description": "按不同访问级别管理团队。分配角色与权限，控制企业钱包中的操作范围。",
+      "roles": {
+        "admin": {
+          "title": "管理员",
+          "description": "可访问全部功能与设置",
+          "permission1": "管理全部用户与角色",
+          "permission2": "配置支付限额与规则",
+          "permission3": "访问全部报表与分析"
+        },
+        "manager": {
+          "title": "经理",
+          "description": "监督运营并审批交易",
+          "permission1": "审批付款与交易",
+          "permission2": "查看报表与分析",
+          "permission3": "管理团队成员"
+        },
+        "operator": {
+          "title": "操作员",
+          "description": "执行日常运营与付款",
+          "permission1": "处理付款与交易",
+          "permission2": "查看交易记录",
+          "permission3": "生成基础报表"
+        }
+      }
+    },
+    "payments": {
+      "title": "支付管控",
+      "description": "以安全与透明的方式管理并监控全部企业付款的高级管控。",
+      "feature1": {
+        "title": "支付限额",
+        "description": "为不同用户与角色设置日、周或月限额"
+      },
+      "feature2": {
+        "title": "审批流程",
+        "description": "对大额交易或敏感操作要求多重审批"
+      },
+      "feature3": {
+        "title": "实时监控",
+        "description": "实时监控全部付款，并即时通知与告警"
+      }
+    },
+    "reports": {
+      "title": "记录与报表",
+      "description": "用于跟踪、分析并导出全部企业财务数据的完整报表工具。",
+      "report1": {
+        "title": "财务分析",
+        "description": "对企业财务的详细分析与洞察"
+      },
+      "report2": {
+        "title": "交易记录",
+        "description": "带筛选与搜索的完整交易记录"
+      },
+      "report3": {
+        "title": "付款报表",
+        "description": "导出用于会计与税务的付款报表"
+      }
+    },
+    "cases": {
+      "title": "用例",
+      "merchants": {
+        "title": "商户",
+        "description": "适合需要管理日常收付款与交易的零售店、餐厅与服务企业。",
+        "benefit1": "接受客户的 QR 付款",
+        "benefit2": "跟踪每日销售与收入",
+        "benefit3": "管理多种支付方式"
+      },
+      "startups": {
+        "title": "初创企业",
+        "description": "适合需要财务管控与团队协作功能的成长型企业。",
+        "benefit1": "面向团队成员的多用户访问",
+        "benefit2": "预算管控与支出限额",
+        "benefit3": "面向投资者的财务报告"
+      }
+    },
+    "cta": {
+      "title": "开始使用企业钱包",
+      "description": "联系我们，了解 RSC Business Wallet 并为贵公司申请开通。",
+      "buttonContact": "联系我们",
+      "buttonRequest": "申请开通"
+    }
+  },
+  "businessBilling": {
+    "hero": {
+      "title": "企业财务管控",
+      "subtitle": "可视化、整理并报告贵公司在 RSC 上的活动。",
+      "cta": "申请开通"
+    },
+    "features": {
+      "title": "功能",
+      "feature1": {
+        "title": "完整付款记录",
+        "description": "查阅企业钱包中全部交易、付款与资金变动的完整记录。"
+      },
+      "feature2": {
+        "title": "数据导出（CSV / PDF）",
+        "description": "以 CSV 或 PDF 格式导出财务数据，供外部分析与会计系统使用。"
+      },
+      "feature3": {
+        "title": "期间划分",
+        "description": "按期间（日、周、月、季或自定义区间）整理并筛选交易。"
+      },
+      "feature4": {
+        "title": "收入与支出识别",
+        "description": "自动分类并识别收入与支出，以便更好地进行财务管理。"
+      }
+    },
+    "cases": {
+      "title": "用例",
+      "case1": {
+        "title": "内部会计",
+        "description": "跟踪全部资金变动，用于内部会计与财务规划。"
+      },
+      "case2": {
+        "title": "税务报表（按司法辖区）",
+        "description": "按所属司法辖区的税务要求生成报表。"
+      },
+      "case3": {
+        "title": "审计",
+        "description": "为内部或外部审计提供完整、详尽的财务记录。"
+      }
+    },
+    "integration": {
+      "title": "集成",
+      "wallet": {
+        "title": "与企业钱包",
+        "description": "与 RSC Business Wallet 无缝集成，实现完整财务管控。",
+        "feature1": "交易自动同步",
+        "feature2": "余额实时更新",
+        "feature3": "多用户访问与权限"
+      },
+      "api": {
+        "title": "与支付 API",
+        "description": "对接 RSC Payment API，将账单与报表集成到您的系统。",
+        "feature1": "通过 API 访问交易数据",
+        "feature2": "自动生成报表",
+        "feature3": "与您现有工具的定制集成"
+      }
+    },
+    "future": {
+      "title": "未来展望",
+      "description": "我们持续改进账单与报表工具。即将推出：",
+      "feature1": "高级分析与预测",
+      "feature2": "多币种支持与兑换",
+      "feature3": "与主流会计软件集成",
+      "cta": "保持关注"
+    }
+  },
+  "businessPayments": {
+    "hero": {
+      "title": "RSC Payments",
+      "subtitle": "面向企业的支付解决方案，结算迅速、费用较低"
+    },
+    "qr": {
+      "title": "QR 收款",
+      "description": "使用 QR 码即时接受客户付款。为产品或服务生成 QR 码，款项直接进入企业钱包。",
+      "feature1": "即时付款确认",
+      "feature2": "无需额外硬件",
+      "feature3": "直接结算至您的钱包",
+      "visual": {
+        "label": "扫码支付"
+      }
+    },
+    "fast": {
+      "title": "快速支付",
+      "description": "收款快于传统银行体系。结算以秒计，而非以日计。",
+      "benefit1": {
+        "title": "即时结算",
+        "description": "付款在 RSC Chain 上立即结算"
+      },
+      "benefit2": {
+        "title": "低费用",
+        "description": "相较传统支付处理商，仅需支付极低交易手续费"
+      },
+      "benefit3": {
+        "title": "全天候可用",
+        "description": "随时随地接受付款，不受银行营业时间限制"
+      }
+    },
+    "friction": {
+      "title": "比银行更少摩擦",
+      "description": "RSC Payments 消除传统银行体系的复杂性与延误。",
+      "banks": {
+        "title": "传统银行",
+        "point1": "结算需数日",
+        "point2": "高额交易手续费",
+        "point3": "复杂的开通流程",
+        "point4": "受银行营业时间限制"
+      },
+      "rsc": {
+        "title": "RSC Payments",
+        "point1": "即时结算",
+        "point2": "低交易手续费",
+        "point3": "简便集成",
+        "point4": "全天候可用"
+      }
+    },
+    "integration": {
+      "title": "RSC Wallet 集成",
+      "description": "将 RSC Payments 与 RSC Business Wallet 无缝集成，实现完整财务管理。",
+      "feature1": {
+        "title": "统一平台",
+        "description": "在同一处管理支付与钱包"
+      },
+      "feature2": {
+        "title": "自动对账",
+        "description": "全部付款自动显示于钱包中"
+      },
+      "feature3": {
+        "title": "生成 QR 码",
+        "description": "直接从钱包生成 QR 码"
+      }
+    },
+    "cases": {
+      "title": "实际用例",
+      "case1": {
+        "title": "零售门店",
+        "description": "某零售门店接入 RSC Payments 后，支付处理时间缩短 90%。",
+        "result": "支付速度提升 90%"
+      },
+      "case2": {
+        "title": "线上业务",
+        "description": "某电子商务平台集成 RSC Payments 后，交易手续费降低 70%。",
+        "result": "费用降低 70%"
+      },
+      "case3": {
+        "title": "服务提供商",
+        "description": "某服务企业使用 RSC Payments 实现即时结算并改善现金流。",
+        "result": "即时现金流"
+      }
+    },
+    "cta": {
+      "title": "开始收款",
+      "description": "立即开始使用 RSC Payments，或联系销售团队获取企业方案。",
+      "buttonStart": "开始使用",
+      "buttonContact": "联系销售"
+    }
+  },
+  "businessAPI": {
+    "hero": {
+      "title": "支付 API",
+      "subtitle": "将 RSC Payments 集成到应用、电子商务与 POS 系统"
+    },
+    "what": {
+      "title": "API 可实现的能力",
+      "description": "RSC Payment API 使您能够将支付处理直接集成到应用、网站与系统中，构建贴合业务需求的定制支付方案。",
+      "capability1": {
+        "title": "处理付款",
+        "description": "通过 API 调用以编程方式接受并处理付款"
+      },
+      "capability2": {
+        "title": "管理交易",
+        "description": "实时创建、跟踪并管理支付交易"
+      },
+      "capability3": {
+        "title": "生成报表",
+        "description": "通过 API 访问交易记录并生成定制报表"
+      },
+      "capability4": {
+        "title": "Webhook 集成",
+        "description": "接收付款事件与状态变更的实时通知"
+      }
+    },
+    "cases": {
+      "title": "用例",
+      "ecommerce": {
+        "title": "电子商务",
+        "description": "将支付集成到网店，实现顺畅结账体验。",
+        "feature1": "一键结账",
+        "feature2": "定期付款",
+        "feature3": "多币种支持"
+      },
+      "apps": {
+        "title": "移动应用",
+        "description": "通过原生 SDK 为移动应用添加支付功能。",
+        "feature1": "iOS 与 Android SDK",
+        "feature2": "应用内购买",
+        "feature3": "推送通知"
+      },
+      "pos": {
+        "title": "POS 系统",
+        "description": "连接销售点系统，在实体场所接受 RSC 付款。",
+        "feature1": "硬件集成",
+        "feature2": "离线模式支持",
+        "feature3": "生成收据"
+      }
+    },
+    "flow": {
+      "title": "集成流程",
+      "description": "仅需数步即可完成的简便集成流程。",
+      "step1": {
+        "title": "获取 API 密钥",
+        "description": "在开发者控制台注册并获取 API 密钥"
+      },
+      "step2": {
+        "title": "安装 SDK",
+        "description": "安装适用于您所用编程语言的 SDK 或库"
+      },
+      "step3": {
+        "title": "集成",
+        "description": "依据 API 文档在应用中添加支付端点"
+      },
+      "step4": {
+        "title": "测试与部署",
+        "description": "在沙箱环境中测试，随后部署至生产环境"
+      }
+    },
+    "security": {
+      "title": "安全",
+      "description": "企业级安全措施，保护 API 集成与客户数据。",
+      "feature1": {
+        "title": "API 密钥认证",
+        "description": "使用 API 密钥与密钥令牌进行安全认证"
+      },
+      "feature2": {
+        "title": "HTTPS 加密",
+        "description": "全部 API 通信均采用 TLS/SSL 协议加密"
+      },
+      "feature3": {
+        "title": "速率限制",
+        "description": "内置速率限制，防止滥用并保障系统稳定"
+      }
+    },
+    "docs": {
+      "title": "技术文档",
+      "description": "包含代码示例、SDK 与集成指南的完整 API 文档。",
+      "link": "查看技术文档"
+    }
+  },
+  "businessUseCases": {
+    "hero": {
+      "title": "企业用例",
+      "subtitle": "企业如何使用 RSC 解决方案的实际示例"
+    },
+    "retail": {
+      "title": "零售",
+      "description": "零售门店与实体企业使用 RSC Payments 快速、安全地接受客户付款，降低交易成本并改善现金流。",
+      "benefit1": "接受客户的 QR 付款",
+      "benefit2": "交易手续费低于传统处理商",
+      "benefit3": "即时结算至企业钱包",
+      "example": {
+        "title": "示例",
+        "text": "某服装店使用 RSC Payments 后，支付处理成本降低 60%，结账速度提升 3 倍。"
+      }
+    },
+    "digital": {
+      "title": "数字服务",
+      "description": "服务商、咨询机构与数字企业使用 RSC 收取服务款项、管理订阅并实现账单自动化。",
+      "benefit1": "自动定期付款",
+      "benefit2": "即时付款通知",
+      "benefit3": "多币种支持",
+      "example": {
+        "title": "示例",
+        "text": "某咨询公司实现开票与收款自动化，行政耗时减少 70%。"
+      }
+    },
+    "platforms": {
+      "title": "在线平台",
+      "description": "电子商务平台、市场与在线服务集成 RSC Payments，为用户提供顺畅支付体验。",
+      "benefit1": "一键结账集成",
+      "benefit2": "市场支付分账",
+      "benefit3": "实时交易跟踪",
+      "example": {
+        "title": "示例",
+        "text": "某在线市场集成 RSC Payments 后，凭借更快结账将转化率提升 25%。"
+      }
+    },
+    "remittances": {
+      "title": "汇款",
+      "description": "金融服务与汇款公司使用 RSC Chain 提供快速、低成本的跨境转账与汇款服务。",
+      "benefit1": "快速跨境转账",
+      "benefit2": "费用低于传统汇款",
+      "benefit3": "全天候可用",
+      "example": {
+        "title": "示例",
+        "text": "某汇款服务将转账费用降低 80%，处理时间由数日缩短至数秒。"
+      }
+    },
+    "examples": {
+      "title": "实践示例",
+      "example1": {
+        "title": "连锁超市",
+        "description": "某连锁超市在 50 家门店部署 RSC Payments，日处理交易超过 10,000 笔。",
+        "metric1": "日交易量 10,000+ 笔",
+        "metric2": "成本降低 60%"
+      },
+      "example2": {
+        "title": "SaaS 平台",
+        "description": "某 SaaS 公司集成 RSC Payments 用于订阅计费，管理数千笔定期付款。",
+        "metric1": "5,000+ 份有效订阅",
+        "metric2": "99.9% 可用性"
+      },
+      "example3": {
+        "title": "市场平台",
+        "description": "某在线市场使用 RSC Payments 处理买卖双方交易，并配备自动托管与结算。",
+        "metric1": "交易速度提升 50%",
+        "metric2": "零欺诈事件"
+      }
+    }
+  },
+  "institutionalP2P": {
+    "hero": {
+      "title": "机构 P2P 市场",
+      "subtitle": "面向金融机构的企业级点对点交易基础设施"
+    },
+    "what": {
+      "title": "什么是机构 P2P 市场",
+      "description": "机构 P2P 市场是面向金融机构、基金与经纪商的成熟交易基础设施。它支持大规模、安全、合规且高效的点对点交易，并内置托管服务与监管合规能力。",
+      "feature1": {
+        "title": "机构交易",
+        "description": "面向机构参与者的大规模交易能力，配备先进的订单撮合与结算系统"
+      },
+      "feature2": {
+        "title": "市场基础设施",
+        "description": "稳健的市场基础设施，具备实时定价、订单簿管理与交易执行"
+      },
+      "feature3": {
+        "title": "安全与信任",
+        "description": "企业级安全：多重签名钱包、冷存储集成与完整审计轨迹"
+      }
+    },
+    "escrow": {
+      "title": "Escrow 服务",
+      "description": "自动化托管服务在全部条件满足前保管资产，保障机构交易双方安全。",
+      "feature1": {
+        "title": "自动托管",
+        "description": "基于智能合约的托管在交易条件核实并完成后自动保管资产"
+      },
+      "feature2": {
+        "title": "多方核验",
+        "description": "资金释放前需多方核验，确保合规并降低欺诈风险"
+      },
+      "feature3": {
+        "title": "争议解决",
+        "description": "内置争议解决机制，并为复杂机构交易提供仲裁支持"
+      }
+    },
+    "compliance": {
+      "title": "合规与监管",
+      "description": "完整合规框架，旨在满足机构金融服务的监管要求。",
+      "item1": "对全部参与者进行 KYC/AML 核验",
+      "item2": "交易监控与报告",
+      "item3": "监管报告与审计轨迹",
+      "item4": "持牌托管服务",
+      "item5": "多司法辖区合规支持",
+      "item6": "实时风险评估与告警"
+    },
+    "cases": {
+      "title": "用例",
+      "funds": {
+        "title": "投资基金",
+        "description": "投资基金通过 P2P 市场进行安全的资产交易、组合再平衡与高效结算。",
+        "benefit1": "大规模交易能力",
+        "benefit2": "安全资产托管",
+        "benefit3": "自动结算与报告"
+      },
+      "brokers": {
+        "title": "经纪商与交易机构",
+        "description": "经纪商与交易机构利用该平台开展客户交易、做市与流动性提供。",
+        "benefit1": "先进订单撮合",
+        "benefit2": "实时市场数据",
+        "benefit3": "监管合规工具"
+      }
+    },
+    "cta": {
+      "title": "机构联系",
+      "description": "联系机构团队，了解 P2P 市场基础设施并讨论您的具体需求。",
+      "button": "联系机构团队"
+    }
+  },
+  "institutionalChain": {
+    "hero": {
+      "title": "RSC Chain",
+      "subtitle": "面向机构应用的企业级区块链基础设施"
+    },
+    "what": {
+      "title": "什么是 RSC Chain",
+      "description": "RSC Chain 是面向机构用途的高性能区块链基础设施。具备企业级安全、可扩展性与合规能力，使金融机构能够大规模构建并部署去中心化应用。",
+      "feature1": {
+        "title": "高性能",
+        "description": "针对高吞吐与低延迟优化，支持每秒数千笔交易"
+      },
+      "feature2": {
+        "title": "企业级安全",
+        "description": "多层安全架构，采用先进密码学与机构级密钥管理"
+      },
+      "feature3": {
+        "title": "监管合规",
+        "description": "内置合规能力，包括 KYC/AML 集成与监管报告功能"
+      }
+    },
+    "architecture": {
+      "title": "架构",
+      "description": "RSC Chain 采用模块化分层架构，兼顾灵活性、可扩展性与机构需求。",
+      "layer1": {
+        "title": "共识层",
+        "description": "稳健的共识机制，保障网络安全与交易最终性"
+      },
+      "layer2": {
+        "title": "执行层",
+        "description": "高性能执行环境，支持智能合约与复杂交易"
+      },
+      "layer3": {
+        "title": "应用层",
+        "description": "面向开发者的 API 与工具，用于构建机构应用与服务"
+      }
+    },
+    "consensus": {
+      "title": "共识机制",
+      "description": "RSC Chain 采用面向机构级安全、性能与去中心化的先进共识机制。",
+      "feature1": {
+        "title": "快速最终性",
+        "description": "快速交易确认并具备确定性最终性，确保即时结算"
+      },
+      "feature2": {
+        "title": "高吞吐",
+        "description": "优化的共识算法，在保障安全的前提下支持高交易量"
+      },
+      "feature3": {
+        "title": "拜占庭容错",
+        "description": "抵御网络故障与恶意行为，在各种条件下维持网络完整性"
+      }
+    },
+    "scalability": {
+      "title": "可扩展性",
+      "description": "RSC Chain 按机构需求扩展，支持不断增长的交易量与网络参与者。",
+      "metric1": {
+        "value": "10,000+",
+        "label": "每秒交易数"
+      },
+      "metric2": {
+        "value": "< 2s",
+        "label": "区块确认时间"
+      },
+      "metric3": {
+        "value": "99.9%",
+        "label": "网络可用性"
+      }
+    },
+    "cases": {
+      "title": "机构用例",
+      "case1": {
+        "title": "央行数字货币",
+        "description": "中央银行依托 RSC Chain 基础设施实施 CBDC 与数字货币系统。",
+        "benefit1": "内置监管合规",
+        "benefit2": "高交易吞吐",
+        "benefit3": "安全且可审计"
+      },
+      "case2": {
+        "title": "跨境支付",
+        "description": "金融机构使用 RSC Chain 构建快速、低成本的跨境支付网络与汇款服务。",
+        "benefit1": "即时结算",
+        "benefit2": "降低交易成本",
+        "benefit3": "全天候可用"
+      },
+      "case3": {
+        "title": "数字资产基础设施",
+        "description": "机构在 RSC Chain 上构建数字资产平台、代币化系统与 DeFi 协议。",
+        "benefit1": "智能合约支持",
+        "benefit2": "互操作性能力",
+        "benefit3": "面向开发者的工具"
+      }
+    },
+    "cta": {
+      "docs": "查看技术文档",
+      "partnership": "机构合作"
+    }
+  },
+  "institutionalCorporate": {
+    "hero": {
+      "title": "RSC Corporate",
+      "subtitle": "面向大型机构的企业级区块链服务与解决方案"
+    },
+    "consulting": {
+      "title": "区块链咨询",
+      "description": "专业区块链咨询服务，协助机构理解、规划并实施贴合自身需求的区块链方案。",
+      "service1": {
+        "title": "战略规划",
+        "description": "为贵机构制定完整的区块链战略与路线图"
+      },
+      "service2": {
+        "title": "安全评估",
+        "description": "针对区块链实施的深度安全审计与风险评估"
+      },
+      "service3": {
+        "title": "实施指导",
+        "description": "覆盖区块链实施全周期的专业指导"
+      }
+    },
+    "infrastructure": {
+      "title": "专用基础设施",
+      "description": "专为贵企业需求设计的私有专用区块链基础设施，具备完全掌控与定制能力。",
+      "feature1": {
+        "title": "私有网络",
+        "description": "与公链隔离的专用区块链网络，确保完全隐私与掌控"
+      },
+      "feature2": {
+        "title": "定制配置",
+        "description": "按精确规格、性能要求与合规需求配置的基础设施"
+      },
+      "feature3": {
+        "title": "托管运维服务",
+        "description": "全托管基础设施，提供全天候监控、维护与支持"
+      }
+    },
+    "integrations": {
+      "title": "私有集成",
+      "description": "将区块链技术无缝集成到现有企业系统与工作流。",
+      "integration1": {
+        "title": "系统集成",
+        "description": "与现有 ERP、CRM 及企业系统集成",
+        "benefit1": "基于 API 的集成",
+        "benefit2": "实时数据同步"
+      },
+      "integration2": {
+        "title": "定制开发",
+        "description": "针对特定用例开发的定制区块链应用与智能合约",
+        "benefit1": "量身定制方案",
+        "benefit2": "完整源代码所有权"
+      }
+    },
+    "support": {
+      "title": "企业支持",
+      "description": "完整企业支持服务，确保区块链基础设施平稳、高效运行。",
+      "feature1": {
+        "title": "全天候技术支持",
+        "description": "专家团队全天候技术支持，应对关键问题与紧急情况"
+      },
+      "feature2": {
+        "title": "专属客户经理",
+        "description": "为贵机构配备专属客户经理，提供个性化服务与协调"
+      },
+      "feature3": {
+        "title": "优先响应时间",
+        "description": "支持请求与问题处理享受有保障的优先响应时间"
+      },
+      "feature4": {
+        "title": "培训与文档",
+        "description": "完整培训计划与文档，协助团队充分释放区块链技术价值"
+      }
+    },
+    "cta": {
+      "title": "直接联系",
+      "description": "直接联系企业团队，讨论具体需求并了解 RSC Corporate 如何助力贵机构。",
+      "button": "联系企业团队"
+    }
+  },
+  "institutionalRSK": {
+    "hero": {
+      "title": "REESK (RSK)",
+      "subtitle": "RSC Chain 生态的原生数字资产"
+    },
+    "what": {
+      "title": "什么是 RSK",
+      "description": "RSK（REESK）是 RSC Chain 生态的原生数字资产，作为主要效用代币，支撑交易、治理、质押及 RSC 网络中的多项生态功能。",
+      "feature1": {
+        "title": "原生资产",
+        "description": "支撑 RSC Chain 全部运营与交易的基础数字资产"
+      },
+      "feature2": {
+        "title": "网络效用",
+        "description": "用于交易手续费、智能合约执行与网络参与"
+      },
+      "feature3": {
+        "title": "生态集成",
+        "description": "深度集成于 RSC Chain 的全部服务、应用与基础设施"
+      }
+    },
+    "role": {
+      "title": "在生态中的角色",
+      "description": "RSK 在 RSC Chain 生态中居于核心地位，承担多项关键职能，支撑网络运行与发展。",
+      "feature1": {
+        "title": "交易媒介",
+        "description": "RSC Chain 上全部交易、支付与价值转移的主要货币"
+      },
+      "feature2": {
+        "title": "参与治理",
+        "description": "使持有者能够参与网络治理与决策过程"
+      },
+      "feature3": {
+        "title": "质押与奖励",
+        "description": "用于质押以保障网络安全，并因参与网络而获得奖励"
+      }
+    },
+    "supply": {
+      "title": "供应与效用",
+      "description": "RSK 具备精心设计的供应机制，并在 RSC Chain 生态中承担多项效用功能。",
+      "supply": {
+        "title": "代币供应",
+        "metric1": {
+          "label": "总供应量",
+          "value": "固定供应"
+        },
+        "metric2": {
+          "label": "分配",
+          "value": "机构分配"
+        }
+      },
+      "utility": {
+        "title": "效用功能",
+        "utility1": "交易手续费与 Gas 支付",
+        "utility2": "质押与网络安全",
+        "utility3": "治理投票权",
+        "utility4": "使用高级功能"
+      }
+    },
+    "cases": {
+      "title": "机构用例",
+      "case1": {
+        "title": "资金管理",
+        "description": "机构使用 RSK 进行资金管理、储备持有与数字资产组合管理。",
+        "benefit1": "价值储存",
+        "benefit2": "流动性管理"
+      },
+      "case2": {
+        "title": "支付基础设施",
+        "description": "RSK 是机构支付系统与跨境交易的基础。",
+        "benefit1": "快速结算",
+        "benefit2": "低交易成本"
+      },
+      "case3": {
+        "title": "质押与收益",
+        "description": "机构质押 RSK 以获得奖励，同时贡献于网络的安全与稳定。",
+        "benefit1": "被动收益生成",
+        "benefit2": "网络参与奖励"
+      }
+    },
+    "docs": {
+      "roadmap": "查看路线图",
+      "documentation": "技术文档"
+    }
+  },
+  "developersDocs": {
+    "hero": {
+      "title": "开发者文档",
+      "subtitle": "在 RSC Chain 上构建所需的完整指南、API 与工具"
+    },
+    "gettingStarted": {
+      "title": "入门指南",
+      "description": "通过完整入门指南开始在 RSC Chain 上构建。按以下步骤配置开发环境并创建首个应用。",
+      "step1": {
+        "title": "配置环境",
+        "description": "安装所需工具与 SDK，并配置开发环境"
+      },
+      "step2": {
+        "title": "创建 API 密钥",
+        "description": "注册开发者账户，并从控制台获取 API 密钥"
+      },
+      "step3": {
+        "title": "连接网络",
+        "description": "通过 RPC 端点连接 RSC Chain 测试网或主网"
+      },
+      "step4": {
+        "title": "构建您的第一个应用",
+        "description": "按照教程创建您的第一个去中心化应用"
+      }
+    },
+    "walletAPI": {
+      "title": "钱包 API",
+      "description": "使用完整的钱包 API 将钱包功能集成到应用中。以编程方式创建钱包、管理账户并处理交易。",
+      "feature1": {
+        "title": "账户管理",
+        "description": "以完整的编程控制创建、导入并管理钱包账户"
+      },
+      "feature2": {
+        "title": "交易处理",
+        "description": "发送、接收并跟踪交易，并查阅详细交易记录"
+      },
+      "feature3": {
+        "title": "多重签名支持",
+        "description": "实现多重签名钱包，以增强安全与治理"
+      }
+    },
+    "rpc": {
+      "title": "区块链 RPC",
+      "description": "通过 JSON-RPC API 与 RSC Chain 区块链交互。查询链上数据、提交交易并与智能合约交互。",
+      "feature1": {
+        "title": "RPC 端点",
+        "description": "访问测试网与主网的公共及私有 RPC 端点"
+      },
+      "feature2": {
+        "title": "智能合约交互",
+        "description": "使用 RPC 方法部署、调用并与智能合约交互"
+      },
+      "feature3": {
+        "title": "区块链查询",
+        "description": "实时查询区块、交易、账户与合约状态"
+      }
+    },
+    "security": {
+      "title": "安全",
+      "description": "在 RSC Chain 上进行安全开发的最佳实践与指南。",
+      "feature1": {
+        "title": "密钥管理",
+        "description": "私钥与凭证的安全存储与管理"
+      },
+      "feature2": {
+        "title": "输入校验",
+        "description": "校验并净化全部用户输入，以防注入攻击"
+      },
+      "feature3": {
+        "title": "交易安全",
+        "description": "实施妥善的交易签名与核验机制"
+      },
+      "feature4": {
+        "title": "智能合约审计",
+        "description": "遵循安全最佳实践，并在部署前进行充分审计"
+      }
+    },
+    "examples": {
+      "title": "代码示例",
+      "example1": {
+        "title": "钱包集成",
+        "description": "将钱包功能集成到 Web 应用的完整示例",
+        "link": "查看示例"
+      },
+      "example2": {
+        "title": "智能合约部署",
+        "description": "部署并与智能合约交互的分步指南",
+        "link": "查看示例"
+      },
+      "example3": {
+        "title": "交易处理",
+        "description": "在 RSC Chain 上发送与接收交易的示例代码",
+        "link": "查看示例"
+      }
+    }
+  },
+  "developersChain": {
+    "hero": {
+      "title": "RSC Chain",
+      "subtitle": "运行节点并与 RSC Chain 交互的技术文档"
+    },
+    "node": {
+      "title": "运行节点",
+      "description": "了解如何部署并运行您自己的 RSC Chain 节点，以参与网络并直接访问区块链数据。",
+      "step1": {
+        "title": "安装依赖",
+        "description": "安装所需的系统依赖与工具",
+        "code": "sudo apt-get update && sudo apt-get install -y build-essential"
+      },
+      "step2": {
+        "title": "克隆仓库",
+        "description": "从 GitHub 克隆 RSC Chain 节点仓库",
+        "code": "git clone https://github.com/rsc-chain/node.git"
+      },
+      "step3": {
+        "title": "构建并运行",
+        "description": "构建节点二进制文件并启动节点",
+        "code": "cd node && make build && ./rsc-node --network mainnet"
+      }
+    },
+    "endpoints": {
+      "title": "RPC 端点",
+      "description": "使用测试网与主网的公共或私有 RPC 端点连接 RSC Chain。",
+      "endpoint1": {
+        "title": "主网 RPC",
+        "url": "https://rpc.rscchain.io",
+        "description": "RSC Chain 主网公共 RPC 端点"
+      },
+      "endpoint2": {
+        "title": "测试网 RPC",
+        "url": "https://testnet.rpc.rscchain.io",
+        "description": "RSC Chain 测试网公共 RPC 端点"
+      },
+      "endpoint3": {
+        "title": "WebSocket RPC",
+        "url": "wss://rpc.rscchain.io/ws",
+        "description": "用于实时区块链数据的 WebSocket 端点"
+      }
+    },
+    "architecture": {
+      "title": "技术架构",
+      "description": "理解 RSC Chain 的技术架构，有助于开发者构建更完善的应用与集成。",
+      "layer1": {
+        "title": "共识层",
+        "description": "共识机制通过稳健的验证过程保障网络安全与交易最终性"
+      },
+      "layer2": {
+        "title": "网络层",
+        "description": "P2P 网络层处理节点通信、区块传播与节点发现"
+      },
+      "layer3": {
+        "title": "应用层",
+        "description": "用于构建去中心化应用的智能合约执行环境与应用接口"
+      }
+    },
+    "github": {
+      "title": "GitHub 仓库",
+      "description": "访问源代码、参与开发，并在 GitHub 上浏览 RSC Chain 仓库。",
+      "link1": {
+        "title": "RSC Chain 节点",
+        "url": "github.com/rsc-chain/node"
+      },
+      "link2": {
+        "title": "RSC Chain SDK",
+        "url": "github.com/rsc-chain/sdk"
+      },
+      "link3": {
+        "title": "RSC Chain 文档",
+        "url": "github.com/rsc-chain/docs"
+      }
+    }
+  },
+  "developersAPIs": {
+    "hero": {
+      "title": "API 与 SDK",
+      "subtitle": "用于在 RSC Chain 上构建的完整 SDK 与 API"
+    },
+    "walletSDK": {
+      "title": "钱包 SDK",
+      "description": "使用完整的钱包 SDK 将钱包功能集成到应用中。支持多种编程语言与平台。",
+      "feature1": "创建并管理钱包账户",
+      "feature2": "发送与接收交易",
+      "feature3": "多重签名钱包支持",
+      "feature4": "交易记录与余额查询",
+      "install": {
+        "title": "安装",
+        "code": "npm install @rsc-chain/wallet-sdk"
+      }
+    },
+    "paymentsSDK": {
+      "title": "支付 SDK",
+      "description": "使用支付 SDK 顺畅处理付款。轻松完成 QR 支付、即时转账与支付处理。",
+      "feature1": "生成 QR 码支付",
+      "feature2": "即时支付处理",
+      "feature3": "支付状态跟踪",
+      "feature4": "Webhook 集成支持",
+      "install": {
+        "title": "安装",
+        "code": "npm install @rsc-chain/payments-sdk"
+      }
+    },
+    "examples": {
+      "title": "代码示例",
+      "example1": {
+        "title": "创建钱包",
+        "description": "创建新钱包账户的示例代码",
+        "code": "const wallet = await WalletSDK.create();",
+        "link": "查看完整示例"
+      },
+      "example2": {
+        "title": "处理付款",
+        "description": "处理支付交易的示例代码",
+        "code": "const payment = await PaymentsSDK.create({ amount, recipient });",
+        "link": "查看完整示例"
+      },
+      "example3": {
+        "title": "查询余额",
+        "description": "查询钱包余额的示例代码",
+        "code": "const balance = await wallet.getBalance();",
+        "link": "查看完整示例"
+      }
+    },
+    "versioning": {
+      "title": "版本管理",
+      "description": "我们的 SDK 遵循语义化版本。请查阅各软件包的最新版本与变更日志。",
+      "version1": {
+        "name": "钱包 SDK",
+        "tag": "v2.1.0",
+        "description": "最新稳定版，增强安全能力并提升性能",
+        "link": "查看变更日志"
+      },
+      "version2": {
+        "name": "支付 SDK",
+        "tag": "v1.5.2",
+        "description": "最新稳定版，新增支付方式并修复缺陷",
+        "link": "查看变更日志"
+      }
+    }
+  },
+  "developersTestnet": {
+    "hero": {
+      "title": "测试网",
+      "subtitle": "在 RSC Chain 测试网上测试与开发，无需使用真实资金"
+    },
+    "what": {
+      "title": "什么是测试网",
+      "description": "RSC Chain 测试网是专为测试与开发设立的独立区块链网络。使用无实际价值的测试代币，使开发者可在无财务风险的前提下自由试验。",
+      "benefit1": {
+        "title": "无风险测试",
+        "description": "无需真实资金或资产即可测试应用与智能合约"
+      },
+      "benefit2": {
+        "title": "完整功能",
+        "description": "测试网提供与主网相同的功能，便于全面测试"
+      },
+      "benefit3": {
+        "title": "免费测试代币",
+        "description": "从水龙头获取测试代币，立即开始测试"
+      }
+    },
+    "faucet": {
+      "title": "水龙头",
+      "description": "测试网水龙头为开发与测试提供免费测试代币。",
+      "card": {
+        "title": "获取测试代币",
+        "description": "直接从水龙头申领测试代币，为测试网钱包充值以供开发与测试。",
+        "info1": "用于开发的免费测试代币",
+        "info2": "无实际价值，可安全试验",
+        "button": "访问水龙头"
+      }
+    },
+    "explorer": {
+      "title": "区块链浏览器",
+      "description": "使用测试网浏览器查看测试网区块链、交易、区块与智能合约。",
+      "card": {
+        "title": "测试网浏览器",
+        "description": "浏览 RSC Chain 测试网上的交易、区块、账户与智能合约。",
+        "feature1": "查看交易记录",
+        "feature2": "浏览区块与账户",
+        "feature3": "查看智能合约",
+        "button": "打开浏览器"
+      }
+    },
+    "limitations": {
+      "title": "限制说明",
+      "description": "在测试网上进行开发时的重要限制与注意事项。",
+      "limitation1": {
+        "title": "无实际价值",
+        "description": "测试代币无实际货币价值，不可兑换为真实资产"
+      },
+      "limitation2": {
+        "title": "网络重置",
+        "description": "测试网可能定期重置，导致测试数据与交易丢失"
+      },
+      "limitation3": {
+        "title": "性能差异",
+        "description": "由于网络活跃度较低，测试网性能可能与主网不同"
+      },
+      "limitation4": {
+        "title": "不可用于生产",
+        "description": "测试网仅供开发使用，不得用于生产应用"
+      }
+    }
+  },
+  "developersRoadmap": {
+    "hero": {
+      "title": "RSC 技术路线图",
+      "subtitle": "透明呈现正在构建、进行中以及即将推出的内容。",
+      "cta": "查看仓库",
+      "githubLink": "https://github.com/rscchain"
+    },
+    "now": {
+      "label": "当前",
+      "title": "开发中",
+      "description": "当前围绕钱包、API 与核心基础设施开展工作。",
+      "items": {
+        "item1": {
+          "title": "钱包核心功能",
+          "version": "v2.1.0",
+          "date": "2024 年第一季度",
+          "description": "增强钱包功能，提升安全性，支持多重签名与高级交易管理。",
+          "githubLink": "https://github.com/rscchain/wallet/issues"
+        },
+        "item2": {
+          "title": "支付 API",
+          "version": "v1.5.0",
+          "date": "2024 年第一季度",
+          "description": "扩展支付 API 能力，新增端点、改进 Webhook 并完善文档。",
+          "githubLink": "https://github.com/rscchain/payments-api/issues"
+        },
+        "item3": {
+          "title": "核心基础设施",
+          "version": "v3.0.0",
+          "date": "2024 年第二季度",
+          "description": "改进区块链基础设施，提升可扩展性、性能优化与网络稳定性。",
+          "githubLink": "https://github.com/rscchain/core/issues"
+        }
+      }
+    },
+    "next": {
+      "label": "下一步",
+      "title": "即将推出",
+      "description": "跨链桥开发、共识改进与开发者工具。",
+      "items": {
+        "item1": {
+          "title": "跨链桥",
+          "version": "v1.0.0",
+          "date": "2024 年第二至第三季度",
+          "description": "开发安全跨链桥，实现 RSC Chain 与其他主流区块链之间的资产转移。",
+          "githubLink": "https://github.com/rscchain/bridge/issues"
+        },
+        "item2": {
+          "title": "共识改进",
+          "version": "v3.1.0",
+          "date": "2024 年第三季度",
+          "description": "增强共识机制，以提升性能、降低延迟并改善网络效率。",
+          "githubLink": "https://github.com/rscchain/consensus/issues"
+        },
+        "item3": {
+          "title": "开发者工具",
+          "version": "v2.0.0",
+          "date": "2024 年第三季度",
+          "description": "为在 RSC Chain 上构建的开发者提供新的开发工具、改进的 SDK 与增强的调试能力。",
+          "githubLink": "https://github.com/rscchain/tooling/issues"
+        }
+      }
+    },
+    "later": {
+      "label": "后续",
+      "title": "探索中",
+      "description": "正在评估的优化、高级功能与集成。",
+      "items": {
+        "item1": {
+          "title": "Layer 2 方案",
+          "version": "TBD",
+          "date": "2025",
+          "description": "探索 Layer 2 扩容方案，以进一步提升交易吞吐并降低成本。",
+          "githubLink": "https://github.com/rscchain/layer2/issues"
+        },
+        "item2": {
+          "title": "高级 DeFi 功能",
+          "version": "TBD",
+          "date": "2025",
+          "description": "研发借贷与收益耕作等高级 DeFi 功能与协议。",
+          "githubLink": "https://github.com/rscchain/defi/issues"
+        },
+        "item3": {
+          "title": "企业集成",
+          "version": "TBD",
+          "date": "2025",
+          "description": "构建与主流企业系统及传统金融基础设施的集成。",
+          "githubLink": "https://github.com/rscchain/integrations/issues"
+        }
+      }
+    },
+    "viewOnGitHub": "在 GitHub 上查看",
+    "cta": {
+      "title": "贡献并在 RSC 上构建",
+      "description": "加入正在构建去中心化金融未来的开发者社区。贡献代码、报告问题，或在 RSC Chain 上构建自己的项目。",
+      "contribute": "参与贡献",
+      "contributeLink": "https://github.com/rscchain",
+      "build": "在 RSC 上构建",
+      "buildLink": "/developers/docs"
+    }
+  },
+  "companyAbout": {
+    "hero": {
+      "title": "关于 Reesk'Cap Coorp",
+      "subtitle": "Reesk'Cap Coorp 生态背后的组织"
+    },
+    "vision": {
+      "title": "愿景",
+      "description": "我们的愿景是打造赋能全球个人与机构的去中心化金融生态，使金融服务对所有人而言均可及、透明且安全。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "我们的使命是建设并维护 RSC Chain 基础设施，提供创新的区块链解决方案，实现安全、快速、低成本的金融交易，并促进普惠金融与创新。"
+    },
+    "philosophy": {
+      "title": "理念",
+      "description": "核心理念指导我们的一切行动，并塑造构建 RSC 生态的方式。",
+      "principle1": {
+        "title": "去中心化",
+        "description": "我们相信去中心化系统能够打造更透明、公平且更具韧性的金融基础设施。"
+      },
+      "principle2": {
+        "title": "安全优先",
+        "description": "安全是我们构建一切的核心，用户资金与数据安全始终置于首位。"
+      },
+      "principle3": {
+        "title": "开放创新",
+        "description": "我们培育开放生态，使开发者、企业与机构能够共同创新与构建。"
+      }
+    }
+  },
+  "companySecurity": {
+    "hero": {
+      "title": "安全与合规",
+      "subtitle": "我们对安全及保护用户资产的承诺"
+    },
+    "model": {
+      "title": "安全模型",
+      "description": "RSC 采用全面的多层安全模型，旨在保护用户资产、数据与网络完整性。",
+      "feature1": {
+        "title": "多层防护",
+        "description": "包括加密、访问控制与监控系统在内的多层安全"
+      },
+      "feature2": {
+        "title": "密钥管理",
+        "description": "配备硬件安全模块与安全密钥存储的先进密钥管理系统"
+      },
+      "feature3": {
+        "title": "持续监控",
+        "description": "全天候监控与威胁检测系统，识别并响应安全事件"
+      }
+    },
+    "responsibilities": {
+      "title": "职责",
+      "description": "我们严肃对待安全职责，并致力于维持最高标准。",
+      "responsibility1": {
+        "title": "资产保护",
+        "description": "通过安全基础设施与一流安全实践保护用户资产"
+      },
+      "responsibility2": {
+        "title": "数据隐私",
+        "description": "确保用户数据隐私并符合数据保护法规"
+      },
+      "responsibility3": {
+        "title": "透明度",
+        "description": "对安全实践及可能发生的事件保持透明"
+      }
+    },
+    "practices": {
+      "title": "最佳实践",
+      "description": "我们遵循的安全最佳实践，以保障平台与用户安全。",
+      "practice1": "定期安全审计与渗透测试",
+      "practice2": "员工安全培训与意识计划",
+      "practice3": "事件响应与灾难恢复计划",
+      "practice4": "符合行业安全标准",
+      "practice5": "定期更新与安全补丁"
+    }
+  },
+  "companyCareers": {
+    "hero": {
+      "title": "招聘",
+      "subtitle": "与我们一同构建去中心化金融的未来"
+    },
+    "positions": {
+      "title": "在招职位",
+      "position1": {
+        "title": "高级区块链开发工程师",
+        "location": "远程",
+        "type": "全职",
+        "description": "主导 RSC Chain 区块链基础设施与智能合约的开发。",
+        "link": "立即申请"
+      },
+      "position2": {
+        "title": "安全工程师",
+        "location": "远程",
+        "type": "全职",
+        "description": "设计并实施安全措施，保护 RSC Chain 基础设施与用户资产。",
+        "link": "立即申请"
+      },
+      "position3": {
+        "title": "产品经理",
+        "location": "远程",
+        "type": "全职",
+        "description": "推动 RSC 生态产品与服务的产品战略与开发。",
+        "link": "立即申请"
+      }
+    },
+    "culture": {
+      "title": "公司文化",
+      "description": "我们培育创新、协作与持续学习的文化。",
+      "value1": {
+        "title": "创新",
+        "description": "我们鼓励以创造性思维解决复杂问题"
+      },
+      "value2": {
+        "title": "协作",
+        "description": "我们相信以团队协作实现共同目标"
+      },
+      "value3": {
+        "title": "成长",
+        "description": "我们支持全体成员的职业发展与持续学习"
+      }
+    },
+    "contact": {
+      "title": "联系",
+      "description": "有意加入团队？请与我们联系。",
+      "email": "careers@rscchain.io"
+    }
+  },
+  "companyContact": {
+    "hero": {
+      "title": "联系与合作",
+      "subtitle": "就商务咨询与合作事宜联系我们的团队"
+    },
+    "form": {
+      "title": "联系表单",
+      "description": "请填写下方表单，我们将尽快回复。",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "company": "公司",
+      "subject": "主题",
+      "subjectPlaceholder": "请选择主题",
+      "subjectOption1": "合作",
+      "subjectOption2": "商务咨询",
+      "subjectOption3": "技术支持",
+      "subjectOption4": "其他",
+      "message": "留言",
+      "submit": "发送留言"
+    },
+    "email": {
+      "title": "机构邮箱",
+      "description": "如需直接咨询，可通过机构邮箱与我们联系。",
+      "address1": {
+        "label": "一般咨询",
+        "email": "info@rscchain.io"
+      },
+      "address2": {
+        "label": "合作伙伴",
+        "email": "partnerships@rscchain.io"
+      }
+    }
+  },
+  "companySignDocs": {
+    "hero": {
+      "title": "Sign Docs",
+      "subtitle": "与 RSC 及合作方签署合作协议与机构文件"
+    },
+    "gate": {
+      "title": "输入您的电子邮箱",
+      "description": "RSC 管理员在此管理文件。合作方使用协议所指定的电子邮箱。",
+      "emailPlaceholder": "you@company.com",
+      "submit": "访问文件"
+    },
+    "list": {
+      "title": "您的文件",
+      "signatures": "签名"
+    },
+    "admin": {
+      "createTitle": "新建合作文件",
+      "createHint": "上传 PDF，指定合作方邮箱，并以 Reesk'Cap Coorp 身份签署。",
+      "title": "文件标题",
+      "description": "说明",
+      "pdf": "PDF 文件",
+      "partners": "合作方签署人",
+      "addPartner": "添加合作方",
+      "partnerName": "全名",
+      "rscAuto": "您（Reesk'Cap Coorp）将自动作为首位签署人添加。",
+      "submit": "创建文件",
+      "allDocs": "全部文件",
+      "empty": "暂无文件。请在上方创建第一份。",
+      "needTitlePdf": "标题与 PDF 为必填项。",
+      "viewOnly": "您可以查看此文件，但未被列为签署人。"
+    },
+    "sign": {
+      "signersTitle": "签署人",
+      "drawTitle": "您的签名",
+      "drawHint": "请在下方框内签署，然后提交。",
+      "clear": "清除",
+      "submit": "提交签名",
+      "alreadySigned": "您已签署此文件。"
+    },
+    "actions": {
+      "changeEmail": "更改邮箱",
+      "backToList": "返回文件列表",
+      "download": "下载已签署 PDF"
+    },
+    "errors": {
+      "noDocuments": "未找到与此邮箱关联的文件。",
+      "generic": "出现错误。请重试。"
+    }
+  },
+  "companyPress": {
+    "hero": {
+      "title": "新闻与媒体",
+      "subtitle": "新闻、官方公告及媒体资料。",
+      "cta": "媒体资料包"
+    },
+    "statements": {
+      "title": "官方声明",
+      "statement1": {
+        "date": "2024年3月15日",
+        "title": "RSC Chain 主网上线",
+        "description": "RSC Chain 主网上线及网络稳定性里程碑的官方公告。"
+      },
+      "statement2": {
+        "date": "2024年2月10日",
+        "title": "与大型金融机构达成合作",
+        "description": "RSC 宣布战略合作，以扩大区块链在传统金融中的应用。"
+      },
+      "statement3": {
+        "date": "2024年1月5日",
+        "title": "完成安全审计",
+        "description": "RSC Chain 与行业领先安全机构完成全面安全审计。"
+      }
+    },
+    "news": {
+      "title": "新闻与发布",
+      "news1": {
+        "date": "2024年4月1日",
+        "title": "RSC Wallet v2.0 发布",
+        "description": "RSC Wallet 重大更新，新增功能、提升安全性并优化用户体验。"
+      },
+      "news2": {
+        "date": "2024年3月20日",
+        "title": "支付 API 现已开放",
+        "description": "RSC 面向企业与开发者开放公共支付 API，以便集成 RSC 支付。"
+      },
+      "news3": {
+        "date": "2024年3月1日",
+        "title": "质押奖励计划上线",
+        "description": "新的质押计划使用户通过支持 RSC Chain 网络获得奖励。"
+      },
+      "news4": {
+        "date": "2024年2月15日",
+        "title": "开发者文档门户",
+        "description": "上线完整开发者文档门户，包含指南、API 与 SDK。"
+      }
+    },
+    "coverage": {
+      "title": "媒体报道",
+      "coverage1": {
+        "source": "TechCrunch",
+        "title": "RSC Chain：面向金融的下一代区块链",
+        "date": "2024年3月25日"
+      },
+      "coverage2": {
+        "source": "CoinDesk",
+        "title": "RSC Chain 如何革新跨境支付",
+        "date": "2024年3月10日"
+      },
+      "coverage3": {
+        "source": "Forbes",
+        "title": "区块链创新：RSC 的去中心化金融路径",
+        "date": "2024年2月28日"
+      },
+      "coverage4": {
+        "source": "The Block",
+        "title": "RSC Chain 主网：技术深潜",
+        "date": "2024年2月15日"
+      }
+    },
+    "announcements": {
+      "title": "重要公告",
+      "announcement1": {
+        "type": "TGE",
+        "title": "代币生成事件（TGE）",
+        "description": "RSC 宣布即将举行代币生成事件，并公布代币分配与效用详情。",
+        "date": "2024 年第二季度"
+      },
+      "announcement2": {
+        "type": "活动",
+        "title": "RSC Chain 峰会 2024",
+        "description": "欢迎参加首届 RSC Chain 峰会，涵盖主题演讲、工作坊与交流机会。",
+        "date": "2024年6月"
+      },
+      "announcement3": {
+        "type": "合作",
+        "title": "战略合作公告",
+        "description": "RSC 宣布重大合作，以扩展生态并推动区块链走向主流应用。",
+        "date": "2024 年第三季度"
+      }
+    },
+    "mediaKit": {
+      "title": "媒体资料包",
+      "description": "下载用于媒体报道与出版物的官方资料。",
+      "logos": {
+        "title": "官方标识",
+        "description": "多种格式与配色的高分辨率 RSC Chain 标识。"
+      },
+      "guidelines": {
+        "title": "品牌规范",
+        "description": "完整品牌规范，包括色彩、字体与使用准则。"
+      },
+      "screenshots": {
+        "title": "产品截图",
+        "description": "供媒体使用的 RSC Wallet 及其他产品官方截图。"
+      }
+    },
+    "contact": {
+      "title": "新闻联系",
+      "description": "媒体问询、采访申请或新闻稿事宜，请联系新闻团队。",
+      "email": "press@rscchain.io"
+    },
+    "form": {
+      "title": "媒体问询表单",
+      "description": "请填写下方表单，用于媒体问询、采访申请或获取媒体资料包。",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "media": "媒体机构",
+      "subject": "主题",
+      "subjectPlaceholder": "请选择主题",
+      "subjectOption1": "采访申请",
+      "subjectOption2": "新闻稿",
+      "subjectOption3": "媒体资料包申请",
+      "subjectOption4": "其他",
+      "message": "留言",
+      "submit": "发送问询"
+    },
+    "readMore": "阅读更多",
+    "readArticle": "阅读文章",
+    "download": "下载"
+  },
+  "sale": {
+    "header": {
+      "title": "wRSK 发售",
+      "subtitle": "RSC Finance",
+      "connectWallet": "连接钱包",
+      "connecting": "连接中…",
+      "connected": "已连接：",
+      "disconnect": "断开连接"
+    },
+    "saleCard": {
+      "title": "wRSK 公开发售",
+      "status": {
+        "upcoming": "即将推出",
+        "active": "进行中",
+        "ended": "已结束",
+        "paused": "已暂停"
+      },
+      "stats": {
+        "price": "价格",
+        "sold": "已售",
+        "available": "可售",
+        "maxPerUser": "单用户上限"
+      },
+      "countdown": {
+        "startsIn": "开始倒计时：",
+        "endsIn": "结束倒计时：",
+        "days": "天",
+        "hours": "小时",
+        "minutes": "分"
+      },
+      "dates": {
+        "start": "开始：",
+        "end": "结束："
+      },
+      "connectPrompt": {
+        "title": "连接钱包以查看发售信息",
+        "description": "要查看 wRSK 代币发售详情并参与，需连接 MetaMask 钱包。连接后即可查看全部发售信息，并使用 USDT 购买代币。",
+        "feature1": "查看实时发售信息",
+        "feature2": "使用 USDT 购买 wRSK 代币",
+        "feature3": "立即获得 25%",
+        "feature4": "75% 在 6 个月内锁仓释放",
+        "feature5": "可领取时领取代币",
+        "note": "注意：请确保已安装 MetaMask，并已切换至 BSC 主网。"
+      },
+      "purchasePrompt": {
+        "title": "连接钱包以购买",
+        "description": "要参与 wRSK 发售，需连接 MetaMask 钱包。连接后即可使用 USDT 购买代币。",
+        "feature1": "使用 USDT 购买 wRSK 代币",
+        "feature2": "立即获得 25%",
+        "feature3": "75% 在 6 个月内锁仓释放",
+        "feature4": "可领取时领取代币",
+        "note": "注意：请确保在 BSC 主网上持有 USDT，并备有足够的 BNB 支付 Gas 费用。"
+      },
+      "loading": "正在加载发售信息…",
+      "error": "无法加载发售信息。"
+    },
+    "buyForm": {
+      "title": "购买 wRSK 代币",
+      "usdtAmount": "USDT 数量",
+      "wRSKAmount": "wRSK 数量",
+      "balance": "您的 USDT 余额：",
+      "buy": "购买代币",
+      "buying": "处理中…",
+      "error": {
+        "invalidAmount": "请输入有效的 USDT 数量",
+        "insufficientBalance": "钱包中 USDT 余额不足",
+        "maxExceeded": "单用户上限为 {max} wRSK"
+      },
+      "success": "购买成功！交易：{tx}"
+    },
+    "claimSection": {
+      "title": "我的代币",
+      "totalPurchased": "累计购买：",
+      "immediate": "即时（25%）：",
+      "vested": "锁仓（75%）：",
+      "claimed": "已领取：",
+      "claimable": "可领取：",
+      "remaining": "剩余：",
+      "claim": "领取代币",
+      "claiming": "领取中…",
+      "error": {
+        "noTokens": "暂无可领取的代币"
+      },
+      "success": "代币领取成功！交易：{tx}"
+    },
+    "infoPanel": {
+      "title": "发售信息",
+      "progress": "发售进度",
+      "price": "价格",
+      "priceDesc": "每枚 wRSK {price} USDT",
+      "vesting": "锁仓释放",
+      "vestingDesc": "25% 即时到账，75% 分 6 个月释放",
+      "limitPerUser": "单用户限额",
+      "paymentMethod": "支付方式",
+      "paymentDesc": "USDT (BSC)",
+      "disclaimer": "重要提示：请确保钱包中有足够 USDT，并已授权合约支出。代币将自动分配：25% 即时到账，75% 分 6 个月锁仓释放。"
+    },
+    "footer": {
+      "copyright": "© 2026 RSC Finance。保留所有权利。",
+      "viewContract": "在 BSCScan 上查看合约"
+    }
+  },
+  "landing": {
+    "heroAnimated": {
+      "title": "RSC Chain 上的数字货币基础设施",
+      "subtitle": "钱包、支付、企业工具与机构通道——由 RSC Chain 统一调度的同一平台。",
+      "urlPreview": "app.rsc.wallet",
+      "balanceLabel": "总余额",
+      "actionSend": "发送",
+      "actionReceive": "接收",
+      "footerHint": "非托管 · 密钥由您持有",
+      "miningPromo": {
+        "badge": "现已登陆 Google Play",
+        "title": "RSC 挖矿应用",
+        "description": "通过手机参与网络。面向 Android 的官方挖矿——RSC Chain 奖励层的组成部分。",
+        "cta": "前往 Google Play 获取"
+      }
+    },
+    "why": {
+      "badge": "RSC 生态",
+      "title": "一套基础设施。",
+      "title2": "多种运营方式。",
+      "subtitle": "RSC Chain 调度钱包身份、支付、质押、商户工具与机构结算——使用户、企业与构建者共享同一通道。",
+      "nonCustodial": {
+        "title": "非托管",
+        "description": "密钥在您，掌控在您。无人能够冻结余额或托管您的资金。"
+      },
+      "instant": {
+        "title": "即时交易",
+        "description": "收发仅需数秒，状态清晰、确认可核验。"
+      },
+      "staking": {
+        "title": "质押与奖励",
+        "description": "参与生态：质押、奖励与集成效用。"
+      },
+      "qrPayments": {
+        "title": "QR 支付",
+        "description": "支付很简单。扫描、确认、完成（适合商户与日常生活）。"
+      },
+      "history": {
+        "title": "记录与透明",
+        "description": "活动记录条理清晰、可导出，便于用户核验。"
+      },
+      "ecosystem": {
+        "title": "为 RSC 生态而设计",
+        "description": "与 RSC Chain 原生集成：身份、应用、服务与未来跨链桥。"
+      }
+    },
+    "features": {
+      "title": "必备尽有。",
+      "titleGradient": "进阶能力同样齐备。",
+      "sendReceive": {
+        "title": "无摩擦收发",
+        "description": "以完整清晰度发送 RSK 及兼容资产：地址、金额、手续费、状态与确认。轻点即可收款，并分享地址或 QR。",
+        "bullet1": "确认与状态：待处理 / 已确认",
+        "bullet2": "复制、分享、扫描 QR",
+        "bullet3": "格式清晰的公开地址",
+        "mockupSending": "发送中"
+      },
+      "portfolio": {
+        "title": "资产组合，简洁可见",
+        "description": "总余额、近期变动与基础指标。旨在数秒内看清资金状况。",
+        "bullet1": "总余额 + 日变动（如适用）",
+        "bullet2": "最近交易",
+        "bullet3": "按资产划分"
+      },
+      "staking": {
+        "title": "质押融入操作流程",
+        "description": "无需离开产品即可质押。奖励与时间安排透明可见。",
+        "bullet1": "已质押数量 / 可用数量",
+        "bullet2": "预估与累计奖励",
+        "bullet3": "清晰操作：质押 / 解除质押",
+        "mockupStaked": "已质押",
+        "mockupRewards": "奖励：+125 RSK"
+      },
+      "security": {
+        "title": "切实的安全，而非空泛承诺",
+        "description": "面向真实用户的保护：锁定、备份与掌控。",
+        "bullet1": "PIN / 生物识别",
+        "bullet2": "自动锁定与后台保护",
+        "bullet3": "助记词备份",
+        "mockupPin": "PIN 已启用",
+        "mockupBiometric": "生物识别"
+      }
+    },
+    "how": {
+      "title": "开始使用",
+      "titleGradient": "仅需数分钟",
+      "step1": {
+        "title": "创建您的钱包",
+        "description": "生成钱包，并安全保存恢复短语（助记词）。"
+      },
+      "step2": {
+        "title": "保护访问安全",
+        "description": "启用 PIN 或生物识别，并配置自动锁定。"
+      },
+      "step3": {
+        "title": "收款或连接服务",
+        "description": "充值、通过 QR 收款，或与 RSC 生态集成。"
+      },
+      "step4": {
+        "title": "使用：支付、发送、质押",
+        "description": "以记录、状态与完全掌控经营日常生活。"
+      },
+      "microcopy": "即便是您的第一只钱包，RSC Wallet 也力求清晰易用。"
+    },
+    "security": {
+      "title": "您的安全是",
+      "titleGradient": "产品的一部分",
+      "paragraph1": "RSC Wallet 为非托管，意味着用户保持对访问的掌控。应用旨在保护私钥，并协助您负责任地恢复账户。",
+      "paragraph2": "安全不是一条横幅：而是面向真实使用而设计的多层防护。",
+      "nonCustodial": {
+        "title": "非托管",
+        "description": "用户掌控自身访问"
+      },
+      "seedPhrase": {
+        "title": "助记词备份",
+        "description": "需要时即可恢复"
+      },
+      "access": {
+        "title": "访问保护",
+        "description": "PIN 与生物识别"
+      },
+      "data": {
+        "title": "受保护的敏感数据",
+        "description": "本地加密（如已实现）"
+      },
+      "practices": {
+        "title": "最佳实践",
+        "description": "防钓鱼提醒与地址核验"
+      },
+      "disclaimer": "最终安全亦取决于用户对助记词与设备的妥善保管。"
+    },
+    "usecases": {
+      "eyebrow": "服务对象",
+      "title": "一条链，四个清晰入口",
+      "subtitle": "选择与您匹配的身份——每条路径均通向更深入的产品介绍与具体能力。",
+      "individuals": {
+        "title": "个人",
+        "summary": "RSC Chain 上的自托管钱包与日常支付。",
+        "item1": "收发 RSC 资产，快速结算",
+        "item2": "余额、活动与可导出记录",
+        "item3": "在支持的场景下进行质押与生态奖励",
+        "item4": "面向 P2P 与零售的 QR 支付",
+        "cta": "打开钱包概览"
+      },
+      "businesses": {
+        "title": "企业与商户",
+        "summary": "当消费级工具不足时，提供收款、对账与 API。",
+        "item1": "状态清晰的 QR 收款",
+        "item2": "企业钱包与面向报表的记录",
+        "item3": "面向应用、电子商务与 POS 的支付 API",
+        "item4": "账单与商业用例文档",
+        "cta": "了解企业钱包"
+      },
+      "developers": {
+        "title": "开发者",
+        "summary": "在具备文档接口与测试环境的 RSC Chain 上构建。",
+        "item1": "与生态技术栈对齐的 REST/WebSocket 模式",
+        "item2": "钱包作为用户与应用的主要入口",
+        "item3": "技术文档、RPC 说明与持续演进的 API 界面",
+        "cta": "打开开发者文档",
+        "item4": "测试网、水龙头说明与公开路线图"
+      },
+      "institutions": {
+        "title": "机构",
+        "summary": "面向受监管与大规模金融的基础设施与服务。",
+        "item1": "机构级链架构与共识说明",
+        "item2": "企业解决方案与私有基础设施选项",
+        "item3": "机构 P2P 市场",
+        "item4": "REESK (RSK) 代币效用与治理背景",
+        "cta": "打开 RSC Chain"
+      }
+    },
+    "preview": {
+      "title": "旨在做到",
+      "titleGradient": "清晰、快捷、优雅",
+      "subtitle": "聚焦于真正重要的体验：掌控、可见性与快捷操作。",
+      "backupWarning": "将恢复短语保存在安全处所",
+      "surfaceLead": "没有虚假手机外框或 QR 装饰：以下是产品真正围绕构建的内容——而非截图陈列。",
+      "point1": "非托管：密钥留在您的设备上；我们从不持有您的资金。",
+      "point2": "RSC Chain 上状态清晰的余额与活动——而非玩具式余额组件。",
+      "point3": "发送、接收、QR 流程与质押集成于同一产品界面。",
+      "point4": "可实际操作的安全：PIN、生物识别、自动锁定与助记词备份——而非演示开关。",
+      "cta": "打开钱包概览"
+    },
+    "ecosystem": {
+      "title": "由",
+      "titleGradient": "RSC Chain",
+      "subtitle": "RSC Wallet 是面向用户的入口。其后由 RSC Chain 协调身份、支付、效用，以及通向跨链桥与银行级支付体验的路线图。",
+      "chain": {
+        "title": "钱包 ↔ RSC Chain",
+        "description": "操作与确认均连接至网络。"
+      },
+      "rewards": {
+        "title": "钱包 ↔ 奖励 / 挖矿 / 活动",
+        "description": "生态内的奖励与效用。"
+      },
+      "bridge": {
+        "title": "钱包 ↔ 跨链桥（路线图）",
+        "description": "启用后，通过官方跨链桥连接其他网络。"
+      },
+      "bank": {
+        "title": "钱包 ↔ RSC Bank / 支付（愿景）",
+        "description": "日常支付、兑换与加密优先的银行体验。"
+      }
+    },
+    "faq": {
+      "title": "常见",
+      "titleGradient": "问题",
+      "subtitle": "关于 RSC Chain、钱包及更广泛平台的清晰解答。",
+      "q1": "RSC Wallet 是托管式的吗？",
+      "a1": "不是。它被设计为非托管：您保持对密钥与资金的访问和掌控。",
+      "q2": "如果丢失手机怎么办？",
+      "a2": "您可以使用助记词恢复钱包。请离线保存，切勿分享。",
+      "q3": "是否有手续费？",
+      "a3": "视操作而定，可能产生网络手续费。应用会在您确认前显示费用。",
+      "q4": "可以查看我的交易吗？",
+      "a4": "可以。您将获得带状态与关键明细的记录，并可在支持的情况下查阅与导出。",
+      "q5": "是否支持 iOS 与 Android？",
+      "a5": "Android 挖矿已在 Google Play 上线。钱包及其他客户端将按产品路线图推进——请在「下载与更新」中查看最新状态。",
+      "q6": "RSC Wallet 是 RSC Chain 的一部分吗？",
+      "a6": "是的。RSC Wallet 是在 RSC Chain 及其效用上操作的官方用户入口。",
+      "q7": "除钱包外，RSC Chain 还调度什么？",
+      "a7": "支付与 QR 通道、企业钱包与 API、机构基础设施、REESK (RSK) 代币效用、挖矿/奖励、汇款以及开发者工具——作为同一平台统筹协调。",
+      "q8": "机构如何参与？",
+      "a8": "通过 RSC Chain 机构页面：P2P 市场、企业服务、链基础设施概览与合作联系。"
+    },
+    "cta": {
+      "badge": "在 RSC 上构建",
+      "title": "从",
+      "titleGradient": "RSC Chain",
+      "title2": "即刻开始",
+      "subtitle": "了解钱包、机构基础设施或开发者文档——并选择与您角色匹配的路径。",
+      "download": "了解 RSC Wallet",
+      "docs": "开发者文档",
+      "microcopy": "个人、企业、机构与构建者共用同一网络。",
+      "chain": "RSC Chain 概览"
+    },
+    "guide": {
+      "navAria": "本页导航",
+      "anchorWhy": "为何选择 RSC",
+      "anchorFeatures": "钱包详情",
+      "anchorHow": "快速开始",
+      "anchorSecurity": "安全",
+      "anchorFaq": "常见问题",
+      "eyebrow": "RSC Chain · 钱包与支付基础设施",
+      "heroLead": "自托管钱包、即时 QR 支付与企业工具——集中呈现于同一文档，便于您选择下一步。",
+      "primaryCta": "了解平台",
+      "secondaryCta": "RSC Wallet",
+      "tertiaryCta": "与我们洽谈",
+      "pathTitle": "选择您的路径",
+      "pathSubtitle": "进入 RSC Chain 所调度全部能力的四个清晰入口。每一入口均通向更深入的专项概览。",
+      "individuals": {
+        "title": "个人",
+        "body": "RSC Chain 上的日常资金：非托管钱包、QR 支付、质押与透明记录。",
+        "b1": "钱包、余额与完整交易记录",
+        "b2": "面向商户与 P2P 的 QR 收付款",
+        "b3": "质押与生态奖励",
+        "cta": "打开钱包概览"
+      },
+      "business": {
+        "title": "企业与商户",
+        "body": "当消费级钱包不足时，提供收款、报表与 API。",
+        "b1": "企业钱包与 QR 收款",
+        "b2": "面向应用与 POS 的支付 API",
+        "b3": "账单与用例文档",
+        "cta": "查看企业钱包"
+      },
+      "developers": {
+        "title": "开发者",
+        "body": "与 RSC Chain 集成：文档、网络说明、API 与测试环境。",
+        "b1": "技术文档与 RPC 说明",
+        "b2": "API、测试网与路线图",
+        "b3": "机构链概览",
+        "cta": "打开开发者文档"
+      },
+      "anchorPlatform": "平台",
+      "brand": "Reesk'Cap Coorp",
+      "headline": "构建下一代数字平台。",
+      "subtitle": "我们打造驱动房地产、数字金融、安全交易以及去中心化基础设施未来的技术。",
+      "orbitWallet": "钱包",
+      "orbitPayments": "支付",
+      "orbitInfra": "基础设施",
+      "institutions": {
+        "title": "机构",
+        "body": "企业级链基础设施、P2P 市场、企业服务与 REESK (RSK) 经济。",
+        "b1": "高性能机构通道",
+        "b2": "企业解决方案与 P2P 市场",
+        "b3": "原生代币效用与治理",
+        "cta": "查看 RSC Chain"
+      }
+    },
+    "siteFooter": {
+      "tagline": "一家为下一代构建数字平台的科技公司。",
+      "productHeading": "产品",
+      "resourcesHeading": "资源",
+      "companyHeading": "公司",
+      "legalHeading": "法律",
+      "wallet": "RSC Wallet",
+      "payments": "支付",
+      "staking": "质押",
+      "businessWallet": "企业钱包",
+      "faq": "常见问题",
+      "developers": "开发者",
+      "rscChain": "RSC Chain",
+      "contact": "联系",
+      "about": "关于 Reesk'Cap Coorp",
+      "security": "安全",
+      "careers": "招聘",
+      "press": "新闻",
+      "terms": "使用条款",
+      "privacy": "隐私",
+      "cookies": "Cookie",
+      "compliance": "合规",
+      "copyright": "© 2026 Reesk'Cap Coorp。保留所有权利。",
+      "disclaimer": "非托管：我们不持有您的资金。请保护恢复短语；密钥丢失即意味着失去访问权限。"
+    },
+    "metrics": {
+      "aria": "平台指标",
+      "m1": {
+        "value": "10,000+",
+        "label": "目标 TPS 容量"
+      },
+      "m2": {
+        "value": "< 2s",
+        "label": "确认设计目标"
+      },
+      "m3": {
+        "value": "99.9%",
+        "label": "可用性目标"
+      },
+      "m4": {
+        "value": "非托管",
+        "label": "用户密钥掌控"
+      }
+    },
+    "platform": {
+      "eyebrow": "RSC Chain 所调度的内容",
+      "title": "同一基础设施下的完整平台",
+      "subtitle": "从个人钱包到机构结算，RSC Chain 统筹驱动生态的产品、通道与效用。",
+      "wallet": {
+        "title": "RSC Wallet",
+        "description": "非托管身份与资产——发送、接收、质押并跟踪活动。"
+      },
+      "payments": {
+        "title": "支付与 QR",
+        "description": "面向个人与商户的日常扫码结算流程，确认状态清晰。"
+      },
+      "business": {
+        "title": "企业套件",
+        "description": "面向现代经营者的企业钱包、支付 API、账单与商业用例。"
+      },
+      "institutional": {
+        "title": "机构链",
+        "description": "面向受监管与高体量工作负载的企业级区块链基础设施。"
+      },
+      "token": {
+        "title": "REESK (RSK)",
+        "description": "覆盖质押、治理与生态参与的原生代币效用。"
+      },
+      "mining": {
+        "title": "挖矿与奖励",
+        "description": "网络参与与奖励——包括官方移动挖矿应用。"
+      },
+      "developers": {
+        "title": "开发者平台",
+        "description": "用于在 RSC Chain 上构建的文档、API、测试网与路线图。"
+      },
+      "remittances": {
+        "title": "汇款",
+        "description": "为速度、清晰与掌控而设计的跨境转账路径。"
+      }
+    },
+    "group": {
+      "brand": "Reesk'Cap Coorp",
+      "heroKicker": "科技控股 · 六大平台 · 同一集团",
+      "heroTitle": "具备机构标准的数字平台。",
+      "heroLead": "Reesk'Cap Coorp 设计并运营覆盖房地产、数字金融、托管与区块链基础设施的自有产品。我们不是交易所，也不是单一应用：我们是在共享标准下构建、集成并维护每一层的组织。",
+      "heroAux": "六大平台。同一集团。",
+      "ctaEcosystem": "了解平台",
+      "ctaProducts": "阅读各章",
+      "houseAria": "Reesk'Cap 集团及其六大平台的等轴测示意图",
+      "manifestoTitle": "Reesk'Cap 为何存在",
+      "manifestoBody": "我们存在，是因为所服务的市场——不动产、支付、托管、结算——需要的不只是彼此割裂的产品。Reesk'Cap 并非为推出一时流行的单一应用或追逐加密热点而设立。我们的使命是持续运营既可独立运行、又能彼此强化的平台：Reeskova 面向实物资产，RSC Wallet 与 Escrow 面向流转中的价值，P2P 与 Corporate 面向多方运营，RSC Chain 作为记账与结算层。每条产品线在同一集团内均有负责人、路线图与品质标准。",
+      "ecoEyebrow": "业务组合",
+      "ecoTitle": "六章内容，同一标准",
+      "ecoSubtitle": "每条业务线都有市场、界面与负责人。集团共享的并非品牌包装，而是价值如何被持有、结算与记录。",
+      "productLabel": "章节",
+      "learnMore": "了解更多",
+      "products": {
+        "reeskova": {
+          "name": "Reeskova",
+          "positioning": "以高端市场标准对房地产资产进行数字化运营。",
+          "p1": "Reeskova 将买、卖、租、投纳入同一市场，面向严肃的从业者：需要文件清晰、可追溯、体验配得上资产本身的经纪人、开发商、基金与买家。",
+          "p2": "它不是分类信息门户。它是不动产被展示、磋商，并借助集团托管与结算通道准备成交的商业层。",
+          "p3": "在 Reesk'Cap 内部，Reeskova 是旗舰房地产平台——进入数字化实物市场的机构入口。",
+          "points": [
+            "具备结构化数据与市场背景的房源",
+            "与 Escrow 对齐的预订与投资流程",
+            "面向运营商与合作方的企业集成"
+          ]
+        },
+        "chain": {
+          "name": "RSC Chain",
+          "positioning": "面向集团产品与授权合作方的记账与结算层。",
+          "p1": "RSC Chain 是支持跨平台可核验结算、合约与可追溯性的区块链基础设施。它不以实验名义对外推销：它是钱包、Escrow 与 P2P 可依清晰规则依赖的技术底座。",
+          "p2": "机构与构建者可获得 RPC、文档与测试环境，无需从零重建每一款产品即可集成。",
+          "p3": "在集团架构中，Chain 是下层——稳定、可审计、共享。",
+          "points": [
+            "内部流程的链上结算",
+            "面向开发者的文档与测试网",
+            "与 Corporate 协调的升级策略"
+          ]
+        },
+        "p2p": {
+          "name": "RSC P2P",
+          "positioning": "规则可见、结算有保障的对手方交易。",
+          "p1": "当买卖双方需要有规则的市场而非非正式聊天时，RSC P2P 结构化点对点交易。平台以可读形式呈现报价、状态与成交条件。",
+          "p2": "它依托 Escrow 在条件满足前保管价值，并在需要时由 Chain 记录结果。",
+          "p3": "它是集团的对手方市场——为成交量而建，而非嘈杂投机。",
+          "points": [
+            "状态可审计的订单簿",
+            "成交与 Escrow 耦合",
+            "面向机构集成方的 API"
+          ]
+        },
+        "escrow": {
+          "name": "RSC Escrow",
+          "positioning": "在约定条件履行前对价值进行托管。",
+          "p1": "Escrow 在各方完成核验、交付或合同里程碑期间保管资金或数字资产。它降低陌生人之间或子公司之间的信任不对称。",
+          "p2": "Reeskova、P2P 与 Corporate 将 Escrow 作为共用通道——统一托管标准，而非各产品临时方案。",
+          "p3": "按既定规则逐步自动释放，并具备可供审计的可追溯性。",
+          "points": [
+            "条件核验完成前予以保管",
+            "与钱包和 Chain 原生集成",
+            "面向企业运营的多方流程"
+          ]
+        },
+        "wallet": {
+          "name": "RSC Wallet",
+          "positioning": "日常访问 RSC 生态中的数字资产。",
+          "p1": "RSC Wallet 是个人与团队持有、发送并接收 RSC Chain 兼容资产的界面。它优先保证余额清晰、记录完整与权限明确，而非视觉效果。",
+          "p2": "当机构需要运营钱包而非仅个人钱包时，它连接 QR 支付、质押与企业产品。",
+          "p3": "它是进入集团的用户门户——许多客户在接触 Escrow、P2P 或 Reeskova 之前首先触及的一层。",
+          "points": [
+            "非托管密钥掌控",
+            "可读的记录与权限",
+            "通向生态支付与质押的桥梁"
+          ]
+        },
+        "corporate": {
+          "name": "RSC Corporate",
+          "positioning": "面向规模化运营机构的服务与平台。",
+          "p1": "RSC Corporate 将机构入驻、协议、报告与工具整合，供在受监管或多站点环境中部署集团技术栈的团队使用。",
+          "p2": "合作方、代理行与房地产运营商可找到单一对手方，以及与 Sign Docs 和安全对齐的合同。",
+          "p3": "它是 Reesk'Cap 的企业界面——政策、合规与实施交汇之处。",
+          "points": [
+            "集中入驻与协议",
+            "跨产品运营报告",
+            "机构联盟的单一通道"
+          ]
+        }
+      },
+      "escrowFlow": {
+        "step1": {
+          "title": "存入",
+          "description": "各方约定条件后，价值进入托管。"
+        },
+        "step2": {
+          "title": "核验",
+          "description": "依据规则核验里程碑、文件或交付。"
+        },
+        "step3": {
+          "title": "释放",
+          "description": "价值自动释放，或经明确批准后释放。"
+        }
+      },
+      "connectEyebrow": "架构",
+      "connectTitle": "三层架构，同一集团",
+      "connectBody": "Reesk'Cap Coorp 堆叠的不是标识，而是职责。上层是业务平台——Reeskova、钱包、P2P、Corporate——客户体验所在之处。中层是共享通道——Escrow、支付 API、运营身份——使托管与规则不必在每个产品中重复建设。下层是 RSC Chain：记账、结算与具备可追溯性的合约。当 Reeskova 房产成交需要保管资金时，Escrow 已与钱包使用同一语言；当 P2P 完成结算时，Chain 接收结果，而无需每个团队重新实现逻辑。",
+      "stackLayers": {
+        "products": {
+          "label": "业务平台",
+          "items": [
+            "Reeskova",
+            "钱包",
+            "P2P",
+            "Corporate"
+          ]
+        },
+        "rails": {
+          "label": "共享通道",
+          "items": [
+            "Escrow",
+            "支付",
+            "API"
+          ]
+        },
+        "chain": {
+          "label": "基础设施",
+          "items": [
+            "RSC Chain",
+            "合约",
+            "结算"
+          ]
+        }
+      },
+      "techEyebrow": "技术栈",
+      "techTitle": "不止于一条区块链",
+      "techIntro": "区块链是记账层；技术栈的其余部分支撑身份、运营数据、可用性以及跨产品组合。我们如此设计，使 Reeskova 团队与钱包团队不必每个季度重写托管或可观测性。",
+      "techIntro2": "以下能力以通用接口在业务组合中复用——不是演示文稿上的口号，而是平台之间的内部契约。",
+      "techLayers": {
+        "identity": {
+          "title": "身份与权限",
+          "description": "跨企业产品与运营钱包共享的角色、访问与操作轨迹。"
+        },
+        "data": {
+          "title": "运营数据",
+          "description": "可供报告与决策使用的市场事件、交易与托管状态。"
+        },
+        "cloud": {
+          "title": "可用性",
+          "description": "面向多区域部署的弹性服务，无需重复业务逻辑。"
+        },
+        "chain": {
+          "title": "记账与结算",
+          "description": "RSC Chain 作为需要公开或私有核验之流程的共用底座。"
+        },
+        "apis": {
+          "title": "组合能力",
+          "description": "稳定的 API，使合作方无需分叉内部代码即可集成支付、托管与查询。"
+        }
+      },
+      "whyEyebrow": "标准",
+      "whyTitle": "为何是同一集团，而非六家初创公司",
+      "whyTheses": {
+        "discipline": {
+          "title": "产品纪律",
+          "body": "每家平台在集团内都有路线图与负责人。我们避免与托管、身份或结算无关的孤立功能。"
+        },
+        "integration": {
+          "title": "真正的集成",
+          "body": "Escrow、Chain 与钱包不是合作演示页：它们是其他产品实际调用的组件。这降低了跨市场运营客户的摩擦。"
+        },
+        "horizon": {
+          "title": "长远视野",
+          "body": "我们为不动产、支付与数字记录将长期并存的制度环境而构建，而非追逐季度热点周期。"
+        }
+      },
+      "audienceEyebrow": "受众",
+      "audienceTitle": "三个入口，同一标准",
+      "audienceSubtitle": "个人、企业与机构看到的不是同一界面，但看到的是同一品质的流程。",
+      "audiences": {
+        "individuals": {
+          "title": "个人",
+          "p1": "需要清晰钱包、日常支付，并逐步使用质押或汇款、而不必面对多余术语的个人。",
+          "p2": "他们经由 RSC Wallet 与支付产品进入；随着财富或运营扩大，背后仍是同一集团。",
+          "products": "RSC Wallet · 支付 · 质押 · 教育",
+          "cta": "查看面向个人的产品"
+        },
+        "businesses": {
+          "title": "企业",
+          "p1": "通过连接 RSC 技术栈的 API 与企业钱包进行收款、结算与报告的商户与团队。",
+          "p2": "随着复杂度上升，企业钱包、QR 支付与账单与 Escrow 共享运营身份。",
+          "products": "企业钱包 · 支付 · API · 账单",
+          "cta": "查看面向企业的产品"
+        },
+        "institutions": {
+          "title": "机构",
+          "p1": "需要 Reeskova、P2P、Corporate 与 Chain 并签署正式合同的房地产运营商、市场部门与机构。",
+          "p2": "通道经由 RSC Corporate、Sign Docs 与安全——联盟与部署的统一窗口。",
+          "products": "Reeskova · P2P · Corporate · RSC Chain",
+          "cta": "查看机构产品"
+        }
+      },
+      "timelineEyebrow": "时序",
+      "timelineTitle": "分层建设",
+      "timelineSubtitle": "业务组合波浪式成长——先可见产品，再共享通道，最后地理扩张。",
+      "timelineYear": "2026",
+      "timeline": {
+        "reeskova": {
+          "label": "Reeskova",
+          "note": "作为集团旗舰平台的房地产市场。"
+        },
+        "wallet": {
+          "label": "钱包",
+          "note": "RSC 资产的用户入口与运营基础。"
+        },
+        "escrow": {
+          "label": "Escrow",
+          "note": "用于房产成交与 P2P 的共用托管。"
+        },
+        "p2p": {
+          "label": "P2P",
+          "note": "与托管和链耦合的对手方市场。"
+        },
+        "chain": {
+          "label": "Chain",
+          "note": "整合的记账与结算基础设施。"
+        },
+        "ai": {
+          "label": "运营 AI",
+          "note": "产品中的撮合、自动化与决策支持。"
+        },
+        "global": {
+          "label": "扩张",
+          "note": "以同一三层架构进行区域部署。"
+        }
+      },
+      "valuesEyebrow": "原则",
+      "valuesTitle": "我们绝不妥协的事项",
+      "valuesSubtitle": "这些原则指导合同、路线图与优先级——它们不是墙上的装饰。",
+      "values": {
+        "innovation": {
+          "title": "有目的的创新",
+          "body": "我们在消除真实摩擦之处试验——托管、成交、结算——而非仅在演示中制造印象。"
+        },
+        "integrity": {
+          "title": "运营完整性",
+          "body": "状态、余额与条件必须对客户可读、对合作方可审计。"
+        },
+        "technology": {
+          "title": "共享技术",
+          "body": "我们更倾向跨平台可复用组件，而非六套彼此隔离的技术栈。"
+        },
+        "trust": {
+          "title": "明示的信任",
+          "body": "Escrow、合约与权限的存在，使信任不必依赖于非正式交谈。"
+        },
+        "execution": {
+          "title": "持续交付",
+          "body": "以可交付的季度衡量路线图，而非无限期的路线图承诺。"
+        }
+      },
+      "newsEyebrow": "纪要",
+      "newsTitle": "来自集团",
+      "newsRead": "阅读全文",
+      "news": {
+        "n1": {
+          "date": "2026年3月",
+          "meta": "产品",
+          "title": "Reeskova 作为 Reesk'Cap 旗下旗舰平台",
+          "excerpt": "房地产市场作为业务组合的核心章节呈现，预订流程从首次试点成交起即设计为连接 Escrow 与 Corporate。"
+        },
+        "n2": {
+          "date": "2026年2月",
+          "meta": "公司",
+          "title": "六款产品的三层技术栈",
+          "excerpt": "Reesk'Cap 将「产品–通道–链」架构正式化，避免在每条业务线重复建设托管与结算。内部文档成为团队之间的契约。"
+        },
+        "n3": {
+          "date": "2026年1月",
+          "meta": "机构",
+          "title": "面向个人、企业与机构的清晰通道",
+          "excerpt": "三个商业入口共享视觉识别与品质标准，由 RSC Corporate 作为联盟、Sign Docs 与安全的统一窗口。"
+        }
+      },
+      "teamAlt": "Reesk'Cap Coorp 团队",
+      "teamTagline": "一支团队，同一标准",
+      "teamPillars": {
+        "growth": "以已交付产品衡量增长",
+        "impact": "影响真实市场，而非仅追求虚荣指标",
+        "secure": "安全与托管是要求，而非附加功能",
+        "together": "跨职能团队优先于产品孤岛"
+      },
+      "ctaTitle": "让我们讨论您的运营",
+      "ctaBody": "如果您代表机构、房地产运营商，或需要在同一标准下完成支付与托管的企业，Reesk'Cap 通过 Corporate 与 Sign Docs 提供单一通道。",
+      "ctaFinal": "了解平台",
+      "footerTagline": "Reesk'Cap Coorp — 科技控股。房地产、数字金融、托管与区块链基础设施同归一处。",
+      "footer": {
+        "products": "产品",
+        "company": "公司",
+        "developers": "开发者",
+        "community": "社区",
+        "about": "关于",
+        "careers": "招聘",
+        "press": "新闻",
+        "legal": "法律",
+        "api": "API",
+        "docs": "文档",
+        "github": "GitHub",
+        "copyright": "© 2026 Reesk'Cap Coorp。保留所有权利。"
+      }
+    }
+  },
+  "institutionalRealEstate": {
+    "nav": {
+      "buy": "购买",
+      "sell": "出售",
+      "rent": "租赁",
+      "invest": "投资",
+      "developers": "开发者",
+      "about": "关于",
+      "signIn": "登录",
+      "dashboard": "控制台",
+      "getStarted": "开始使用"
+    },
+    "hero": {
+      "eyebrow": "房地产的未来",
+      "line1": "未来",
+      "line2": "的房地产",
+      "line3": "从这里开始。",
+      "subtitle": "通过面向下一代设计的智能数字市场进行买、卖、租与投资。",
+      "ctaExplore": "浏览房源",
+      "ctaAgent": "成为经纪人",
+      "floatDash": "市场脉搏",
+      "floatGrowth": "组合同比增长",
+      "floatCity": "里斯本 · 高端",
+      "floatPrice": "$840,000",
+      "floatAi": "AI 匹配就绪"
+    },
+    "stats": {
+      "s1": {
+        "value": "25K+",
+        "label": "房源"
+      },
+      "s2": {
+        "value": "120+",
+        "label": "城市"
+      },
+      "s3": {
+        "value": "95%",
+        "label": "客户满意度"
+      },
+      "s4": {
+        "value": "$2B+",
+        "label": "物业价值"
+      }
+    },
+    "why": {
+      "eyebrow": "为何选择 Reeskova",
+      "title": "由技术驱动的现代不动产市场",
+      "subtitle": "高端体验。智能发现。可信专业人士。",
+      "ai": {
+        "title": "AI 搜索",
+        "text": "以理解您居住与投资方式的智能搜索发现房源。"
+      },
+      "verified": {
+        "title": "已核验房源",
+        "text": "每条精选房源均经审核，使买家安心推进。"
+      },
+      "secure": {
+        "title": "安全交易",
+        "text": "为更安全的磋商与可对接托管的成交流程而设计。"
+      },
+      "smart": {
+        "title": "智能投资",
+        "text": "帮助您评估机会而非噪音的信号与分析。"
+      }
+    },
+    "map": {
+      "eyebrow": "探索",
+      "title": "交互式地图发现",
+      "subtitle": "浏览城市、悬停标记，并用筛选精炼——同时保持高端体验。",
+      "filter1": "全部",
+      "filter2": "购买",
+      "filter3": "租赁",
+      "filter4": "投资",
+      "pin1": {
+        "title": "市中心阁楼",
+        "meta": "购买 · 2 室 · 94 m²"
+      },
+      "pin2": {
+        "title": "海滨住宅",
+        "meta": "购买 · 4 室 · 210 m²"
+      },
+      "pin3": {
+        "title": "城市套房",
+        "meta": "租赁 · 1 室 · 48 m²"
+      },
+      "pin4": {
+        "title": "收益资产",
+        "meta": "投资 · 资本化率 6.2%"
+      }
+    },
+    "featured": {
+      "eyebrow": "精选",
+      "title": "值得关注的房源",
+      "viewAll": "查看全部",
+      "badge": "精选",
+      "cta": "查看房源",
+      "p1": {
+        "price": "$1.2M",
+        "title": "Skyline Residence",
+        "city": "圣保罗",
+        "beds": "3 室",
+        "area": "168 m²"
+      },
+      "p2": {
+        "price": "$640K",
+        "title": "Harbor Apartment",
+        "city": "里斯本",
+        "beds": "2 室",
+        "area": "92 m²"
+      },
+      "p3": {
+        "price": "$890K",
+        "title": "Design Villa",
+        "city": "迈阿密",
+        "beds": "4 室",
+        "area": "240 m²"
+      },
+      "p4": {
+        "price": "$415K",
+        "title": "Urban Studio Tower",
+        "city": "马德里",
+        "beds": "1 室",
+        "area": "56 m²"
+      }
+    },
+    "how": {
+      "eyebrow": "运作方式",
+      "title": "从搜索到入住",
+      "subtitle": "清晰旅程——对买家优雅，对经纪人高效。",
+      "s1": {
+        "title": "搜索",
+        "text": "借助 AI 辅助筛选与实时地图背景发现住宅。"
+      },
+      "s2": {
+        "title": "看房",
+        "text": "预约看房，并与可信专业人士协调。"
+      },
+      "s3": {
+        "title": "磋商",
+        "text": "将沟通与提案纳入同一高端工作流。"
+      },
+      "s4": {
+        "title": "安全成交",
+        "text": "依托更安全的交易基础设施推进。"
+      },
+      "s5": {
+        "title": "入住",
+        "text": "清晰成交——开启下一章。"
+      }
+    },
+    "audience": {
+      "eyebrow": "面向所有人",
+      "title": "为买家、经纪人与开发商而建",
+      "subtitle": "同一平台。不同路径。共享技术。",
+      "buyers": {
+        "title": "买家",
+        "text": "以具备下一代体验的产品进行浏览、比较与联系。",
+        "b1": "智能搜索与地图发现",
+        "b2": "已核验库存与可信经纪人",
+        "b3": "透明的联系与看房流程"
+      },
+      "agents": {
+        "title": "经纪人",
+        "text": "捕捉合格需求，并以品牌级呈现展示房源。",
+        "b1": "转化意向的线索通道",
+        "b2": "高端房源叙事",
+        "b3": "贴合现代 CRM 习惯的工具"
+      },
+      "developers": {
+        "title": "开发者",
+        "text": "向全球数字受众展示发售与期房项目。",
+        "b1": "可即刻发售的焦点展示面",
+        "b2": "富媒体与投资叙事",
+        "b3": "导入商务团队的管道"
+      }
+    },
+    "invest": {
+      "eyebrow": "投资",
+      "title": "自信投资于机会。",
+      "subtitle": "ROI 清晰度、租金回报信号与增长背景——以高端金融产品的克制呈现。",
+      "m1": {
+        "value": "6.8%",
+        "label": "平均 ROI 信号"
+      },
+      "m2": {
+        "value": "12%",
+        "label": "租金回报指数"
+      },
+      "m3": {
+        "value": "+18%",
+        "label": "增长展望"
+      },
+      "chartLabel": "示意性组合轨迹"
+    },
+    "tech": {
+      "eyebrow": "技术",
+      "title": "技术支持",
+      "titleAccent": "Reesk'Cap Coorp 技术",
+      "subtitle": "Reeskova 不是静态目录。它运行于为下一代数字平台设计的基础设施之上。",
+      "ai": {
+        "title": "AI",
+        "text": "撮合与发现智能。"
+      },
+      "data": {
+        "title": "大数据",
+        "text": "市场与库存洞察层。"
+      },
+      "cloud": {
+        "title": "云",
+        "text": "弹性、面向全球的交付。"
+      },
+      "chain": {
+        "title": "区块链就绪",
+        "text": "为链上结算通道做好准备。"
+      },
+      "analytics": {
+        "title": "智能分析",
+        "text": "无冗余的决策支持。"
+      },
+      "escrow": {
+        "title": "Escrow 就绪",
+        "text": "安全交易基础设施路径。"
+      }
+    },
+    "group": {
+      "eyebrow": "Reesk'Cap Coorp",
+      "title": "构建下一代数字平台。",
+      "lead": "Reeskova 是 Reesk'Cap Coorp 的旗舰房地产市场。",
+      "text": "我们强化母品牌，同时不干扰前来寻找住宅的用户——并为生态中的下一款产品留出空间。",
+      "p1": {
+        "name": "Reeskova",
+        "role": "房地产市场"
+      },
+      "p2": {
+        "name": "RSC P2P",
+        "role": "点对点交易"
+      },
+      "p3": {
+        "name": "RSC Escrow",
+        "role": "安全交易基础设施"
+      },
+      "p4": {
+        "name": "未来金融解决方案",
+        "role": "扩展 Reesk'Cap Coorp 技术栈"
+      }
+    },
+    "testimonials": {
+      "eyebrow": "声音",
+      "title": "受到推动市场之人的信赖",
+      "t1": {
+        "quote": "Reeskova 更像一家产品公司——而非传统分类信息门户。体验本身即建立信任。",
+        "name": "Ana Moreira",
+        "role": "买家 · 里斯本"
+      },
+      "t2": {
+        "quote": "作为经纪人，我终于有了一扇与所代理物业品质相匹配的前门。",
+        "name": "Carlos Nieto",
+        "role": "经纪人 · 马德里"
+      },
+      "t3": {
+        "quote": "投资叙事干净、企业化。正是机构客户所期待的。",
+        "name": "Sofia Alvarez",
+        "role": "开发商合作"
+      }
+    },
+    "cta": {
+      "line1": "准备发现",
+      "line2": "您的下一处房产？",
+      "button": "立即开始"
+    },
+    "footer": {
+      "tagline": "由技术驱动的现代不动产市场——Reesk'Cap Coorp 的一部分。",
+      "product": "产品",
+      "company": "公司",
+      "social": "社交",
+      "marketplace": "市场平台",
+      "about": "关于",
+      "contact": "联系",
+      "privacy": "隐私",
+      "terms": "条款",
+      "careers": "招聘",
+      "reeskCapCoorp": "Reesk'Cap Coorp",
+      "copyright": "© 2026 Reeskova。保留所有权利。",
+      "backToRsc": "返回 RSC Chain"
+    }
+  }
+}

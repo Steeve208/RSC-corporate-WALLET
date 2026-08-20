@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Network, 
   Layers, 
@@ -26,7 +27,7 @@ export function InstitutionalChainPage() {
       
       {/* Hero Section */}
       <section className="institutional-chain-hero">
-        <div className="institutional-chain-hero-container">
+        <div className="institutional-chain-hero-container rk-hero-split">
           <div className="institutional-chain-hero-content">
             <div className="institutional-chain-hero-icon">
               <Network size={64} />
@@ -34,6 +35,7 @@ export function InstitutionalChainPage() {
             <h1 className="institutional-chain-hero-title">{t('institutionalChain.hero.title')}</h1>
             <p className="institutional-chain-hero-subtitle">{t('institutionalChain.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

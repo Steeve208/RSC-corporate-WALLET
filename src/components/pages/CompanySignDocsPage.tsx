@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import {
   accessSignDocs,
   createSignDocument,
@@ -123,7 +124,7 @@ export function CompanySignDocsPage() {
         description,
         pdfFile,
         adminEmail: email,
-        adminName: 'RSC Group',
+        adminName: "Reesk'Cap Coorp",
         partners: partners.filter((p) => p.email.trim()),
       });
       setTitle('');
@@ -253,12 +254,15 @@ export function CompanySignDocsPage() {
       <Navbar />
 
       <section className="company-sign-docs-hero">
-        <div className="company-sign-docs-hero-container">
-          <div className="company-sign-docs-hero-icon">
-            <FileSignature size={64} />
+        <div className="company-sign-docs-hero-container rk-hero-split">
+          <div className="company-sign-docs-hero-content">
+            <div className="company-sign-docs-hero-icon">
+              <FileSignature size={64} />
+            </div>
+            <h1 className="company-sign-docs-hero-title">{t('companySignDocs.hero.title')}</h1>
+            <p className="company-sign-docs-hero-subtitle">{t('companySignDocs.hero.subtitle')}</p>
           </div>
-          <h1 className="company-sign-docs-hero-title">{t('companySignDocs.hero.title')}</h1>
-          <p className="company-sign-docs-hero-subtitle">{t('companySignDocs.hero.subtitle')}</p>
+          <SiteLayerVisual />
         </div>
       </section>
 

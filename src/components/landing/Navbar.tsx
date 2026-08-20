@@ -1,19 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Globe, Search, ChevronDown, ArrowRight, Building2, Network, Coins, Wallet, QrCode, TrendingUp, Send, GraduationCap, CreditCard, FileText, Briefcase, Code, Book, FlaskConical, Map, Info, Shield, Briefcase as BriefcaseIcon, Newspaper, Mail, Check, Menu, X, Landmark, PenLine } from 'lucide-react';
-import { useTranslation, Language } from '../../contexts/I18nContext';
+import { useTranslation, LANGUAGE_LABELS, SUPPORTED_LANGUAGES, type Language } from '../../contexts/I18nContext';
+import '../../styles/landing.css';
 
 const NAV_ITEM_KEYS = ['individuos', 'empresas', 'instituciones', 'desarrolladores', 'empresa'] as const;
 type NavbarItemKey = (typeof NAV_ITEM_KEYS)[number];
 type PromoVariant = NavbarItemKey;
-
-const PROMO_IMAGES: Record<PromoVariant, string> = {
-  individuos: '/ecosystem/wallet-v2.jpg',
-  empresas: '/ecosystem/corporate.jpg',
-  instituciones: '/ecosystem/reeskova-v2.jpg',
-  desarrolladores: '/ecosystem/chain.jpg',
-  empresa: '/ecosystem/corporate.jpg',
-};
 
 function DropdownPromoVisual({
   variant,
@@ -27,10 +20,9 @@ function DropdownPromoVisual({
   return (
     <div
       className={`rsc-dropdown-promo-visual rsc-dropdown-promo-visual--${variant}`}
-      style={{ backgroundImage: `url(${PROMO_IMAGES[variant]})` }}
       aria-hidden
     >
-      <div className="rsc-dropdown-promo-veil" />
+      <span className="rsc-dropdown-promo-iso" />
       <div className="rsc-dropdown-promo-caption">
         <span className="rsc-dropdown-promo-kicker">{kicker}</span>
         <span className="rsc-dropdown-promo-line">{line}</span>
@@ -62,10 +54,10 @@ export function Navbar() {
   const empresaDropdownMobileRef = useRef<HTMLDivElement>(null);
   const languageDropdownRef = useRef<HTMLDivElement>(null);
 
-  const languages: { code: Language; name: string }[] = [
-    { code: 'en', name: t('languages.en') },
-    { code: 'es', name: t('languages.es') },
-  ];
+  const languages: { code: Language; name: string }[] = SUPPORTED_LANGUAGES.map((code) => ({
+    code,
+    name: LANGUAGE_LABELS[code],
+  }));
 
   const individuosMenuItems = {
     left: [
@@ -770,7 +762,7 @@ export function Navbar() {
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               >
                 <Globe size={20} />
-                <span>Idioma / Language</span>
+                <span>{t('languages.menu')}</span>
                 <ChevronDown className={`rsc-mobile-nav-chevron ${isLanguageOpen ? 'rsc-mobile-nav-chevron--open' : ''}`} size={18} />
               </button>
               {isLanguageOpen && (
@@ -794,7 +786,7 @@ export function Navbar() {
 
             <button className="rsc-mobile-action-button">
               <Search size={20} />
-              <span>Buscar / Search</span>
+              <span>{t('languages.search')}</span>
             </button>
           </div>
         </div>
@@ -816,7 +808,7 @@ export function Navbar() {
                 (window as any).navigateToPage('landing');
               }
             }}
-            aria-label="RSC Group home"
+            aria-label="Reesk'Cap Coorp home"
           >
             <div className="rsc-logo-dots">
               <div className="rsc-dot rsc-dot--top"></div>
@@ -825,7 +817,7 @@ export function Navbar() {
               <div className="rsc-dot rsc-dot--right"></div>
               <div className="rsc-dot rsc-dot--bottom"></div>
             </div>
-            <span className="rsc-logo-text">RSC GROUP</span>
+            <span className="rsc-logo-text">Reesk'Cap Coorp</span>
           </button>
         </div>
 
@@ -1298,7 +1290,7 @@ export function Navbar() {
           <div className="rsc-nav-dropdown" ref={languageDropdownRef}>
             <button 
               className={`rsc-icon-button ${isLanguageOpen ? 'rsc-icon-button--active' : ''}`} 
-              aria-label="Language"
+              aria-label={t('languages.menu')}
               onClick={handleLanguageClick}
             >
               <Globe className="rsc-icon" size={18} />

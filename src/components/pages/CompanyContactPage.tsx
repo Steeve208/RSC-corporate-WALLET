@@ -1,5 +1,6 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
+import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Mail, 
   Send,
@@ -18,7 +19,7 @@ export function CompanyContactPage() {
       
       {/* Hero Section */}
       <section className="company-contact-hero">
-        <div className="company-contact-hero-container">
+        <div className="company-contact-hero-container rk-hero-split">
           <div className="company-contact-hero-content">
             <div className="company-contact-hero-icon">
               <MessageSquare size={64} />
@@ -26,6 +27,7 @@ export function CompanyContactPage() {
             <h1 className="company-contact-hero-title">{t('companyContact.hero.title')}</h1>
             <p className="company-contact-hero-subtitle">{t('companyContact.hero.subtitle')}</p>
           </div>
+          <SiteLayerVisual />
         </div>
       </section>
 

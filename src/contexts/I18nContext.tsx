@@ -9,11 +9,30 @@ import {
 } from 'react';
 import enTranslations from '../locales/en.json';
 import esTranslations from '../locales/es.json';
+import frTranslations from '../locales/fr.json';
+import ptTranslations from '../locales/pt.json';
+import zhTranslations from '../locales/zh.json';
 
-/** Languages with a real locale file (not English fallback). */
-export type Language = 'en' | 'es';
+export type Language = 'en' | 'es' | 'fr' | 'pt' | 'zh';
 
-export const SUPPORTED_LANGUAGES: readonly Language[] = ['en', 'es'] as const;
+export const SUPPORTED_LANGUAGES: readonly Language[] = ['en', 'es', 'fr', 'pt', 'zh'] as const;
+
+/** Native names — always shown as-is in the language menu. */
+export const LANGUAGE_LABELS: Record<Language, string> = {
+  en: 'English',
+  es: 'Español',
+  fr: 'Français',
+  pt: 'Português',
+  zh: '中文',
+};
+
+const HTML_LANG: Record<Language, string> = {
+  en: 'en',
+  es: 'es',
+  fr: 'fr',
+  pt: 'pt',
+  zh: 'zh-CN',
+};
 
 interface I18nContextType {
   language: Language;
@@ -27,7 +46,7 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 export const useTranslation = () => {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error('useTranslation must be used within I18nProvider');
+    throw new Error('useTranslation must be used within an I18nProvider');
   }
   return context;
 };
@@ -35,6 +54,9 @@ export const useTranslation = () => {
 const translationsMap: Record<Language, Record<string, unknown>> = {
   en: enTranslations as Record<string, unknown>,
   es: esTranslations as Record<string, unknown>,
+  fr: frTranslations as Record<string, unknown>,
+  pt: ptTranslations as Record<string, unknown>,
+  zh: zhTranslations as Record<string, unknown>,
 };
 
 function resolveKey(tree: unknown, key: string): unknown {
@@ -53,10 +75,6 @@ function readStoredLanguage(): Language {
   if (saved && (SUPPORTED_LANGUAGES as readonly string[]).includes(saved)) {
     return saved as Language;
   }
-  // Legacy codes (pt/fr/…) used English content — reset to English
-  if (saved && saved !== 'en' && saved !== 'es') {
-    localStorage.setItem('rsc-language', 'en');
-  }
   return 'en';
 }
 
@@ -71,11 +89,11 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
     if (!(SUPPORTED_LANGUAGES as readonly string[]).includes(lang)) return;
     setLanguageState(lang);
     localStorage.setItem('rsc-language', lang);
-    document.documentElement.lang = lang;
+    document.documentElement.lang = HTML_LANG[lang];
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = language;
+    document.documentElement.lang = HTML_LANG[language];
   }, [language]);
 
   const t = useCallback(
