@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Map, 
   Code, 
@@ -34,7 +33,6 @@ export function DevelopersRoadmapPage() {
               <ExternalLink className="developers-roadmap-hero-cta-icon" size={20} />
             </a>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

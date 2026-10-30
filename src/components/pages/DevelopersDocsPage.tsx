@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Book, 
   Rocket, 
@@ -33,7 +32,6 @@ export function DevelopersDocsPage() {
             <h1 className="developers-docs-hero-title">{t('developersDocs.hero.title')}</h1>
             <p className="developers-docs-hero-subtitle">{t('developersDocs.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Newspaper, 
   Download, 
@@ -37,7 +36,6 @@ export function CompanyPressPage() {
               <Download className="company-press-hero-cta-icon" size={20} />
             </a>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

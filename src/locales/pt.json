@@ -38,7 +38,7 @@
         }
       },
       "promoKicker": "Indivíduos",
-      "promoLine": "Carteira e pagamentos do dia a dia. O mesmo padrão do restante da casa."
+      "promoLine": "A experiência da pessoa. O dinheiro e o crédito permanecem no parceiro."
     },
     "empresas": {
       "title": "Para empresas",
@@ -67,7 +67,7 @@
         }
       },
       "promoKicker": "Empresas",
-      "promoLine": "Cobranças, APIs e carteiras empresariais. Um único desk operacional."
+      "promoLine": "Conta, pagamentos e capital. A licença não se exerce em nome da ReeskOva."
     },
     "instituciones": {
       "title": "Nossos clientes",
@@ -96,7 +96,7 @@
         }
       },
       "promoKicker": "Instituições",
-      "promoLine": "Reeskova, P2P, Corporate e Chain. Contratos formais, uma única contraparte."
+      "promoLine": "Pagamentos, crédito, identidade e imóveis. Sem nomes até existir relação formal."
     },
     "desarrolladores": {
       "title": "Para desenvolvedores",
@@ -125,7 +125,7 @@
         }
       },
       "promoKicker": "Desenvolvedores",
-      "promoLine": "RPC, testnet e APIs estáveis. Integre sem reescrever a stack."
+      "promoLine": "APIs e integração. A cadeia entra quando encaixa, não como fim."
     },
     "empresa": {
       "title": "Sobre a Reesk'Cap Coorp",
@@ -157,8 +157,8 @@
           "description": "Assine contratos de parceria e documentos"
         }
       },
-      "promoKicker": "Reesk'Cap Coorp",
-      "promoLine": "Holding de tecnologia. Seis plataformas, um padrão de qualidade."
+      "promoKicker": "ReeskOva",
+      "promoLine": "Gestão de ativos privados. Visão não é serviço aberto."
     }
   },
   "hero": {
@@ -2519,19 +2519,19 @@
       }
     },
     "group": {
-      "brand": "Reesk'Cap Coorp",
-      "heroKicker": "Holding de tecnologia · Seis plataformas · Uma casa",
-      "heroTitle": "Plataformas digitais com padrão institucional.",
-      "heroLead": "A Reesk'Cap Coorp projeta e opera produtos proprietários em imobiliário, finanças digitais, custódia e infraestrutura blockchain. Não somos uma exchange nem um aplicativo isolado: somos a organização que constrói, integra e mantém cada camada sob padrões compartilhados.",
-      "heroAux": "Seis plataformas. Uma casa.",
-      "ctaEcosystem": "Explorar plataformas",
-      "ctaProducts": "Ler os capítulos",
+      "brand": "ReeskOva",
+      "heroKicker": "Gestão de ativos privados",
+      "heroTitle": "O futuro da oportunidade começa pelo acesso.",
+      "heroLead": "A ReeskOva desenha a infraestrutura que liga capital, imóveis, pagamentos e ativos digitais numa só experiência. Não somos um banco, nem uma rede de pagamentos, nem uma imobiliária tradicional: somos a camada de experiência e de orquestração. A atividade que exige autorização permanece no parceiro regulado.",
+      "heroAux": "Visão não é serviço aberto. O Brasil é a base estratégica inicial.",
+      "ctaEcosystem": "Ler a arquitetura",
+      "ctaProducts": "Ver o estado de cada parte",
       "houseAria": "Ilustração isométrica do grupo Reesk'Cap com as suas seis plataformas",
-      "manifestoTitle": "Por que a Reesk'Cap existe",
-      "manifestoBody": "Existimos porque os mercados que atendemos — imóveis, pagamentos, custódia, liquidação — merecem mais do que produtos desconectados. A Reesk'Cap não foi criada para lançar um aplicativo da moda nem para perseguir manchetes de cripto. Fomos construídos para sustentar plataformas que se mantêm por si e se fortalecem mutuamente: Reeskova para ativos reais, RSC Wallet e Escrow para valor em movimento, P2P e Corporate para operações multipartes, RSC Chain como camada de registro e liquidação. Cada linha de produto tem um responsável, um roadmap e um patamar de qualidade dentro da mesma casa.",
-      "ecoEyebrow": "Portfólio",
-      "ecoTitle": "Seis capítulos, um padrão",
-      "ecoSubtitle": "Cada linha tem um mercado, uma interface e um responsável. O que o grupo compartilha não é apenas a marca: é a forma como o valor é detido, liquidado e registrado.",
+      "manifestoTitle": "Ordenamos o acesso à oportunidade.",
+      "manifestoBody": "Capital, crédito, pagamentos, investimento, imóveis e ativos digitais não deveriam exigir uma porta distinta de cada vez. A ReeskOva reúne-os numa só arquitetura de gestão. A nossa intenção é que quem entra possa descobrir uma oportunidade, compreendê-la e acompanhá-la com clareza. A experiência permanece simples. A infraestrutura, por trás, guarda o rigor.",
+      "ecoEyebrow": "Ecossistema",
+      "ecoTitle": "Uma só visão.",
+      "ecoSubtitle": "Cada linha da ReeskOva exprime a mesma intenção: ordenar o acesso ao capital, ao imóvel, ao pagamento e ao ativo digital. Não são portas soltas. São a mesma casa, lida a partir do lugar que corresponde.",
       "productLabel": "Capítulo",
       "learnMore": "Saiba mais",
       "products": {
@@ -2610,16 +2610,16 @@
       },
       "escrowFlow": {
         "step1": {
-          "title": "Depósito",
-          "description": "As partes acordam as condições e o valor entra em custódia."
+          "title": "Pedido",
+          "description": "A pessoa compara e pede. Isso vive na experiência."
         },
         "step2": {
-          "title": "Verificação",
-          "description": "Marcos, documentos ou entregas são validados em relação às regras."
+          "title": "Análise",
+          "description": "O parceiro autorizado estuda o caso. A ReeskOva não concede."
         },
         "step3": {
-          "title": "Liberação",
-          "description": "O valor é liberado automaticamente ou com aprovação explícita."
+          "title": "Decisão",
+          "description": "Sem parceiro não há crédito. O contrato permanece fora de casa."
         }
       },
       "connectEyebrow": "Arquitetura",
@@ -2627,59 +2627,59 @@
       "connectBody": "A Reesk'Cap Coorp não empilha logotipos: empilha responsabilidades. A camada superior são as plataformas de negócio — Reeskova, Wallet, P2P, Corporate — onde vive a experiência do cliente. A camada intermediária são os trilhos compartilhados — Escrow, APIs de pagamento, identidade operacional — para que custódia e regras não se dupliquem em cada produto. A camada inferior é a RSC Chain: registro, liquidação e contratos com rastreabilidade. Quando o fechamento de um imóvel na Reeskova precisa reter fundos, o Escrow já fala a mesma língua da Wallet; quando o P2P liquida, a Chain recebe o resultado sem reimplementar a lógica em cada equipe.",
       "stackLayers": {
         "products": {
-          "label": "Plataformas de negócio",
+          "label": "Experiência",
           "items": [
-            "Reeskova",
+            "Home",
+            "Discover",
             "Wallet",
-            "P2P",
-            "Corporate"
+            "Passaporte"
           ]
         },
         "rails": {
-          "label": "Trilhos compartilhados",
+          "label": "Ativos e finanças",
           "items": [
-            "Escrow",
-            "Pagamentos",
-            "APIs"
+            "Imóveis",
+            "Crédito",
+            "Pagamentos"
           ]
         },
         "chain": {
-          "label": "Infraestrutura",
+          "label": "Tecnologia",
           "items": [
-            "RSC Chain",
-            "Contratos",
-            "Liquidação"
+            "Dados",
+            "Segurança",
+            "Cadeia"
           ]
         }
       },
-      "techEyebrow": "Stack técnica",
-      "techTitle": "Mais do que uma blockchain",
-      "techIntro": "A blockchain é a camada de registro; o restante da stack sustenta identidade, dados operacionais, disponibilidade e composição entre produtos. Desenhamos para que uma equipe da Reeskova e uma equipe da Wallet não reescrevam custódia ou observabilidade a cada trimestre.",
-      "techIntro2": "As capacidades abaixo se repetem no portfólio com interfaces comuns — não como jargão de apresentação, mas como contratos internos entre plataformas.",
+      "techEyebrow": "Tecnologia e confiança",
+      "techTitle": "O rigor que sustenta o acesso.",
+      "techIntro": "A tecnologia da ReeskOva existe para que a confiança não dependa de uma promessa. Identidade, dados, segurança e integração servem uma só intenção: que o acesso ao capital, ao imóvel e ao ativo digital seja claro.",
+      "techIntro2": "Quem entra não precisa ver a complexidade. Precisa saber que cada passo é governado: quem acede, o que se regista e com que propósito. A cadeia entra quando a casa o exige.",
       "techLayers": {
         "identity": {
-          "title": "Identidade e permissões",
-          "description": "Funções, acessos e rastros de operação compartilhados entre produtos corporativos e carteiras operacionais."
+          "title": "Identidade",
+          "description": "Ordena o acesso. Cada permissão tem um propósito e um responsável."
         },
         "data": {
-          "title": "Dados operacionais",
-          "description": "Eventos de mercado, transações e estados de custódia disponíveis para relatórios e decisões."
+          "title": "Dados",
+          "description": "Servem a decisão, não o ruído. Recolhem-se com propósito e governam-se com o mesmo critério da casa."
         },
         "cloud": {
-          "title": "Disponibilidade",
-          "description": "Serviços elásticos para implantação em múltiplas regiões, sem duplicar a lógica de negócio."
+          "title": "Segurança",
+          "description": "Faz parte do desenho: autenticação, custódia de credenciais e vigilância contínua."
         },
         "chain": {
-          "title": "Registro e liquidação",
-          "description": "A RSC Chain como piso comum para fluxos que exigem verificação pública ou privada."
+          "title": "Cadeia",
+          "description": "Regista quando o assunto o merece. É infraestrutura ao serviço da confiança."
         },
         "apis": {
-          "title": "Composição",
-          "description": "APIs estáveis para que parceiros integrem pagamentos, escrow e consultas sem ramificar o código interno."
+          "title": "Integração",
+          "description": "Permite que um parceiro entre na experiência sem partir a casa em duas."
         }
       },
       "whyEyebrow": "Padrão",
-      "whyTitle": "Por que uma casa, e não seis startups",
+      "whyTitle": "Três regras que não se negociam.",
       "whyTheses": {
         "discipline": {
           "title": "Disciplina de produto",
@@ -2721,62 +2721,54 @@
         }
       },
       "timelineEyebrow": "Sequência",
-      "timelineTitle": "Construindo em camadas",
-      "timelineSubtitle": "O portfólio cresce em ondas — primeiro o produto visível, depois os trilhos compartilhados e, por último, a expansão geográfica.",
+      "timelineTitle": "De uma ideia a um ecossistema.",
+      "timelineSubtitle": "A ReeskOva parte de uma perceção: as oportunidades existem, e chegam separadas. A resposta é uma arquitetura capaz de reunir capital, imóvel, pagamento e ativo digital.",
       "timelineYear": "2026",
       "timeline": {
-        "reeskova": {
-          "label": "Reeskova",
-          "note": "Marketplace imobiliário como plataforma de referência do grupo."
+        "perception": {
+          "label": "Perceção",
+          "note": "O capital, o crédito, o imóvel e o ativo digital existem. Cada um chega por um sistema distinto."
         },
-        "wallet": {
-          "label": "Wallet",
-          "note": "Acesso do usuário e base operacional para ativos RSC."
+        "idea": {
+          "label": "Ideia",
+          "note": "Reuni-los numa só camada. Quem entra vê a oportunidade e segue-a, sem ter de operar cada sistema em separado."
         },
-        "escrow": {
-          "label": "Escrow",
-          "note": "Custódia comum para fechamentos imobiliários e P2P."
+        "platform": {
+          "label": "Plataforma",
+          "note": "A aplicação é a entrada: descobrir, o património, o investimento e a identidade, num mesmo lugar."
         },
-        "p2p": {
-          "label": "P2P",
-          "note": "Mercado de contrapartes acoplado a escrow e chain."
+        "infrastructure": {
+          "label": "Infraestrutura",
+          "note": "O pagamento, o crédito, os dados, a cadeia e os parceiros deixam de ser peças soltas e passam a ser camadas da mesma arquitetura."
         },
-        "chain": {
-          "label": "Chain",
-          "note": "Infraestrutura consolidada de registro e liquidação."
-        },
-        "ai": {
-          "label": "IA operacional",
-          "note": "Matching, automação e apoio à decisão nos produtos."
-        },
-        "global": {
-          "label": "Expansão",
-          "note": "Implantação regional com a mesma arquitetura de três camadas."
+        "ecosystem": {
+          "label": "Ecossistema",
+          "note": "Aplicação, rede, imóveis e infraestrutura financeira leem-se como uma só casa."
         }
       },
-      "valuesEyebrow": "Princípios",
-      "valuesTitle": "O que não negociamos",
-      "valuesSubtitle": "Estes princípios orientam contratos, roadmaps e prioridades — não decoram uma parede.",
+      "valuesEyebrow": "Direção",
+      "valuesTitle": "A direção.",
+      "valuesSubtitle": "Uma condução global e quatro direções regionais, na América Latina, em França e em África.",
       "values": {
         "innovation": {
-          "title": "Inovação com propósito",
-          "body": "Experimentamos onde isso remove atrito real — custódia, fechamentos, liquidação — e não apenas onde impressiona em uma demonstração."
+          "title": "Steeve Rocher",
+          "body": "Direção global. Conduz a visão, a coerência do ecossistema e a direção institucional."
         },
         "integrity": {
-          "title": "Integridade operacional",
-          "body": "Estados, saldos e condições devem ser legíveis para os clientes e auditáveis para os parceiros."
+          "title": "Robenson Leger",
+          "body": "América Latina. Organiza a visão da região e a coerência da casa, com o Brasil como base."
         },
         "technology": {
-          "title": "Tecnologia compartilhada",
-          "body": "Preferimos componentes reutilizáveis entre plataformas a seis stacks isoladas."
+          "title": "Etienne Leger",
+          "body": "França. Aproxima a visão da França e sustenta a coerência da casa na Europa."
         },
         "trust": {
-          "title": "Confiança explícita",
-          "body": "Escrow, contratos e permissões existem para que a confiança não dependa de conversas informais."
+          "title": "Amarachi",
+          "body": "África. Conduz, com Emmanuel A, a visão e a coerência da casa no continente."
         },
         "execution": {
-          "title": "Execução sustentada",
-          "body": "Roadmaps medidos em trimestres entregáveis, não em promessas infinitas."
+          "title": "Emmanuel A",
+          "body": "África. Conduz, com Amarachi, a visão e a coerência da casa no continente."
         }
       },
       "newsEyebrow": "Notas",
@@ -2803,17 +2795,17 @@
         }
       },
       "teamAlt": "Equipe Reesk'Cap Coorp",
-      "teamTagline": "Uma equipe, um padrão",
+      "teamTagline": "Pessoas · Tecnologia · Oportunidades",
       "teamPillars": {
         "growth": "Crescimento medido em produtos entregues",
         "impact": "Impacto em mercados reais, não apenas em métricas de vaidade",
         "secure": "Segurança e custódia como requisito, não como recurso",
         "together": "Equipes multifuncionais acima de silos de produto"
       },
-      "ctaTitle": "Vamos falar da sua operação",
+      "ctaTitle": "Para parceiros e instituições.",
       "ctaBody": "Se você representa uma instituição, um operador imobiliário ou uma empresa que precisa de pagamentos e custódia sob o mesmo padrão, a Reesk'Cap oferece um canal único por meio de Corporate e Sign Docs.",
       "ctaFinal": "Explorar plataformas",
-      "footerTagline": "Reesk'Cap Coorp — holding de tecnologia. Imobiliário, finanças digitais, custódia e infraestrutura blockchain sob o mesmo teto.",
+      "footerTagline": "ReeskOva. Gestão de ativos privados: finanças, crédito, pagamentos, investimento, imóveis e ativos digitais numa só arquitetura. A operação regulada permanece no parceiro autorizado.",
       "footer": {
         "products": "Produtos",
         "company": "Empresa",
@@ -2826,8 +2818,21 @@
         "api": "API",
         "docs": "Documentação",
         "github": "GitHub",
-        "copyright": "© 2026 Reesk'Cap Coorp. Todos os direitos reservados."
-      }
+        "copyright": "© 2026 ReeskOva. Leitura institucional. Não é uma oferta de investimento nem um contrato."
+      },
+      "equationLabel": "Mapa de leitura",
+      "equationNote": "Uma equação de leitura, não um balanço. Nenhuma parte está, por si, em operação.",
+      "equation": {
+        "0": "Finanças",
+        "1": "Crédito",
+        "2": "Pagamentos",
+        "3": "Investimento",
+        "4": "Imóveis",
+        "5": "Ativos digitais",
+        "6": "Social",
+        "7": "Tecnologia"
+      },
+      "photoAlt": "Fotografia de contexto do livro institucional. Não é uma sede, um cliente nem um ativo em carteira."
     }
   },
   "institutionalRealEstate": {

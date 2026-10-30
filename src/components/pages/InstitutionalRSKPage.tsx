@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Coins, 
   Network, 
@@ -33,7 +32,6 @@ export function InstitutionalRSKPage() {
             <h1 className="institutional-rsk-hero-title">{t('institutionalRSK.hero.title')}</h1>
             <p className="institutional-rsk-hero-subtitle">{t('institutionalRSK.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

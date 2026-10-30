@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   QrCode, 
   Users, 
@@ -30,7 +29,6 @@ export function PaymentsPage() {
             <h1 className="payments-hero-title">{t('payments.hero.title')}</h1>
             <p className="payments-hero-subtitle">{t('payments.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

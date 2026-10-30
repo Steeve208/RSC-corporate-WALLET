@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Shield, 
   Lock, 
@@ -28,7 +27,6 @@ export function CompanySecurityPage() {
             <h1 className="company-security-hero-title">{t('companySecurity.hero.title')}</h1>
             <p className="company-security-hero-subtitle">{t('companySecurity.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

@@ -38,7 +38,7 @@
         }
       },
       "promoKicker": "Individuos",
-      "promoLine": "Wallet y pagos cotidianos. El mismo criterio que el resto de la casa."
+      "promoLine": "La experiencia de la persona. El dinero y el crédito permanecen en el socio."
     },
     "empresas": {
       "title": "Para Empresas",
@@ -67,7 +67,7 @@
         }
       },
       "promoKicker": "Empresas",
-      "promoLine": "Cobros, APIs y wallets de negocio. Una sola mesa operativa."
+      "promoLine": "Cuenta, pagos y capital. La licencia no se ejerce en nombre de ReeskOva."
     },
     "instituciones": {
       "title": "Nuestros Clientes",
@@ -96,7 +96,7 @@
         }
       },
       "promoKicker": "Instituciones",
-      "promoLine": "Reeskova, P2P, Corporate y Chain. Contratos formales, un interlocutor."
+      "promoLine": "Pagos, crédito, identidad e inmuebles. Sin nombres hasta que exista relación formal."
     },
     "desarrolladores": {
       "title": "Para Desarrolladores",
@@ -125,7 +125,7 @@
         }
       },
       "promoKicker": "Developers",
-      "promoLine": "RPC, testnet y APIs estables. Integración sin reescribir el stack."
+      "promoLine": "APIs e integración. La cadena entra cuando encaja, no como fin."
     },
     "empresa": {
       "title": "Acerca de Reesk'Cap Coorp",
@@ -157,8 +157,8 @@
           "description": "Firma acuerdos de partnership y documentos"
         }
       },
-      "promoKicker": "Reesk'Cap Coorp",
-      "promoLine": "Holding tecnológico. Seis plataformas, un criterio de calidad."
+      "promoKicker": "ReeskOva",
+      "promoLine": "Gestión de activos privados. La visión no es un servicio abierto."
     }
   },
   "hero": {
@@ -2519,301 +2519,293 @@
       }
     },
     "group": {
-      "brand": "Reesk'Cap Coorp",
-      "heroKicker": "Holding tecnológico · Seis plataformas · Una casa",
-      "heroTitle": "Plataformas digitales con criterio institucional.",
-      "heroLead": "Reesk'Cap Coorp diseña y opera productos propios en inmobiliario, finanzas digitales, custodia y infraestructura blockchain. No somos un exchange ni una app aislada: somos la organización que construye, integra y mantiene cada capa con estándares compartidos.",
-      "heroAux": "Seis plataformas. Una casa.",
-      "ctaEcosystem": "Explorar plataformas",
-      "ctaProducts": "Leer capítulos",
-      "houseAria": "Ilustración isométrica del grupo Reesk'Cap con sus seis plataformas",
-      "manifestoTitle": "Por qué existe Reesk'Cap",
-      "manifestoBody": "Existimos porque los mercados que tocamos — propiedad, pagos, custodia, liquidación — merecen más que productos desconectados. Reesk'Cap no nace para lanzar una sola app de moda ni para competir en titulares de cripto. Nacemos para sostener plataformas que funcionen solas y se refuercen entre sí: Reeskova para activos inmobiliarios, RSC Wallet y Escrow para valor en movimiento, P2P y Corporate para operaciones entre partes, RSC Chain como capa de registro y liquidación. Cada línea de producto tiene dueño, roadmap y criterio de calidad dentro de la misma casa.",
-      "ecoEyebrow": "Portafolio",
-      "ecoTitle": "Seis capítulos, un criterio común",
-      "ecoSubtitle": "Cada línea tiene mercado, interfaz y dueño. Lo que comparte el grupo no es la marca: son las reglas con las que se custodia, se liquida y se deja constancia.",
-      "productLabel": "Capítulo",
+      "brand": "ReeskOva",
+      "heroKicker": "Gestión de activos privados",
+      "heroTitle": "El futuro de la oportunidad empieza por el acceso.",
+      "heroLead": "ReeskOva diseña la infraestructura que conecta capital, inmuebles, pagos y activos digitales en una sola experiencia. No somos un banco, ni una red de pagos, ni una inmobiliaria tradicional: somos la capa de experiencia y de orquestación. La actividad que exige autorización permanece en el socio regulado.",
+      "heroAux": "La visión no es un servicio abierto. Brasil es la base estratégica inicial.",
+      "ctaEcosystem": "Leer la arquitectura",
+      "ctaProducts": "Ver el estado de cada parte",
+      "houseAria": "Arquitectura institucional de ReeskOva",
+      "manifestoTitle": "Ordenamos el acceso a la oportunidad.",
+      "manifestoBody": "Capital, crédito, pagos, inversión, inmuebles y activos digitales no deberían exigir una puerta distinta cada vez. ReeskOva los reúne en una sola arquitectura de gestión. Nuestra intención es que quien entra pueda descubrir una oportunidad, comprenderla y seguirla con claridad. La experiencia permanece simple. La infraestructura, detrás, guarda el rigor.",
+      "ecoEyebrow": "Ecosistema",
+      "ecoTitle": "Una sola visión.",
+      "ecoSubtitle": "Cada línea de ReeskOva expresa la misma intención: ordenar el acceso al capital, al inmueble, al pago y al activo digital. No son puertas sueltas. Son la misma casa, leída desde el lugar que corresponde.",
+      "productLabel": "Estado",
       "learnMore": "Saber más",
       "products": {
         "reeskova": {
-          "name": "Reeskova",
-          "positioning": "Operación digital de activos inmobiliarios con estándares de mercado premium.",
-          "p1": "Reeskova concentra compra, venta, alquiler e inversión en un marketplace diseñado para operadores serios: agentes, desarrolladores, fondos y compradores que necesitan claridad documental, trazabilidad y una experiencia acorde al valor del activo.",
-          "p2": "No es un portal clasificados. Es la capa comercial donde la propiedad se presenta, se negocia y se prepara para cerrar con los rails de custodia y liquidación del grupo.",
-          "p3": "Dentro de Reesk'Cap, Reeskova es la plataforma estrella de real estate — la puerta de entrada institucional al mercado físico digitalizado.",
+          "name": "ReeskOva Properties",
+          "positioning": "Visión de futuro. Patrimonio inmobiliario, pasaporte del activo y liquidez, con estructura jurídica propia.",
+          "p1": "ReeskOva Properties busca ordenar un mercado fragmentado: el inmueble como activo informado antes de ser una estructura de participación. El Pasaporte organiza la información. No sustituye el documento oficial.",
+          "p2": "Tokenización, inversión fraccionada y el puente entre propietario e inversor pertenecen a la visión. No hay un stock de propiedades publicado en esta edición.",
+          "p3": "La marca organiza la comprensión. El instrumento jurídico crea el efecto.",
           "points": [
-            "Listados con datos estructurados y contexto de mercado",
-            "Flujos de reserva e inversión alineados con Escrow",
-            "Integración con Corporate para operadores y partners"
+            "Pasaporte del activo, en diseño",
+            "Liquidez no se presume",
+            "El derecho permanece en la estructura jurídica"
           ]
         },
         "chain": {
           "name": "RSC Chain",
-          "positioning": "Capa de registro y liquidación para productos del grupo y partners autorizados.",
-          "p1": "RSC Chain es la infraestructura blockchain que sostiene liquidación verificable, contratos y trazabilidad entre plataformas. No se vende como experimento: es el piso técnico sobre el que Wallet, Escrow y P2P pueden apoyarse con reglas claras.",
-          "p2": "Instituciones y builders encuentran RPC, documentación y entornos de prueba para integrar sin rehacer cada producto desde cero.",
-          "p3": "En la arquitectura del grupo, Chain es la capa inferior — estable, auditable, compartida.",
+          "positioning": "Visión de futuro. Una red propia, todavía no una infraestructura en operación.",
+          "p1": "RSC Chain es la visión de una blockchain capaz de acompañar wallet y aplicaciones sin congelar el ecosistema. No es una red que se pueda usar hoy.",
+          "p2": "La prioridad declarada de RSC es la utilidad antes que la especulación. Sin red definida, no hay minería ni liquidación propia.",
+          "p3": "Cincuenta millones de RSC, cuando se mencionan, son una cifra de diseño, no circulación y no un precio.",
           "points": [
-            "Liquidación on-chain para flujos internos",
-            "Documentación y testnet para developers",
-            "Política de upgrades coordinada con Corporate"
+            "Sin red publicada",
+            "Utilidad antes que narrativa",
+            "Gobierno on-chain no está en vigor"
           ]
         },
         "p2p": {
-          "name": "RSC P2P",
-          "positioning": "Intercambio entre contrapartes con reglas visibles y liquidación respaldada.",
-          "p1": "RSC P2P ordena el intercambio peer-to-peer cuando comprador y vendedor necesitan un mercado con reglas, no un chat informal. La plataforma expone ofertas, estados y condiciones de cierre de forma legible.",
-          "p2": "Se apoya en Escrow para retener valor hasta cumplir condiciones y en Chain para registrar el resultado cuando corresponde.",
-          "p3": "Es el marketplace de contrapartes del grupo — pensado para volumen, no para especulación ruidosa.",
+          "name": "Discover",
+          "positioning": "Planificado. El lugar donde empieza la oportunidad, no donde se cierra.",
+          "p1": "Discover fue concebido para reunir oportunidades, activos y servicios que hoy circulan en entornos que no se hablan. La búsqueda muestra un estado: disponible, en estructura o visión.",
+          "p2": "No es un escaparate que convierte la curiosidad en adhesión. De la descubierta se pasa al análisis. Solo después, si la estructura existe, a la acción.",
+          "p3": "No hay inventario, ranking ni recomendación publicados.",
           "points": [
-            "Libro de ofertas con estados auditables",
-            "Cierre acoplado a Escrow",
-            "APIs para integradores institucionales"
+            "Estado antes que brillo",
+            "No mezcla certezas distintas",
+            "Sirve a personas, inversores y empresas"
           ]
         },
         "escrow": {
-          "name": "RSC Escrow",
-          "positioning": "Custodia de valor hasta que las condiciones acordadas se cumplen.",
-          "p1": "Escrow retiene fondos o activos digitales mientras las partes completan verificaciones, entregas o hitos contractuales. Reduce la asimetría de confianza en operaciones entre desconocidos o entre filiales.",
-          "p2": "Reeskova, P2P y Corporate consumen Escrow como rail común — un solo criterio de custodia en lugar de soluciones ad hoc por producto.",
-          "p3": "Automatización progresiva de liberación según reglas definidas, con trazabilidad para auditoría.",
+          "name": "Crédito",
+          "positioning": "Dependiente de socio. Intermediación y comparación, no concesión automática.",
+          "p1": "El crédito se diseña como experiencia de solicitud y comparación. El análisis y el contrato permanecen en el socio autorizado.",
+          "p2": "ReeskOva no se presenta como prestamista. Ocultar al socio para simplificar violaría la transparencia.",
+          "p3": "Sin socio, no hay crédito. Esa frase es el límite de la página.",
           "points": [
-            "Retención hasta condiciones verificadas",
-            "Integración nativa con Wallet y Chain",
-            "Flujos multi-parte para operaciones corporativas"
+            "Solicitud en la experiencia",
+            "Decisión en el socio",
+            "Sin concesión automática"
           ]
         },
         "wallet": {
-          "name": "RSC Wallet",
-          "positioning": "Acceso cotidiano a activos digitales del ecosistema RSC.",
-          "p1": "RSC Wallet es la interfaz donde personas y equipos guardan, envían y reciben activos compatibles con RSC Chain. Prioriza claridad de saldo, historial y permisos sobre efectos visuales.",
-          "p2": "Conecta con pagos QR, staking y productos de negocio cuando la organización necesita una billetera operativa, no solo personal.",
-          "p3": "Es la puerta de usuario al grupo — la primera capa que muchos clientes tocan antes de Escrow, P2P o Reeskova.",
+          "name": "Wallet",
+          "positioning": "Experiencia planificada. El servicio financiero depende de un socio regulado.",
+          "p1": "La Wallet es el lugar donde una persona debería leer posición, activo y movimiento sin saltar de aplicación. No es, en este volumen, un saldo operativo ni una institución de pago.",
+          "p2": "Pix, transferencia, recibo y cualquier cifra que represente dinero dependen de integración. El código QR es un gesto de interfaz sobre el arreglo que opera el socio.",
+          "p3": "Un número en pantalla no convierte la experiencia en un banco.",
           "points": [
-            "Non-custodial con control de claves",
-            "Historial y permisos legibles",
-            "Puente hacia pagos y staking del ecosistema"
+            "Lectura de cuenta, no depósito propio",
+            "Pagos con socio regulado",
+            "Activo RSC aún en visión"
           ]
         },
         "corporate": {
-          "name": "RSC Corporate",
-          "positioning": "Servicios y plataformas para organizaciones que operan a escala.",
-          "p1": "RSC Corporate agrupa onboarding institucional, acuerdos, reportes y herramientas para equipos que despliegan el stack del grupo en entornos regulados o multi-sede.",
-          "p2": "Partners, bancos correspondientes y operadores inmobiliarios encuentran un interlocutor único y contratos alineados con Sign Docs y Security.",
-          "p3": "Es la cara enterprise de Reesk'Cap — donde la política, el cumplimiento y la implementación se encuentran.",
+          "name": "Empresas",
+          "positioning": "Dependiente de socio. Cuenta, pagos y capital para compañías, con la operación autorizada fuera de casa.",
+          "p1": "El recorrido de empresas contempla cuenta, pagos, recibos, tarjeta, capital y herramientas. Lo que exige licencia no se ejerce en nombre de ReeskOva.",
+          "p2": "Las APIs, el KYC y el cumplimiento son la puerta por la que entra un especialista sin partir la experiencia en dos.",
+          "p3": "No hay socios nombrados en esta edición. Una categoría no es un contrato firmado.",
           "points": [
-            "Onboarding y acuerdos centralizados",
-            "Reportes operativos cross-producto",
-            "Canal único para alianzas institucionales"
+            "Experiencia de empresa, no licencia propia",
+            "Socio para pago y crédito",
+            "APIs como banda de integración"
           ]
         }
       },
       "escrowFlow": {
         "step1": {
-          "title": "Depósito",
-          "description": "Las partes acuerdan condiciones y el valor entra en custodia."
+          "title": "Solicitud",
+          "description": "La persona compara y pide. Eso vive en la experiencia."
         },
         "step2": {
-          "title": "Verificación",
-          "description": "Se validan hitos, documentos o entregas según reglas."
+          "title": "Análisis",
+          "description": "El socio autorizado estudia el caso. ReeskOva no concede."
         },
         "step3": {
-          "title": "Liberación",
-          "description": "El valor se libera automáticamente o con aprobación explícita."
+          "title": "Decisión",
+          "description": "Sin socio no hay crédito. El contrato permanece fuera de casa."
         }
       },
       "connectEyebrow": "Arquitectura",
-      "connectTitle": "Tres capas, un grupo",
-      "connectBody": "Reesk'Cap Coorp no apila logos: apila responsabilidades. La capa superior son las plataformas de negocio — Reeskova, Wallet, P2P, Corporate — donde vive la experiencia del cliente. La capa media son los rails compartidos — Escrow, APIs de pago, identidad operativa — que evitan duplicar custodia y reglas en cada producto. La capa inferior es RSC Chain: registro, liquidación y contratos con trazabilidad. Cuando un cierre inmobiliario en Reeskova necesita retener fondos, Escrow ya habla el mismo idioma que Wallet; cuando P2P liquida, Chain recibe el resultado sin reimplementar la lógica en cada equipo.",
+      "connectTitle": "Seis bandas, una puerta.",
+      "connectBody": "Experiencia, productos, finanzas, activos, tecnología y socios pueden madurar a velocidades distintas sin perder el vínculo. Una capa no absorbe la responsabilidad de la siguiente. La experiencia no concede crédito. Un activo digital no reemplaza el título. El socio no es un logo: ejecuta lo que ReeskOva diseña y no opera. ReeskOva permanece en la banda de experiencia y de orquestación.",
       "stackLayers": {
         "products": {
-          "label": "Plataformas de negocio",
+          "label": "Experiencia",
           "items": [
-            "Reeskova",
+            "Home",
+            "Discover",
             "Wallet",
-            "P2P",
-            "Corporate"
+            "Pasaporte"
           ]
         },
         "rails": {
-          "label": "Rails compartidos",
+          "label": "Activos y finanzas",
           "items": [
-            "Escrow",
-            "Pagos",
-            "APIs"
+            "Inmuebles",
+            "Crédito",
+            "Pagos"
           ]
         },
         "chain": {
-          "label": "Infraestructura",
+          "label": "Tecnología",
           "items": [
-            "RSC Chain",
-            "Contratos",
-            "Liquidación"
+            "Datos",
+            "Seguridad",
+            "Cadena"
           ]
         }
       },
-      "techEyebrow": "Stack técnico",
-      "techTitle": "Más que una cadena de bloques",
-      "techIntro": "Blockchain es la capa de registro; el resto del stack sostiene identidad, datos operativos, disponibilidad y composición entre productos. Diseñamos para que un equipo de Reeskova y uno de Wallet no reescriban custodia ni observabilidad cada trimestre.",
-      "techIntro2": "Las capacidades siguientes se repiten en el portafolio con interfaces comunes — no como buzzwords en una slide, sino como contratos internos entre plataformas.",
+      "techEyebrow": "Tecnología y confianza",
+      "techTitle": "El rigor que sostiene el acceso.",
+      "techIntro": "La tecnología de ReeskOva existe para que la confianza no dependa de una promesa. Identidad, datos, seguridad e integración sirven a una sola intención: que el acceso al capital, al inmueble y al activo digital sea claro.",
+      "techIntro2": "Quien entra no necesita ver la complejidad. Necesita saber que cada paso está gobernado: quién accede, qué se registra y con qué propósito. La cadena entra cuando la casa lo requiere.",
       "techLayers": {
         "identity": {
-          "title": "Identidad y permisos",
-          "description": "Roles, acceso y trazas de operación compartidos entre productos corporativos y wallets operativas."
+          "title": "Identidad",
+          "description": "Ordena el acceso. Cada permiso tiene un propósito y un responsable."
         },
         "data": {
-          "title": "Datos operativos",
-          "description": "Eventos de mercado, transacciones y estados de custodia disponibles para reportes y decisiones."
+          "title": "Datos",
+          "description": "Sirven a la decisión, no al ruido. Se recogen con propósito y se gobiernan con el mismo criterio que la casa."
         },
         "cloud": {
-          "title": "Disponibilidad",
-          "description": "Servicios elásticos para despliegue multi-región sin duplicar lógica de negocio."
+          "title": "Seguridad",
+          "description": "Forma parte del diseño: autenticación, custodia de credenciales y vigilancia continua."
         },
         "chain": {
-          "title": "Registro y liquidación",
-          "description": "RSC Chain como piso común para cerrar flujos que requieren verificación pública o privada."
+          "title": "Cadena",
+          "description": "Registra cuando el asunto lo merece. Es infraestructura al servicio de la confianza."
         },
         "apis": {
-          "title": "Composición",
-          "description": "APIs estables para que partners integren pagos, escrow y consultas sin fork del código interno."
+          "title": "Integración",
+          "description": "Permite que un socio entre en la experiencia sin partir la casa en dos."
         }
       },
       "whyEyebrow": "Criterio",
-      "whyTitle": "Por qué una casa, no seis startups",
+      "whyTitle": "Tres reglas que no se negocian.",
       "whyTheses": {
         "discipline": {
-          "title": "Disciplina de producto",
-          "body": "Cada plataforma tiene roadmap y responsables dentro del grupo. Evitamos lanzar features huérfanas que no se conectan con custodia, identidad o liquidación."
+          "title": "Transparencia",
+          "body": "Lo que es visión debe parecer visión. Lo que depende de un socio debe decirse así. Lo que es un concepto no se presenta como servicio abierto."
         },
         "integration": {
-          "title": "Integración real",
-          "body": "Escrow, Chain y Wallet no son slides de partner: son componentes que otros productos invocan. Eso reduce fricción para clientes que operan en más de un mercado."
+          "title": "El límite del socio",
+          "body": "El socio ejecuta lo que ReeskOva diseña y no opera. Experiencia no concede crédito. Un activo digital no reemplaza el registro del título."
         },
         "horizon": {
-          "title": "Horizonte largo",
-          "body": "Construimos para regímenes donde propiedad, pagos y registro digital conviven años, no para ciclos de hype trimestral."
+          "title": "Largo plazo",
+          "body": "Construimos para décadas, no solo para ciclos. Crecer sin la estructura correspondiente no es crecimiento: es un atajo."
         }
       },
-      "audienceEyebrow": "Públicos",
-      "audienceTitle": "Tres entradas al mismo criterio",
-      "audienceSubtitle": "Individuos, empresas e instituciones no ven la misma pantalla, pero sí la misma calidad de proceso.",
+      "audienceEyebrow": "A quién sirve",
+      "audienceTitle": "Personas, empresas y socios.",
+      "audienceSubtitle": "Cada participante tiene una función que los demás no absorben. Una categoría no es una alianza firmada.",
       "audiences": {
         "individuals": {
-          "title": "Individuos",
-          "p1": "Personas que necesitan una wallet clara, pagos cotidianos y acceso gradual a staking o remesas sin jerga innecesaria.",
-          "p2": "Entran por RSC Wallet y productos de pagos; cuando escalan patrimonio o operaciones, encuentran el mismo grupo detrás.",
-          "products": "RSC Wallet · Pagos · Staking · Educación",
-          "cta": "Ver productos para individuos"
+          "title": "Personas",
+          "p1": "Descubren, pagan, siguen y, cuando la estructura existe, participan. Entran por la aplicación, todavía en el campo de lo planificado.",
+          "p2": "No necesitan entender toda la infraestructura. Necesitan un paso siguiente que sea verdadero, y saber quién responde por ese paso.",
+          "products": "Discover · Wallet · Pasaporte",
+          "cta": "Ver el recorrido"
         },
         "businesses": {
           "title": "Empresas",
-          "p1": "Comercios y equipos que cobran, liquidan y reportan con APIs y wallets de negocio conectadas al stack RSC.",
-          "p2": "Business Wallet, pagos QR y facturación comparten identidad operativa con Escrow cuando el negocio crece en complejidad.",
-          "products": "Business Wallet · Pagos · API · Facturación",
-          "cta": "Ver productos para empresas"
+          "p1": "El ritmo y la responsabilidad no son los de un usuario con otro nombre. El recorrido contempla pago, recibo, gestión y, por socios, capital y crédito.",
+          "p2": "La operación regulada permanece en quien está autorizado.",
+          "products": "Pagos · Capital · APIs",
+          "cta": "Ver la banda financiera"
         },
         "institutions": {
-          "title": "Instituciones",
-          "p1": "Operadores inmobiliarios, mesas de mercado y organizaciones que necesitan Reeskova, P2P, Corporate y Chain con contratos formales.",
-          "p2": "El canal pasa por RSC Corporate, Sign Docs y Security — una sola mesa para alianzas y despliegue.",
-          "products": "Reeskova · P2P · Corporate · RSC Chain",
-          "cta": "Ver productos institucionales"
+          "title": "Socios e instituciones",
+          "p1": "Quien liquida entra en la banda financiera. Quien origina inmuebles entra en la banda de activos. Quien aporta identidad entra en tecnología y cumplimiento.",
+          "p2": "Mientras no haya una relación formal, el mapa permanece funcional y anónimo.",
+          "products": "Pagos · Crédito · Identidad · Inmuebles",
+          "cta": "Ver dónde encaja"
         }
       },
       "timelineEyebrow": "Secuencia",
-      "timelineTitle": "Construcción por capas",
-      "timelineSubtitle": "El portafolio crece en oleadas — producto visible primero, rails compartidos después, expansión geográfica al final.",
+      "timelineTitle": "De una idea a un ecosistema.",
+      "timelineSubtitle": "ReeskOva parte de una percepción: las oportunidades existen, y llegan separadas. La respuesta es una arquitectura capaz de reunir capital, inmueble, pago y activo digital.",
       "timelineYear": "2026",
       "timeline": {
-        "reeskova": {
-          "label": "Reeskova",
-          "note": "Marketplace inmobiliario como plataforma estrella del grupo."
+        "perception": {
+          "label": "Percepción",
+          "note": "El capital, el crédito, el inmueble y el activo digital existen. Cada uno llega por un sistema distinto."
         },
-        "wallet": {
-          "label": "Wallet",
-          "note": "Acceso de usuario y base operativa para activos RSC."
+        "idea": {
+          "label": "Idea",
+          "note": "Reunirlos en una sola capa. Quien entra ve la oportunidad y la sigue, sin tener que operar cada sistema por separado."
         },
-        "escrow": {
-          "label": "Escrow",
-          "note": "Custodia común para cierres inmobiliarios y P2P."
+        "platform": {
+          "label": "Plataforma",
+          "note": "La aplicación es la entrada: descubrir, el patrimonio, la inversión y la identidad, en un mismo lugar."
         },
-        "p2p": {
-          "label": "P2P",
-          "note": "Mercado de contrapartes acoplado a escrow y chain."
+        "infrastructure": {
+          "label": "Infraestructura",
+          "note": "El pago, el crédito, los datos, la cadena y los socios dejan de ser piezas sueltas y pasan a ser capas de la misma arquitectura."
         },
-        "chain": {
-          "label": "Chain",
-          "note": "Infraestructura de registro y liquidación consolidada."
-        },
-        "ai": {
-          "label": "IA operativa",
-          "note": "Matching, automatización y soporte a decisiones en productos."
-        },
-        "global": {
-          "label": "Expansión",
-          "note": "Despliegue regional con la misma arquitectura de tres capas."
+        "ecosystem": {
+          "label": "Ecosistema",
+          "note": "Aplicación, red, inmuebles e infraestructura financiera se leen como una sola casa."
         }
       },
-      "valuesEyebrow": "Principios",
-      "valuesTitle": "Lo que no negociamos",
-      "valuesSubtitle": "Estos principios guían contratos, roadmaps y prioridades — no decoran una pared.",
+      "valuesEyebrow": "Dirección",
+      "valuesTitle": "La dirección.",
+      "valuesSubtitle": "Una conducción global y cuatro direcciones regionales, en América Latina, Francia y África.",
       "values": {
         "innovation": {
-          "title": "Innovación con propósito",
-          "body": "Experimentamos donde reduce fricción real — custodia, cierres, liquidación — no donde solo impresiona en una demo."
+          "title": "Steeve Rocher",
+          "body": "Dirección global. Conduce la visión, la coherencia del ecosistema y la dirección institucional."
         },
         "integrity": {
-          "title": "Integridad operativa",
-          "body": "Estados, saldos y condiciones deben ser legibles para clientes y auditables para partners."
+          "title": "Robenson Leger",
+          "body": "América Latina. Organiza la visión de la región y la coherencia de la casa, con Brasil como base."
         },
         "technology": {
-          "title": "Tecnología compartida",
-          "body": "Preferimos componentes reutilizables entre plataformas antes que seis stacks aislados."
+          "title": "Etienne Leger",
+          "body": "Francia. Acerca la visión a Francia y sostiene la coherencia de la casa en Europa."
         },
         "trust": {
-          "title": "Confianza explícita",
-          "body": "Escrow, contratos y permisos existen para que la confianza no dependa de conversaciones informales."
+          "title": "Amarachi",
+          "body": "África. Conduce, con Emmanuel A, la visión y la coherencia de la casa en el continente."
         },
         "execution": {
-          "title": "Ejecución sostenida",
-          "body": "Roadmaps medidos en trimestres entregables, no en promesas de roadmap infinito."
+          "title": "Emmanuel A",
+          "body": "África. Conduce, con Amarachi, la visión y la coherencia de la casa en el continente."
         }
       },
-      "newsEyebrow": "Notas",
-      "newsTitle": "Desde la casa",
+      "newsEyebrow": "Lectura",
+      "newsTitle": "Cómo leer esta casa",
       "newsRead": "Leer nota completa",
       "news": {
         "n1": {
-          "date": "Mar 2026",
-          "meta": "Producto",
-          "title": "Reeskova como plataforma estrella bajo Reesk'Cap",
-          "excerpt": "El marketplace inmobiliario se presenta como capítulo central del portafolio, con flujos de reserva pensados para conectar con Escrow y Corporate desde el primer cierre piloto."
+          "date": "2026",
+          "meta": "Institucional",
+          "title": "Cómo se lee el Corporate Book",
+          "excerpt": "Este sitio sigue la misma regla que el libro: visión, plan, desarrollo y dependencia de un socio no se convierten unos en otros. Donde no hay cifra, licencia o logo confirmado, no se imprime."
         },
         "n2": {
-          "date": "Feb 2026",
-          "meta": "Empresa",
-          "title": "Un stack de tres capas para seis productos",
-          "excerpt": "Reesk'Cap formaliza la arquitectura productos–rails–chain para evitar duplicar custodia y liquidación en cada línea de negocio. La documentación interna pasa a ser contrato entre equipos."
+          "date": "2026",
+          "meta": "Dirección",
+          "title": "Cinco direcciones, una casa.",
+          "excerpt": "Steeve Rocher conduce la dirección global. Robenson Leger, América Latina. Etienne Leger, Francia. Amarachi y Emmanuel A, África."
         },
         "n3": {
-          "date": "Ene 2026",
-          "meta": "Institucional",
-          "title": "Canales claros para individuos, empresas e instituciones",
-          "excerpt": "Tres entradas comerciales comparten identidad visual y criterio de calidad, con RSC Corporate como mesa única para alianzas, Sign Docs y seguridad."
+          "date": "2026",
+          "meta": "Límite",
+          "title": "No somos un banco",
+          "excerpt": "La Wallet puede mostrar un número y seguir siendo una lectura de cuenta, no un depósito de ReeskOva. Pix, transferencia y crédito esperan al socio autorizado."
         }
       },
-      "teamAlt": "Equipo Reesk'Cap Coorp",
-      "teamTagline": "Un equipo, un criterio",
+      "teamAlt": "Contexto institucional de ReeskOva",
+      "teamTagline": "Personas · Tecnología · Oportunidades",
       "teamPillars": {
-        "growth": "Crecimiento medido en productos entregados",
-        "impact": "Impacto en mercados reales, no solo en métricas de vanidad",
-        "secure": "Seguridad y custodia como requisito, no como feature",
-        "together": "Equipos cross-funcionales sobre silos de producto"
+        "growth": "Acceso con criterio",
+        "impact": "Brasil como base inicial",
+        "secure": "La licencia permanece en el socio",
+        "together": "Utilidad antes que especulación"
       },
-      "ctaTitle": "Conversemos sobre su operación",
-      "ctaBody": "Si representa una institución, un operador inmobiliario o un negocio que necesita pagos y custodia en el mismo criterio, Reesk'Cap ofrece un canal único a través de Corporate y Sign Docs.",
-      "ctaFinal": "Explorar plataformas",
-      "footerTagline": "Reesk'Cap Coorp — holding tecnológico. Inmobiliario, finanzas digitales, custodia e infraestructura blockchain bajo un mismo techo.",
+      "ctaTitle": "Para socios e instituciones.",
+      "ctaBody": "Si trae liquidación, entra en la banda financiera. Si trae identidad, entra en tecnología y cumplimiento. Si origina inmuebles, entra en la banda de activos, con el trabajo jurídico al lado. ReeskOva no convierte una visión en oferta.",
+      "ctaFinal": "Ver la arquitectura",
+      "footerTagline": "ReeskOva. Gestión de activos privados: finanzas, crédito, pagos, inversión, inmuebles y activos digitales en una sola arquitectura. La operación regulada permanece en el socio autorizado.",
       "footer": {
         "products": "Productos",
         "company": "Empresa",
@@ -2826,8 +2818,21 @@
         "api": "API",
         "docs": "Documentación",
         "github": "GitHub",
-        "copyright": "© 2026 Reesk'Cap Coorp. Todos los derechos reservados."
-      }
+        "copyright": "© 2026 ReeskOva. Documento de lectura institucional. No es una oferta de inversión ni un contrato."
+      },
+      "equationLabel": "Mapa de lectura",
+      "equationNote": "Una ecuación de lectura, no un balance. Ninguna parte está, por sí, en operación.",
+      "equation": {
+        "0": "Finanzas",
+        "1": "Crédito",
+        "2": "Pagos",
+        "3": "Inversión",
+        "4": "Inmuebles",
+        "5": "Activos digitales",
+        "6": "Social",
+        "7": "Tecnología"
+      },
+      "photoAlt": "Fotografía de contexto del libro institucional. No es una sede, un cliente ni un activo en cartera."
     }
   },
   "institutionalRealEstate": {

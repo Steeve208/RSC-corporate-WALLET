@@ -38,7 +38,7 @@
         }
       },
       "promoKicker": "Individuals",
-      "promoLine": "Everyday wallet and payments. The same standard as the rest of the house."
+      "promoLine": "The person’s experience. Money and credit stay with the partner."
     },
     "empresas": {
       "title": "For Business",
@@ -67,7 +67,7 @@
         }
       },
       "promoKicker": "Business",
-      "promoLine": "Collections, APIs, and business wallets. One operational desk."
+      "promoLine": "Account, payments, and capital. The license is not exercised in ReeskOva’s name."
     },
     "instituciones": {
       "title": "Our Clients",
@@ -96,7 +96,7 @@
         }
       },
       "promoKicker": "Institutions",
-      "promoLine": "Reeskova, P2P, Corporate, and Chain. Formal contracts, one counterpart."
+      "promoLine": "Payments, credit, identity, and property. No names until a formal relationship exists."
     },
     "desarrolladores": {
       "title": "For Developers",
@@ -125,7 +125,7 @@
         }
       },
       "promoKicker": "Developers",
-      "promoLine": "RPC, testnet, and stable APIs. Integrate without rewriting the stack."
+      "promoLine": "APIs and integration. The chain enters when it belongs, not as an end."
     },
     "empresa": {
       "title": "About Reesk'Cap Coorp",
@@ -157,8 +157,8 @@
           "description": "Sign partnership agreements and documents"
         }
       },
-      "promoKicker": "Reesk'Cap Coorp",
-      "promoLine": "Technology holding. Six platforms, one quality standard."
+      "promoKicker": "ReeskOva",
+      "promoLine": "Private asset management. Vision is not an open service."
     }
   },
   "hero": {
@@ -2519,301 +2519,293 @@
       }
     },
     "group": {
-      "brand": "Reesk'Cap Coorp",
-      "heroKicker": "Technology holding · Six platforms · One house",
-      "heroTitle": "Digital platforms with institutional standards.",
-      "heroLead": "Reesk'Cap Coorp designs and operates proprietary products across real estate, digital finance, custody, and blockchain infrastructure. We are not an exchange or a standalone app: we are the organization that builds, integrates, and maintains each layer under shared standards.",
-      "heroAux": "Six platforms. One house.",
-      "ctaEcosystem": "Explore platforms",
-      "ctaProducts": "Read chapters",
-      "houseAria": "Isometric illustration of Reesk'Cap group with its six platforms",
-      "manifestoTitle": "Why Reesk'Cap exists",
-      "manifestoBody": "We exist because the markets we serve — property, payments, custody, settlement — deserve more than disconnected products. Reesk'Cap was not created to launch a trendy single app or to chase crypto headlines. We were built to sustain platforms that stand alone and strengthen one another: Reeskova for real assets, RSC Wallet and Escrow for value in motion, P2P and Corporate for multi-party operations, RSC Chain as the layer of record and settlement. Every product line has an owner, a roadmap, and a quality bar inside the same house.",
-      "ecoEyebrow": "Portfolio",
-      "ecoTitle": "Six chapters, one standard",
-      "ecoSubtitle": "Each line has a market, an interface, and an owner. What the group shares is not branding: it is how value is held, settled, and recorded.",
-      "productLabel": "Chapter",
+      "brand": "ReeskOva",
+      "heroKicker": "Private asset management",
+      "heroTitle": "The future of opportunity begins with access.",
+      "heroLead": "ReeskOva designs the infrastructure that connects capital, property, payments, and digital assets in one experience. We are not a bank, a payments network, or a traditional real-estate firm: we are the experience and orchestration layer. Activity that requires authorization stays with the regulated partner.",
+      "heroAux": "Vision is not an open service. Brazil is the initial strategic base.",
+      "ctaEcosystem": "Read the architecture",
+      "ctaProducts": "See the status of each part",
+      "houseAria": "Institutional architecture of ReeskOva",
+      "manifestoTitle": "We order access to opportunity.",
+      "manifestoBody": "Capital, credit, payments, investment, real estate, and digital assets should not require a different door each time. ReeskOva brings them into one management architecture. Our intention is that whoever enters can discover an opportunity, understand it, and follow it with clarity. The experience stays simple. The infrastructure, behind it, keeps the rigor.",
+      "ecoEyebrow": "Ecosystem",
+      "ecoTitle": "One vision.",
+      "ecoSubtitle": "Each line of ReeskOva expresses the same intention: to order access to capital, property, payment, and the digital asset. They are not loose doors. They are the same house, read from the entrance that fits.",
+      "productLabel": "Status",
       "learnMore": "Learn more",
       "products": {
         "reeskova": {
-          "name": "Reeskova",
-          "positioning": "Digital operation of real-estate assets at premium market standards.",
-          "p1": "Reeskova brings buy, sell, rent, and invest into one marketplace built for serious operators: agents, developers, funds, and buyers who need document clarity, traceability, and an experience worthy of the asset.",
-          "p2": "It is not a classifieds portal. It is the commercial layer where property is presented, negotiated, and prepared to close using the group's custody and settlement rails.",
-          "p3": "Inside Reesk'Cap, Reeskova is the flagship real-estate platform — the institutional entry point to a digitized physical market.",
+          "name": "ReeskOva Properties",
+          "positioning": "Future vision. Real-estate wealth, the asset passport, and liquidity, each with its own legal structure.",
+          "p1": "ReeskOva Properties seeks to order a fragmented market: the property as an informed asset before it is a participation structure. The Passport organizes information. It does not replace the official document.",
+          "p2": "Tokenization, fractional investment, and the bridge between owner and investor belong to the vision. No stock of properties is published in this edition.",
+          "p3": "The brand organizes understanding. The legal instrument creates the effect.",
           "points": [
-            "Listings with structured data and market context",
-            "Reservation and investment flows aligned with Escrow",
-            "Corporate integration for operators and partners"
+            "Asset passport, in design",
+            "Liquidity is not presumed",
+            "The right stays in the legal structure"
           ]
         },
         "chain": {
           "name": "RSC Chain",
-          "positioning": "Record and settlement layer for group products and authorized partners.",
-          "p1": "RSC Chain is the blockchain infrastructure that supports verifiable settlement, contracts, and traceability across platforms. It is not sold as an experiment: it is the technical floor Wallet, Escrow, and P2P can rely on with clear rules.",
-          "p2": "Institutions and builders find RPC, documentation, and test environments to integrate without rebuilding every product from scratch.",
-          "p3": "In the group's architecture, Chain is the lower layer — stable, auditable, shared.",
+          "positioning": "Future vision. A network of its own, not an infrastructure in operation.",
+          "p1": "RSC Chain is the vision of a blockchain able to follow the wallet and the applications without freezing the ecosystem. It is not a network that can be used today.",
+          "p2": "The declared priority of RSC is utility before speculation. Without a defined network, there is no mining and no settlement of our own.",
+          "p3": "Fifty million RSC, when mentioned, is a design figure, not circulation and not a price.",
           "points": [
-            "On-chain settlement for internal flows",
-            "Documentation and testnet for developers",
-            "Upgrade policy coordinated with Corporate"
+            "No published network",
+            "Utility before narrative",
+            "No on-chain governance in force"
           ]
         },
         "p2p": {
-          "name": "RSC P2P",
-          "positioning": "Counterparty exchange with visible rules and backed settlement.",
-          "p1": "RSC P2P structures peer-to-peer exchange when buyer and seller need a market with rules, not an informal chat. The platform exposes offers, states, and closing conditions in readable form.",
-          "p2": "It relies on Escrow to hold value until conditions are met and on Chain to record outcomes when required.",
-          "p3": "It is the group's counterparty marketplace — built for volume, not noisy speculation.",
+          "name": "Discover",
+          "positioning": "Planned. Where opportunity begins, not where it closes.",
+          "p1": "Discover was conceived to gather opportunities, assets, and services that today circulate in environments that do not speak to each other. Search shows a status: available, in structure, or vision.",
+          "p2": "It is not a storefront that turns curiosity into adhesion. From discovery one moves to analysis. Only then, if the structure exists, to action.",
+          "p3": "There is no published inventory, ranking, or recommendation.",
           "points": [
-            "Order book with auditable states",
-            "Closing coupled to Escrow",
-            "APIs for institutional integrators"
+            "Status before shine",
+            "Distinct degrees of certainty stay distinct",
+            "For people, investors, and businesses"
           ]
         },
         "escrow": {
-          "name": "RSC Escrow",
-          "positioning": "Value custody until agreed conditions are fulfilled.",
-          "p1": "Escrow holds funds or digital assets while parties complete verifications, deliveries, or contractual milestones. It reduces trust asymmetry between strangers or between subsidiaries.",
-          "p2": "Reeskova, P2P, and Corporate consume Escrow as a common rail — one custody standard instead of ad hoc solutions per product.",
-          "p3": "Progressive automation of release according to defined rules, with traceability for audit.",
+          "name": "Credit",
+          "positioning": "Partner-dependent. Intermediation and comparison, not automatic granting.",
+          "p1": "Credit is designed as an experience of request and comparison. Analysis and contract stay with the authorized partner.",
+          "p2": "ReeskOva does not present itself as a lender. Hiding the partner in order to simplify would violate transparency.",
+          "p3": "Without a partner, there is no credit. That sentence is the limit of the page.",
           "points": [
-            "Hold until conditions are verified",
-            "Native integration with Wallet and Chain",
-            "Multi-party flows for corporate operations"
+            "Request in the experience",
+            "Decision at the partner",
+            "No automatic granting"
           ]
         },
         "wallet": {
-          "name": "RSC Wallet",
-          "positioning": "Everyday access to digital assets in the RSC ecosystem.",
-          "p1": "RSC Wallet is the interface where people and teams hold, send, and receive assets compatible with RSC Chain. It prioritizes balance clarity, history, and permissions over visual effects.",
-          "p2": "It connects to QR payments, staking, and business products when an organization needs an operational wallet, not only a personal one.",
-          "p3": "It is the user gateway to the group — the first layer many clients touch before Escrow, P2P, or Reeskova.",
+          "name": "Wallet",
+          "positioning": "Planned experience. A financial service depends on a regulated partner.",
+          "p1": "The Wallet is where a person should read position, asset, and movement without jumping between applications. It is not, in this volume, an operating balance or a payment institution.",
+          "p2": "Pix, transfer, receipt, and any figure that represents money depend on integration. The QR code is an interface gesture on the arrangement the partner operates.",
+          "p3": "A number on a screen does not turn the experience into a bank.",
           "points": [
-            "Non-custodial key control",
-            "Readable history and permissions",
-            "Bridge to ecosystem payments and staking"
+            "A reading of the account, not a deposit of our own",
+            "Payments with a regulated partner",
+            "The RSC asset still in vision"
           ]
         },
         "corporate": {
-          "name": "RSC Corporate",
-          "positioning": "Services and platforms for organizations operating at scale.",
-          "p1": "RSC Corporate groups institutional onboarding, agreements, reporting, and tooling for teams deploying the group's stack in regulated or multi-site environments.",
-          "p2": "Partners, correspondent banks, and real-estate operators find a single counterparty and contracts aligned with Sign Docs and Security.",
-          "p3": "It is the enterprise face of Reesk'Cap — where policy, compliance, and implementation meet.",
+          "name": "Businesses",
+          "positioning": "Partner-dependent. Account, payments, and capital for companies, with the authorized operation outside the house.",
+          "p1": "The business journey contemplates account, payments, receipts, card, capital, and tools. What requires a license is not exercised in ReeskOva’s name.",
+          "p2": "APIs, KYC, and compliance are the door through which a specialist enters without splitting the experience in half.",
+          "p3": "No partners are named in this edition. A category is not a signed contract.",
           "points": [
-            "Centralized onboarding and agreements",
-            "Cross-product operational reports",
-            "Single channel for institutional alliances"
+            "A business experience, not a license of our own",
+            "A partner for payment and credit",
+            "APIs as the integration band"
           ]
         }
       },
       "escrowFlow": {
         "step1": {
-          "title": "Deposit",
-          "description": "Parties agree on conditions and value enters custody."
+          "title": "Request",
+          "description": "The person compares and asks. That lives in the experience."
         },
         "step2": {
-          "title": "Verification",
-          "description": "Milestones, documents, or deliveries are validated against rules."
+          "title": "Analysis",
+          "description": "The authorized partner studies the case. ReeskOva does not grant credit."
         },
         "step3": {
-          "title": "Release",
-          "description": "Value is released automatically or with explicit approval."
+          "title": "Decision",
+          "description": "Without a partner there is no credit. The contract stays outside the house."
         }
       },
       "connectEyebrow": "Architecture",
-      "connectTitle": "Three layers, one group",
-      "connectBody": "Reesk'Cap Coorp does not stack logos: it stacks responsibilities. The upper layer is business platforms — Reeskova, Wallet, P2P, Corporate — where the client experience lives. The middle layer is shared rails — Escrow, payment APIs, operational identity — so custody and rules are not duplicated in every product. The lower layer is RSC Chain: record, settlement, and contracts with traceability. When a Reeskova property closing needs to hold funds, Escrow already speaks the same language as Wallet; when P2P settles, Chain receives the outcome without reimplementing logic in every team.",
+      "connectTitle": "Six bands. One door.",
+      "connectBody": "Experience, products, finance, assets, technology, and partners can mature at different speeds without losing the link. One layer does not absorb the responsibility of the next. Experience does not grant credit. A digital asset does not replace the title record. The partner is not a logo: the partner executes what ReeskOva designs and does not operate. ReeskOva remains the band of experience and orchestration.",
       "stackLayers": {
         "products": {
-          "label": "Business platforms",
+          "label": "Experience",
           "items": [
-            "Reeskova",
+            "Home",
+            "Discover",
             "Wallet",
-            "P2P",
-            "Corporate"
+            "Passport"
           ]
         },
         "rails": {
-          "label": "Shared rails",
+          "label": "Assets and finance",
           "items": [
-            "Escrow",
-            "Payments",
-            "APIs"
+            "Property",
+            "Credit",
+            "Payments"
           ]
         },
         "chain": {
-          "label": "Infrastructure",
+          "label": "Technology",
           "items": [
-            "RSC Chain",
-            "Contracts",
-            "Settlement"
+            "Data",
+            "Security",
+            "Chain"
           ]
         }
       },
-      "techEyebrow": "Technical stack",
-      "techTitle": "More than a blockchain",
-      "techIntro": "Blockchain is the record layer; the rest of the stack supports identity, operational data, availability, and composition across products. We design so a Reeskova team and a Wallet team do not rewrite custody or observability every quarter.",
-      "techIntro2": "The capabilities below repeat across the portfolio with common interfaces — not as slide buzzwords, but as internal contracts between platforms.",
+      "techEyebrow": "Technology and trust",
+      "techTitle": "The rigor that holds access.",
+      "techIntro": "ReeskOva’s technology exists so that trust does not rest on a promise. Identity, data, security, and integration serve one intention: that access to capital, property, and the digital asset be clear.",
+      "techIntro2": "Whoever enters need not see the complexity. They need to know that each step is governed: who may enter, what is recorded, and to what purpose. The chain enters when the house requires it.",
       "techLayers": {
         "identity": {
-          "title": "Identity and permissions",
-          "description": "Shared roles, access, and operation traces across corporate products and operational wallets."
+          "title": "Identity",
+          "description": "It orders access. Each permission has a purpose and a responsible party."
         },
         "data": {
-          "title": "Operational data",
-          "description": "Market events, transactions, and custody states available for reporting and decisions."
+          "title": "Data",
+          "description": "It serves the decision, not the noise. It is gathered with a purpose and governed by the same standard as the house."
         },
         "cloud": {
-          "title": "Availability",
-          "description": "Elastic services for multi-region deployment without duplicating business logic."
+          "title": "Security",
+          "description": "It belongs to the design: authentication, the keeping of credentials, and continuous watch."
         },
         "chain": {
-          "title": "Record and settlement",
-          "description": "RSC Chain as the common floor for flows requiring public or private verification."
+          "title": "Chain",
+          "description": "It records when the matter calls for it. Infrastructure in the service of trust."
         },
         "apis": {
-          "title": "Composition",
-          "description": "Stable APIs so partners integrate payments, escrow, and queries without forking internal code."
+          "title": "Integration",
+          "description": "It lets a partner enter the experience without splitting the house in two."
         }
       },
       "whyEyebrow": "Standard",
-      "whyTitle": "Why one house, not six startups",
+      "whyTitle": "Three rules we do not trade.",
       "whyTheses": {
         "discipline": {
-          "title": "Product discipline",
-          "body": "Each platform has a roadmap and owners inside the group. We avoid orphan features that do not connect to custody, identity, or settlement."
+          "title": "Transparency",
+          "body": "What is vision must look like vision. What depends on a partner must be said as such. What is a concept is not presented as an open service."
         },
         "integration": {
-          "title": "Real integration",
-          "body": "Escrow, Chain, and Wallet are not partner slides: they are components other products invoke. That reduces friction for clients operating in more than one market."
+          "title": "The partner’s limit",
+          "body": "The partner executes what ReeskOva designs and does not operate. Experience does not grant credit. A digital asset does not replace the title record."
         },
         "horizon": {
-          "title": "Long horizon",
-          "body": "We build for regimes where property, payments, and digital record coexist for years, not for quarterly hype cycles."
+          "title": "Long term",
+          "body": "We build for decades, not only for cycles. Expanding without the corresponding structure is not growth. It is a shortcut."
         }
       },
-      "audienceEyebrow": "Audiences",
-      "audienceTitle": "Three entries, one standard",
-      "audienceSubtitle": "Individuals, businesses, and institutions do not see the same screen, but they do see the same quality of process.",
+      "audienceEyebrow": "Whom it serves",
+      "audienceTitle": "People, businesses, and partners.",
+      "audienceSubtitle": "Each participant has a function the others do not absorb. A category is not a signed partnership.",
       "audiences": {
         "individuals": {
-          "title": "Individuals",
-          "p1": "People who need a clear wallet, everyday payments, and gradual access to staking or remittances without unnecessary jargon.",
-          "p2": "They enter through RSC Wallet and payment products; as wealth or operations scale, they find the same group behind them.",
-          "products": "RSC Wallet · Payments · Staking · Education",
-          "cta": "View products for individuals"
+          "title": "People",
+          "p1": "They discover, pay, follow and, when the structure exists, participate. They enter through the application, still in the field of the planned.",
+          "p2": "They do not need to understand the whole infrastructure. They need a next step that is true, and to know who answers for that step.",
+          "products": "Discover · Wallet · Passport",
+          "cta": "See the journey"
         },
         "businesses": {
           "title": "Businesses",
-          "p1": "Merchants and teams that collect, settle, and report with APIs and business wallets connected to the RSC stack.",
-          "p2": "Business Wallet, QR payments, and billing share operational identity with Escrow as complexity grows.",
-          "products": "Business Wallet · Payments · API · Billing",
-          "cta": "View products for businesses"
+          "p1": "The pace and the responsibility are not those of a user under another name. The journey contemplates payment, receipt, management and, through partners, capital and credit.",
+          "p2": "Regulated operation stays with whoever is authorized.",
+          "products": "Payments · Capital · APIs",
+          "cta": "See the financial band"
         },
         "institutions": {
-          "title": "Institutions",
-          "p1": "Real-estate operators, market desks, and organizations that need Reeskova, P2P, Corporate, and Chain with formal contracts.",
-          "p2": "The channel runs through RSC Corporate, Sign Docs, and Security — one desk for alliances and deployment.",
-          "products": "Reeskova · P2P · Corporate · RSC Chain",
-          "cta": "View institutional products"
+          "title": "Partners and institutions",
+          "p1": "Whoever settles enters the financial band. Whoever originates property enters the asset band. Whoever brings identity enters technology and compliance.",
+          "p2": "Until there is a formal relationship, the map stays functional and anonymous.",
+          "products": "Payments · Credit · Identity · Property",
+          "cta": "See where you fit"
         }
       },
       "timelineEyebrow": "Sequence",
-      "timelineTitle": "Building in layers",
-      "timelineSubtitle": "The portfolio grows in waves — visible product first, shared rails next, geographic expansion last.",
+      "timelineTitle": "From an idea to an ecosystem.",
+      "timelineSubtitle": "ReeskOva begins from a perception: the opportunities exist, and they arrive apart. The answer is one architecture, able to gather capital, property, payment, and the digital asset.",
       "timelineYear": "2026",
       "timeline": {
-        "reeskova": {
-          "label": "Reeskova",
-          "note": "Real-estate marketplace as the group's flagship platform."
+        "perception": {
+          "label": "Perception",
+          "note": "Capital, credit, property, and the digital asset exist. Each arrives through a different system."
         },
-        "wallet": {
-          "label": "Wallet",
-          "note": "User access and operational base for RSC assets."
+        "idea": {
+          "label": "Idea",
+          "note": "To gather them in one layer. Whoever enters sees the opportunity and follows it, without having to operate each system apart."
         },
-        "escrow": {
-          "label": "Escrow",
-          "note": "Common custody for property closings and P2P."
+        "platform": {
+          "label": "Platform",
+          "note": "The application is the entry: discovery, wealth, investment, and identity, in one place."
         },
-        "p2p": {
-          "label": "P2P",
-          "note": "Counterparty market coupled to escrow and chain."
+        "infrastructure": {
+          "label": "Infrastructure",
+          "note": "Payment, credit, data, the chain, and partners cease to be loose pieces and become layers of the same architecture."
         },
-        "chain": {
-          "label": "Chain",
-          "note": "Consolidated record and settlement infrastructure."
-        },
-        "ai": {
-          "label": "Operational AI",
-          "note": "Matching, automation, and decision support in products."
-        },
-        "global": {
-          "label": "Expansion",
-          "note": "Regional deployment with the same three-layer architecture."
+        "ecosystem": {
+          "label": "Ecosystem",
+          "note": "Application, network, property, and financial infrastructure are read as one house."
         }
       },
-      "valuesEyebrow": "Principles",
-      "valuesTitle": "What we do not compromise",
-      "valuesSubtitle": "These principles guide contracts, roadmaps, and priorities — they do not decorate a wall.",
+      "valuesEyebrow": "Direction",
+      "valuesTitle": "The leadership.",
+      "valuesSubtitle": "One global direction and four regional directions, in Latin America, France, and Africa.",
       "values": {
         "innovation": {
-          "title": "Purposeful innovation",
-          "body": "We experiment where it removes real friction — custody, closings, settlement — not where it only impresses in a demo."
+          "title": "Steeve Rocher",
+          "body": "Global direction. He leads the vision, the coherence of the ecosystem, and the institutional direction."
         },
         "integrity": {
-          "title": "Operational integrity",
-          "body": "States, balances, and conditions must be readable for clients and auditable for partners."
+          "title": "Robenson Leger",
+          "body": "Latin America. He organizes the vision of the region and the coherence of the house, with Brazil as its base."
         },
         "technology": {
-          "title": "Shared technology",
-          "body": "We prefer reusable components across platforms over six isolated stacks."
+          "title": "Etienne Leger",
+          "body": "France. He brings the vision to France and holds the coherence of the house in Europe."
         },
         "trust": {
-          "title": "Explicit trust",
-          "body": "Escrow, contracts, and permissions exist so trust does not depend on informal conversations."
+          "title": "Amarachi",
+          "body": "Africa. With Emmanuel A, she leads the vision and the coherence of the house on the continent."
         },
         "execution": {
-          "title": "Sustained execution",
-          "body": "Roadmaps measured in shippable quarters, not infinite roadmap promises."
+          "title": "Emmanuel A",
+          "body": "Africa. With Amarachi, he leads the vision and the coherence of the house on the continent."
         }
       },
-      "newsEyebrow": "Notes",
-      "newsTitle": "From the house",
+      "newsEyebrow": "Reading",
+      "newsTitle": "How to read this house",
       "newsRead": "Read full note",
       "news": {
         "n1": {
-          "date": "Mar 2026",
-          "meta": "Product",
-          "title": "Reeskova as flagship platform under Reesk'Cap",
-          "excerpt": "The real-estate marketplace is presented as the portfolio's central chapter, with reservation flows designed to connect with Escrow and Corporate from the first pilot closing."
+          "date": "2026",
+          "meta": "Institutional",
+          "title": "How to read the Corporate Book",
+          "excerpt": "This site follows the same rule as the book: vision, plan, development, and partner dependence do not convert into one another. Where a figure, a license, or a logo was not confirmed, it is not printed."
         },
         "n2": {
-          "date": "Feb 2026",
-          "meta": "Company",
-          "title": "A three-layer stack for six products",
-          "excerpt": "Reesk'Cap formalizes the products–rails–chain architecture to avoid duplicating custody and settlement in every business line. Internal documentation becomes a contract between teams."
+          "date": "2026",
+          "meta": "Direction",
+          "title": "Five directions, one house.",
+          "excerpt": "Steeve Rocher leads global direction. Robenson Leger, Latin America. Etienne Leger, France. Amarachi and Emmanuel A, Africa."
         },
         "n3": {
-          "date": "Jan 2026",
-          "meta": "Institutional",
-          "title": "Clear channels for individuals, businesses, and institutions",
-          "excerpt": "Three commercial entries share visual identity and quality standards, with RSC Corporate as the single desk for alliances, Sign Docs, and security."
+          "date": "2026",
+          "meta": "Limit",
+          "title": "We are not a bank",
+          "excerpt": "The Wallet may show a number and still be a reading of the account, not a deposit of ReeskOva. Pix, transfer, and credit wait for the authorized partner."
         }
       },
-      "teamAlt": "Reesk'Cap Coorp team",
-      "teamTagline": "One team, one standard",
+      "teamAlt": "Institutional context of ReeskOva",
+      "teamTagline": "People · Technology · Opportunities",
       "teamPillars": {
-        "growth": "Growth measured in shipped products",
-        "impact": "Impact in real markets, not vanity metrics alone",
-        "secure": "Security and custody as requirement, not feature",
-        "together": "Cross-functional teams over product silos"
+        "growth": "Access with a criterion",
+        "impact": "Brazil as the initial base",
+        "secure": "The license stays with the partner",
+        "together": "Utility before speculation"
       },
-      "ctaTitle": "Let's discuss your operation",
-      "ctaBody": "If you represent an institution, a real-estate operator, or a business that needs payments and custody under the same standard, Reesk'Cap offers a single channel through Corporate and Sign Docs.",
-      "ctaFinal": "Explore platforms",
-      "footerTagline": "Reesk'Cap Coorp — technology holding. Real estate, digital finance, custody, and blockchain infrastructure under one roof.",
+      "ctaTitle": "For partners and institutions.",
+      "ctaBody": "If you bring settlement, you enter the financial band. If you bring identity, you enter technology and compliance. If you originate property, you enter the asset band, with the legal work beside it. ReeskOva does not turn a vision into an offer.",
+      "ctaFinal": "See the architecture",
+      "footerTagline": "ReeskOva. Private asset management: finance, credit, payments, investment, real estate, and digital assets in one architecture. Regulated operation stays with the authorized partner.",
       "footer": {
         "products": "Products",
         "company": "Company",
@@ -2826,8 +2818,21 @@
         "api": "API",
         "docs": "Documentation",
         "github": "GitHub",
-        "copyright": "© 2026 Reesk'Cap Coorp. All rights reserved."
-      }
+        "copyright": "© 2026 ReeskOva. An institutional reading. Not an investment offer and not a contract."
+      },
+      "equationLabel": "Reading map",
+      "equationNote": "A reading equation, not a balance sheet. No part is, by itself, in operation.",
+      "equation": {
+        "0": "Finance",
+        "1": "Credit",
+        "2": "Payments",
+        "3": "Investment",
+        "4": "Real estate",
+        "5": "Digital assets",
+        "6": "Social",
+        "7": "Technology"
+      },
+      "photoAlt": "A contextual photograph from the institutional book. Not an office, a client, or an asset on the books."
     }
   },
   "institutionalRealEstate": {

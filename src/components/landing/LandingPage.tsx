@@ -5,14 +5,9 @@ import '../../styles/landing-group.css';
 import { useScrollAnimation } from './useScrollAnimation';
 import { Navbar } from './Navbar';
 import { useTranslation } from '../../contexts/I18nContext';
-import {
-  ReeskCapHouse,
-  ArchitectureStack,
-  ProductVignette,
-  EscrowFlow,
-  TechLayers,
-  type ProductKey,
-} from './graphics';
+import { ArchitectureStack, EscrowFlow, TechLayers } from './graphics';
+
+type ProductKey = 'reeskova' | 'chain' | 'p2p' | 'escrow' | 'wallet' | 'corporate';
 import { ArrowRight, ArrowUpRight, Boxes, Globe2, ShieldCheck, Users } from 'lucide-react';
 
 type AppNavigatePage =
@@ -69,13 +64,15 @@ const CHAPTERS: {
   key: ProductKey;
   page: AppNavigatePage;
   n: string;
+  photo: string;
+  href?: string;
 }[] = [
-  { key: 'reeskova', page: 'institutionalRealEstate', n: '01' },
-  { key: 'chain', page: 'institutionalChain', n: '02' },
-  { key: 'p2p', page: 'institutionalP2P', n: '03' },
-  { key: 'escrow', page: 'institutionalP2P', n: '04' },
-  { key: 'wallet', page: 'wallet', n: '05' },
-  { key: 'corporate', page: 'institutionalCorporate', n: '06' },
+  { key: 'reeskova', page: 'institutionalRealEstate', n: '01', photo: '/book/residences.jpg', href: 'https://www.reeskova.com' },
+  { key: 'chain', page: 'institutionalChain', n: '02', photo: '/book/servers.jpg' },
+  { key: 'p2p', page: 'institutionalP2P', n: '03', photo: '/book/avenue.jpg' },
+  { key: 'escrow', page: 'institutionalP2P', n: '04', photo: '/book/interior.jpg', href: 'https://rsccredit.com.br/' },
+  { key: 'wallet', page: 'wallet', n: '05', photo: '/book/glass.jpg' },
+  { key: 'corporate', page: 'institutionalCorporate', n: '06', photo: '/book/office.jpg' },
 ];
 
 const AUDIENCES = [
@@ -84,8 +81,16 @@ const AUDIENCES = [
   { key: 'institutions', page: 'institutionalCorporate' as const },
 ] as const;
 
-const TIMELINE = ['reeskova', 'wallet', 'escrow', 'p2p', 'chain', 'ai', 'global'] as const;
+const TIMELINE = ['perception', 'idea', 'platform', 'infrastructure', 'ecosystem'] as const;
 const VALUES = ['innovation', 'integrity', 'technology', 'trust', 'execution'] as const;
+
+const PORTRAITS: Record<(typeof VALUES)[number], string> = {
+  innovation: '/book/steeve.jpg',
+  integrity: '/book/robenson.jpg',
+  technology: '/book/etienne.jpg',
+  trust: '/book/amarachi.jpg',
+  execution: '/book/emmanuel.jpg',
+};
 const TECH_KEYS = ['identity', 'data', 'cloud', 'chain', 'apis'] as const;
 const WHY_KEYS = ['discipline', 'integration', 'horizon'] as const;
 
@@ -96,15 +101,6 @@ export function LandingPage() {
   useEffect(() => {
     document.documentElement.style.setProperty('--rg-serif', "'Cormorant Garamond', Georgia, serif");
   }, []);
-
-  const houseLabels = {
-    reeskova: t('landing.group.products.reeskova.name'),
-    chain: t('landing.group.products.chain.name'),
-    wallet: t('landing.group.products.wallet.name'),
-    p2p: t('landing.group.products.p2p.name'),
-    escrow: t('landing.group.products.escrow.name'),
-    corporate: t('landing.group.products.corporate.name'),
-  };
 
   const stackLayers = [
     {
@@ -165,16 +161,21 @@ export function LandingPage() {
             </div>
             <p className="rg-hero__aux">{t('landing.group.heroAux')}</p>
           </div>
-
-          <div className="rg-hero__graphic" aria-label={t('landing.group.houseAria')}>
-            <ReeskCapHouse
-              labels={houseLabels}
-              layerLabels={{
-                products: t('landing.group.stackLayers.products.label'),
-                rails: t('landing.group.stackLayers.rails.label'),
-                chain: t('landing.group.stackLayers.chain.label'),
-              }}
+          <aside className="rg-hero__plate">
+            <img
+              className="rg-hero__photo"
+              src="/book/facade.jpg"
+              alt={t('landing.group.photoAlt')}
             />
+          </aside>
+          <div className="rg-hero__map" aria-label={t('landing.group.equationLabel')}>
+            <p className="rg-kicker">{t('landing.group.equationLabel')}</p>
+            <ol className="rg-hero__equation">
+              {tList(t, 'landing.group.equation', 8).map((term) => (
+                <li key={term}>{term}</li>
+              ))}
+            </ol>
+            <p className="rg-hero__plate-note">{t('landing.group.equationNote')}</p>
           </div>
         </div>
       </section>
@@ -201,6 +202,11 @@ export function LandingPage() {
               className={`rg-chapter${i % 2 === 1 ? ' rg-chapter--flip' : ''} animate-on-scroll`}
               aria-labelledby={`rg-chapter-${item.key}`}
             >
+              <img
+                className="rg-chapter__photo"
+                src={item.photo}
+                alt={t('landing.group.photoAlt')}
+              />
               <div className="rg-chapter__copy">
                 <p className="rg-chapter__num">
                   {item.n} · {t('landing.group.productLabel')}
@@ -218,17 +224,26 @@ export function LandingPage() {
                   ))}
                 </ul>
                 {item.key === 'escrow' && <EscrowFlow steps={escrowSteps} />}
-                <button
-                  type="button"
-                  className="rg-btn rg-btn--primary"
-                  onClick={() => navigateToPage(item.page)}
-                >
-                  {t('landing.group.learnMore')}
-                  <ArrowUpRight size={18} strokeWidth={2} aria-hidden />
-                </button>
-              </div>
-              <div className={`rg-chapter__visual rg-chapter__visual--${item.key}`}>
-                <ProductVignette product={item.key} />
+                {item.href ? (
+                  <a
+                    className="rg-btn rg-btn--primary"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('landing.group.learnMore')}
+                    <ArrowUpRight size={18} strokeWidth={2} aria-hidden />
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    className="rg-btn rg-btn--primary"
+                    onClick={() => navigateToPage(item.page)}
+                  >
+                    {t('landing.group.learnMore')}
+                    <ArrowUpRight size={18} strokeWidth={2} aria-hidden />
+                  </button>
+                )}
               </div>
             </article>
           ))}
@@ -300,10 +315,9 @@ export function LandingPage() {
           <p className="rg-section-sub">{t('landing.group.timelineSubtitle')}</p>
         </header>
         <ol className="rg-timeline__track">
-          {TIMELINE.map((key, i) => (
+          {TIMELINE.map((key) => (
             <li key={key} className="rg-timeline__item">
               <span className="rg-timeline__dot" aria-hidden />
-              {i === 0 && <span className="rg-timeline__year">{t('landing.group.timelineYear')}</span>}
               <span className="rg-timeline__label">{t(`landing.group.timeline.${key}.label`)}</span>
               <span className="rg-timeline__note">{t(`landing.group.timeline.${key}.note`)}</span>
             </li>
@@ -319,7 +333,12 @@ export function LandingPage() {
         </header>
         <ul className="rg-values__list">
           {VALUES.map((key) => (
-            <li key={key} className="rg-values__row">
+            <li key={key} className={`rg-values__row${key === 'innovation' ? ' rg-values__row--lead' : ''}`}>
+              <img
+                className="rg-values__portrait"
+                src={PORTRAITS[key]}
+                alt=""
+              />
               <h3>{t(`landing.group.values.${key}.title`)}</h3>
               <p>{t(`landing.group.values.${key}.body`)}</p>
             </li>
@@ -355,8 +374,8 @@ export function LandingPage() {
         <div className="rg-team__photo">
           <img
             className="rg-team__img"
-            src="/rsc-team-clean.png"
-            alt={t('landing.group.teamAlt')}
+            src="/book/skyline.jpg"
+            alt={t('landing.group.photoAlt')}
             width={1021}
             height={494}
             loading="lazy"

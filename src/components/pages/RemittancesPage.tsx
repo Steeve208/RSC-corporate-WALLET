@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Globe, 
   Zap,
@@ -35,7 +34,6 @@ export function RemittancesPage() {
               <ArrowRight className="remittances-hero-cta-icon" size={20} />
             </a>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

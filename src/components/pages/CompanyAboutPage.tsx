@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Info, 
   Eye, 
@@ -26,7 +25,6 @@ export function CompanyAboutPage() {
             <h1 className="company-about-hero-title">{t('companyAbout.hero.title')}</h1>
             <p className="company-about-hero-subtitle">{t('companyAbout.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   FileText, 
   Download, 
@@ -37,7 +36,6 @@ export function BusinessBillingPage() {
               <ArrowRight className="business-billing-hero-cta-icon" size={20} />
             </a>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

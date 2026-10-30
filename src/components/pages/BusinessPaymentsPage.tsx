@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   CreditCard, 
   QrCode, 
@@ -34,7 +33,6 @@ export function BusinessPaymentsPage() {
             <h1 className="business-payments-hero-title">{t('businessPayments.hero.title')}</h1>
             <p className="business-payments-hero-subtitle">{t('businessPayments.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

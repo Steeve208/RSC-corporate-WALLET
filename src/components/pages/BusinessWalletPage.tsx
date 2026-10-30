@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Briefcase, 
   Users, 
@@ -36,7 +35,6 @@ export function BusinessWalletPage() {
             <h1 className="business-wallet-hero-title">{t('businessWallet.hero.title')}</h1>
             <p className="business-wallet-hero-subtitle">{t('businessWallet.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

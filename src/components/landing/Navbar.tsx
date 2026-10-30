@@ -808,7 +808,7 @@ export function Navbar() {
                 (window as any).navigateToPage('landing');
               }
             }}
-            aria-label="Reesk'Cap Coorp home"
+            aria-label="ReeskOva home"
           >
             <div className="rsc-logo-dots">
               <div className="rsc-dot rsc-dot--top"></div>
@@ -817,7 +817,7 @@ export function Navbar() {
               <div className="rsc-dot rsc-dot--right"></div>
               <div className="rsc-dot rsc-dot--bottom"></div>
             </div>
-            <span className="rsc-logo-text">Reesk'Cap Coorp</span>
+            <span className="rsc-logo-text">ReeskOva</span>
           </button>
         </div>
 

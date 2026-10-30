@@ -143,8 +143,38 @@
   50% { transform: translateY(-3px); }
 }
 
-@media (max-width: 900px) {
-  .rk-3d { height: 280px; max-width: 360px; }
+@media (max-width: 1199px) {
+  .rk-3d {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    perspective: none;
+  }
+
+  .rk-3d__floor {
+    display: none;
+  }
+
+  .rk-3d__world {
+    height: auto;
+    transform: none;
+    gap: 0.75rem;
+  }
+
+  .rk-3d__layer {
+    transform: none;
+  }
+
+  .rk-3d-tile,
+  .rk-3d-plate {
+    min-height: 56px;
+    border-radius: 10px;
+  }
+
+  .rk-3d-tile span,
+  .rk-3d-plate--gold span {
+    font-size: 0.82rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

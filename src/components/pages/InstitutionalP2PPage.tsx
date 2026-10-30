@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Building2, 
   Shield, 
@@ -33,7 +32,6 @@ export function InstitutionalP2PPage() {
             <h1 className="institutional-p2p-hero-title">{t('institutionalP2P.hero.title')}</h1>
             <p className="institutional-p2p-hero-subtitle">{t('institutionalP2P.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

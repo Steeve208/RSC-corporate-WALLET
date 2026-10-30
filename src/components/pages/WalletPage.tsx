@@ -1,6 +1,5 @@
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import { 
   Send, 
   Wallet, 
@@ -39,7 +38,6 @@ export function WalletPage() {
               </button>
             </div>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 

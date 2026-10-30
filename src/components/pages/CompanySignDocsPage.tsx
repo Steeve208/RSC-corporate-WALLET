@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../../contexts/I18nContext';
 import { Navbar } from '../landing/Navbar';
-import { SiteLayerVisual } from '../landing/SiteLayerVisual';
 import {
   accessSignDocs,
   createSignDocument,
@@ -262,7 +261,6 @@ export function CompanySignDocsPage() {
             <h1 className="company-sign-docs-hero-title">{t('companySignDocs.hero.title')}</h1>
             <p className="company-sign-docs-hero-subtitle">{t('companySignDocs.hero.subtitle')}</p>
           </div>
-          <SiteLayerVisual />
         </div>
       </section>
 
